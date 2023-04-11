@@ -3,6 +3,7 @@
   --black: #000;
   --blue: #3a66ff;
   --dark: #212121;
+  --silver: #e0e9ff;
   --index-1: 1;
   --index-2: 2;
   --index-3: 3;
@@ -196,6 +197,31 @@ a {
   background-color: var(--blue);
 }
 
+.title-1 {
+  color: var(--dark);
+  line-height: 0.8275862069;
+  font-weight: 700;
+}
+@media (min-width: 82.875em) {
+  .title-1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 82.875em) {
+  .title-1 {
+    font-size: calc(1.75rem + 1.25 * (((100vw - 20rem)) / ((62.875))));
+  }
+}
+@media (max-width: 20em) {
+  .title-1 {
+    font-size: 1.75rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,5 +309,78 @@ a {
 }
 .header__call {
   margin-left: 35px;
+}
+
+.hero-automation__container {
+  margin-top: 12px;
+  background: -o-linear-gradient(83.44deg, #FFFFFF -6.06%, #F3F5F8 135.59%);
+  background: linear-gradient(6.56deg, #FFFFFF -6.06%, #F3F5F8 135.59%);
+  border-radius: 70px;
+  text-align: center;
+  position: relative;
+}
+.hero-automation__content {
+  padding: 42px 0 55px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-automation__subtitle {
+  color: var(--blue);
+  background-color: var(--silver);
+  border-radius: 42px;
+  font-size: 10px;
+  line-height: 2.1;
+  text-transform: uppercase;
+  padding: 6px 20px;
+}
+.hero-automation__title {
+  margin-top: 35px;
+}
+.hero-automation__title span {
+  background: -o-linear-gradient(359.94deg, #1A5AFF 51.8%, #CA95F5 75.15%);
+  background: linear-gradient(90.06deg, #1A5AFF 51.8%, #CA95F5 75.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-automation__text {
+  margin-top: 35px;
+  padding: 25px 44px;
+  color: var(--black);
+  font-size: 18px;
+  line-height: 1.7777777778;
+  font-weight: 400;
+  background-color: var(--white);
+  border: 1px solid var(--silver);
+  border-radius: 40px;
+}
+.hero-automation__text span {
+  font-weight: 500;
+}
+.hero-automation__btn {
+  margin-top: 45px;
+}
+.hero-automation__decor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 57px;
+  right: 60px;
+}
+.hero-automation__decor span {
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: var(--blue);
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */

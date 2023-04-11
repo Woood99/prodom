@@ -1,3 +1,13 @@
-.title {}
+.title-1 {
+    color: var(--dark);
+    
+    @include adaptiveValue("font-size", 48, 28);
+    line-height: math.div(48 , 58);
+    font-weight: 700;
+}
 
 .subtitle {}
+
+.text-center{
+    text-align: center;
+}
