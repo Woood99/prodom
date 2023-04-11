@@ -49,9 +49,11 @@
             line-height: math.div(21, 16);
         }
 
-        &:hover {
-            span {
-                color: var(--blue);
+        @media (min-width:$smallTablet-min) {
+            &:hover {
+                span {
+                    color: var(--blue);
+                }
             }
         }
     }
