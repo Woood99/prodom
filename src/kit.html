@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Ui Kit</title>
+    <link rel="preload" href="fonts/ManropeRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeMedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeSemibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body" style="padding: 20px;">
+    <div class="site-container">
+        <div class="container">
+            <div class="block">
+                <div>
+                    <h4>Buttons</h4>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-reset btn-primary">Primary</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-reset btn-primary">⚡️ Заказать звонок</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-reset btn-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <style>
+        h4:not([class]) {
+            font-size: 30px;
+            line-height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .block {
+            padding: 20px 0;
+        }
+
+        .block:first-child {
+            padding-top: 0;
+        }
+
+        .block:last-child {
+            padding-bottom: 0;
+        }
+
+        .block:not(:first-child) {
+            border-top: 1px solid gray;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+    </style>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

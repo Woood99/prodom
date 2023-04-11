@@ -1,9 +1,9 @@
 // main
-$fontFamily: "asd";
-$fontSize: 14;
+$fontFamily: "Manrope";
+$fontSize: 16;
 $minWidth: 320;
 $maxWidth: 1920;
-$contentWidth: 1170;
+$contentWidth: 1296;
 $containerOffset: 15;
 $containerWidth: calc($contentWidth + ($containerOffset * 2));
 
@@ -13,9 +13,12 @@ $mainColor: #000; // Цвет шрифта по умолчанию
 
 :root {
 
-    // additional colors
-    --accent: #000;
-    --primary: #fff;
+    // colors
+    --white: #fff;
+    --black: #000;
+    --blue: #3a66ff;
+    --dark: #212121;
+
 
     // z-index
     --index-1: 1;

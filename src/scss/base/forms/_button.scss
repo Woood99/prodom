@@ -14,3 +14,53 @@
         background-color $transitionSpeed $transitionFunction,
         border $transitionSpeed $transitionFunction;
 }
+
+
+.btn-primary {
+    height: 58px;
+    padding: 0 28px;
+
+    color: var(--white);
+    background-color: var(--black);
+
+    border-radius: 15px;
+
+    font-size: 16px;
+    line-height: math.div(22, 16);
+    font-weight: 500;
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--blue);
+    }
+
+    &:focus {
+        color: var(--white);
+        background-color: var(--blue);
+    }
+}
+
+.btn-secondary {
+    height: 58px;
+    padding: 0 28px;
+
+    color: var(--black);
+    background-color: transparent;
+    border: 1px solid currentColor;
+
+    border-radius: 15px;
+
+    font-size: 16px;
+    line-height: math.div(22, 16);
+    font-weight: 500;
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--blue);
+    }
+
+    &:focus {
+        color: var(--white);
+        background-color: var(--blue);
+    }
+}
