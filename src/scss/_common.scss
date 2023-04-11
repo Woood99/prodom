@@ -1,13 +1,39 @@
 .title-1 {
     color: var(--dark);
-    
+
     @include adaptiveValue("font-size", 48, 28);
-    line-height: math.div(48 , 58);
+    line-height: math.div(58, 48);
     font-weight: 700;
+}
+
+.title-2 {
+    color: var(--dark);
+
+    @include adaptiveValue("font-size", 38, 22);
+    line-height: math.div(42, 38);
+    font-weight: 500;
+}
+
+.subtitle-number {
+    color: var(--blue);
+    background-color: #F3F6FF;
+
+    letter-spacing: 0.11em;
+    font-size: 20px;
+    line-height: math.div(21, 20);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 22px;
+    border-radius: 42px;
 }
 
 .subtitle {}
 
-.text-center{
+.text-center {
     text-align: center;
 }
