@@ -10,6 +10,7 @@
 }
 
 .btn {
+    white-space: nowrap;
     transition: color $transitionSpeed $transitionFunction,
         background-color $transitionSpeed $transitionFunction,
         border $transitionSpeed $transitionFunction;
@@ -40,6 +41,12 @@
         color: var(--white);
         background-color: var(--blue);
     }
+
+    @media (max-width:$tablet-max) {
+        height: 44px;
+        padding: 0 22px;
+        font-size: 13px;
+    }
 }
 
 .btn-secondary {
@@ -66,5 +73,11 @@
     &:focus {
         color: var(--white);
         background-color: var(--blue);
+    }
+
+    @media (max-width:$tablet-max) {
+        height: 44px;
+        padding: 0 22px;
+        font-size: 13px;
     }
 }

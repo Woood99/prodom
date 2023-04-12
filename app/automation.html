@@ -26,12 +26,14 @@
             <a href="#" class="header__logo">
                 <img loading="lazy" src="./img/logo.svg" width="131" height="25" alt="продом">
             </a>
-            <nav class="header__nav nav">
+            <nav class="header__nav nav" data-menu>
                 <ul class="nav__list list-reset">
                     <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Продукты и решения</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Внедрение</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+                </ul>
+                <ul class="nav__list list-reset">
                     <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
@@ -44,8 +46,15 @@
                         +7 495 135-56-51
                     </span>
                 </a>
-                <button type="button" class="btn btn-reset btn-primary header__call">⚡ Заказать звонок</button>
+                <button type="button" class="btn btn-reset btn-primary header__call" data-da=".header__nav,768,3">
+                    ⚡ Заказать звонок
+                </button>
             </div>
+            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
 </header>
@@ -99,6 +108,71 @@
                 <img loading="lazy" src="./img/crm-images.jpg" width="967" height="609" alt="CRM и электронный журнал">
             </picture>
         </div>
+    </div>
+</section>
+
+            <section class="history-automation">
+    <div class="history-automation__container container">
+        <div class="history-automation__body">
+            <div class="history-automation__item">
+                <h3 class="history-automation__title title-3">
+                    Смотрите <span>историю заявок</span>,
+                    проверяйте статус, слушайте записи
+                </h3>
+                <div class="history-automation__images">
+                    <picture>
+                        <source srcset="./img/history-images.webp" type="image/webp">
+                        <img loading="lazy" src="./img/history-images.jpg" width="229" height="156" alt="Картинка">
+                    </picture>
+                </div>
+            </div>
+            <div class="history-automation__item">
+                <div class="history-automation__images">
+                    <picture>
+                        <source srcset="./img/avatars-decor-2.webp" type="image/webp">
+                        <img loading="lazy" src="./img/avatars-decor-2.jpg" width="164" height="72" alt="Картинка">
+                    </picture>
+                </div>
+                <h3 class="history-automation__title title-3">
+                    Назначайте <span>конкретных исполнителей</span>
+                    для конкретных задач
+                </h3>
+            </div>
+            <div class="history-automation__item">
+                <h3 class="history-automation__title title-3">
+                    Получайте <span>моментальные оповещения</span> обо всех изменениях в системе
+                </h3>
+                <div class="history-automation__elements">
+                    <div class="item-primary item-primary--orange">
+                        <div class="item-primary__icon">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#alarm"></use>
+                            </svg>
+                        </div>
+                        <h3 class="item-primary__title">
+                            Новая заявка от жителя
+                        </h3>
+                        <p class="item-primary__descr">
+                            Течь в санузле, нужен сантехник
+                        </p>
+                    </div>
+                    <div class="item-primary item-primary--green">
+                        <div class="item-primary__icon">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#tick"></use>
+                            </svg>
+                        </div>
+                        <h3 class="item-primary__title">
+                            Заявка №348321 выполнена
+                        </h3>
+                        <p class="item-primary__descr">
+                            Ангарская 16, кв 72
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-reset btn-primary history-automation__btn">Демонстрация</button>
     </div>
 </section>
 

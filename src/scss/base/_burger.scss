@@ -1,63 +1,62 @@
 .burger {
-    --burger-width: 30px;
-    --burger-height: 30px;
+    --burger-width: 26px;
+    --burger-height: 18px;
     --burger-line-height: 2px;
-
     position: relative;
+    z-index: 12;
     border: none;
     padding: 0;
     width: var(--burger-width);
     height: var(--burger-height);
-    color: #000;
+    color: var(--blue);
     background-color: transparent;
     cursor: pointer;
+    transform: rotate(0);
 
-    &::before,
-    &::after {
-        content: "";
+    span {
+        display: block;
         position: absolute;
-        left: 0;
         width: 100%;
         height: var(--burger-line-height);
         background-color: currentColor;
-        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    &::before {
-        top: 0;
-    }
-
-    &::after {
-        top: calc(100% - var(--burger-line-height));
-    }
-
-    &__line {
-        position: absolute;
+        border-radius: 9px;
+        opacity: 1;
         left: 0;
-        top: 50%;
-        width: 100%;
-        height: var(--burger-line-height);
-        background-color: currentColor;
-        transform: translateY(-50%);
-        transition: transform 0.3s ease-in-out;
+        transform: rotate(0);
+        transition: 435ms ease-in-out;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-100%);
+            top: 100%;
+        }
     }
+
 
     &--active {
-        &::before {
-            top: 50%;
-            transform: rotate(45deg);
-            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-        }
+        span {
+            &:nth-child(1) {
+                top: 9px;
+                transform: rotate(135deg) translateY(-50%);
+            }
 
-        &::after {
-            top: 50%;
-            transform: rotate(-45deg);
-            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-        }
+            &:nth-child(2) {
+                opacity: 0;
+                left: 40px;
+            }
 
-        .burger__line {
-            transform: scale(0);
-            transition: transform 0.3s ease-in-out;
+            &:nth-child(3) {
+                top: 9px;
+                transform: rotate(-135deg) translateY(-50%);
+            }
         }
     }
 }

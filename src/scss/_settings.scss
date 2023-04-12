@@ -101,3 +101,9 @@ a {
     margin: 0;
     padding: 0;
 }
+
+.main {
+    @media (max-width:$tablet-max) {
+        margin-top: calc(var(--header-height) + 16px);
+    }
+}

@@ -1,7 +1,7 @@
 .title-1 {
     color: var(--dark);
 
-    @include adaptiveValue("font-size", 48, 28);
+    @include adaptiveValue("font-size", 48, 26);
     line-height: math.div(58, 48);
     font-weight: 700;
 }
@@ -11,6 +11,14 @@
 
     @include adaptiveValue("font-size", 38, 22);
     line-height: math.div(42, 38);
+    font-weight: 500;
+}
+
+.title-3 {
+    color: var(--dark);
+
+    @include adaptiveValue("font-size", 22, 16);
+    line-height: math.div(30, 22);
     font-weight: 500;
 }
 
@@ -30,9 +38,13 @@
 
     padding: 8px 22px;
     border-radius: 42px;
-}
 
-.subtitle {}
+    @media (max-width:$smallTablet-max) {
+        font-size: 14px;
+        border-radius: 28px;
+        padding: 8px 16px;
+    }
+}
 
 .text-center {
     text-align: center;

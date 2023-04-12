@@ -1,0 +1,126 @@
+.history-automation {
+    margin-top: 70px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+
+        @media (max-width:$desktop) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 16px;
+        }
+    }
+
+    &__item {
+        padding: 40px 38px;
+
+        background-color: #FBFBFB;
+        border: 1px solid #E7EAF2;
+        border-radius: 39px;
+
+        display: flex;
+        flex-direction: column;
+
+        &:nth-child(1) {
+            .history-automation__images {
+                margin-top: auto;
+            }
+        }
+
+        &:nth-child(2) {}
+
+        &:nth-child(3) {
+            .history-automation__elements {
+                margin-top: auto;
+            }
+
+            @media (max-width:$desktop) {
+                grid-column: 1/-1;
+            }
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 20px;
+            border-radius: 18px;
+        }
+    }
+
+    &__title {
+        span {
+            color: var(--blue);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        &:last-child {
+            margin-top: auto;
+        }
+    }
+
+    &__images {}
+
+    &__elements {
+        background: #DAE1FE;
+        border-radius: 34px;
+
+        padding: 16px 24px;
+
+        .item-primary {
+            &:first-child {
+                position: relative;
+                left: 53px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width:$desktop) {
+            align-self: start;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            border-radius: 16px;
+
+            .item-primary {
+                &:first-child {
+                    left: 16px;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 72px;
+        align-self: center;
+
+        height: 68px;
+        padding: 22px 38px 24px;
+
+        font-size: 20px;
+        line-height: math.div(22, 20);
+        font-weight: 500;
+        border-radius: 18px;
+
+        @media (max-width:$smallTablet-max) {
+            height: 50px;
+            padding: 14px 38px;
+            font-size: 14px;
+            width: 80%;
+        }
+    }
+}

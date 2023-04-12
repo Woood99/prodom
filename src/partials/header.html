@@ -4,12 +4,14 @@
             <a href="#" class="header__logo">
                 <img loading="lazy" src="./img/logo.svg" width="131" height="25" alt="продом">
             </a>
-            <nav class="header__nav nav">
+            <nav class="header__nav nav" data-menu>
                 <ul class="nav__list list-reset">
                     <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Продукты и решения</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Внедрение</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+                </ul>
+                <ul class="nav__list list-reset">
                     <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
@@ -22,8 +24,15 @@
                         +7 495 135-56-51
                     </span>
                 </a>
-                <button type="button" class="btn btn-reset btn-primary header__call">⚡ Заказать звонок</button>
+                <button type="button" class="btn btn-reset btn-primary header__call" data-da=".header__nav,768,3">
+                    ⚡ Заказать звонок
+                </button>
             </div>
+            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
 </header>
