@@ -108,19 +108,8 @@
         margin-top: 72px;
         align-self: center;
 
-        height: 68px;
-        padding: 22px 38px 24px;
-
-        font-size: 20px;
-        line-height: math.div(22, 20);
-        font-weight: 500;
-        border-radius: 18px;
-
-        @media (max-width:$smallTablet-max) {
-            height: 50px;
-            padding: 14px 38px;
-            font-size: 14px;
-            width: 80%;
+        @media (max-width:$tablet-max) {
+            margin-top: 50px;
         }
     }
 }

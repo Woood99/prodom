@@ -1,0 +1,102 @@
+.app-performers-automation {
+    margin-top: 120px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1188px;
+    }
+
+    &__top {}
+
+    &__images {
+        margin-top: 65px;
+
+        img {
+            margin: 0 auto;
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 40px;
+        }
+    }
+
+    &__items {
+        margin-top: 54px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 16px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 30px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        background-color: #FBFBFB;
+        border: 1px solid #E7EAF2;
+        border-radius: 40px;
+        padding: 40px;
+        overflow: hidden;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center right;
+
+        display: flex;
+        align-items: center;
+
+        @media (max-width:$tablet-max) {
+            border-radius: 22px;
+            padding: 20px;
+            min-height: 200px;
+            align-items: start;
+        }
+    }
+
+    &__item-title {
+        max-width: 260px;
+        flex: 1 0 260px;
+
+        span {
+            color: var(--blue);
+        }
+
+        @media (max-width:$tablet-max) {
+            max-width: 200px;
+            flex: 1 0 200px;
+        }
+    }
+
+    &__item-card {
+        background: #DBE2FF;
+        border-radius: 36px;
+        padding: 30px;
+        flex: 0 0 340px;
+        margin-left: 20px;
+
+        @media (max-width:$tablet-max) {
+            margin-left: auto;
+            position: relative;
+            left: 0px;
+            padding: 20px;
+            border-radius: 18px;
+
+        }
+    }
+
+    &__btn {
+        margin-top: 85px;
+        align-self: center;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        margin-top: 70px;
+    }
+}

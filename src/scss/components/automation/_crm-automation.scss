@@ -1,50 +1,6 @@
 .crm-automation {
     margin-top: 50px;
 
-    &__container {}
-
-    &__top {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @media (max-width:$tablet-max) {
-            flex-direction: column;
-        }
-    }
-
-    &__subtitle {
-        margin-right: 20px;
-
-        @media (max-width:$tablet-max) {
-            margin-right: 0;
-        }
-    }
-
-    &__title {
-        @media (max-width:$tablet-max) {
-            margin-top: 12px;
-        }
-    }
-
-    &__descr {
-        margin: 32px auto 0;
-
-        text-align: center;
-        max-width: 842px;
-
-        color: var(--black);
-
-        font-size: 18px;
-        line-height: math.div(32, 18);
-        font-weight: 400;
-
-        @media (max-width:$tablet-max) {
-            font-size: 14px;
-            margin-top: 25px;
-        }
-    }
-
     &__images {
         margin-top: 64px;
         position: relative;

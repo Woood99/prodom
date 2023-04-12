@@ -1,0 +1,68 @@
+.card-user {
+    background-color: var(--white);
+    box-shadow: 4.5px 7px 40px rgba(51, 60, 147, 0.3);
+    border-radius: 27px;
+    padding: 22px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-left: 11px;
+
+        font-size: 11px;
+        line-height: math.div(15, 11);
+        color: var(--black);
+        font-weight: 500;
+    }
+
+    &__time {
+        margin-left: 7px;
+        padding-left: 7px;
+        color: rgba(0, 0, 0, 0.56);
+        ;
+        font-size: 10px;
+        line-height: math.div(12, 10);
+        font-weight: 400;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 2px;
+            height: 2px;
+            background-color: currentColor;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+    }
+
+    &__descr {
+        margin-top: 15px;
+
+        color: rgba(0, 0, 0, 0.8);
+
+        font-size: 11px;
+        line-height: math.div(15, 11);
+        font-weight: 500;
+    }
+
+    &__like {
+        margin-top: 15px;
+
+        width: 20px;
+        height: 22px;
+        display: block;
+    }
+}

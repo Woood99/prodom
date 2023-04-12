@@ -47,6 +47,22 @@
         padding: 0 22px;
         font-size: 13px;
     }
+
+    &--big-size {
+        font-size: 20px;
+        line-height: math.div(22, 20);
+        font-weight: 500;
+        border-radius: 18px;
+        height: 68px;
+        padding: 22px 38px 24px;
+
+        @media (max-width:$smallTablet-max) {
+            height: 50px;
+            padding: 14px 38px;
+            font-size: 14px;
+            width: 80%;
+        }
+    }
 }
 
 .btn-secondary {

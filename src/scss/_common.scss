@@ -49,3 +49,53 @@
 .text-center {
     text-align: center;
 }
+
+
+
+.top-section-info {
+
+    &__top {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width:$tablet-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__subtitle {
+        align-self: start;
+        margin-right: 20px;
+
+        @media (max-width:$tablet-max) {
+            margin-right: 0;
+            align-self: center;
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 12px;
+        }
+    }
+
+    &__descr {
+        margin: 32px auto 0;
+
+        text-align: center;
+        max-width: 842px;
+
+        color: var(--black);
+
+        font-size: 18px;
+        line-height: math.div(32, 18);
+        font-weight: 400;
+
+        @media (max-width:$tablet-max) {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}
