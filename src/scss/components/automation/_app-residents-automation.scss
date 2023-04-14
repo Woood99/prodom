@@ -1,0 +1,48 @@
+.app-residents-automation {
+    margin-top: 110px;
+
+    &__container {
+        max-width: 1188px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__top {}
+
+    &__images {
+        margin-top: 68px;
+        background: #E7EFFF;
+        border-radius: 58px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
+        }
+    }
+
+    &__list {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__btn {
+        align-self: center;
+        margin-top: 80px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        margin-top: 70px;
+    }
+}

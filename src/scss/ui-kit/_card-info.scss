@@ -1,0 +1,92 @@
+.card-info {
+    padding: 50px 43px;
+    background: #FBFBFB;
+    border: 1px solid #E7EAF2;
+    border-radius: 39px;
+
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 26, 18);
+        line-height: math.div(32, 26);
+        font-weight: 500;
+        color: var(--dark);
+    }
+
+    &__icon {
+        margin-left: 15px;
+        width: 53px;
+        height: 53px;
+
+        @media (max-width:$smallTablet-max) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__descr {
+        margin-top: 35px;
+        margin-bottom: 50px;
+
+
+        color: var(--black);
+        font-size: 16px;
+        line-height: math.div(25, 16);
+        font-weight: 400;
+
+        @media (max-width:$tablet-max) {
+            font-size: 14px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__link {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+
+        color: var(--blue);
+
+        font-size: 16px;
+        line-height: math.div(22, 16);
+        font-weight: 500;
+        transition: color $transitionSpeed $transitionFunction;
+
+        svg {
+            margin-left: 12px;
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        @media (min-width:$smallTablet-min) {
+            &:hover {
+                color: var(--blue-light);
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            font-size: 14px;
+            align-self: start;
+
+            svg {
+                margin-left: 8px;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        padding: 24px;
+        border-radius: 22px;
+    }
+}
