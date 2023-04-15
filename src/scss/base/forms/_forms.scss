@@ -1,3 +1,64 @@
+.form-primary {
+
+    &__title {
+        color: var(--dark);
+        font-size: 40px;
+        line-height: math.div(48, 40);
+    }
+
+    &__descr {
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: math.div(32, 18);
+        font-weight: 500;
+        color: var(--dark);
+
+        @media (max-width:$tablet-max) {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
+
+    &__container {
+        margin-top: 40px;
+    }
+
+    &__label {
+        height: 54px;
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 14px;
+        }
+
+        @media (max-width:$tablet-max) {
+            height: 46px;
+        }
+    }
+
+    &__agree {
+        margin-top: 21px;
+    }
+
+    &_btn {
+        margin-top: 80px;
+        width: 100%;
+
+        padding: 24px 30px;
+        height: 70px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 35px;
+        }
+    }
+}
+
+.label-primary {
+    &__input {}
+}
+
+
+
 // =============================================================================
 
 // button
@@ -6,12 +67,12 @@
 // =============================================================================
 
 // input
-// @import "input";
+@import "input";
 
 // =============================================================================
 
 // checkbox
-// @import "checkbox";
+@import "checkbox";
 
 // =============================================================================
 

@@ -4,7 +4,6 @@
     border-radius: 0;
     background-color: #fff;
     padding: 0;
-    border: 1px solid green;
 
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
@@ -20,4 +19,30 @@
 
 textarea.input-reset {
     resize: none;
+}
+
+.input-primary {
+    height: 54px;
+    width: 100%;
+
+    color: var(--dark);
+    font-size: 13px;
+    line-height: 100%;
+    font-weight: 500;
+
+    padding: 0 26px;
+
+    background: #F8FAFC;
+    border: 1px solid #E0E7FF;
+    border-radius: 16px;
+
+    &::placeholder {
+        color: #9EACD8;
+    }
+
+    @media (max-width:$smallTablet-max) {
+        height: 46px;
+        padding: 0 18px;
+        border-radius: 12px;
+    }
 }
