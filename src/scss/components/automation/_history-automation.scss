@@ -70,7 +70,21 @@
         }
     }
 
-    &__images {}
+    &__images {
+        img {
+            box-shadow: 3.96867px 6.07638px 35.084px rgba(51, 60, 147, 0.06);
+            border-radius: 41px;
+
+            @media (max-width:$smallTablet-max) {
+                width: 125px;
+                border-radius: 16px;
+            }
+        }
+
+        @media (max-width:$desktop) {
+            margin-bottom: 32px;
+        }
+    }
 
     &__elements {
         background: #DAE1FE;

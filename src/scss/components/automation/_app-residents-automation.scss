@@ -10,15 +10,69 @@
 
     &__top {}
 
+
     &__images {
-        margin-top: 68px;
-        background: #E7EFFF;
+        margin-top: 65px;
+        padding-top: 80px;
+        display: grid;
+        grid-template-columns: percent(367, 1199) percent(367, 1199) percent(367, 1199);
+        grid-column-gap: 53px;
+        justify-content: center;
+        background: #a28af0;
         border-radius: 58px;
 
+        overflow: hidden;
+        position: relative;
+        @include adaptiveValue("max-height", 673, 200);
         @media (max-width:$tablet-max) {
-            margin-top: 32px;
+            margin-top: 40px;
+            border-radius: 32px;
+            grid-column-gap: 40px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding-top: 32px;
+            border-radius: 24px;
+            grid-column-gap: 24px;
         }
     }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        margin-left: 88px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        &::before {
+            @include adaptiveValue("border-radius", 48, 16);
+            content: '';
+            width: calc(100% + (8px*2));
+            height: calc(100% + (8px*2));
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background: rgba(248, 250, 253, 0.11);
+            z-index: 1;
+
+            @media (max-width:$smallTablet-max) {
+                width: calc(100% + (5px*2));
+                height: calc(100% + (5px*2));
+                top: -5px;
+                left: -5px;
+            }
+        }
+        @media (max-width:$tablet-max){
+            margin-left: 35px;
+        }
+    }
+
 
     &__list {
         margin-top: 64px;
