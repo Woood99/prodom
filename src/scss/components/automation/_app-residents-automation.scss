@@ -24,6 +24,7 @@
         overflow: hidden;
         position: relative;
         @include adaptiveValue("max-height", 673, 200);
+
         @media (max-width:$tablet-max) {
             margin-top: 40px;
             border-radius: 32px;
@@ -68,8 +69,13 @@
                 left: -5px;
             }
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             margin-left: 35px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            margin-left: 24px;
         }
     }
 

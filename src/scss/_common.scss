@@ -46,6 +46,38 @@
     }
 }
 
+.popular-subtitle {
+    background-color: #ff604a;
+    color: var(--white);
+    border-radius: 32px;
+
+    font-size: 14px;
+    line-height: math.div(19, 14);
+    font-weight: 500;
+    padding: 9px 20px;
+
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+        width: 15px;
+        height: 17px;
+        fill: var(--white);
+        margin-right: 5px;
+    }
+
+    @media (max-width:$smallTablet-max) {
+        font-size: 12px;
+        padding: 6px 12px;
+        border-radius: 20px;
+
+        svg {
+            width: 12px;
+            height: 14px;
+        }
+    }
+}
+
 .text-center {
     text-align: center;
 }

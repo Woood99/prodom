@@ -87,3 +87,6 @@ import './functions/fix-fullheight';
 
 
 // ========================================================================================
+
+import Rellax from 'rellax';
+const heroRellax = new Rellax('.hero-primary__title');

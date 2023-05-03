@@ -1,12 +1,13 @@
 .hero-automation {
 
     &__container {
-        margin-top: 12px;
+        margin-top: 18px;
         background: linear-gradient(6.56deg, #FFFFFF -6.06%, #F3F5F8 135.59%);
         border-radius: 70px;
         text-align: center;
         position: relative;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             background: transparent;
             border-radius: 0;
         }
@@ -16,7 +17,8 @@
         padding: 42px 0 55px;
         max-width: 800px;
         margin: 0 auto;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             padding: 25px 0;
         }
     }
@@ -27,12 +29,14 @@
 
         border-radius: 42px;
 
-        font-size: 12px;
-        line-height: math.div(18 ,12 );
+        font-size: 10px;
+        line-height: math.div(21, 10);
         text-transform: uppercase;
-        letter-spacing: 1px;
-            font-weight: 500;
+        letter-spacing: 0.11em;
+        font-weight: 600;
         padding: 6px 20px;
+
+        display: inline-block;
     }
 
     &__title {
@@ -43,7 +47,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             margin-top: 25px;
         }
     }
@@ -65,25 +70,29 @@
         span {
             font-weight: 500;
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             margin-top: 25px;
             font-size: 14px;
             border-radius: 16px;
             padding: 12px;
         }
-        @media (max-width:$mobile-max){
-             font-size: 13px; 
+
+        @media (max-width:$mobile-max) {
+            font-size: 13px;
         }
     }
 
     &__btn {
         margin-top: 45px;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             margin-top: 25px;
             width: 50%;
         }
-        @media (max-width:$mobile-max){
-             width: 80%; 
+
+        @media (max-width:$mobile-max) {
+            width: 80%;
         }
     }
 
@@ -104,9 +113,11 @@
             line-height: math.div(18, 12);
             font-weight: 500;
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             position: static;
-            span{
+
+            span {
                 margin-top: 12px;
                 font-size: 10px;
             }
