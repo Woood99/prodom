@@ -131,3 +131,64 @@
         }
     }
 }
+
+
+.hero-primary {
+    margin-top: 18px;
+    background: linear-gradient(6.56deg, #FFFFFF -6.06%, #F3F5F8 135.59%);
+    border-radius: 70px;
+    padding: 80px 51px 66px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include adaptiveValue("font-size", 190, 55);
+        line-height: math.div(171, 190);
+        display: block;
+    }
+
+    &__text {
+        position: relative;
+        top: -14px;
+
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #E7EAF2;
+        backdrop-filter: blur(7.5px);
+        border-radius: 45px;
+        width: 100%;
+        padding: 46px 32px;
+        text-align: center;
+
+        font-size: 18px;
+        line-height: math.div(32, 18);
+        font-weight: 500;
+
+        p {
+            margin: 0 auto;
+            max-width: 705px;
+
+            span {
+                font-weight: 500;
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            padding: 32px 24px;
+            font-size: 14px;
+            top: -3px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 12px;
+            padding: 16px;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        padding: 56px 16px 56px;
+        border-radius: 0;
+        background: transparent;
+    }
+}
