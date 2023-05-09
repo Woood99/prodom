@@ -29,77 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
-/* harmony import */ var _functions_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/dynamic-adapt */ "./src/js/functions/dynamic-adapt.js");
-/* harmony import */ var _functions_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_functions_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _functions_fix_fullheight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/fix-fullheight */ "./src/js/functions/fix-fullheight.js");
-/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
-/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _functions_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/tabs */ "./src/js/functions/tabs.js");
+/* harmony import */ var _functions_spollers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/spollers */ "./src/js/functions/spollers.js");
+/* harmony import */ var _functions_dynamic_adapt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./functions/dynamic-adapt */ "./src/js/functions/dynamic-adapt.js");
+/* harmony import */ var _functions_dynamic_adapt__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_functions_dynamic_adapt__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _functions_fix_fullheight__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/fix-fullheight */ "./src/js/functions/fix-fullheight.js");
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_5__);
 // ========================================================================================
 
-// Бургер-меню
+
+
+
+
 
 (0,_functions_burger__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_functions_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_functions_spollers__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
 // ========================================================================================
 
-// Модальное окно
-// import popup from './functions/popup'
-// const call = new popup();
+
+const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_5___default())('.hero-primary__title');
 
 // ========================================================================================
 
-// Табы
-// import tabs from "./functions/tabs";
-// tabs();
-
-// ========================================================================================
-
-// Файл со слайдерами
 // import "./functions/sliders";
-
-// ========================================================================================
-
-// import validateForms from './functions/validate-forms';
-// const rules1 = [...];
-
-// const afterForm = () => {
-//   console.log('Произошла отправка');
-// };
-
-// validateForms('.form-1', rules1, afterForm);
-
-// ========================================================================================
-
-// Спойлеры
-// import spollers from "./functions/spollers";
-// spollers();
-
-// ========================================================================================
-
-// Звёздный рейтинг 
-// import formRating from "./functions/rating";
-// formRating();
-
-// ========================================================================================
-
-// quantity
-// import quantity from './functions/quantity'
-// quantity();
-
-// ========================================================================================
-
-// Динамический адаптив
-
-
-// ========================================================================================
-
-// Фикс фулскрин-блоков
-
-
-// ========================================================================================
-
-
-const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())('.hero-primary__title');
 
 /***/ }),
 
@@ -107,9 +62,14 @@ const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())('.hero-pr
 /*!***************************!*\
   !*** ./src/js/_vendor.js ***!
   \***************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vendor_focus_visible__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible */ "./src/js/vendor/focus-visible.js");
+/* harmony import */ var _vendor_focus_visible__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible__WEBPACK_IMPORTED_MODULE_0__);
 // ========================================================================================
+
 
 // Плагин кастом-скролла
 // import 'simplebar';
@@ -119,33 +79,6 @@ const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())('.hero-pr
 // Анимации по скроллу
 // import AOS from 'aos';
 // AOS.init();
-
-// ========================================================================================
-
-// Галерея
-
-// Документация: https://www.lightgalleryjs.com/docs/
-// Сниппет(HTML): gallery
-
-// Подключение базового набора функционала
-// import lightGallery from 'lightgallery';
-
-// Плагины
-// lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, 
-// lgShare, lgThumbnail, lgVideo, lgMediumZoom
-// import lgFullscreen from 'lightgallery/plugins/fullscreen/lg-fullscreen.min.js';
-
-// Запуск
-// const galleries = document.querySelectorAll('#galleryID');
-// galleries.forEach(gallery => {
-//     lightGallery(gallery, {
-//         // plugins: [lgFullscreen],
-//         licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
-//         speed: 500,
-//     });
-// });
-
-// ========================================================================================
 
 /***/ }),
 
@@ -373,6 +306,275 @@ window.addEventListener('resize', fixHeight);
 
 /***/ }),
 
+/***/ "./src/js/functions/spollers.js":
+/*!**************************************!*\
+  !*** ./src/js/functions/spollers.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _support_modules_dataMediaQueries__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../support-modules/dataMediaQueries */ "./src/js/support-modules/dataMediaQueries.js");
+/* harmony import */ var _support_modules_slide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../support-modules/slide */ "./src/js/support-modules/slide.js");
+
+
+
+/*
+Для родителя слойлеров пишем атрибут data-spollers
+Для заголовков слойлеров пишем атрибут data-spoller
+Если нужно включать\выключать работу спойлеров на разных размерах экранов
+пишем параметры ширины и типа брейкпоинта.
+Например: 
+data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
+data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
+Если нужно что бы в блоке открывался болько один слойлер добавляем атрибут data-one-spoller
+*/
+const spollers = () => {
+  const spollersArray = document.querySelectorAll('[data-spollers]');
+  if (spollersArray.length > 0) {
+    // Получение обычных слойлеров
+    const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
+      return !item.dataset.spollers.split(",")[0];
+    });
+    // Инициализация обычных слойлеров
+    if (spollersRegular.length) {
+      initSpollers(spollersRegular);
+    }
+    // Получение слойлеров с медиа запросами
+    let mdQueriesArray = (0,_support_modules_dataMediaQueries__WEBPACK_IMPORTED_MODULE_0__["default"])(spollersArray, "spollers");
+    if (mdQueriesArray && mdQueriesArray.length) {
+      mdQueriesArray.forEach(mdQueriesItem => {
+        // Событие
+        mdQueriesItem.matchMedia.addEventListener("change", function () {
+          initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+        });
+        initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+      });
+    }
+
+    // Инициализация
+    function initSpollers(spollersArray) {
+      let matchMedia = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      spollersArray.forEach(spollersBlock => {
+        spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+        if (matchMedia.matches || !matchMedia) {
+          spollersBlock.classList.add('_spoller-init');
+          initSpollerBody(spollersBlock);
+          spollersBlock.addEventListener("click", setSpollerAction);
+        } else {
+          spollersBlock.classList.remove('_spoller-init');
+          initSpollerBody(spollersBlock, false);
+          spollersBlock.removeEventListener("click", setSpollerAction);
+        }
+      });
+    }
+    // Работа с контентом
+    function initSpollerBody(spollersBlock) {
+      let hideSpollerBody = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
+      if (spollerTitles.length) {
+        spollerTitles = Array.from(spollerTitles).filter(item => item.closest('[data-spollers]') === spollersBlock);
+        spollerTitles.forEach(spollerTitle => {
+          if (hideSpollerBody) {
+            spollerTitle.removeAttribute('tabindex');
+            if (!spollerTitle.classList.contains('_spoller-active')) {
+              spollerTitle.nextElementSibling.hidden = true;
+            }
+          } else {
+            spollerTitle.setAttribute('tabindex', '-1');
+            spollerTitle.nextElementSibling.hidden = false;
+          }
+        });
+      }
+    }
+    function setSpollerAction(e) {
+      const el = e.target;
+      if (el.closest('[data-spoller]')) {
+        const spollerTitle = el.closest('[data-spoller]');
+        const spollersBlock = spollerTitle.closest('[data-spollers]');
+        const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
+        if (!spollersBlock.querySelectorAll('._slide').length) {
+          if (oneSpoller && !spollerTitle.classList.contains('_spoller-active')) {
+            hideSpollersBody(spollersBlock);
+          }
+          spollerTitle.classList.toggle('_spoller-active');
+          (0,_support_modules_slide__WEBPACK_IMPORTED_MODULE_1__._slideToggle)(spollerTitle.nextElementSibling, 500);
+        }
+        e.preventDefault();
+      }
+    }
+    function hideSpollersBody(spollersBlock) {
+      const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._spoller-active');
+      if (spollerActiveTitle) {
+        spollerActiveTitle.classList.remove('_spoller-active');
+        (0,_support_modules_slide__WEBPACK_IMPORTED_MODULE_1__._slideUp)(spollerActiveTitle.nextElementSibling, 500);
+      }
+    }
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (spollers);
+
+/***/ }),
+
+/***/ "./src/js/functions/tabs.js":
+/*!**********************************!*\
+  !*** ./src/js/functions/tabs.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _support_modules_getHash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../support-modules/getHash */ "./src/js/support-modules/getHash.js");
+/* harmony import */ var _support_modules_dataMediaQueries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../support-modules/dataMediaQueries */ "./src/js/support-modules/dataMediaQueries.js");
+/* harmony import */ var _support_modules_slide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../support-modules/slide */ "./src/js/support-modules/slide.js");
+
+
+
+
+/*
+Для родителя табов пишем атрибут data-tabs
+Для родителя заголовков табов пишем атрибут data-tabs-titles
+Для родителя блоков табов пишем атрибут data-tabs-body
+Для родителя блоков табов можно указать data-tabs-hash, это втключит добавление хеша
+Если нужно чтобы табы открывались с анимацией 
+добавляем к data-tabs data-tabs-animate
+По умолчанию, скорость анимации 500ms, 
+указать свою скорость можно так: data-tabs-animate="1000"
+Если нужно чтобы табы превращались в "спойлеры", на неком размере экранов, пишем параметры ширины.
+Например: data-tabs="992" - табы будут превращаться в спойлеры на экранах меньше или равно 992px
+*/
+const tabs = () => {
+  const tabs = document.querySelectorAll('[data-tabs]');
+  let tabsActiveHash = [];
+  if (tabs.length > 0) {
+    const hash = (0,_support_modules_getHash__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    if (hash && hash.startsWith('tab-')) {
+      tabsActiveHash = hash.replace('tab-', '').split('-');
+    }
+    tabs.forEach((tabsBlock, index) => {
+      tabsBlock.classList.add('_tab-init');
+      tabsBlock.setAttribute('data-tabs-index', index);
+      tabsBlock.addEventListener("click", setTabsAction);
+      initTabs(tabsBlock);
+    });
+
+    // Получение слойлеров с медиа запросами
+    let mdQueriesArray = (0,_support_modules_dataMediaQueries__WEBPACK_IMPORTED_MODULE_1__["default"])(tabs, "tabs");
+    if (mdQueriesArray && mdQueriesArray.length) {
+      mdQueriesArray.forEach(mdQueriesItem => {
+        // Событие
+        mdQueriesItem.matchMedia.addEventListener("change", function () {
+          setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+        });
+        setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+      });
+    }
+  }
+  // Установка позиций заголовков
+  function setTitlePosition(tabsMediaArray, matchMedia) {
+    tabsMediaArray.forEach(tabsMediaItem => {
+      tabsMediaItem = tabsMediaItem.item;
+      let tabsTitles = tabsMediaItem.querySelector('[data-tabs-titles]');
+      let tabsTitleItems = tabsMediaItem.querySelectorAll('[data-tabs-title]');
+      let tabsContent = tabsMediaItem.querySelector('[data-tabs-body]');
+      let tabsContentItems = tabsMediaItem.querySelectorAll('[data-tabs-item]');
+      tabsTitleItems = Array.from(tabsTitleItems).filter(item => item.closest('[data-tabs]') === tabsMediaItem);
+      tabsContentItems = Array.from(tabsContentItems).filter(item => item.closest('[data-tabs]') === tabsMediaItem);
+      tabsContentItems.forEach((tabsContentItem, index) => {
+        if (matchMedia.matches) {
+          tabsContent.append(tabsTitleItems[index]);
+          tabsContent.append(tabsContentItem);
+          tabsMediaItem.classList.add('_tab-spoller');
+        } else {
+          tabsTitles.append(tabsTitleItems[index]);
+          tabsMediaItem.classList.remove('_tab-spoller');
+        }
+      });
+    });
+  }
+  // Работа с контентом
+  function initTabs(tabsBlock) {
+    let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles]>*');
+    let tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*');
+    const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+    const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
+    if (tabsActiveHashBlock) {
+      const tabsActiveTitle = tabsBlock.querySelector('[data-tabs-titles]>._tab-active');
+      tabsActiveTitle ? tabsActiveTitle.classList.remove('_tab-active') : null;
+    }
+    if (tabsContent.length) {
+      tabsContent = Array.from(tabsContent).filter(item => item.closest('[data-tabs]') === tabsBlock);
+      tabsTitles = Array.from(tabsTitles).filter(item => item.closest('[data-tabs]') === tabsBlock);
+      tabsContent.forEach((tabsContentItem, index) => {
+        tabsTitles[index].setAttribute('data-tabs-title', '');
+        tabsContentItem.setAttribute('data-tabs-item', '');
+        if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
+          tabsTitles[index].classList.add('_tab-active');
+        }
+        tabsContentItem.hidden = !tabsTitles[index].classList.contains('_tab-active');
+      });
+    }
+  }
+  function setTabsStatus(tabsBlock) {
+    let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-title]');
+    let tabsContent = tabsBlock.querySelectorAll('[data-tabs-item]');
+    const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+    function isTabsAnamate(tabsBlock) {
+      if (tabsBlock.hasAttribute('data-tabs-animate')) {
+        return tabsBlock.dataset.tabsAnimate > 0 ? Number(tabsBlock.dataset.tabsAnimate) : 500;
+      }
+    }
+    const tabsBlockAnimate = isTabsAnamate(tabsBlock);
+    if (tabsContent.length > 0) {
+      const isHash = tabsBlock.hasAttribute('data-tabs-hash');
+      tabsContent = Array.from(tabsContent).filter(item => item.closest('[data-tabs]') === tabsBlock);
+      tabsTitles = Array.from(tabsTitles).filter(item => item.closest('[data-tabs]') === tabsBlock);
+      tabsContent.forEach((tabsContentItem, index) => {
+        if (tabsTitles[index].classList.contains('_tab-active')) {
+          if (tabsBlockAnimate) {
+            (0,_support_modules_slide__WEBPACK_IMPORTED_MODULE_2__._slideDown)(tabsContentItem, tabsBlockAnimate);
+          } else {
+            tabsContentItem.hidden = false;
+          }
+          if (isHash && !tabsContentItem.closest('.popup')) {
+            setHash(`tab-${tabsBlockIndex}-${index}`);
+          }
+        } else {
+          if (tabsBlockAnimate) {
+            (0,_support_modules_slide__WEBPACK_IMPORTED_MODULE_2__._slideUp)(tabsContentItem, tabsBlockAnimate);
+          } else {
+            tabsContentItem.hidden = true;
+          }
+        }
+      });
+    }
+  }
+  function setTabsAction(e) {
+    const el = e.target;
+    if (el.closest('[data-tabs-title]')) {
+      const tabTitle = el.closest('[data-tabs-title]');
+      const tabsBlock = tabTitle.closest('[data-tabs]');
+      if (!tabTitle.classList.contains('_tab-active') && !tabsBlock.querySelector('._slide')) {
+        let tabActiveTitle = tabsBlock.querySelectorAll('[data-tabs-title]._tab-active');
+        tabActiveTitle.length ? tabActiveTitle = Array.from(tabActiveTitle).filter(item => item.closest('[data-tabs]') === tabsBlock) : null;
+        tabActiveTitle.length ? tabActiveTitle[0].classList.remove('_tab-active') : null;
+        tabTitle.classList.add('_tab-active');
+        setTabsStatus(tabsBlock);
+      }
+      e.preventDefault();
+    }
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tabs);
+
+/***/ }),
+
 /***/ "./src/js/functions/throttle.js":
 /*!**************************************!*\
   !*** ./src/js/functions/throttle.js ***!
@@ -495,6 +697,480 @@ const getHeightBlock = (selector, nameVariable) => {
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHeightBlock);
+
+/***/ }),
+
+/***/ "./src/js/support-modules/dataMediaQueries.js":
+/*!****************************************************!*\
+  !*** ./src/js/support-modules/dataMediaQueries.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Обработа медиа запросов из атрибутов 
+const dataMediaQueries = (array, dataSetValue) => {
+  // Получение объектов с медиа запросами
+  const media = Array.from(array).filter(function (item, index, self) {
+    if (item.dataset[dataSetValue]) {
+      return item.dataset[dataSetValue].split(",")[0];
+    }
+  });
+  // Инициализация объектов с медиа запросами
+  if (media.length) {
+    const breakpointsArray = [];
+    media.forEach(item => {
+      const params = item.dataset[dataSetValue];
+      const breakpoint = {};
+      const paramsArray = params.split(",");
+      breakpoint.value = paramsArray[0];
+      breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
+      breakpoint.item = item;
+      breakpointsArray.push(breakpoint);
+    });
+    // Получаем уникальные брейкпоинты
+    let mdQueries = breakpointsArray.map(function (item) {
+      return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
+    });
+    function uniqArray(array) {
+      return array.filter(function (item, index, self) {
+        return self.indexOf(item) === index;
+      });
+    }
+    mdQueries = uniqArray(mdQueries);
+    const mdQueriesArray = [];
+    if (mdQueries.length) {
+      // Работаем с каждым брейкпоинтом
+      mdQueries.forEach(breakpoint => {
+        const paramsArray = breakpoint.split(",");
+        const mediaBreakpoint = paramsArray[1];
+        const mediaType = paramsArray[2];
+        const matchMedia = window.matchMedia(paramsArray[0]);
+        // Объекты с нужными условиями
+        const itemsArray = breakpointsArray.filter(function (item) {
+          if (item.value === mediaBreakpoint && item.type === mediaType) {
+            return true;
+          }
+        });
+        mdQueriesArray.push({
+          itemsArray,
+          matchMedia
+        });
+      });
+      return mdQueriesArray;
+    }
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataMediaQueries);
+
+/***/ }),
+
+/***/ "./src/js/support-modules/getHash.js":
+/*!*******************************************!*\
+  !*** ./src/js/support-modules/getHash.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Получение хеша в адресе сайта
+const getHash = () => {
+  if (location.hash) {
+    return location.hash.replace('#', '');
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHash);
+
+/***/ }),
+
+/***/ "./src/js/support-modules/slide.js":
+/*!*****************************************!*\
+  !*** ./src/js/support-modules/slide.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "_slideDown": () => (/* binding */ _slideDown),
+/* harmony export */   "_slideToggle": () => (/* binding */ _slideToggle),
+/* harmony export */   "_slideUp": () => (/* binding */ _slideUp)
+/* harmony export */ });
+// Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
+const _slideUp = function (target) {
+  let duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  let showmore = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  if (!target.classList.contains('_slide')) {
+    target.classList.add('_slide');
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = `${target.offsetHeight}px`;
+    target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = showmore ? `${showmore}px` : `0px`;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(() => {
+      target.hidden = !showmore ? true : false;
+      !showmore ? target.style.removeProperty('height') : null;
+      target.style.removeProperty('padding-top');
+      target.style.removeProperty('padding-bottom');
+      target.style.removeProperty('margin-top');
+      target.style.removeProperty('margin-bottom');
+      !showmore ? target.style.removeProperty('overflow') : null;
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      target.classList.remove('_slide');
+      // Создаем событие 
+      document.dispatchEvent(new CustomEvent("slideUpDone", {
+        detail: {
+          target: target
+        }
+      }));
+    }, duration);
+  }
+};
+const _slideDown = function (target) {
+  let duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  let showmore = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  if (!target.classList.contains('_slide')) {
+    target.classList.add('_slide');
+    target.hidden = target.hidden ? false : null;
+    showmore ? target.style.removeProperty('height') : null;
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = showmore ? `${showmore}px` : `0px`;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout(() => {
+      target.style.removeProperty('height');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      target.classList.remove('_slide');
+      // Создаем событие 
+      document.dispatchEvent(new CustomEvent("slideDownDone", {
+        detail: {
+          target: target
+        }
+      }));
+    }, duration);
+  }
+};
+const _slideToggle = function (target) {
+  let duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  if (target.hidden) {
+    return _slideDown(target, duration);
+  } else {
+    return _slideUp(target, duration);
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/vendor/focus-visible.js":
+/*!****************************************!*\
+  !*** ./src/js/vendor/focus-visible.js ***!
+  \****************************************/
+/***/ (() => {
+
+/**
+ * Applies the :focus-visible polyfill at the given scope.
+ * A scope in this case is either the top-level Document or a Shadow Root.
+ *
+ * @param {(Document|ShadowRoot)} scope
+ * @see https://github.com/WICG/focus-visible
+ */
+function applyFocusVisiblePolyfill(scope) {
+  var hadKeyboardEvent = true;
+  var hadFocusVisibleRecently = false;
+  var hadFocusVisibleRecentlyTimeout = null;
+  var inputTypesAllowlist = {
+    text: true,
+    search: true,
+    url: true,
+    tel: true,
+    email: true,
+    password: true,
+    number: true,
+    date: true,
+    month: true,
+    week: true,
+    time: true,
+    datetime: true,
+    'datetime-local': true
+  };
+
+  /**
+   * Helper function for legacy browsers and iframes which sometimes focus
+   * elements like document, body, and non-interactive SVG.
+   * @param {Element} el
+   */
+  function isValidFocusTarget(el) {
+    if (el && el !== document && el.nodeName !== 'HTML' && el.nodeName !== 'BODY' && 'classList' in el && 'contains' in el.classList) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Computes whether the given element should automatically trigger the
+   * `focus-visible` class being added, i.e. whether it should always match
+   * `:focus-visible` when focused.
+   * @param {Element} el
+   * @return {boolean}
+   */
+  function focusTriggersKeyboardModality(el) {
+    var type = el.type;
+    var tagName = el.tagName;
+    if (tagName === 'INPUT' && inputTypesAllowlist[type] && !el.readOnly) {
+      return true;
+    }
+    if (tagName === 'TEXTAREA' && !el.readOnly) {
+      return true;
+    }
+    if (el.isContentEditable) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Add the `focus-visible` class to the given element if it was not added by
+   * the author.
+   * @param {Element} el
+   */
+  function addFocusVisibleClass(el) {
+    if (el.classList.contains('focus-visible')) {
+      return;
+    }
+    el.classList.add('focus-visible');
+    el.setAttribute('data-focus-visible-added', '');
+  }
+
+  /**
+   * Remove the `focus-visible` class from the given element if it was not
+   * originally added by the author.
+   * @param {Element} el
+   */
+  function removeFocusVisibleClass(el) {
+    if (!el.hasAttribute('data-focus-visible-added')) {
+      return;
+    }
+    el.classList.remove('focus-visible');
+    el.removeAttribute('data-focus-visible-added');
+  }
+
+  /**
+   * If the most recent user interaction was via the keyboard;
+   * and the key press did not include a meta, alt/option, or control key;
+   * then the modality is keyboard. Otherwise, the modality is not keyboard.
+   * Apply `focus-visible` to any current active element and keep track
+   * of our keyboard modality state with `hadKeyboardEvent`.
+   * @param {KeyboardEvent} e
+   */
+  function onKeyDown(e) {
+    if (e.metaKey || e.altKey || e.ctrlKey) {
+      return;
+    }
+    if (isValidFocusTarget(scope.activeElement)) {
+      addFocusVisibleClass(scope.activeElement);
+    }
+    hadKeyboardEvent = true;
+  }
+
+  /**
+   * If at any point a user clicks with a pointing device, ensure that we change
+   * the modality away from keyboard.
+   * This avoids the situation where a user presses a key on an already focused
+   * element, and then clicks on a different element, focusing it with a
+   * pointing device, while we still think we're in keyboard modality.
+   * @param {Event} e
+   */
+  function onPointerDown(e) {
+    hadKeyboardEvent = false;
+  }
+
+  /**
+   * On `focus`, add the `focus-visible` class to the target if:
+   * - the target received focus as a result of keyboard navigation, or
+   * - the event target is an element that will likely require interaction
+   *   via the keyboard (e.g. a text box)
+   * @param {Event} e
+   */
+  function onFocus(e) {
+    // Prevent IE from focusing the document or HTML element.
+    if (!isValidFocusTarget(e.target)) {
+      return;
+    }
+    if (hadKeyboardEvent || focusTriggersKeyboardModality(e.target)) {
+      addFocusVisibleClass(e.target);
+    }
+  }
+
+  /**
+   * On `blur`, remove the `focus-visible` class from the target.
+   * @param {Event} e
+   */
+  function onBlur(e) {
+    if (!isValidFocusTarget(e.target)) {
+      return;
+    }
+    if (e.target.classList.contains('focus-visible') || e.target.hasAttribute('data-focus-visible-added')) {
+      // To detect a tab/window switch, we look for a blur event followed
+      // rapidly by a visibility change.
+      // If we don't see a visibility change within 100ms, it's probably a
+      // regular focus change.
+      hadFocusVisibleRecently = true;
+      window.clearTimeout(hadFocusVisibleRecentlyTimeout);
+      hadFocusVisibleRecentlyTimeout = window.setTimeout(function () {
+        hadFocusVisibleRecently = false;
+      }, 100);
+      removeFocusVisibleClass(e.target);
+    }
+  }
+
+  /**
+   * If the user changes tabs, keep track of whether or not the previously
+   * focused element had .focus-visible.
+   * @param {Event} e
+   */
+  function onVisibilityChange(e) {
+    if (document.visibilityState === 'hidden') {
+      // If the tab becomes active again, the browser will handle calling focus
+      // on the element (Safari actually calls it twice).
+      // If this tab change caused a blur on an element with focus-visible,
+      // re-apply the class when the user switches back to the tab.
+      if (hadFocusVisibleRecently) {
+        hadKeyboardEvent = true;
+      }
+      addInitialPointerMoveListeners();
+    }
+  }
+
+  /**
+   * Add a group of listeners to detect usage of any pointing devices.
+   * These listeners will be added when the polyfill first loads, and anytime
+   * the window is blurred, so that they are active when the window regains
+   * focus.
+   */
+  function addInitialPointerMoveListeners() {
+    document.addEventListener('mousemove', onInitialPointerMove);
+    document.addEventListener('mousedown', onInitialPointerMove);
+    document.addEventListener('mouseup', onInitialPointerMove);
+    document.addEventListener('pointermove', onInitialPointerMove);
+    document.addEventListener('pointerdown', onInitialPointerMove);
+    document.addEventListener('pointerup', onInitialPointerMove);
+    document.addEventListener('touchmove', onInitialPointerMove);
+    document.addEventListener('touchstart', onInitialPointerMove);
+    document.addEventListener('touchend', onInitialPointerMove);
+  }
+  function removeInitialPointerMoveListeners() {
+    document.removeEventListener('mousemove', onInitialPointerMove);
+    document.removeEventListener('mousedown', onInitialPointerMove);
+    document.removeEventListener('mouseup', onInitialPointerMove);
+    document.removeEventListener('pointermove', onInitialPointerMove);
+    document.removeEventListener('pointerdown', onInitialPointerMove);
+    document.removeEventListener('pointerup', onInitialPointerMove);
+    document.removeEventListener('touchmove', onInitialPointerMove);
+    document.removeEventListener('touchstart', onInitialPointerMove);
+    document.removeEventListener('touchend', onInitialPointerMove);
+  }
+
+  /**
+   * When the polfyill first loads, assume the user is in keyboard modality.
+   * If any event is received from a pointing device (e.g. mouse, pointer,
+   * touch), turn off keyboard modality.
+   * This accounts for situations where focus enters the page from the URL bar.
+   * @param {Event} e
+   */
+  function onInitialPointerMove(e) {
+    // Work around a Safari quirk that fires a mousemove on <html> whenever the
+    // window blurs, even if you're tabbing out of the page. ¯\_(ツ)_/¯
+    if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {
+      return;
+    }
+    hadKeyboardEvent = false;
+    removeInitialPointerMoveListeners();
+  }
+
+  // For some kinds of state, we are interested in changes at the global scope
+  // only. For example, global pointer input, global key presses and global
+  // visibility change should affect the state at every scope:
+  document.addEventListener('keydown', onKeyDown, true);
+  document.addEventListener('mousedown', onPointerDown, true);
+  document.addEventListener('pointerdown', onPointerDown, true);
+  document.addEventListener('touchstart', onPointerDown, true);
+  document.addEventListener('visibilitychange', onVisibilityChange, true);
+  addInitialPointerMoveListeners();
+
+  // For focus and blur, we specifically care about state changes in the local
+  // scope. This is because focus / blur events that originate from within a
+  // shadow root are not re-dispatched from the host element if it was already
+  // the active element in its own scope:
+  scope.addEventListener('focus', onFocus, true);
+  scope.addEventListener('blur', onBlur, true);
+
+  // We detect that a node is a ShadowRoot by ensuring that it is a
+  // DocumentFragment and also has a host property. This check covers native
+  // implementation and polyfill implementation transparently. If we only cared
+  // about the native implementation, we could just check if the scope was
+  // an instance of a ShadowRoot.
+  if (scope.nodeType === Node.DOCUMENT_FRAGMENT_NODE && scope.host) {
+    // Since a ShadowRoot is a special kind of DocumentFragment, it does not
+    // have a root element to add a class to. So, we add this attribute to the
+    // host element instead:
+    scope.host.setAttribute('data-js-focus-visible', '');
+  } else if (scope.nodeType === Node.DOCUMENT_NODE) {
+    document.documentElement.classList.add('js-focus-visible');
+    document.documentElement.setAttribute('data-js-focus-visible', '');
+  }
+}
+
+// It is important to wrap all references to global window and document in
+// these checks to support server-side rendering use cases
+// @see https://github.com/WICG/focus-visible/issues/199
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  // Make the polyfill helper globally available. This can be used as a signal
+  // to interested libraries that wish to coordinate with the polyfill for e.g.,
+  // applying the polyfill to a shadow root:
+  window.applyFocusVisiblePolyfill = applyFocusVisiblePolyfill;
+
+  // Notify interested libraries of the polyfill's presence, in case the
+  // polyfill was loaded lazily:
+  var event;
+  try {
+    event = new CustomEvent('focus-visible-polyfill-ready');
+  } catch (error) {
+    // IE11 does not support using CustomEvent as a constructor directly:
+    event = document.createEvent('CustomEvent');
+    event.initCustomEvent('focus-visible-polyfill-ready', false, false, {});
+  }
+  window.dispatchEvent(event);
+}
+if (typeof document !== 'undefined') {
+  // Apply the polyfill to the global document, so that no JavaScript
+  // coordination is required to use the polyfill in the top-level document:
+  applyFocusVisiblePolyfill(document);
+}
 
 /***/ }),
 
@@ -1089,7 +1765,6 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_vendor */ "./src/js/_vendor.js");
-/* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
 

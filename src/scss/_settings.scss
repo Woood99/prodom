@@ -90,6 +90,10 @@ a {
     position: relative;
 }
 
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 ($containerOffset + px);
