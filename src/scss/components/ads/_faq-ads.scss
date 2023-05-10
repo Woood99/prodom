@@ -1,0 +1,59 @@
+.faq-ads {
+    margin-top: 100px;
+
+    .container {
+        @media (max-width:$tablet-max) {
+            padding: 0;
+        }
+    }
+
+    &__wrapper {
+        padding: 80px 0;
+        background: linear-gradient(0deg, #1D1D1F, #1D1D1F), #FBFBFB;
+        border: 1px solid #E7EAF2;
+        border-radius: 40px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(35%, 35%);
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(89.28deg, rgba(95, 95, 250, 0) 3.91%, #6565FF 9.89%, #4242E3 44.88%, #2FC4FF 81.59%, rgba(51, 166, 249, 0) 89.27%);
+            filter: blur(134.5px);
+            z-index: -1;
+        }
+
+        @media (max-width:$tablet-max) {
+            padding: 56px 32px;
+            border: none;
+            border-radius: 18px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 24px 16px;
+        }
+    }
+
+    &__spollers {
+        max-width: 634px;
+        margin: 0 auto;
+
+        @media (max-width:$tablet-max) {
+            max-width: none;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        margin-top: 56px;
+    }
+
+    @media (max-width:$mobile-max) {
+        margin-top: 32px;
+    }
+}

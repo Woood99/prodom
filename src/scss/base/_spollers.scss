@@ -1,53 +1,85 @@
 .spollers {
     &__item {
-        font-size: 20px;
-
         &:not(:last-child) {
-            margin-bottom: 20px;
+            border-bottom: 1px solid #3F4043;
         }
     }
 
     &__title {
+        font-size: 20px;
+        line-height: math.div(28, 20);
+        font-weight: 500;
         width: 100%;
         cursor: default;
         text-align: left;
-        border: 1px solid green;
         position: relative;
+        color: var(--white);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        white-space: normal;
+        padding: 20px 0;
 
         ._spoller-init & {
             cursor: pointer;
 
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                right: 10px;
-                top: 50%;
-                background-color: #000;
-                height: 2px;
-                width: 15px;
-                transition: transform 0.5s ease 0s;
-            }
-
-            &::before {
-                transform: translate(-75%, -50%) rotate(40deg);
-            }
-
-            &::after {
-                transform: translate(0, -50%) rotate(-40deg);
-            }
-
             &._spoller-active {
-                &::before {
-                    transform: translateX(-75%) rotate(-40deg);
-                }
-
-                &::after {
-                    transform: rotate(40deg);
+                svg {
+                    fill: var(--white);
                 }
             }
         }
+
+        svg {
+            margin-left: 20px;
+            --size: 24px;
+            width: var(--size);
+            height: var(--size);
+            flex: 0 0 var(--size);
+            fill: #3F3F42;
+            transition: fill $transitionSpeed $transitionFunction;
+
+            @media (max-width:$tablet-max) {
+                --size: 20px;
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            padding: 16px 0;
+            font-size: 16px;
+        }
+
+        @media (max-width:$mobile-max) {
+            font-size: 14px;
+        }
     }
 
-    &__body {}
+    &__body {
+        padding-bottom: 20px;
+        color: var(--white);
+        font-size: 16px;
+        line-height: math.div(22, 16);
+        font-weight: 400;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+
+                @media (max-width:$tablet-max) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            padding-bottom: 16px;
+            font-size: 14px;
+        }
+
+        @media (max-width:$mobile-max) {
+            font-size: 12px;
+        }
+    }
 }
