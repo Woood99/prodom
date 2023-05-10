@@ -4,6 +4,7 @@
     border-radius: 0;
     background-color: #fff;
     padding: 0;
+    outline: none;
 
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
@@ -11,6 +12,7 @@
     &::-webkit-search-results-decoration {
         display: none;
     }
+
 }
 
 textarea.input-reset {
@@ -31,9 +33,14 @@ textarea.input-reset {
     background: #F8FAFC;
     border: 1px solid #E0E7FF;
     border-radius: 16px;
+    transition: border $transitionSpeed $transitionFunction;
 
     &::placeholder {
         color: #9EACD8;
+    }
+
+    &.focus-visible {
+        border: 1px solid var(--dark);
     }
 
     @media (max-width:$smallTablet-max) {
