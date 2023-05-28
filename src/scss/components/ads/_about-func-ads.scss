@@ -143,7 +143,22 @@
                 }
 
                 &__image {
-                    max-width: 533px;
+                    max-width: 403px;
+                    margin-bottom: 75px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        background-image: url('../img/cat.png');
+                        width: 250px;
+                        height: 250px;
+                        position: absolute;
+                        top: 120%;
+                        left: 8%;
+                        transform: translateY(-50%) translateX(-50%);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
 
                     @media (max-width:$smallTablet-max) {
                         max-width: 100%;

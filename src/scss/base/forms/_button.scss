@@ -3,6 +3,7 @@
     padding: 0;
     background: transparent;
     cursor: pointer;
+    outline: none;
 }
 
 .btn {
@@ -33,7 +34,7 @@
         }
     }
 
-    &:focus {
+    &.focus-visible {
         color: var(--white);
         background-color: var(--blue);
     }
@@ -82,9 +83,11 @@
         }
     }
 
-    &:focus {
+
+    &.focus-visible {
         color: var(--white);
         background-color: var(--blue);
+        outline: none;
     }
 
     @media (max-width:$tablet-max) {

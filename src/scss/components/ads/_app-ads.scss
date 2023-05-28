@@ -62,15 +62,6 @@
         }
     }
 
-    .form-primary {
-
-        &_btn {}
-
-        &__label {}
-
-        &__agree {}
-    }
-
     @media (max-width:$tablet-max) {
         padding: 56px 0;
     }

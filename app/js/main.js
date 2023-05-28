@@ -56,6 +56,10 @@ const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_5___default())('.hero-pr
 
 // import "./functions/sliders";
 
+GreenAudioPlayer.init({
+  selector: '.custom-audio__wrapper'
+});
+
 /***/ }),
 
 /***/ "./src/js/_vendor.js":

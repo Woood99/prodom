@@ -1,0 +1,99 @@
+.hero-skud {
+
+    &__container {}
+
+    &__inner {
+        @media (max-width:$tablet-max) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 32px 16px;
+        }
+    }
+
+    &__title {}
+
+    &__text {
+        p {
+            max-width: 740px;
+        }
+    }
+
+    &__images {
+        margin-top: 32px;
+        padding-top: 52px;
+
+        display: grid;
+        grid-template-columns: percent(272, 1188) percent(272, 1188);
+        grid-column-gap: 48px;
+        justify-content: center;
+        background: linear-gradient(357.72deg, #957BE9 -11.58%, #C4B3FF 102.86%);
+        border-radius: 377px;
+
+
+        overflow: hidden;
+        position: relative;
+        @include adaptiveValue("max-height", 501, 175);
+
+        @media (max-width:$tablet-max) {
+            border-radius: 80px;
+            grid-column-gap: 40px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding-top: 32px;
+            border-radius: 42px;
+            grid-column-gap: 24px;
+            grid-template-columns: percent(350, 1188) percent(350, 1188);
+        }
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @include adaptiveValue("border-radius", 28, 16);
+
+        img {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            @include adaptiveValue("border-radius", 28, 16);
+        }
+
+        &::before {
+            @include adaptiveValue("border-radius", 38, 16);
+            content: '';
+            width: calc(100% + (8px*2));
+            height: calc(100% + (8px*2));
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background-color: rgba(255, 255, 255, 0.11);
+            z-index: 1;
+            border-radius: 28px;
+
+            @media (max-width:$smallTablet-max) {
+                width: calc(100% + (5px*2));
+                height: calc(100% + (5px*2));
+                top: -5px;
+                left: -5px;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 56px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
+        }
+
+        @media (max-width:$mobile-max) {
+            width: 80%;
+        }
+    }
+}

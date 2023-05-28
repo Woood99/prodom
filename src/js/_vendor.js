@@ -11,3 +11,4 @@ import './vendor/focus-visible'
 // Анимации по скроллу
 // import AOS from 'aos';
 // AOS.init();
+

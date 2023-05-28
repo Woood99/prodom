@@ -20,3 +20,9 @@ const heroRellax = new Rellax('.hero-primary__title');
 // ========================================================================================
 
 // import "./functions/sliders";
+
+
+
+GreenAudioPlayer.init({
+    selector: '.custom-audio__wrapper',
+});
