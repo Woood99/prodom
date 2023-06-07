@@ -122,3 +122,56 @@
         border-radius: 18px;
     }
 }
+
+.card-info-third {
+    background: #FBFBFB;
+    border: 1px solid #E7EAF2;
+    border-radius: 56px;
+    padding: 36px 44px 54px;
+    &__icon {
+        --size: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--blue);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+          width: 15px;
+          height: 15px;
+          fill: none;
+          stroke: var(--white);
+          stroke-width: 2px;
+        }
+        @media (max-width:$tablet-max){
+            --size: 35px;
+        }
+    }
+
+    &__title {margin-top: 24px;
+        font-size: 20px;
+        line-height: math.div(27 , 20);
+        font-weight: 500;
+        color: var(--dark);
+        @media (max-width:$tablet-max){
+            margin-top: 16px;
+        }
+    }
+
+    &__descr {
+        margin-top: 24px;
+        font-size: 14px;
+line-height: math.div(23 , 14);
+color: #452145;
+@media (max-width:$tablet-max){
+    margin-top: 16px;
+}
+    }
+    @media (max-width:$tablet-max){
+        border-radius: 32px;
+        padding: 32px 24px;
+    }
+}

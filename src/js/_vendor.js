@@ -2,8 +2,10 @@
 import './vendor/focus-visible'
 
 // Плагин кастом-скролла
-// import 'simplebar';
-
+import SimpleBar from 'simplebar';
+if (window.innerWidth >= 1024) {
+    new SimpleBar(document.querySelector('.simplebar-resize'));
+}
 
 // ========================================================================================
 
@@ -11,4 +13,3 @@ import './vendor/focus-visible'
 // Анимации по скроллу
 // import AOS from 'aos';
 // AOS.init();
-

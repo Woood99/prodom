@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "О компании"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            @include('partials/about-company/hero-about-company.html')
+            @include('partials/about-company/partners-about-company.html')
+            @include('partials/about-company/form-about-company.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+
+</html>

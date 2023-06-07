@@ -144,9 +144,10 @@
     align-items: center;
 
     &__title {
-        @include adaptiveValue("font-size", 190, 55);
+        @include adaptiveValue("font-size", 190, 50);
         line-height: math.div(171, 190);
         display: block;
+       white-space: nowrap;
     }
 
     &__text {
@@ -178,6 +179,7 @@
             padding: 32px 24px;
             font-size: 14px;
             top: -3px;
+            border-radius: 24px;
         }
 
         @media (max-width:$smallTablet-max) {
@@ -304,5 +306,52 @@
 
     @media (max-width:$smallTablet-max) {
         width: 100%;
+    }
+}
+
+
+.tag{
+    height: 42px;
+    background: #3A60E8;
+border-radius: 42px;
+font-size: 14px;
+line-height: math.div(21 , 14);
+font-weight: 500;
+padding: 0 16px;
+color: var(--white);
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.nav-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    border-radius: 32px;
+
+    width: 61px;
+    height: 52px;
+
+    transition: background-color $transitionSpeed $transitionFunction;
+    svg{
+       width: 28px;
+       height: 28px;
+        fill: var(--white);
+    }
+    &_prev {
+    }
+
+    &_next {
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+    &.swiper-button-disabled{
+        background-color: #E7EAF2;
+        cursor: default;
     }
 }

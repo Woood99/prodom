@@ -1,14 +1,13 @@
 .hero-skud {
 
-    &__container {}
+    &__container {
+        @media (max-width:$tablet-max){
+            padding: 0;
+        }
+    }
 
     &__inner {
         @media (max-width:$tablet-max) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        @media (max-width:$smallTablet-max) {
             padding: 32px 16px;
         }
     }
