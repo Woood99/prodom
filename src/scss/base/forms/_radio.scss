@@ -82,10 +82,14 @@
             background-color: #e7efff;
             border: 1px solid #e0e7ff;
             color: var(--blue);
+            &.focus-visible{
+                border: 1px solid var(--blue); 
+            }
         }
     }
 
     &__label {
+        outline: none;
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -101,5 +105,9 @@
         transition: background-color $transitionSpeed $transitionFunction,
             border $transitionSpeed $transitionFunction,
             color $transitionSpeed $transitionFunction;
+
+        &.focus-visible {
+            border: 1px solid var(--blue);
+        }
     }
 }

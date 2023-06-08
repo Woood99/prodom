@@ -1,0 +1,85 @@
+.hero-contacts {
+    .container{
+        max-width: 1224px;
+    }
+    &__container {
+        @media (max-width:$tablet-max) {
+            padding: 0;
+        }
+    }
+
+    &__inner {
+        background: var(--white);
+        padding: 0;
+        border-radius: 0;
+        @media (max-width:$tablet-max) {
+            padding: 32px 16px;
+        }
+    }
+
+    &__title {}
+
+    &__content {
+        padding: 54px 100px;
+
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+
+        .col {
+            &:not(:last-child) {
+                margin-right: 32px;
+
+                @media (max-width:$tablet-max) {
+                    margin-right: 0;
+                    margin-bottom: 32px;
+                }
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 32px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 24px 16px;
+        }
+    }
+
+    &__content-title {
+        color: var(--black);
+        font-size: 18px;
+        line-height: math.div(23, 18);
+        font-weight: 500;
+
+        @media (max-width:$tablet-max) {
+            font-size: 16px;
+        }
+    }
+
+    &__content-wrapper {
+        margin-top: 24px;
+        font-size: 16px;
+        line-height: math.div(28, 16);
+        font-weight: 400;
+
+        a {
+            display: block;
+            transition: color $transitionSpeed $transitionFunction;
+
+            @media (min-width:$smallTablet-min) {
+                &:hover {
+                    color: var(--blue);
+                }
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 16px;
+            font-size: 14px;
+        }
+    }
+}

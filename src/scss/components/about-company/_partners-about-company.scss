@@ -76,7 +76,7 @@
                 }
             }
 
-            @media (min-width:$desktop-min) {
+            @media (min-width:$tablet-min) {
                 &:hover {
                     span {
                         color: var(--blue);
@@ -91,8 +91,10 @@
             @media (max-width:$smallTablet-max) {
                 --width: 175px;
             }
-            &.focus-visible{
+
+            &.focus-visible {
                 outline: none;
+
                 span {
                     color: var(--blue);
                 }
@@ -111,16 +113,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             margin-top: 32px;
         }
-        @media (max-width:$smallTablet-max){
-             display: none; 
+
+        @media (max-width:$smallTablet-max) {
+            display: none;
         }
     }
 
-    &__prev {
-    }
+    &__prev {}
 
     &__next {
         margin-left: 8px;

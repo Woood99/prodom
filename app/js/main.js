@@ -1022,7 +1022,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Плагин кастом-скролла
 
-if (window.innerWidth >= 1024) {
+if (window.innerWidth >= 1024 && document.querySelector('.simplebar-resize')) {
   new simplebar__WEBPACK_IMPORTED_MODULE_1__["default"](document.querySelector('.simplebar-resize'));
 }
 
@@ -22803,4 +22803,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map

@@ -95,8 +95,8 @@
         }
     }
 
-    @media (max-width:$desktop) {
+    @media (max-width:$tablet-max) {
         margin-top: 56px;
-        margin-bottom: 32px;
+        margin-bottom: 56px;
     }
 }

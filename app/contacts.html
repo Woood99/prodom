@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Контакты</title>
+    <link rel="preload" href="fonts/ManropeRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeMedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeSemibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ManropeExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+    <script defer src="js/main.js"></script>
+
+
+</head>
+
+
+<body class="page__body">
+    <div class="site-container">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__inner">
+            <a href="#" class="header__logo">
+                <img loading="lazy" src="./img/logo.svg" width="131" height="25" alt="продом">
+            </a>
+            <nav class="header__nav nav" data-menu>
+                <ul class="nav__list list-reset">
+                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Продукты и решения</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Внедрение</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="tel:+74951355651" class="header__tel">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#call"></use>
+                    </svg>
+                    <span>
+                        +7 495 135-56-51
+                    </span>
+                </a>
+                <button type="button" class="btn btn-reset btn-primary header__call" data-da=".header__nav,768,3">
+                    ⚡ Заказать звонок
+                </button>
+            </div>
+            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+        <main class="main">
+            <section class="hero-contacts">
+    <div class="container hero-contacts__container">
+        <div class="hero-contacts__inner hero-primary">
+            <h1 class="hero-contacts__title hero-primary__title" data-rellax-speed="-2.5">
+                контакты
+            </h1>
+            <div class="hero-contacts__content hero-primary__text">
+                <div class="col">
+                    <h2 class="hero-contacts__content-title">
+                        По любым вопросам
+                    </h2>
+                    <div class="hero-contacts__content-wrapper">
+                        <a href="mailto:support@prodom.ai">support@prodom.ai</a>
+                        <a href="tel:+7 (495) 135-56-51">+7 (495) 135-56-51</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h2 class="hero-contacts__content-title">
+                        Адрес и часы работы
+                    </h2>
+                    <div class="hero-contacts__content-wrapper">
+                        117342, Москва, ул. Бутлерова, д. 17б, офис 86 <br>
+                        Метро Беляево, Калужская <br>
+                        Пн-Пт с 9:00 до 18:00
+                    </div>
+                </div>
+                <div class="col">
+                    <h2 class="hero-contacts__content-title">
+                        Реквизиты
+                    </h2>
+                    <div class="hero-contacts__content-wrapper">
+                        ООО «Продом» <br>
+                        ИНН: 9728001711 <br>
+                        ОГРН: 1207700139668
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="form-contacts">
+    <div class="container">
+        <div class="form-contacts__container">
+
+            <form action="#" class="form-primary form-contacts__form">
+                <h4 class="form-contacts__title">
+                    Если есть вопросы — заполните форму ниже.
+                    Мы перезвоним.
+                </h4>
+                <label class="form-primary__label label-primary">
+                    <input type="text" name="Имя" class="input-reset input-primary label-primary__input"
+                        placeholder="Имя">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <input type="email" name="email" class="input-reset input-primary label-primary__input"
+                        placeholder="E-mail (необязательно)">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <input type="tel" name="phone" class="input-reset input-primary label-primary__input"
+                        placeholder="Телефон">
+                </label>
+                <div class="form-primary__choices">
+                    <span>Меня интересует:</span>
+                    <div class="radio-secondary">
+                        <div class="radio-secondary__item">
+                            <input id="o_1" class="radio-secondary__input" type="radio"
+                                value="Автоматизация для УК и ТСЖ" name="Меня интересует:" checked>
+                            <label for="o_1" class="radio-secondary__label">
+                                Автоматизация для УК и ТСЖ
+                            </label>
+                        </div>
+                        <div class="radio-secondary__item">
+                            <input id="o_2" class="radio-secondary__input" type="radio"
+                                value="Аварийно-диспетчерская служба" name="Меня интересует:">
+                            <label for="o_2" class="radio-secondary__label">
+                                Аварийно-диспетчерская служба
+                            </label>
+                        </div>
+                        <div class="radio-secondary__item">
+                            <input id="o_3" class="radio-secondary__input" type="radio"
+                                value="Система контроля и управление доступом" name="Меня интересует:">
+                            <label for="o_3" class="radio-secondary__label">
+                                Система контроля и управление доступом
+                            </label>
+                        </div>
+                        <div class="radio-secondary__item">
+                            <input id="o_4" class="radio-secondary__input" type="radio" value="Другое"
+                                name="Меня интересует:">
+                            <label for="o_4" class="radio-secondary__label">
+                                Другое
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-reset btn-primary form-primary__btn">
+                    Отправить заявку
+                </button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+        </main>
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__cols">
+            <div class="footer__col footer__col--1 footer-contacts">
+                <a href="mailto:support@prodom.ai" class="footer-contacts__item">
+                    support@prodom.ai
+                </a>
+                <a href="tel:+74951355651" class="footer-contacts__item">
+                    +7 (495) 135-56-51
+                </a>
+            </div>
+            <div class="footer__col footer__col--2 footer-nav">
+                <h3 class="footer-nav__title">
+                    Меню
+                </h3>
+                <ul class="footer-nav__list list-reset">
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Продукты
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Внедрение
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col--3 footer-nav">
+                <h3 class="footer-nav__title">
+                    Информация
+                </h3>
+                <ul class="footer-nav__list list-reset">
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Политика конфиденциальности
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Пользовательское соглашение
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col--4 footer-nav">
+                <h3 class="footer-nav__title">
+                    Вход
+                </h3>
+                <ul class="footer-nav__list list-reset">
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Для диспетчеров
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            Для СБ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__policy">
+                © ООО «Продом» | Все права защищены
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+
+</html>
