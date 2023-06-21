@@ -33,6 +33,12 @@
                 <div class="row">
                     <button type="button" class="btn btn-reset btn-secondary">Secondary</button>
                 </div>
+                <div class="row">
+                    <button type="button" class="btn btn-reset btn-primary btn-primary--blue">Primary</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-reset btn-secondary btn-secondary--blue">Secondary</button>
+                </div>
             </div>
             <div class="block">
                 <div>
@@ -128,6 +134,39 @@
                     </div>
                 </div>
             </div>
+            <div class="block">
+                <div class="row">
+                    <article class="news-card">
+                        <a href="#" class="news-card__wrapper">
+                            <div class="news-card__image ibg">
+                                <picture>
+                                    <source srcset="./img/news-card.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/news-card.jpg" class="image" width="375" height="262"
+                                        alt="Обновили кое-что в приложении: счета теперь на самом виду">
+                                </picture>
+                            </div>
+                            <div class="news-card__content">
+                                <div class="news-card__subtitle">
+                                    <span>обновления</span>
+                                </div>
+                                <time datetime="2023-03-19" class="news-card__time">19 марта 2023</time>
+                                <h2 class="news-card__title">
+                                    Обновили кое-что в приложении
+                                </h2>
+                                <p class="news-card__descr">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia magnam beatae ut.
+                                    Porro
+                                    veritatis quam eveniet quis nemo consectetur, delectus velit reprehenderit assumenda
+                                    esse
+                                    corrupti quidem quaerat officiis, aut eligendi incidunt architecto mollitia tempora
+                                    deleniti
+                                    nostrum minima quos. Voluptatum, eum!
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -143,9 +182,11 @@
         .block {
             padding: 20px 0;
         }
-        .block .spollers__title{
+
+        .block .spollers__title {
             color: black;
         }
+
         .block:first-child {
             padding-top: 0;
         }
