@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Главная"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            @include('partials/home/hero-home.html')
+            @include('partials/home/info-home.html')
+            @include('partials/home/possibilities-home.html')
+            @include('partials/home/tags-home.html')
+            @include('partials/home/about-home.html')
+            @include('partials/home/training-home.html')
+            @include('partials/home/app-home.html')
+            @include('partials/home/newsletter-home.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+
+</html>

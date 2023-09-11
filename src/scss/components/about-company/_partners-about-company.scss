@@ -37,7 +37,8 @@
             user-select: none;
             --width: 260px;
             overflow: hidden;
-
+            width: auto;
+            height: auto;
             display: flex;
             flex-direction: column;
 

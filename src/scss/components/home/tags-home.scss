@@ -1,0 +1,45 @@
+.tags-home {
+    @include adaptiveValue("margin-top", 137, 75);
+    @include adaptiveValue("margin-bottom", -263, -65);
+    border-radius: 88px;
+    background-color: #0f0f0f;
+    position: relative;
+
+    .container {
+        position: relative;
+        padding-top: 100px;
+        @include adaptiveValue("padding-bottom", 375, 100);
+    }
+
+    &__decor {
+        position: absolute;
+        bottom: -20%;
+        right: 0;
+
+    }
+
+    &__wrapper {
+        .row {
+            transform: translateX(-25px);
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__tag {
+        border: none;
+        background: rgba(255, 255, 255, 0.13);
+        color: var(--white);
+        flex-wrap: nowrap;
+        min-width: max-content;
+
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+}

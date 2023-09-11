@@ -38,7 +38,10 @@
             background-color: var(--blue);
         }
     }
-
+    &:active{
+        color: var(--white);
+        background-color: var(--blue-dark);
+    }
     &.focus-visible {
         color: var(--white);
         background-color: var(--blue);
@@ -108,7 +111,10 @@
             background-color: var(--blue);
         }
     }
-
+    &:active{
+        color: var(--white);
+        background-color: var(--blue-dark);
+    }
 
     &.focus-visible {
         color: var(--white);

@@ -1,0 +1,121 @@
+.hero-home {
+    margin-top: 30px;
+
+    &__container {}
+
+    &__wrapper {
+        border-radius: 71px;
+        background: linear-gradient(267deg, #DFE8FF 8.44%, rgba(255, 255, 255, 0.00) 59.93%);
+
+        display: flex;
+
+        padding: 70px 0 120px 61px;
+        overflow: hidden;
+    }
+
+    &__info {
+        min-width: 512px;
+        margin-right: 7px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 120%;
+        font-weight: 500;
+        color: var(--black);
+
+        span {
+            color: var(--blue);
+        }
+    }
+
+    &__descr {
+        margin-top: 20px;
+        color: var(--black);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 175%;
+    }
+
+    &__btn {
+        margin-top: 62px;
+    }
+
+    &__images {
+        flex-grow: 1;
+        max-height: 400px;
+
+        display: flex;
+    }
+
+    &__image {
+        @include adaptiveValue("border-radius", 42, 24);
+        min-width: 277px;
+        box-shadow: 0px 4.20999px 33px 0px rgba(4, 58, 163, 0.09);
+        transition: transform $transitionSpeedFast $transitionFunction;
+        --hover-prc: 32%;
+        img {
+            height: 100%;
+            @include adaptiveValue("border-radius", 42, 24);
+        }
+
+        &:nth-child(2) {
+            transform: translateX(-62%);
+
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc(-62% - var(--hover-prc)));
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            transform: translateX(calc(-277px + (-24%)));
+
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc(-277px + (-24%) - var(--hover-prc)));
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            transform: translateX(calc((-277px*2) + 14%));
+
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc((-277px*2) + 14% - var(--hover-prc)));
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            transform: translateX(calc((-277px*3) + 52%));
+
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc((-277px*3) + 52%  - var(--hover-prc)));
+                }
+            }
+        }
+
+        &:nth-child(6) {
+            transform: translateX(calc((-277px*4) + 90%));
+
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc((-277px*4) + 90% - var(--hover-prc)));
+                }
+            }
+        }
+
+        &:nth-child(7) {
+            transform: translateX(calc((-277px*5) + 128%));
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc((-277px*5) + 128% - var(--hover-prc)));
+                }
+            }
+        }
+    }
+}

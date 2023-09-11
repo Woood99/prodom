@@ -1,0 +1,99 @@
+.newsletter-home {
+    margin-top: 93px;
+    margin-bottom: 55px;
+
+    &__wrapper {
+        border-radius: 82px;
+        background: #050505;
+        text-align: center;
+        padding: 63px 35px 90px;
+        color: var(--white);
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            background-image: url("../img/decor-3.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            position: absolute;
+            bottom: -65px;
+            left: 0;
+            width: 75%;
+            height: 150%;
+        }
+    }
+
+    &__title,
+    &__descr,
+    &__form {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 166.943%;
+        letter-spacing: -1px;
+    }
+
+    &__descr {
+        margin-top: 1px;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 159.299%;
+    }
+
+    &__form {
+        margin-top: 70px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__input {
+        margin: 0;
+        width: 471px;
+        height: 80px;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        input {
+            border-radius: 26px;
+            border: none;
+            background: rgba(255, 255, 255, 0.37);
+            backdrop-filter: blur(11.5px);
+            height: 80px;
+            font-size: 18px;
+            padding: 0 38px;
+            color: var(--white);
+
+            &::placeholder {
+                color: var(--white);
+            }
+
+            &.focus-visible {
+                border: none;
+            }
+        }
+    }
+
+    &__btn {
+        margin: 0 0 0 6px;
+        width: auto;
+        height: 80px;
+        padding: 0 66px;
+        border-radius: 28px;
+
+        @media (min-width:$desktop-min) {
+            &:hover {
+                background-color: var(--blue-dark);
+                color: var(--white);
+            }
+        }
+    }
+}

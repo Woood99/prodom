@@ -98,6 +98,12 @@ a {
     margin: 0 auto;
     padding: 0 ($containerOffset + px);
     max-width: $containerWidth + px;
+    &--no-padding{
+        padding: 0;
+    }
+    &--big{
+        max-width: 1440px;
+    }
 }
 
 .list-reset {

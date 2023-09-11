@@ -1,0 +1,33 @@
+.app-home {
+
+    &__container {}
+
+    &__top {
+        background: none;
+    }
+    &__title {
+        @include adaptiveValue("font-size", 162, 50);
+        letter-spacing: -3.259px;
+    }
+
+    &__text {
+        p{
+            max-width: 500px;
+        }
+    }
+    &__form{
+        margin: 0 auto;
+        padding: 66px 70px;
+        max-width: 600px;
+        border-radius: 65px;
+background-color: var(--white);
+box-shadow: 0px 0.8px 24px 0px rgba(0, 0, 0, 0.06);
+    }
+    &__btn{
+        margin-top: 24px;
+        height: 99px;
+        @media (max-width:$tablet-max){
+            height: 60px;
+        }
+    }
+}

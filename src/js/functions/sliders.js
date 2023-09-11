@@ -4,9 +4,10 @@
 
 import Swiper, {
     Navigation,
-    Pagination
+    Pagination,
+    Autoplay
 } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 
 
@@ -42,7 +43,40 @@ function initSliders() {
         });
     }
 
+    if (document.querySelector('.info-home__slider')) {
+        const el = document.querySelector('.info-home__slider');
+        const swiper = new Swiper(el, {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 2.7,
+            spaceBetween: 16,
+            speed: 800,
+            autoHeight: true,
+            initialSlide: el.querySelectorAll('.swiper-slide').length,
+            navigation: {
+                nextEl: el.closest('.info-home').querySelector('.info-home__next'),
+                prevEl: el.closest('.info-home').querySelector('.info-home__prev'),
+            },
+        });
 
+        addAndDeleteShadow();
+        swiper.on('transitionStart', function () {
+            addAndDeleteShadow();
+        });
+
+        function addAndDeleteShadow() {
+            if (!el.closest('.info-home').querySelector('.info-home__next').hasAttribute('disabled')) {
+                el.classList.add('_shadow-right');
+            } else {
+                el.classList.remove('_shadow-right')
+            }
+            if (!el.closest('.info-home').querySelector('.info-home__prev').hasAttribute('disabled')) {
+                el.classList.add('_shadow-left');
+            } else {
+                el.classList.remove('_shadow-left')
+            }
+        }
+    }
 
 
 }

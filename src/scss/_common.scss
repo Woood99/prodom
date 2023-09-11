@@ -147,7 +147,7 @@
         @include adaptiveValue("font-size", 190, 50);
         line-height: math.div(171, 190);
         display: block;
-       white-space: nowrap;
+        white-space: nowrap;
     }
 
     &__text {
@@ -310,19 +310,41 @@
 }
 
 
-.tag{
+.tag {
     height: 42px;
-    background: #3A60E8;
-border-radius: 42px;
-font-size: 14px;
-line-height: math.div(21 , 14);
-font-weight: 500;
-padding: 0 16px;
-color: var(--white);
+    background-color: #3a60e8;
+    border-radius: 42px;
+    font-size: 14px;
+    line-height: math.div(21, 14);
+    font-weight: 500;
+    padding: 0 16px;
+    color: var(--white);
 
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.tag--white {
+        border: 1px solid rgba(180, 199, 245, 0.00);
+        background-color: #f1f3f4;
+        color: var(--black);
+    }
+
+    &.tag--big {
+        font-size: 15px;
+        letter-spacing: -0.158px;
+        border-radius: 36px;
+        height: 52px;
+        padding: 0 24px;
+    }
+
+    &.tag--very-big {
+        font-size: 24px;
+        letter-spacing: -0.245px;
+        border-radius: 56px;
+        height: 79px;
+        padding: 0 38px;
+    }
 }
 
 
@@ -337,20 +359,22 @@ justify-content: center;
     height: 52px;
 
     transition: background-color $transitionSpeed $transitionFunction;
-    svg{
-       width: 28px;
-       height: 28px;
+
+    svg {
+        width: 28px;
+        height: 28px;
         fill: var(--white);
     }
-    &_prev {
-    }
+
+    &_prev {}
 
     &_next {
-        svg{
+        svg {
             transform: rotate(180deg);
         }
     }
-    &.swiper-button-disabled{
+
+    &.swiper-button-disabled {
         background-color: #E7EAF2;
         cursor: default;
     }

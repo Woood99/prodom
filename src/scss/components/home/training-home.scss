@@ -1,0 +1,36 @@
+.training-home {
+    margin-top: 73px;
+    &__wrapper {
+        border-radius: 74px;
+background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
+padding: 70px 76px 133px;
+    }
+
+    &__title {
+        color: var(--white);
+font-size: 32px;
+font-weight: 500;
+line-height: 140%;
+letter-spacing: 0.16px;
+max-width: 660px;
+    }
+
+    &__tags {
+        margin-top: 56px;
+        .row{
+            display: flex;
+            align-items: center;
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+        
+        }
+    }
+
+    &__tag {
+        &:not(:last-child){
+            margin-right: 16px;
+        }
+    }
+}
+
