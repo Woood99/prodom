@@ -1,36 +1,63 @@
 .training-home {
-    margin-top: 73px;
+    @include adaptiveValue("margin-top", 73, 32, 1920, 576, 1);
+
     &__wrapper {
-        border-radius: 74px;
-background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
-padding: 70px 76px 133px;
+        @include adaptiveValue("border-radius", 74, 18, 1920, 576, 1);
+        background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
+        padding: 70px 76px 133px;
+
+        @media (max-width:$tablet-max) {
+            padding: 56px 32px;
+        }
     }
 
     &__title {
         color: var(--white);
-font-size: 32px;
-font-weight: 500;
-line-height: 140%;
-letter-spacing: 0.16px;
-max-width: 660px;
+        @include adaptiveValue("font-size", 32, 16, 1920, 576, 1);
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 0.16px;
+        max-width: 660px;
+
+        @media (max-width:$tablet-max) {
+            max-width: none;
+        }
     }
 
     &__tags {
         margin-top: 56px;
-        .row{
+
+        .row {
             display: flex;
             align-items: center;
-        &:not(:last-child){
-            margin-bottom: 16px;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+
+                @media (max-width:$mobile-max) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            @media (max-width:$mobile-max) {
+                flex-direction: column;
+                align-items: start;
+            }
         }
-        
+
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
         }
     }
 
     &__tag {
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-right: 16px;
+
+            @media (max-width:$mobile-max) {
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
         }
     }
 }
-

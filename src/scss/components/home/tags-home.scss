@@ -1,21 +1,25 @@
 .tags-home {
-    @include adaptiveValue("margin-top", 137, 75);
-    @include adaptiveValue("margin-bottom", -263, -65);
-    border-radius: 88px;
+    @include adaptiveValue("margin-top", 137, 75, 1920, 576, 1);
+    @include adaptiveValue("margin-bottom", -263, -65, 1920, 576, 1);
+    @include adaptiveValue("border-radius", 88, 18,1920,576,1);
     background-color: #0f0f0f;
     position: relative;
 
     .container {
         position: relative;
-        padding-top: 100px;
-        @include adaptiveValue("padding-bottom", 375, 100);
+        @include adaptiveValue("padding-top", 100, 46, 1920, 576, 1);
+        @include adaptiveValue("padding-bottom", 375, 100, 1920, 576, 1);
     }
 
     &__decor {
         position: absolute;
         bottom: -20%;
         right: 0;
-
+        @media (max-width:$smallTablet-max){
+             width: 100%;
+             top: -15%;
+             bottom: auto; 
+        }
     }
 
     &__wrapper {

@@ -48,7 +48,7 @@ function initSliders() {
         const swiper = new Swiper(el, {
             observer: true,
             observeParents: true,
-            slidesPerView: 2.7,
+            slidesPerView: 1.4,
             spaceBetween: 16,
             speed: 800,
             autoHeight: true,
@@ -56,6 +56,14 @@ function initSliders() {
             navigation: {
                 nextEl: el.closest('.info-home').querySelector('.info-home__next'),
                 prevEl: el.closest('.info-home').querySelector('.info-home__prev'),
+            },
+            breakpoints: {
+                769: {
+                    slidesPerView: 2.7,
+                },
+                550: {
+                    slidesPerView: 2.35,
+                },
             },
         });
 

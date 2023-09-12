@@ -996,7 +996,12 @@ __webpack_require__.r(__webpack_exports__);
 // ========================================================================================
 
 
-const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_6___default())('.hero-primary__title');
+const rellaxTargets = document.querySelectorAll('.hero-primary__title');
+rellaxTargets.forEach(target => {
+  if (!target.classList.contains('_no-rellax')) {
+    const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_6___default())(target);
+  }
+});
 
 // ========================================================================================
 
@@ -1299,7 +1304,7 @@ function initSliders() {
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
       observer: true,
       observeParents: true,
-      slidesPerView: 2.7,
+      slidesPerView: 1.4,
       spaceBetween: 16,
       speed: 800,
       autoHeight: true,
@@ -1307,6 +1312,14 @@ function initSliders() {
       navigation: {
         nextEl: el.closest('.info-home').querySelector('.info-home__next'),
         prevEl: el.closest('.info-home').querySelector('.info-home__prev')
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 2.7
+        },
+        550: {
+          slidesPerView: 2.35
+        }
       }
     });
     addAndDeleteShadow();

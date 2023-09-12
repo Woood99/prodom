@@ -4,29 +4,48 @@
 
     &__top {
         background: none;
+
+        @media (max-width:$tablet-max) {
+            padding: 32px 0;
+        }
     }
+
     &__title {
-        @include adaptiveValue("font-size", 162, 50);
+        @include adaptiveValue("font-size", 162, 45, 1920, 576, 1);
         letter-spacing: -3.259px;
     }
 
     &__text {
-        p{
+        p {
             max-width: 500px;
         }
     }
-    &__form{
+
+    &__form {
         margin: 0 auto;
         padding: 66px 70px;
         max-width: 600px;
-        border-radius: 65px;
-background-color: var(--white);
-box-shadow: 0px 0.8px 24px 0px rgba(0, 0, 0, 0.06);
+      border-radius: 65px;
+        background-color: var(--white);
+        box-shadow: 0px 0.8px 24px 0px rgba(0, 0, 0, 0.06);
+
+        @media (max-width:$tablet-max) {
+            margin-top: 16px;
+        }
+      @media (max-width:$smallTablet-max){
+        margin-top: 0;  
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        max-width: none;
+      }
     }
-    &__btn{
+
+    &__btn {
         margin-top: 24px;
         height: 99px;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             height: 60px;
         }
     }

@@ -100,7 +100,7 @@
         &__title {
             max-width: 670px;
 
-            @include adaptiveValue("font-size", 66, 35);
+            @include adaptiveValue("font-size", 66, 35, 1920, 576, 1);
             line-height: math.div(75, 66);
             font-weight: 500;
         }

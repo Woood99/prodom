@@ -1,11 +1,21 @@
 .possibilities-home {
     margin-top: 35px;
     position: relative;
-    &__top{
+
+    &__top {
         background: none;
+
+        @media (max-width:$tablet-max) {
+            padding: 32px 0;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 24px 0;
+        }
     }
+
     &__title {
-        @include adaptiveValue("font-size", 162, 50);
+        @include adaptiveValue("font-size", 162, 40, 1920, 576, 1);
         letter-spacing: -3.259px;
     }
 
@@ -15,46 +25,86 @@
         grid-template-columns: repeat(3, minmax(auto, 417px));
         grid-column-gap: 13px;
         grid-row-gap: 38px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 56px;
+            grid-row-gap: 13px;
+            grid-template-columns: 400px 1fr;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
+        @include adaptiveValue("border-radius", 60, 18, 1920, 576, 1);
+
         &--1 {
             background-color: #ffc5ee;
             display: flex;
             justify-content: center;
             align-items: end;
-            border-radius: 60px;
             height: 100%;
             max-height: 449px;
             position: relative;
 
-            &::before {
-                --bottom-gap: 5%;
-                content: '';
-                position: absolute;
-                width: calc(67% - 24px);
-                height: calc(100% - var(--bottom-gap));
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: var(--bottom-gap);
-                background-color: #ffc5ee;
-                box-shadow: 0px 5.1759px 31.05539px 0px #E294CC;
+            @media (min-width:$tablet-min) {
+                &::before {
+                    --bottom-gap: 5%;
+                    content: '';
+                    position: absolute;
+                    width: calc(67% - 24px);
+                    height: calc(100% - var(--bottom-gap));
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: var(--bottom-gap);
+                    background-color: #ffc5ee;
+                    box-shadow: 0px 5.1759px 31.05539px 0px #E294CC;
+                }
             }
 
             picture {
                 width: 67%;
+
+                @media (max-width:$tablet-max) {
+                    width: auto;
+                    min-height: calc(100% + 24px);
+                }
+
+                @media (max-width:$mobile-max){
+                }
             }
 
             img {
                 position: relative;
                 z-index: 2;
+
+                @media (max-width:$smallTablet-max) {
+                    height: 100%;
+                    max-width: 220px;
+                }
+            }
+
+            @media (max-width:$tablet-max) {
+                grid-column: 1/2;
+            }
+            @media (max-width:$smallTablet-max){
+                max-width: 500px;
+                min-width: 500px;
+                justify-self: center;
+                max-height: 350px;
+            }
+            @media (max-width:$mobile-max){
+                max-width: none;
+                min-width: auto; 
+                justify-self:auto; 
             }
         }
 
         &--2 {
             grid-column: 2 span;
             max-height: 449px;
-            border-radius: 60px;
             background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
             padding: 56px 0 56px 56px;
             display: flex;
@@ -69,11 +119,20 @@
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
+
+                @media (max-width:1200px) {
+                    max-width: 300px;
+                }
+
+                @media (max-width:$tablet-max) {
+                    max-width: none;
+                    text-align: center;
+                }
             }
 
             .possibilities-home__item-title {
                 color: var(--white);
-                font-size: 32px;
+                @include adaptiveValue("font-size", 32, 18, 1920, 576, 1);
                 line-height: 125%;
                 font-weight: 500;
 
@@ -87,7 +146,7 @@
                 margin-top: 24px;
                 color: var(--white);
                 font-weight: 400;
-                font-size: 18px;
+                @include adaptiveValue("font-size", 18, 16, 1920, 576, 1);
                 line-height: 160%;
             }
 
@@ -98,12 +157,40 @@
                 top: 50%;
                 transform: translateY(-50%);
                 right: -25%;
+
+                @media (max-width:1300px) {
+                    right: -40%;
+                }
+
+                @media (max-width:1200px) {
+                    right: -50%;
+                }
+
+                @media (max-width:$tablet-max) {
+                    position: static;
+                    transform: translateY(25%);
+                }
+                @media (max-width:$smallTablet-max){
+                    margin-top: 32px;
+                     transform: translateY(0); 
+                }
+            }
+
+            @media (max-width:$tablet-max) {
+                padding: 32px;
+                flex-direction: column;
+                grid-column: 2/3;
+            }
+
+            @media (max-width:$smallTablet-max) {
+                padding: 24px;
+                grid-column: 1/2;
+                max-height: none;
             }
         }
 
         &--3 {
             max-height: 483px;
-            border-radius: 60px;
             border: 1px solid #e7eaf2;
             background-color: #fbfbfb;
             padding: 86px 35px 48px;
@@ -115,15 +202,19 @@
 
             .possibilities-home__item-title {
                 margin-top: 75px;
-                font-size: 31px;
+                @include adaptiveValue("font-size", 31, 18, 1920, 576, 1);
                 font-weight: 500;
                 line-height: 125%;
+
+                @media (max-width:$tablet-max) {
+                    margin-top: 32px;
+                }
             }
 
             .possibilities-home__item-descr {
                 margin-top: 16px;
 
-                font-size: 18px;
+                @include adaptiveValue("font-size", 18, 16, 1920, 576, 1);
                 font-weight: 400;
                 line-height: 160%;
             }
@@ -131,7 +222,6 @@
 
         &--4 {
             max-height: 483px;
-            border-radius: 60px;
             border: 1px solid #e7eaf2;
             background-color: #fbfbfb;
             --gap-sides: 35px;
@@ -141,11 +231,13 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+
             .possibilities-home__item-title {
-                font-size: 31px;
+                @include adaptiveValue("font-size", 31, 18, 1920, 576, 1);
                 font-weight: 500;
                 line-height: 125%;
                 margin-bottom: 24px;
+
                 span {
                     color: var(--blue);
                 }
@@ -154,11 +246,13 @@
 
             .possibilities-home__item-tags {
                 margin: 60px calc(-1 * var(--gap-sides)) 0;
+
                 .row {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    &:not(:last-child){
+
+                    &:not(:last-child) {
                         margin-bottom: 6px;
                     }
                 }
@@ -166,33 +260,60 @@
                 .tag {
                     flex-wrap: nowrap;
                     min-width: max-content;
-                    &:not(:last-child){
+
+                    &:not(:last-child) {
                         margin-right: 6px;
                     }
                 }
             }
+
+            @media (max-width:$tablet-max) {
+                grid-column: 1/3;
+                grid-row: 3/4;
+            }
+
+            @media (max-width:$smallTablet-max) {
+                grid-column: 1/2;
+                grid-row: auto;
+            }
         }
+
         &--5 {
             max-height: 483px;
-            border-radius: 60px;
             border: 1px solid #e7eaf2;
             background-color: #fbfbfb;
             --gap-sides: 35px;
-padding: 25px 0 48px 44px;
+            padding: 25px 0 48px 44px;
             color: var(--black);
 
 
             overflow: hidden;
+
             .possibilities-home__item-title {
-                font-size: 31px;
+                @include adaptiveValue("font-size", 31, 18, 1920, 576, 1);
                 font-weight: 500;
                 line-height: 125%;
+
                 span {
                     color: var(--blue);
                 }
             }
 
-
+            @media (max-width:$tablet-max) {
+                img {
+                    max-width: 50%;
+                    margin-left: auto;
+                }
+            }
+          @media (max-width:$mobile-max){
+            img{
+                max-width: 65%;
+             }  
+          }
         }
+    }
+
+    @media (max-width:$tablet-max) {
+        margin-top: 0;
     }
 }

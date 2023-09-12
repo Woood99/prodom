@@ -14,7 +14,7 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 26, 18);
+        @include adaptiveValue("font-size", 26, 18, 1920, 576, 1);
         line-height: math.div(32, 26);
         font-weight: 500;
         color: var(--dark);
