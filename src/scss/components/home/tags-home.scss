@@ -1,24 +1,25 @@
 .tags-home {
-    @include adaptiveValue("margin-top", 137, 75, 1920, 576, 1);
-    @include adaptiveValue("margin-bottom", -263, -65, 1920, 576, 1);
-    @include adaptiveValue("border-radius", 88, 18,1920,576,1);
+    @include adaptiveValue("margin-top", 137, 75, 1296, 576, 1);
+    @include adaptiveValue("margin-bottom", -263, -65, 1296, 576, 1);
+    @include adaptiveValue("border-radius", 88, 18, 1296, 576, 1);
     background-color: #0f0f0f;
     position: relative;
 
     .container {
         position: relative;
-        @include adaptiveValue("padding-top", 100, 46, 1920, 576, 1);
-        @include adaptiveValue("padding-bottom", 375, 100, 1920, 576, 1);
+        @include adaptiveValue("padding-top", 100, 46, 1296, 576, 1);
+        @include adaptiveValue("padding-bottom", 375, 100, 1296, 576, 1);
     }
 
     &__decor {
         position: absolute;
         bottom: -20%;
         right: 0;
-        @media (max-width:$smallTablet-max){
-             width: 100%;
-             top: -15%;
-             bottom: auto; 
+
+        @media (max-width:$smallTablet-max) {
+            width: 100%;
+            top: -15%;
+            bottom: auto;
         }
     }
 
@@ -37,7 +38,7 @@
     &__tag {
         border: none;
         background: rgba(255, 255, 255, 0.13);
-        color: var(--white);
+        color: rgba(255,255,255, 0.45);
         flex-wrap: nowrap;
         min-width: max-content;
 

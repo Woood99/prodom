@@ -8,7 +8,7 @@
     }
 
     &__wrapper {
-        @include adaptiveValue("border-radius", 71, 16, 1920, 576, 1);
+        @include adaptiveValue("border-radius", 71, 16, 1296, 576, 1);
         background: linear-gradient(267deg, #DFE8FF 8.44%, rgba(255, 255, 255, 0.00) 59.93%);
 
         display: flex;
@@ -26,8 +26,8 @@
     }
 
     &__info {
-        min-width: 512px;
-        margin-right: 7px;
+        min-width: 520px;
+        margin-right: 75px;
 
         @media (max-width:$tablet-max) {
             max-width: 600px;
@@ -38,7 +38,7 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 48, 28, 1920, 576, 1);
+        @include adaptiveValue("font-size", 48, 28, 1296, 576, 1);
         line-height: 120%;
         font-weight: 500;
         color: var(--black);
@@ -51,10 +51,10 @@
     &__descr {
         margin-top: 20px;
         color: var(--black);
-        font-weight: 500;
-        @include adaptiveValue("font-size", 18, 14, 1920, 576, 1);
+        font-weight: 400;
+        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
         line-height: 175%;
-
+        max-width: 430px;
         @media (max-width:$tablet-max) {
             margin-top: 16px;
         }
@@ -71,33 +71,37 @@
 
     &__images {
         flex-grow: 1;
-        max-height: 400px;
+        max-height: 445px;
 
         display: flex;
 
         @media (max-width:$tablet-max) {
             margin-top: 48px;
-            max-height: 420px;
+            max-height: 460px;
         }
       @media (max-width:$smallTablet-max){
-        max-height: 320px; 
+        max-height: 375px; 
       }
       @media (max-width:$mobile-max){
-         max-height: 280px; 
+         max-height: 250px; 
       }
     }
 
     &__image {
-        border-radius: 42px;
-        min-width: 277px;
-        box-shadow: 0px 4.20999px 33px 0px rgba(4, 58, 163, 0.09);
-        transition: transform $transitionSpeedFast $transitionFunction;
+        border-radius: 47px;
+        min-width: 308px;
+        box-shadow: 0px 4.68361px 36.7125px 0px rgba(4, 58, 163, 0.09);
+        transition: transform $transitionSpeed ease-out;
         --active-prc: 32%;
+
         img {
             height: 100%;
-            border-radius: 42px;
+            border-radius: 47px;
+            @media (max-width:$tablet-max){
+                border-radius: 50px;;
+            }
             @media (max-width:$smallTablet-max){
-                 border-radius: 30px; 
+                 border-radius: 40px; 
             }
             @media (max-width:$mobile-max){
                 border-radius: 28px;
@@ -105,75 +109,67 @@
         }
 
         &:nth-child(2) {
-            transform: translateX(-62%);
+            transform: translateX(-61%);
 
             @media (min-width:$tablet-min) {
                 &:hover {
-                    transform: translateX(calc(-62% - var(--active-prc)));
+                    transform: translateX(calc(-61% - var(--active-prc)));
                 }
+            }
+            @media (max-width:$smallMobile-max){
+                 transform: translateX(-75%); 
             }
         }
 
         &:nth-child(3) {
-            transform: translateX(calc(-277px + (-24%)));
+            transform: translateX(calc(-308px + (-22%)));
 
             @media (min-width:$tablet-min) {
                 &:hover {
-                    transform: translateX(calc(-277px + (-24%) - var(--active-prc)));
+                    transform: translateX(calc(-308px + (-22%) - var(--active-prc)));
                 }
+            }
+            @media (max-width:$smallMobile-max){
+                transform: translateX(calc(-308px + (-44%)));
             }
         }
 
         &:nth-child(4) {
-            transform: translateX(calc((-277px*2) + 14%));
+            transform: translateX(calc((-308px*2) + 17%));
 
             @media (min-width:$tablet-min) {
                 &:hover {
-                    transform: translateX(calc((-277px*2) + 14% - var(--active-prc)));
+                    transform: translateX(calc((-308px*2) + 17% - var(--active-prc)));
                 }
+            }
+            @media (max-width:$smallMobile-max){
+                transform: translateX(calc((-308px*2) + (-9%)));    
             }
         }
 
         &:nth-child(5) {
-            transform: translateX(calc((-277px*3) + 52%));
+            transform: translateX(calc((-308px*3) + 56%));
 
             @media (min-width:$tablet-min) {
                 &:hover {
-                    transform: translateX(calc((-277px*3) + 52% - var(--active-prc)));
+                    transform: translateX(calc((-308px*3) + 56% - var(--active-prc)));
                 }
             }
-        }
-
-        &:nth-child(6) {
-            transform: translateX(calc((-277px*4) + 90%));
-
-            @media (min-width:$tablet-min) {
-                &:hover {
-                    transform: translateX(calc((-277px*4) + 90% - var(--active-prc)));
-                }
+            @media (max-width:$smallMobile-max){
+                transform: translateX(calc((-308px*3) + 21%)); 
             }
         }
-
-        &:nth-child(7) {
-            transform: translateX(calc((-277px*5) + 128%));
-
-            @media (min-width:$tablet-min) {
-                &:hover {
-                    transform: translateX(calc((-277px*5) + 128% - var(--active-prc)));
-                }
-            }
-        }
-
         @media (max-width:$tablet-max) {
-            min-width: 300px;
+            min-width: 330px;
+            border-radius: 50px;
         }
         @media (max-width:$smallTablet-max){
-             min-width: 280px; 
-             border-radius: 30px;
+             min-width: 310px; 
+             border-radius: 40px;
         }
         @media (max-width:$mobile-max){
-             min-width: 260px; 
-             border-radius: 28px;
+             min-width: 290px; 
+             border-radius: 30px;
         }
     }
 }

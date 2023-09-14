@@ -42,7 +42,6 @@ textarea.input-reset {
     &.focus-visible {
         border: 1px solid var(--dark);
     }
-
     @media (max-width:$smallTablet-max) {
         height: 46px;
         padding: 0 18px;

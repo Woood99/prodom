@@ -84,7 +84,7 @@
 
         span {
             display: block;
-            @include adaptiveValue("font-size", 56, 32, 1920, 576, 1);
+            @include adaptiveValue("font-size", 56, 32, 1296, 576, 1);
             line-height: math.div(92, 56);
             font-weight: 500;
         }

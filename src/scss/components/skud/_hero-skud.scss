@@ -34,7 +34,7 @@
 
         overflow: hidden;
         position: relative;
-        @include adaptiveValue("max-height", 501, 175, 1920, 576, 1);
+        @include adaptiveValue("max-height", 501, 175, 1296, 576, 1);
 
         @media (max-width:$tablet-max) {
             border-radius: 80px;
@@ -53,18 +53,18 @@
         height: 100%;
         width: 100%;
         position: relative;
-        @include adaptiveValue("border-radius", 28, 16, 1920, 576, 1);
+        @include adaptiveValue("border-radius", 28, 16, 1296, 576, 1);
 
         img {
             height: 100%;
             width: 100%;
             position: relative;
             z-index: 2;
-            @include adaptiveValue("border-radius", 28, 16, 1920, 576, 1);
+            @include adaptiveValue("border-radius", 28, 16, 1296, 576, 1);
         }
 
         &::before {
-            @include adaptiveValue("border-radius", 38, 16, 1920, 576, 1);
+            @include adaptiveValue("border-radius", 38, 16, 1296, 576, 1);
             content: '';
             width: calc(100% + (8px*2));
             height: calc(100% + (8px*2));

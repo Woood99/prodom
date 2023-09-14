@@ -1,30 +1,53 @@
 .training-home {
-    @include adaptiveValue("margin-top", 73, 32, 1920, 576, 1);
+    @include adaptiveValue("margin-top", 73, 32, 1296, 576, 1);
 
     &__wrapper {
-        @include adaptiveValue("border-radius", 74, 18, 1920, 576, 1);
-        background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
+        @include adaptiveValue("border-radius", 74, 18, 1296, 576, 1);
+        background-image: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
         padding: 70px 76px 133px;
-
+        
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('../img/pexels-alex-knight.png');
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: contain;
+            z-index: 0;
+            @media (max-width:$tablet-max){
+                background-position: right -8% bottom -50px;  
+            }
+            @media (max-width:$mobile-max){
+                background-position: right -50px bottom -15px;  
+            }
+        }
         @media (max-width:$tablet-max) {
             padding: 56px 32px;
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 32px 24px; 
         }
     }
 
     &__title {
         color: var(--white);
-        @include adaptiveValue("font-size", 32, 16, 1920, 576, 1);
+        @include adaptiveValue("font-size", 32, 16, 1296, 576, 1);
         font-weight: 500;
         line-height: 140%;
         letter-spacing: 0.16px;
         max-width: 660px;
 
+        position: relative;
+        z-index: 1;
         @media (max-width:$tablet-max) {
             max-width: none;
         }
     }
 
-    &__tags {
+    &__tags {        position: relative;
+        z-index: 1;
         margin-top: 56px;
 
         .row {
@@ -51,6 +74,7 @@
     }
 
     &__tag {
+background-color: #5e85f4;
         &:not(:last-child) {
             margin-right: 16px;
 

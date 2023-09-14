@@ -103,7 +103,7 @@
     }
 
     &__phone {
-        @include adaptiveValue("border-radius", 32, 16, 1920, 576, 1);
+        @include adaptiveValue("border-radius", 32, 16, 1296, 576, 1);
         position: relative;
 
         img {
@@ -111,11 +111,11 @@
             width: 100%;
             position: relative;
             z-index: var(--index-1);
-            @include adaptiveValue("border-radius", 32, 16, 1920, 576, 1);
+            @include adaptiveValue("border-radius", 32, 16, 1296, 576, 1);
         }
 
         &::before {
-            @include adaptiveValue("border-radius", 32, 16, 1920, 576, 1);
+            @include adaptiveValue("border-radius", 32, 16, 1296, 576, 1);
             content: '';
             width: calc(100% + (8px*2));
             height: calc(100% + (8px*2));

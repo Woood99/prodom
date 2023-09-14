@@ -1,7 +1,7 @@
 .about-home {
-    @include adaptiveValue("border-top-left-radius", 65, 16, 1920, 576, 1);
-    @include adaptiveValue("border-top-right-radius", 65, 16, 1920, 576, 1);
-    @include adaptiveValue("padding-top", 90, 46);
+    @include adaptiveValue("border-top-left-radius", 65, 16, 1296, 576, 1);
+    @include adaptiveValue("border-top-right-radius", 65, 16, 1296, 576, 1);
+    @include adaptiveValue("padding-top", 90, 46, 1296, 576, 1);
     background-color: var(--white);
     position: relative;
 
@@ -13,11 +13,12 @@
 
     &__title {
         color: var(--black);
-        @include adaptiveValue("font-size", 32, 16,1920,576,1);
+        @include adaptiveValue("font-size", 32, 16, 1296, 576, 1);
         font-weight: 500;
         line-height: math.div(42, 32);
         letter-spacing: -0.32px;
         margin-right: 24px;
+
         span {
             color: var(--blue);
         }
@@ -25,14 +26,15 @@
 
     &__content {
         margin-top: 155px;
-      border-radius: 74px;
+        border-radius: 74px;
         background-color: #f3f6ff;
         padding: 0 60px;
-        @media (max-width:$tablet-max){
-       padding: 0;
-       background-color: transparent;
-       border-radius: 0;
-       margin-top: 46px;
+
+        @media (max-width:$tablet-max) {
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            margin-top: 46px;
         }
     }
 
@@ -42,7 +44,8 @@
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 24px;
         grid-row-gap: 24px;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             grid-column-gap: 16px;
             grid-row-gap: 16px;
             grid-template-columns: 1fr;
@@ -51,7 +54,7 @@
     }
 
     &__item {
-        @include adaptiveValue("border-radius", 54, 18,1920,576,1);
+        @include adaptiveValue("border-radius", 54, 18, 1296, 576, 1);
         border: 1px solid #dce4fc;
         background-color: var(--white);
 
@@ -65,7 +68,8 @@
         &--1 {
             .about-home__item-icon {
                 background: #f1edff;
-                svg{
+
+                svg {
                     stroke: rgb(117, 88, 211);
                 }
             }
@@ -74,7 +78,8 @@
         &--2 {
             .about-home__item-icon {
                 background: #eaf1ff;
-                svg{
+
+                svg {
                     stroke: rgb(59, 102, 255);
                 }
             }
@@ -89,7 +94,8 @@
                 }
             }
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             padding: 24px;
         }
     }
@@ -110,12 +116,14 @@
             height: 30px;
             fill: none;
             stroke-width: 1.5px;
-            svg{
+
+            svg {
                 width: 25px;
                 height: 25px;
             }
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             width: 55px;
             height: 55px;
         }
@@ -124,7 +132,7 @@
     &__item-subtitle {
         margin-top: -18px;
         color: #141414;
-        @include adaptiveValue("font-size", 18, 16, 1920, 576, 1);
+        @include adaptiveValue("font-size", 18, 16, 1296, 576, 1);
         font-weight: 400;
         line-height: 150%;
         letter-spacing: -0.13px;
@@ -132,7 +140,7 @@
 
     &__item-title {
         color: #141414;
-        @include adaptiveValue("font-size", 60, 30, 1920, 576, 1);
+        @include adaptiveValue("font-size", 60, 30, 1296, 576, 1);
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -1px;
@@ -140,7 +148,7 @@
 
     &__item-descr {
         color: var(--black);
-        @include adaptiveValue("font-size", 18, 14,1920,576,1);
+        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
         font-weight: 400;
         line-height: 166%;
         max-width: 244px;
@@ -149,10 +157,11 @@
     &__item-link {
         margin-top: 32px;
         color: var(--blue);
-        @include adaptiveValue("font-size", 16, 13,1920,576,1);
+        @include adaptiveValue("font-size", 16, 13, 1296, 576, 1);
         font-weight: 500;
         line-height: 140%;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             margin-top: 24px;
         }
     }

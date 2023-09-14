@@ -1,7 +1,7 @@
 .title-1 {
     color: var(--dark);
 
-    @include adaptiveValue("font-size", 48, 26, 1920, 576, 1);
+    @include adaptiveValue("font-size", 48, 26, 1296, 576, 1);
     line-height: math.div(58, 48);
     font-weight: 700;
 }
@@ -9,7 +9,7 @@
 .title-2 {
     color: var(--dark);
 
-    @include adaptiveValue("font-size", 38, 22, 1920, 576, 1);
+    @include adaptiveValue("font-size", 38, 22, 1296, 576, 1);
     line-height: math.div(42, 38);
     font-weight: 500;
 }
@@ -17,7 +17,7 @@
 .title-3 {
     color: var(--dark);
 
-    @include adaptiveValue("font-size", 22, 16, 1920, 576, 1);
+    @include adaptiveValue("font-size", 22, 16, 1296, 576, 1);
     line-height: math.div(30, 22);
     font-weight: 500;
 }
@@ -144,16 +144,18 @@
     align-items: center;
 
     &__title {
-        @include adaptiveValue("font-size", 190, 50, 1920, 576, 1);
+        @include adaptiveValue("font-size", 190, 50, 1296, 576, 1);
         line-height: math.div(171, 190);
         display: block;
         white-space: nowrap;
-        &._no-rellax{
-        +.hero-primary__text{
-            @media (max-width:$tablet-max){
-                top: -9px;
+
+        &._no-rellax {
+            +.hero-primary__text {
+                top: -35px;
+                @media (max-width:$tablet-max) {
+                    top: -10px;
+                }
             }
-        }
         }
     }
 
@@ -181,6 +183,7 @@
                 font-weight: 500;
             }
         }
+
         @media (max-width:$tablet-max) {
             padding: 32px 24px;
             font-size: 14px;
@@ -193,6 +196,7 @@
             padding: 16px;
         }
     }
+
     @media (max-width:$tablet-max) {
         padding: 56px 16px 56px;
         border-radius: 0;
@@ -328,12 +332,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width:$tablet-max){
+
+    @media (max-width:$tablet-max) {
         font-size: 12px;
         height: 36px;
         padding: 0 14px;
         border-radius: 18px;
     }
+
     &.tag--white {
         border: 1px solid rgba(180, 199, 245, 0.00);
         background-color: #f1f3f4;
@@ -346,15 +352,17 @@
         border-radius: 36px;
         height: 52px;
         padding: 0 24px;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             padding: 0 20px;
             height: 44px;
             border-radius: 18px;
             font-size: 13px;
         }
-        @media (max-width:$smallTablet-max){
-             height: 40px;
-             padding: 0 16px; 
+
+        @media (max-width:$smallTablet-max) {
+            height: 40px;
+            padding: 0 16px;
         }
     }
 
@@ -364,17 +372,19 @@
         border-radius: 56px;
         height: 79px;
         padding: 0 38px;
-        @media (max-width:$tablet-max){
+        font-weight: 400;
+        @media (max-width:$tablet-max) {
             padding: 0 30px;
             height: 56px;
             border-radius: 24px;
             font-size: 18px;
         }
-    @media (max-width:$smallTablet-max){
-        font-size: 14px;
-        height: 50px;
-        padding: 0 22px;  
-    }
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 14px;
+            height: 50px;
+            padding: 0 22px;
+        }
     }
 }
 

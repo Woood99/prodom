@@ -22,7 +22,7 @@
 
         overflow: hidden;
         position: relative;
-        @include adaptiveValue("max-height", 661, 200, 1920, 576, 1);
+        @include adaptiveValue("max-height", 661, 200, 1296, 576, 1);
 
         @media (max-width:$tablet-max) {
             margin-top: 40px;
@@ -52,7 +52,7 @@
         }
 
         &::before {
-            @include adaptiveValue("border-radius", 55, 16, 1920, 576, 1);
+            @include adaptiveValue("border-radius", 55, 16, 1296, 576, 1);
             content: '';
             width: calc(100% + (8px*2));
             height: calc(100% + (8px*2));

@@ -1,5 +1,5 @@
 .form-about-company {
-    @include adaptiveValue("margin-top", 280, 125, 1920, 576, 1);
+    @include adaptiveValue("margin-top", 280, 125, 1296, 576, 1);
     margin-bottom: 47px;
 
     .container {
