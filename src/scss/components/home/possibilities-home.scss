@@ -20,7 +20,11 @@
         @include adaptiveValue("font-size", 162, 50, 1296, 420, 1);
         font-weight: 600;
     }
-
+    &__text{
+       @media (min-width:$tablet-min){
+        top: 22px; 
+       }
+    }
     &__inner {
         margin-top: 75px;
         display: grid;

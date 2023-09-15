@@ -6072,6 +6072,11 @@ textarea.input-reset {
     font-size: 3.125rem;
   }
 }
+@media (min-width: 1025px) {
+  .possibilities-home__text {
+    top: 22px;
+  }
+}
 .possibilities-home__inner {
   margin-top: 75px;
   display: -ms-grid;
@@ -7149,6 +7154,11 @@ textarea.input-reset {
 @media (max-width: 26.25em) {
   .app-home__title {
     font-size: 2.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .app-home__text {
+    top: 22px;
   }
 }
 .app-home__text p {

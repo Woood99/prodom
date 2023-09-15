@@ -25,6 +25,9 @@
     }
 
     &__text {
+        @media (min-width:$tablet-min){
+            top: 22px; 
+           }
         p {
             max-width: 750px;
         }
