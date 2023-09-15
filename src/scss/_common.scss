@@ -148,15 +148,6 @@
         line-height: math.div(171, 190);
         display: block;
         white-space: nowrap;
-
-        &._no-rellax {
-            +.hero-primary__text {
-                top: -35px;
-                @media (max-width:$tablet-max) {
-                    top: -10px;
-                }
-            }
-        }
     }
 
     &__text {

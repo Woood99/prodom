@@ -16,9 +16,7 @@ spollers();
 import Rellax from 'rellax';
 const rellaxTargets = document.querySelectorAll('.hero-primary__title');
 rellaxTargets.forEach(target => {
-    if (!target.classList.contains('_no-rellax')) {
-        const heroRellax = new Rellax(target);
-    }
+    const heroRellax = new Rellax(target);
 }) 
 
 // ========================================================================================

@@ -121,6 +121,7 @@
         max-width: 567px;
         display: flex;
         flex-direction: column;
+      justify-content: center;
         align-items: start;
 
         @media (max-width:$tablet-max) {
@@ -169,7 +170,6 @@
 
     &__descr {
         margin-top: 28px;
-        flex-grow: 1;
         color: var(--black);
         @include adaptiveValue("font-size", 18, 16, 1296, 576, 1);
         line-height: math.div(31, 18);
@@ -181,7 +181,7 @@
     }
 
     &__btn {
-        margin-top: 16px;
+        margin-top: 78px;
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;

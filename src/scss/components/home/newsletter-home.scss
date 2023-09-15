@@ -1,6 +1,6 @@
 .newsletter-home {
-    margin-top: 93px;
-    margin-bottom: 55px;
+    @include adaptiveValue("margin-top", 240, 48,1296,576,1);
+    @include adaptiveValue("margin-bottom", 80, 48,1296,576,1);
 
     &__wrapper {
         @include adaptiveValue("border-radius", 82, 18,1296,576,1);
@@ -125,9 +125,5 @@
             padding: 0 32px;
             height: 55px;
         }
-    }
-    @media (max-width:$tablet-max){
-        margin-top: 46px;
-        margin-bottom: 32px;
     }
 }

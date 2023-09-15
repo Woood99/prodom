@@ -998,9 +998,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const rellaxTargets = document.querySelectorAll('.hero-primary__title');
 rellaxTargets.forEach(target => {
-  if (!target.classList.contains('_no-rellax')) {
-    const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_6___default())(target);
-  }
+  const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_6___default())(target);
 });
 
 // ========================================================================================
@@ -1319,6 +1317,24 @@ function initSliders() {
           slidesPerView: 2.21
         }
       }
+    });
+  }
+  if (document.querySelector('.tags-home')) {
+    const container = document.querySelector('.tags-home');
+    const items = container.querySelectorAll('.tags-home__row');
+    items.forEach(item => {
+      const ticker = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](item, {
+        spaceBetween: 16,
+        centeredSlides: true,
+        speed: parseInt(item.dataset.tickerSpeed),
+        autoplay: {
+          delay: 0
+        },
+        loop: true,
+        slidesPerView: 'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
+      });
     });
   }
 }

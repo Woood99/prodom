@@ -1,26 +1,47 @@
 <section class="app-home">
     <div class="container app-home__container">
+        <img loading="lazy" src="./img/lightning-6.png" class="app-home__decor-lightning app-home__decor-lightning--1" aria-hidden="true" alt="">
+        <img loading="lazy" src="./img/lightning-1.png" class="app-home__decor-lightning app-home__decor-lightning--2" aria-hidden="true" alt="">
+        <img loading="lazy" src="./img/lightning-2.png" class="app-home__decor-lightning app-home__decor-lightning--3" aria-hidden="true" alt="">
+        <img loading="lazy" src="./img/lightning-3.png" class="app-home__decor-lightning app-home__decor-lightning--4" aria-hidden="true" alt="">
+        <img loading="lazy" src="./img/lightning-4.png" class="app-home__decor-lightning app-home__decor-lightning--5" aria-hidden="true" alt="">
+        <img loading="lazy" src="./img/lightning-5.png" class="app-home__decor-lightning app-home__decor-lightning--6" aria-hidden="true" alt="">
         <div class="app-home__top hero-primary">
-            <h1 class="app-home__title hero-primary__title _no-rellax">
-                оставьте заявку
+            <h1 class="app-home__title hero-primary__title" data-rellax-speed="-1.13" data-rellax-tablet-speed="0"  data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-percentage="0.203">
+                30 дней бесплатно
             </h1>
             <div class="app-home__text hero-primary__text">
                 <p>
-                    Укажите, какой вопрос вам интересен. Мы очень скоро
-                    свяжемся с вами и всё подробно расскажем.
+                    Попробуйте все возможности сервиса в течении 30 дней.
+                </p>
+                <p>
+                    Это бесплатно. Оставьте заявку, чтобы узнать подробности.
                 </p>
             </div>
         </div>
         <form action="#" class="app-home__form form-primary">
             <label class="form-primary__label label-primary">
-                <input type="text" name="Имя" class="input-reset input-primary label-primary__input" placeholder="Имя">
+                <input type="text" name="Имя" class="input-reset input-primary label-primary__input"
+                    placeholder="Имя">
             </label>
             <label class="form-primary__label label-primary">
-                <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
+                <input type="email" name="email" class="input-reset input-primary label-primary__input"
+                    placeholder="E-mail (необязательно)">
             </label>
-               <textarea name="text" class="input-reset form-primary__textarea textarea-primary" placeholder="Кратко опишите задачу"></textarea>
-            <button type="submit" class="btn btn-reset btn-primary form-primary__btn app-home__btn">
-                Отправить заявку
+            <label class="form-primary__label label-primary">
+                <input type="tel" name="phone" class="input-reset input-primary label-primary__input"
+                    placeholder="Телефон">
+            </label>
+            <div class="form-primary__agree checkbox">
+                <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                <label for="c_1" class="checkbox__label">
+                    <span class="checkbox__text">
+                        Соглашаюсь на обработку персональных данных
+                    </span>
+                </label>
+            </div>
+            <button type="submit" class="app-home__btn btn btn-reset btn-primary form-primary__btn">
+                Оставить заявку
             </button>
         </form>
     </div>

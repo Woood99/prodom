@@ -4,11 +4,12 @@
     @include adaptiveValue("border-radius", 88, 18, 1296, 576, 1);
     background-color: #0f0f0f;
     position: relative;
+    @include adaptiveValue("padding-top", 100, 46, 1296, 576, 1);
+    @include adaptiveValue("padding-bottom", 375, 100, 1296, 576, 1);
 
-    .container {
-        position: relative;
-        @include adaptiveValue("padding-top", 100, 46, 1296, 576, 1);
-        @include adaptiveValue("padding-bottom", 375, 100, 1296, 576, 1);
+    &__container {
+        max-width: 1920px;
+        margin: 0 auto;
     }
 
     &__decor {
@@ -23,28 +24,23 @@
         }
     }
 
-    &__wrapper {
-        .row {
-            transform: translateX(-25px);
-            display: flex;
-            align-items: center;
+    &__wrapper {}
 
-            &:not(:last-child) {
-                margin-bottom: 16px;
-            }
+    &__row {
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+        .swiper-wrapper {
+            transition-timing-function: linear;
         }
     }
 
     &__tag {
         border: none;
         background: rgba(255, 255, 255, 0.13);
-        color: rgba(255,255,255, 0.45);
+        color: rgba(255, 255, 255, 0.45);
         flex-wrap: nowrap;
-        min-width: max-content;
-
-        &:not(:last-child) {
-            margin-right: 16px;
-        }
+        max-width: max-content;
     }
 
 }

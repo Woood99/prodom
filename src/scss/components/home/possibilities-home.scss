@@ -4,7 +4,8 @@
 
     &__top {
         background: none;
-
+        padding-left: 0;    
+        padding-right: 0;
         @media (max-width:$tablet-max) {
             padding: 32px 0;
         }
@@ -16,7 +17,8 @@
 
     &__title {
         letter-spacing: -3.259px;
-        @include adaptiveValue("font-size", 162, 50, 1296, 320, 1);
+        @include adaptiveValue("font-size", 162, 50, 1296, 420, 1);
+        font-weight: 600;
     }
 
     &__inner {
