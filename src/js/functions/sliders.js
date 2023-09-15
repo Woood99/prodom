@@ -71,7 +71,7 @@ function initSliders() {
         const items = container.querySelectorAll('.tags-home__row');
         items.forEach(item => {
             const ticker = new Swiper(item, {
-                spaceBetween: 16,
+                spaceBetween: 8,
                 centeredSlides: true,
                 speed: parseInt(item.dataset.tickerSpeed),
                 autoplay: {
@@ -80,7 +80,12 @@ function initSliders() {
                 loop: true,
                 slidesPerView: 'auto',
                 allowTouchMove: false,
-                disableOnInteraction: true
+                disableOnInteraction: true,
+                breakpoints: {
+                    769: {
+                        spaceBetween: 16,
+                    },
+                },
             });
         })
     }

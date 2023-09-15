@@ -6660,9 +6660,13 @@ textarea.input-reset {
   color: rgba(255, 255, 255, 0.45);
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  white-space: nowrap;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 .about-home {

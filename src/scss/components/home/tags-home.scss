@@ -40,7 +40,9 @@
         background: rgba(255, 255, 255, 0.13);
         color: rgba(255, 255, 255, 0.45);
         flex-wrap: nowrap;
+        white-space: nowrap;
         max-width: max-content;
+        min-width: max-content;
     }
 
 }
