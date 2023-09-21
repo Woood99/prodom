@@ -65,30 +65,6 @@ function initSliders() {
             },
         });
     }
-    if (document.querySelector('.tags-home')) {
-        const container = document.querySelector('.tags-home');
-        const items = container.querySelectorAll('.tags-home__row');
-        items.forEach(item => {
-            const ticker = new Swiper(item, {
-                spaceBetween: 8,
-                centeredSlides: true,
-                speed: parseInt(item.dataset.tickerSpeed),
-                autoplay: {
-                    delay: 0
-                },
-                loop: true,
-                slidesPerView: 'auto',
-                allowTouchMove: false,
-                disableOnInteraction: true,
-                breakpoints: {
-                    769: {
-                        spaceBetween: 16,
-                    },
-                },
-            });
-        })
-    }
-
 }
 
 

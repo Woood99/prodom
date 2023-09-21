@@ -364,6 +364,7 @@
         height: 79px;
         padding: 0 38px;
         font-weight: 400;
+
         @media (max-width:$tablet-max) {
             padding: 0 30px;
             height: 56px;
@@ -419,5 +420,13 @@
     @media (max-width:$tablet-max) {
         width: 51px;
         height: 42px;
+    }
+}
+
+
+.ticker-slider{
+    .marquee3k__copy{
+        display: inline-flex !important;
+        align-items: center !important;
     }
 }

@@ -1497,6 +1497,15 @@ textarea.input-reset {
   }
 }
 
+.ticker-slider .marquee3k__copy {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
 .item-primary {
   display: -ms-grid;
   display: grid;
@@ -6075,7 +6084,7 @@ textarea.input-reset {
 }
 @media (min-width: 1025px) {
   .possibilities-home__text {
-    top: 22px;
+    top: -25px;
   }
 }
 .possibilities-home__inner {
@@ -6674,6 +6683,7 @@ textarea.input-reset {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+  margin-right: 16px;
 }
 
 .about-home {
@@ -7155,7 +7165,7 @@ textarea.input-reset {
 }
 @media (min-width: 1025px) {
   .app-home__text {
-    top: 22px;
+    top: -25px;
   }
 }
 .app-home__text p {
