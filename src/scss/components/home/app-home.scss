@@ -58,17 +58,17 @@
         z-index: 1;
 
         &--1 {
-            top: 3%;
+            top: 2.5%;
             left: 20%;
         }
 
         &--2 {
-            top: 36%;
+            top: 35%;
             left: 10%;
         }
 
         &--3 {
-            top: 46%;
+            top: 51%;
             left: 4%;
         }
 
@@ -78,13 +78,14 @@
         }
 
         &--5 {
-            top: 33%;
-            right: -4%;
+            top: 28%;
+            right: -3%;
+            z-index: -1;
         }
 
         &--6 {
-            top: 55%;
-            right: 18%;
+            top: 56%;
+            right: 17%;
         }
         @media (max-width:$tablet-max){
             display: none;

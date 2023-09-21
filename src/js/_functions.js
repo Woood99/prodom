@@ -14,10 +14,18 @@ spollers();
 // ========================================================================================
 
 import Rellax from 'rellax';
-const rellaxTargets = document.querySelectorAll('.hero-primary__title');
-rellaxTargets.forEach(target => {
-    const heroRellax = new Rellax(target);
-}) 
+const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
+const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
+rellaxTargetsTitlte.forEach(target => {
+    if (!target.classList.contains('_no-rellax')) {
+        const heroRellax = new Rellax(target);
+    }
+})
+rellaxTargetsText.forEach(target => {
+    if (!target.classList.contains('_no-rellax')) {
+        const heroRellax = new Rellax(target);
+    }
+})
 
 // ========================================================================================
 

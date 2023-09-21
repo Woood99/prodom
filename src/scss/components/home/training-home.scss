@@ -83,5 +83,12 @@ background-color: #5e85f4;
                 margin-bottom: 8px;
             }
         }
+        &.tag--big{
+letter-spacing:normal;
+border-radius: 45px;
+font-size: 16px;
+padding: 0 28px;
+height: 58px;
+        }
     }
 }

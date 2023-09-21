@@ -49,22 +49,21 @@ function initSliders() {
             observer: true,
             observeParents: true,
             slidesPerView: 1.4,
-            spaceBetween: 16,
+            spaceBetween: 19,
             speed: 800,
             autoHeight: true,
             initialSlide: 2,
-            centeredSlides: true,
-            centeredSlidesBounds: true,
+            // centeredSlides: true,
+            // centeredSlidesBounds: true,
             breakpoints: {
                 550: {
                     slidesPerView: 2.35,
                 },
                 769: {
-                    slidesPerView: 2.21,
+                    slidesPerView: 2,
                 },
             },
         });
-
     }
     if (document.querySelector('.tags-home')) {
         const container = document.querySelector('.tags-home');

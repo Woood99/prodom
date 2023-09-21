@@ -143,7 +143,7 @@
                 @include adaptiveValue("font-size", 32, 18, 1296, 576, 1);
                 line-height: 125%;
                 font-weight: 500;
-
+                max-width: 305px;
                 span {
                     display: block;
                     color: #aec2ff;

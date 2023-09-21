@@ -64,34 +64,21 @@
         text-align: left;
         white-space: normal;
         padding: 24px 24px 48px 32px;
-
         &--1 {
             .about-home__item-icon {
-                background: #f1edff;
-
-                svg {
-                    stroke: rgb(117, 88, 211);
-                }
+                background:#ffdaf2;
             }
         }
 
         &--2 {
             .about-home__item-icon {
-                background: #eaf1ff;
-
-                svg {
-                    stroke: rgb(59, 102, 255);
-                }
+                background: #a1c5ff;
             }
         }
 
         &--3 {
             .about-home__item-icon {
-                background: #fee1ff;
-
-                svg {
-                    stroke: rgb(206, 104, 208);
-                }
+                background: #b7b6ff;
             }
         }
 
@@ -114,13 +101,9 @@
         svg {
             width: 30px;
             height: 30px;
-            fill: none;
+            stroke: var(--black);
+            fill: var(--white);
             stroke-width: 1.5px;
-
-            svg {
-                width: 25px;
-                height: 25px;
-            }
         }
 
         @media (max-width:$tablet-max) {

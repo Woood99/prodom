@@ -89,13 +89,13 @@
 
 .btn-secondary {
     height: 58px;
-    padding: 0 28px;
+    padding: 0 38px;
 
     color: var(--black);
     background-color: transparent;
     border: 1px solid currentColor;
 
-    border-radius: 15px;
+    border-radius: 20px;
 
     font-size: 16px;
     line-height: math.div(22, 16);
@@ -107,18 +107,15 @@
 
     @media (min-width:$tablet-min) {
         &:hover {
-            color: var(--white);
-            background-color: var(--blue);
+            color: var(--blue);
         }
     }
     &:active{
-        color: var(--white);
-        background-color: var(--blue-dark);
+        color: var(--blue-dark);
     }
 
     &.focus-visible {
-        color: var(--white);
-        background-color: var(--blue);
+        color: var(--blue);
         outline: none;
     }
 
