@@ -996,6 +996,7 @@ __webpack_require__.r(__webpack_exports__);
 // ========================================================================================
 
 
+
 const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
 const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
 rellaxTargetsTitlte.forEach(target => {

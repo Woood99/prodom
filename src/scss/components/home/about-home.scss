@@ -9,6 +9,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width:$tablet-max) {
+            margin-left: 25px;
+        }
     }
 
     &__title {
@@ -21,6 +25,9 @@
 
         span {
             color: var(--blue);
+        }
+        @media (max-width:$tablet-max){
+            font-weight: 600;
         }
     }
 
@@ -64,9 +71,10 @@
         text-align: left;
         white-space: normal;
         padding: 24px 24px 48px 32px;
+
         &--1 {
             .about-home__item-icon {
-                background:#ffdaf2;
+                background: #ffdaf2;
             }
         }
 

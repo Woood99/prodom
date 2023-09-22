@@ -14,6 +14,7 @@ spollers();
 // ========================================================================================
 
 import Rellax from 'rellax';
+import { bottom } from '@popperjs/core';
 const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
 const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
 rellaxTargetsTitlte.forEach(target => {

@@ -25,12 +25,21 @@
     }
 
     &__text {
-        @media (min-width:$tablet-min) {
-            top: -25px;
+        @media (min-width:1200px) {
+            top: -32px;
+        }
+
+        top: 12px;
+
+        @media (max-width:$smallTablet-max) {
+            top: 8px;
         }
 
         p {
             max-width: 750px;
+            @media (max-width:$mobile-max){
+              display: inline;
+            }
         }
     }
 
@@ -45,12 +54,11 @@
 
     &__btn {
         margin-top: 40px;
-        height: 80px;
+        height: 76px;
         border-radius: 28px;
 
         @media (max-width:$tablet-max) {
-            height: 50px;
-            border-radius: 23px;
+            margin-top: 24px;
         }
     }
 

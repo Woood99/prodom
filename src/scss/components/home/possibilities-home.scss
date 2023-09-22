@@ -21,8 +21,12 @@
         font-weight: 600;
     }
     &__text{
-       @media (min-width:$tablet-min){
-        top: -25px; 
+       @media (min-width:1200px){
+        top: -32px; 
+       }
+       top: 12px;
+       @media (max-width:$smallTablet-max){
+         top: 8px; 
        }
     }
     &__inner {
@@ -148,6 +152,9 @@
                     display: block;
                     color: #aec2ff;
                 }
+                @media (max-width:$tablet-max){
+                    font-weight: 600;
+                }
             }
 
             .possibilities-home__item-descr {
@@ -216,6 +223,7 @@
 
                 @media (max-width:$tablet-max) {
                     margin-top: 32px;
+                    font-weight: 600;
                 }
             }
 
@@ -254,6 +262,9 @@
 
                 span {
                     color: var(--blue);
+                }
+                @media (max-width:$tablet-max){
+                    font-weight: 600;
                 }
             }
 
@@ -316,6 +327,7 @@
                 }
                 @media (max-width:$smallTablet-max){
                      margin-right: 24px; 
+                     font-weight: 600;
                 }
             }
 
