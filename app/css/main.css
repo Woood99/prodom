@@ -6082,12 +6082,9 @@ textarea.input-reset {
     font-size: 3.125rem;
   }
 }
-.possibilities-home__text {
-  top: 12px;
-}
-@media (min-width: 1200px) {
+@media (max-width: 1024px) {
   .possibilities-home__text {
-    top: -32px;
+    top: 12px;
   }
 }
 @media (max-width: 768px) {
@@ -7210,7 +7207,7 @@ textarea.input-reset {
 .app-home__text {
   top: 12px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
   .app-home__text {
     top: -32px;
   }

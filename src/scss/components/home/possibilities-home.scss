@@ -21,10 +21,10 @@
         font-weight: 600;
     }
     &__text{
-       @media (min-width:1200px){
-        top: -32px; 
+       @media (max-width:$tablet-max){
+        top: 12px;
        }
-       top: 12px;
+    
        @media (max-width:$smallTablet-max){
          top: 8px; 
        }
