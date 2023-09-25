@@ -38,7 +38,7 @@ if (rellaxTargetsText.length) {
                 localStorage.setItem(nameSection, topValue - transformValue + 5);
             }
         }
-        if (window.innerWidth < 1400 && window.innerWidth >= 1024) {
+        if (window.innerWidth < 1400) {
             if (transformValue <= 15 && transformValue >= -15) {
                 localStorage.setItem(nameSection, topValue - transformValue + 7);
             }
@@ -48,10 +48,12 @@ if (rellaxTargetsText.length) {
 
     rellaxTargetsText.forEach(target => {
         if (!target.classList.contains('_no-rellax')) {
-            target.style.top = `${localStorage.getItem(target.dataset.topValueName)}px`;
-            window.addEventListener('scroll', () => {
-                setTopValue(-25, target, target.dataset.topValueName);
-            });
+            if (window.innerWidth > 1024) {
+                target.style.top = `${localStorage.getItem(target.dataset.topValueName)}px`;
+                window.addEventListener('scroll', () => {
+                    setTopValue(-25, target, target.dataset.topValueName);
+                });
+            }
         }
     })
 

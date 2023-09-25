@@ -16,17 +16,17 @@
     }
 
     &__title {
-        letter-spacing: -3.259px;
-        @include adaptiveValue("font-size", 162, 50, 1296, 420, 1);
+        letter-spacing: -3.24px;
+        @include adaptiveValue("font-size", 162, 48, 1296, 420, 1);
         font-weight: 600;
+        @media (max-width:$tablet-max){
+            letter-spacing: -2px;
+        }
     }
     &__text{
        @media (max-width:$tablet-max){
-        top: 12px;
-       }
-    
-       @media (max-width:$smallTablet-max){
-         top: 8px; 
+        top: 10px;
+        padding: 16px 24px; 
        }
     }
     &__inner {

@@ -19,26 +19,25 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 132, 40, 1296, 420, 1);
-        letter-spacing: -3.259px;
+        @include adaptiveValue("font-size", 132, 38, 1296, 420, 1);
+        letter-spacing: -3.24px;
         font-weight: 600;
+
+        @media (max-width:$tablet-max) {
+            letter-spacing: -2px;
+        }
     }
 
     &__text {
-        @media (min-width:$tablet-min){
-            top: -32px;
-        }
-
-        top: 12px;
-
-        @media (max-width:$smallTablet-max) {
-            top: 8px;
+        @media (max-width:$tablet-max) {
+            top: 10px;
         }
 
         p {
             max-width: 750px;
-            @media (max-width:$mobile-max){
-              display: inline;
+
+            @media (max-width:$mobile-max) {
+                display: inline;
             }
         }
     }
@@ -50,12 +49,22 @@
         @media (max-width:$tablet-max) {
             margin-top: 16px;
         }
+
+        @media (max-width:$smallTablet-max) {
+            .label-primary {
+                height: 48px;
+
+                &__input {
+                    height: 48px;
+                }
+            }
+        }
     }
 
     &__btn {
         margin-top: 40px;
         height: 76px;
-        border-radius: 28px;
+        @include adaptiveValue("border-radius", 28, 18, 1296, 420, 1);
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;
