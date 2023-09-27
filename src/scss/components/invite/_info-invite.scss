@@ -1,0 +1,102 @@
+.info-invite {
+    @include adaptiveValue("margin-top", 125, 48, 1296, 576, 1);
+
+    &__top {
+        text-align: center;
+    }
+
+    &__title {
+        max-width: 896px;
+        margin: 0 auto;
+
+        span {
+            color: var(--blue);
+        }
+    }
+
+    &__descr {
+        max-width: 746px;
+        margin: 26px auto 0;
+        color: var(--black);
+        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+        line-height: math.div(32, 18);
+        font-weight: 500;
+    }
+
+    &__wrapper {
+        max-width: 1160px;
+        margin: 86px auto 0;
+        display: grid;
+        grid-template-columns: percent(457, 1160) 1fr;
+        grid-column-gap: 58px;
+        @media (max-width:$tablet-max) {
+            margin-top: 56px;
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            margin-top: 32px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__left{
+        margin-top: 16px;
+    }
+    &__spollers {
+        .spollers {
+            &__item {
+                background: #FBFBFB;
+                border: 1px solid #E7EAF2;
+                border-radius: 40px;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width:$tablet-max) {
+                    border-radius: 24px;
+                }
+            }
+
+            &__title {
+                color: var(--dark);
+                padding: 20px 44px 20px 32px;
+                justify-content: start;
+
+                span {
+                    margin-right: 24px;
+                }
+
+                @media (max-width:$tablet-max) {
+                    padding: 12px 24px;
+                }
+            }
+
+            &__body {
+                color: #868A93;
+                padding: 0 150px 40px 110px;
+
+                @media (max-width:$tablet-max) {
+                    padding: 0 24px 24px;
+                }
+            }
+
+            &__icon {
+                margin-right: 24px;
+
+                @media (max-width:$smallTablet-max) {
+                    margin-right: 16px;
+                }
+            }
+
+            &__control {
+                margin-left: auto;
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 72px;
+        }
+    }
+}

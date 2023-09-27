@@ -1,7 +1,7 @@
 .tags-home {
     @include adaptiveValue("margin-top", 137, 75, 1296, 576, 1);
     @include adaptiveValue("margin-bottom", -263, -65, 1296, 576, 1);
-    @include adaptiveValue("border-radius", 88, 18, 1296, 576, 1);
+    @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
     background-color: #0f0f0f;
     position: relative;
     @include adaptiveValue("padding-top", 100, 46, 1296, 576, 1);

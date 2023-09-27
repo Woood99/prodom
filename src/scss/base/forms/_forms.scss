@@ -24,20 +24,31 @@
     }
 
     &__label {
-        height: 54px;
+        height: 75px;
         display: block;
 
         &:not(:last-child) {
             margin-bottom: 14px;
+            @media (max-width:$tablet-max){
+                margin-bottom: 7px;
+            }
         }
 
         @media (max-width:$tablet-max) {
-            height: 46px;
+            height: 58px;
         }
     }
 
     &__agree {
         margin-top: 21px;
+        @media (max-width:$tablet-max){
+            margin-top: 14px;
+            margin-left: 12px;
+            .checkbox__text{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+        }
     }
 
     &__btn {

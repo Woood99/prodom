@@ -3,7 +3,7 @@
     @include adaptiveValue("margin-bottom", 80, 48,1296,576,1);
 
     &__wrapper {
-        @include adaptiveValue("border-radius", 82, 18,1296,576,1);
+        @include adaptiveValue("border-radius", 82, 24,1296,576,1);
         background: #050505;
         text-align: center;
         padding: 63px 35px 90px;
@@ -69,20 +69,16 @@
     &__input {
         margin: 0;
         width: 471px;
-        height: 80px;
 
         &:not(:last-child) {
             margin-bottom: 0;
         }
 
         input {
-            border-radius: 26px;
             border: none;
             background: rgba(255, 255, 255, 0.37);
             backdrop-filter: blur(11.5px);
-            height: 80px;
             font-size: 18px;
-            padding: 0 38px;
             color: var(--white);
 
             &::placeholder {
@@ -93,10 +89,7 @@
                 border: none;
             }
             @media (max-width:$tablet-max){
-                height: 55px;
                 font-size: 14px;
-                padding: 0 24px;
-                border-radius: 18px;
             }
         }
         @media (max-width:$tablet-max){
@@ -108,7 +101,7 @@
     &__btn {
         margin: 0 0 0 18px;
         width: auto;
-        height: 80px;
+ height: 75px;
         padding: 0 66px;
         border-radius: 28px;
 
@@ -121,9 +114,9 @@
         @media (max-width:$tablet-max){
             margin: 16px 0 0 0;
             width: 100%;
-            border-radius: 18px;
+            border-radius: 20px;
             padding: 0 32px;
-            height: 55px;
+            height: 58px;
         }
     }
 }

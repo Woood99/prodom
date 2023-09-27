@@ -2,7 +2,7 @@
     @include adaptiveValue("margin-top", 73, 32, 1296, 576, 1);
 
     &__wrapper {
-        @include adaptiveValue("border-radius", 74, 18, 1296, 576, 1);
+        @include adaptiveValue("border-radius", 74, 24, 1296, 576, 1);
         background-image: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
         padding: 70px 76px 88px;
 

@@ -48,19 +48,33 @@ function initSliders() {
         const swiper = new Swiper(el, {
             observer: true,
             observeParents: true,
-            slidesPerView: 1.4,
-            spaceBetween: 19,
+            slidesPerView: 1.65,
+            spaceBetween: 15,
             speed: 800,
             autoHeight: true,
-            initialSlide: 2,
-            // centeredSlides: true,
-            // centeredSlidesBounds: true,
+            initialSlide: el.querySelectorAll('.swiper-slide').length - 2,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
             breakpoints: {
-                550: {
-                    slidesPerView: 2.35,
-                },
                 769: {
                     slidesPerView: 2,
+                    centeredSlides: false,
+                    centeredSlidesBounds: false,
+                    initialSlide: el.querySelectorAll('.swiper-slide').length - 3,
+                    spaceBetween: 19,
+                },
+                1025: {
+                    slidesPerView: 1.6,
+                    centeredSlides: false,
+                    centeredSlidesBounds: false,
+                    spaceBetween: 19,
+                },
+                1201: {
+                    slidesPerView: 2,
+                    centeredSlides: false,
+                    centeredSlidesBounds: false,
+                    initialSlide: el.querySelectorAll('.swiper-slide').length - 3,
+                    spaceBetween: 19,
                 },
             },
         });

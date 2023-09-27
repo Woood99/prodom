@@ -61,7 +61,7 @@
     }
 
     &__item {
-        @include adaptiveValue("border-radius", 54, 18, 1296, 576, 1);
+        @include adaptiveValue("border-radius", 54, 24, 1296, 576, 1);
         border: 1px solid #dce4fc;
         background-color: var(--white);
 
@@ -91,7 +91,7 @@
         }
 
         @media (max-width:$tablet-max) {
-            padding: 24px;
+            padding: 20px 20px 30px 30px;
         }
     }
 
@@ -112,18 +112,22 @@
             stroke: var(--black);
             fill: var(--white);
             stroke-width: 1.5px;
+            @media (max-width:$tablet-max){
+                width: 22px;
+                height: 22px;
+            }
         }
 
         @media (max-width:$tablet-max) {
-            width: 55px;
-            height: 55px;
+            width: 51px;
+            height: 51px;
         }
     }
 
     &__item-subtitle {
-        margin-top: -18px;
+        margin-top: -44px;
         color: #141414;
-        @include adaptiveValue("font-size", 18, 16, 1296, 576, 1);
+        @include adaptiveValue("font-size", 18, 13, 1296, 576, 1);
         font-weight: 400;
         line-height: 150%;
         letter-spacing: -0.13px;
@@ -131,29 +135,33 @@
 
     &__item-title {
         color: #141414;
-        @include adaptiveValue("font-size", 60, 30, 1296, 576, 1);
+        @include adaptiveValue("font-size", 60, 43, 1296, 576, 1);
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -1px;
+        @media (max-width:$tablet-max){
+            letter-spacing: -0.722px;
+        }
     }
 
     &__item-descr {
         color: var(--black);
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+        @include adaptiveValue("font-size", 18, 13, 1296, 576, 1);
         font-weight: 400;
         line-height: 166%;
         max-width: 244px;
+        max-width: 174px;
     }
 
     &__item-link {
         margin-top: 32px;
         color: var(--blue);
-        @include adaptiveValue("font-size", 16, 13, 1296, 576, 1);
+        @include adaptiveValue("font-size", 16, 12, 1296, 576, 1);
         font-weight: 500;
         line-height: 140%;
 
         @media (max-width:$tablet-max) {
-            margin-top: 24px;
+            margin-top: 20px;
         }
     }
 

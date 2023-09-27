@@ -29,6 +29,12 @@
             transition: border $transitionSpeed $transitionFunction;
             position: relative;
             top: 0px;
+            @media (max-width:$tablet-max){
+                border-radius: 4.5px;
+                width: 15px;
+                height: 15px;
+                flex: 0 0 15px;
+            }
         }
 
         &::after {
@@ -43,6 +49,13 @@
             border-radius: 5px;
             transform: scale(0);
             transition: transform $transitionSpeed $transitionFunction;
+            @media (max-width:$tablet-max){
+                width: 10px;
+                height: 10px;
+            top: 2.5px;
+            left: 2.5px;
+            border-radius: 3.5px;
+            }
         }
 
     }

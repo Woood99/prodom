@@ -1007,7 +1007,7 @@ rellaxTargetsTitlte.forEach(target => {
 rellaxTargetsText.forEach(target => {
   if (!target.classList.contains('_no-rellax')) {
     const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_6___default())(target, {
-      breakpoints: [576, 768, 1024]
+      breakpoints: [577, 769, 1201]
     });
   }
 });
@@ -1016,12 +1016,12 @@ if (rellaxTargetsText.length) {
     const style = window.getComputedStyle(target);
     const transformValue = new WebKitCSSMatrix(style.transform).m42;
     if (window.innerWidth >= 1400) {
-      if (transformValue <= 15 && transformValue >= -38) {
+      if (transformValue <= 15 && transformValue >= -25) {
         localStorage.setItem(nameSection, topValue - transformValue + 5);
       }
     }
     if (window.innerWidth < 1400) {
-      if (transformValue <= 15 && transformValue >= -15) {
+      if (transformValue <= 15 && transformValue >= 0) {
         localStorage.setItem(nameSection, topValue - transformValue + 7);
       }
     }
@@ -1029,7 +1029,7 @@ if (rellaxTargetsText.length) {
   }
   rellaxTargetsText.forEach(target => {
     if (!target.classList.contains('_no-rellax')) {
-      if (window.innerWidth > 1024) {
+      if (window.innerWidth > 1200) {
         target.style.top = `${localStorage.getItem(target.dataset.topValueName)}px`;
         window.addEventListener('scroll', () => {
           setTopValue(-25, target, target.dataset.topValueName);
@@ -1334,19 +1334,33 @@ function initSliders() {
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
       observer: true,
       observeParents: true,
-      slidesPerView: 1.4,
-      spaceBetween: 19,
+      slidesPerView: 1.65,
+      spaceBetween: 15,
       speed: 800,
       autoHeight: true,
-      initialSlide: 2,
-      // centeredSlides: true,
-      // centeredSlidesBounds: true,
+      initialSlide: el.querySelectorAll('.swiper-slide').length - 2,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
       breakpoints: {
-        550: {
-          slidesPerView: 2.35
-        },
         769: {
-          slidesPerView: 2
+          slidesPerView: 2,
+          centeredSlides: false,
+          centeredSlidesBounds: false,
+          initialSlide: el.querySelectorAll('.swiper-slide').length - 3,
+          spaceBetween: 19
+        },
+        1025: {
+          slidesPerView: 1.6,
+          centeredSlides: false,
+          centeredSlidesBounds: false,
+          spaceBetween: 19
+        },
+        1201: {
+          slidesPerView: 2,
+          centeredSlides: false,
+          centeredSlidesBounds: false,
+          initialSlide: el.querySelectorAll('.swiper-slide').length - 3,
+          spaceBetween: 19
         }
       }
     });

@@ -24,7 +24,7 @@ rellaxTargetsTitlte.forEach(target => {
 rellaxTargetsText.forEach(target => {
     if (!target.classList.contains('_no-rellax')) {
         const heroRellax = new Rellax(target, {
-            breakpoints: [576, 768, 1024],
+            breakpoints: [577, 769, 1201],
         });
     }
 })
@@ -34,12 +34,12 @@ if (rellaxTargetsText.length) {
         const style = window.getComputedStyle(target);
         const transformValue = new WebKitCSSMatrix(style.transform).m42;
         if (window.innerWidth >= 1400) {
-            if (transformValue <= 15 && transformValue >= -38) {
+            if (transformValue <= 15 && transformValue >= -25) {
                 localStorage.setItem(nameSection, topValue - transformValue + 5);
             }
         }
         if (window.innerWidth < 1400) {
-            if (transformValue <= 15 && transformValue >= -15) {
+            if (transformValue <= 15 && transformValue >= 0) {
                 localStorage.setItem(nameSection, topValue - transformValue + 7);
             }
         }
@@ -48,7 +48,7 @@ if (rellaxTargetsText.length) {
 
     rellaxTargetsText.forEach(target => {
         if (!target.classList.contains('_no-rellax')) {
-            if (window.innerWidth > 1024) {
+            if (window.innerWidth > 1200) {
                 target.style.top = `${localStorage.getItem(target.dataset.topValueName)}px`;
                 window.addEventListener('scroll', () => {
                     setTopValue(-25, target, target.dataset.topValueName);
