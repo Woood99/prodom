@@ -71,6 +71,10 @@
 
         @media (max-width:$mobile-max) {
             --height: 250px;
+            padding-left: 24px;
+        }
+        @media (max-width:$smallMobile-max){
+             padding-left: 16px; 
         }
     }
 
@@ -99,8 +103,8 @@
         border-radius: 50px;
         min-width: 320px;
         min-height: 463px;
-        box-shadow: 0px 4.87057px 38.17794px 0px rgba(4, 58, 163, 0.09);
-
+        box-shadow: 0px 4.87057px 38.17794px 0px rgba(4, 58, 163, 0.09);       transition: transform $transitionSpeed ease-out;
+        --active-prc: 35.2%;
         img {
             height: 100%;
             border-radius: 50px;
@@ -113,28 +117,56 @@
                 border-radius: 28px;
             }
         }
-
+        &:nth-child(1) {
+            @media (min-width:$tablet-min) {
+                &:hover {
+                    transform: translateX(calc(-1 * var(--active-prc)));
+                }
+            }
+        }
         &:nth-child(2) {
             transform: translateX(-61%);
-
+            @media (min-width:$tablet-min) {
+                &:hover {
+                    transform: translateX(calc(-61% - var(--active-prc)));
+                }
+            }
             @media (max-width:$smallMobile-max) {
                 transform: translateX(-75%);
             }
+           @media (max-width:$mobile-max){
+            transform: translateX(-80%);
+           }
         }
 
         &:nth-child(3) {
             transform: translateX(calc(-320px + (-22%)));
 
+            @media (min-width:$tablet-min) {
+                &:hover {
+                    transform: translateX(calc(-320px + (-22%) - var(--active-prc)));
+                }
+            }
             @media (max-width:$smallMobile-max) {
-                transform: translateX(calc(-308px + (-44%)));
+                transform: translateX(calc(-310px + (-44%)));
+            }
+            @media (max-width:$mobile-max){
+                transform: translateX(calc(-290px + (-58%)));
             }
         }
 
         &:nth-child(4) {
             transform: translateX(calc((-320px*2) + 17%));
-
+            @media (min-width:$tablet-min) {
+                &:hover {
+                    transform: translateX(calc((-320px*2) + 17% - var(--active-prc)));
+                }
+            }
             @media (max-width:$smallMobile-max) {
-                transform: translateX(calc((-308px*2) + (-9%)));
+                transform: translateX(calc((-310px*2) + (-9%)));
+            }
+            @media (max-width:$mobile-max){
+                transform: translateX(calc((-290px*2) + (-35%)));
             }
         }
 
@@ -142,7 +174,10 @@
             transform: translateX(calc((-320px*3) + 56%));
 
             @media (max-width:$smallMobile-max) {
-                transform: translateX(calc((-308px*3) + 21%));
+                transform: translateX(calc((-310px*3) + 21%));
+            }
+            @media (max-width:$mobile-max){
+                transform: translateX(calc((-290px*3) - 12%));
             }
         }
 
@@ -165,14 +200,22 @@
         }
     }
 
+
+
     &__items {
         @include adaptiveValue("margin-top", 92, 32, 1296, 576, 1);
         align-self: stretch;
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 23px;
-        grid-row-gap: 16px;
+        grid-column-gap: 24px;
+        grid-row-gap: 13px;
+        @media (max-width:$tablet-max){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media (max-width:$smallTablet-max){
+             grid-template-columns: 1fr; 
+        }
     }
 
     &__item {
@@ -205,6 +248,15 @@
 
             .hero-invite__item-title {
                 margin-bottom: 48px;
+                @media (max-width:$tablet-max){
+                    margin-bottom: 24px;
+                }
+            }
+            @media (max-width:$tablet-max){
+                padding: 32px;
+            }
+            @media (max-width:$smallTablet-max){
+                 padding: 24px; 
             }
         }
 
@@ -248,6 +300,7 @@
 
                 @media (max-width:$smallTablet-max) {
                     margin-right: 24px;
+                    margin-bottom: 24px;
                 }
             }
 
@@ -257,7 +310,12 @@
                 box-shadow: 0px 9.34226px 22.18787px -4.67113px rgba(237, 238, 239, 0.72);
                 overflow: hidden;
             }
-
+            @media (max-width:$tablet-max){
+              padding: 32px 0 32px 32px;
+            }
+          @media (max-width:$smallTablet-max){
+            padding: 24px 0 24px 24px; 
+          }
         }
     }
 
