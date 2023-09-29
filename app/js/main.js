@@ -1012,30 +1012,36 @@ rellaxTargetsText.forEach(target => {
   }
 });
 if (rellaxTargetsText.length) {
-  function setTopValue(topValue, target, nameSection) {
-    const style = window.getComputedStyle(target);
-    const transformValue = new WebKitCSSMatrix(style.transform).m42;
-    if (window.innerWidth >= 1400) {
-      if (transformValue <= 25 && transformValue >= -30) {
-        localStorage.setItem(nameSection, topValue - transformValue + 5);
+  function transform(target, topValue) {
+    const title = target.previousElementSibling;
+    const targetPosition = {
+      top: window.pageYOffset + title.getBoundingClientRect().top,
+      bottom: window.pageYOffset + title.getBoundingClientRect().bottom
+    };
+    const windowPosition = {
+      top: window.pageYOffset,
+      bottom: window.pageYOffset + document.documentElement.clientHeight
+    };
+    if (targetPosition.top < windowPosition.bottom - window.innerHeight / 1.65 && targetPosition.bottom > windowPosition.top - target.clientHeight - 50) {
+      target.classList.remove('_translate-none');
+      if (window.innerWidth >= 1500) {
+        target.style.top = `2px`;
+      }
+    } else {
+      target.classList.add('_translate-none');
+      target.style.removeProperty('top');
+      if (window.innerWidth >= 1500) {
+        target.style.top = `${topValue}px`;
       }
     }
-    if (window.innerWidth < 1400) {
-      if (transformValue <= 30 && transformValue >= -6) {
-        localStorage.setItem(nameSection, topValue - transformValue + 7);
-      }
-    }
-    if (window.innerWidth <= 1200) {
-      localStorage.setItem(nameSection, 0);
-    }
-    target.style.top = `${localStorage.getItem(nameSection)}px`;
   }
   rellaxTargetsText.forEach(target => {
     if (!target.classList.contains('_no-rellax')) {
       if (window.innerWidth > 1200) {
-        target.style.top = `${localStorage.getItem(target.dataset.topValueName)}px`;
+        const topValue = Number(window.getComputedStyle(target).getPropertyValue('top').replace('px', ''));
+        transform(target, topValue);
         window.addEventListener('scroll', () => {
-          setTopValue(-25, target, target.dataset.topValueName);
+          transform(target, topValue);
         });
       }
     }

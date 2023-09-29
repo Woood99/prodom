@@ -6153,11 +6153,19 @@ textarea.input-reset {
     letter-spacing: -2px;
   }
 }
+.possibilities-home__text {
+  top: -18px;
+}
 @media (max-width: 1200px) {
   .possibilities-home__text {
     top: 18px;
     padding: 16px 24px;
   }
+}
+.possibilities-home__text._translate-none {
+  -webkit-transform: translate(0) !important;
+  -ms-transform: translate(0) !important;
+  transform: translate(0) !important;
 }
 .possibilities-home__inner {
   margin-top: 75px;
@@ -7291,10 +7299,18 @@ textarea.input-reset {
     max-width: 925px;
   }
 }
+.app-home__text {
+  top: -18px;
+}
 @media (max-width: 1200px) {
   .app-home__text {
     top: 18px;
   }
+}
+.app-home__text._translate-none {
+  -webkit-transform: translate(0) !important;
+  -ms-transform: translate(0) !important;
+  transform: translate(0) !important;
 }
 .app-home__text p {
   max-width: 750px;

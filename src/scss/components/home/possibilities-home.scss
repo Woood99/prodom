@@ -27,9 +27,14 @@
     }
 
     &__text {
+        top: -18px;
         @media (max-width:1200px) {
             top: 18px;
             padding: 16px 24px;
+        }
+
+        &._translate-none {
+            transform: translate(0) !important;
         }
     }
 

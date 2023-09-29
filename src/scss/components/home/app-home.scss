@@ -32,10 +32,14 @@
     }
 
     &__text {
+        top: -18px;
         @media (max-width:1200px) {
             top: 18px;
         }
 
+        &._translate-none {
+            transform: translate(0) !important;
+        }
         p {
             max-width: 750px;
 
@@ -43,6 +47,7 @@
                 display: inline;
             }
         }
+
     }
 
     &__form {
