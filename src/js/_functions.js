@@ -34,14 +34,17 @@ if (rellaxTargetsText.length) {
         const style = window.getComputedStyle(target);
         const transformValue = new WebKitCSSMatrix(style.transform).m42;
         if (window.innerWidth >= 1400) {
-            if (transformValue <= 15 && transformValue >= -25) {
+            if (transformValue <= 25 && transformValue >= -30) {
                 localStorage.setItem(nameSection, topValue - transformValue + 5);
             }
         }
         if (window.innerWidth < 1400) {
-            if (transformValue <= 15 && transformValue >= 0) {
+            if (transformValue <= 30 && transformValue >= -6) {
                 localStorage.setItem(nameSection, topValue - transformValue + 7);
             }
+        }
+        if (window.innerWidth <= 1200) {
+            localStorage.setItem(nameSection, 0);
         }
         target.style.top = `${localStorage.getItem(nameSection)}px`
     }
