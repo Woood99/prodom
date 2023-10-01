@@ -113,7 +113,9 @@ a {
 }
 
 .main {
-    @media (max-width:$tablet-max) {
-        margin-top: calc(var(--header-height) + 16px);
+    &:not(.main--no-header){
+        @media (max-width:$tablet-max) {
+            margin-top: calc(var(--header-height) + 16px);
+        }
     }
 }
