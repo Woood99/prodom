@@ -1012,7 +1012,7 @@ rellaxTargetsText.forEach(target => {
   }
 });
 if (rellaxTargetsText.length) {
-  function transform(target, topValue) {
+  function transform(target, topPropertyValue, topGapTarget, rellaxName) {
     const title = target.previousElementSibling;
     const targetPosition = {
       top: window.pageYOffset + title.getBoundingClientRect().top,
@@ -1024,24 +1024,27 @@ if (rellaxTargetsText.length) {
     };
     if (targetPosition.top < windowPosition.bottom - window.innerHeight / 1.65 && targetPosition.bottom > windowPosition.top - target.clientHeight - 50) {
       target.classList.remove('_translate-none');
-      if (window.innerWidth >= 1500) {
-        target.style.top = `2px`;
+      const currentTopGapTarget = windowPosition.top + target.getBoundingClientRect().top;
+      const distinction = currentTopGapTarget - topGapTarget;
+      if (localStorage.getItem(rellaxName)) target.style.top = localStorage.getItem(rellaxName);
+      if (distinction !== NaN && (distinction < 0 || distinction >= 0) && distinction > -20 && distinction < 20) {
+        localStorage.setItem(rellaxName, `${Math.round(topPropertyValue - distinction + 1)}px`);
+        target.style.top = localStorage.getItem(rellaxName);
       }
     } else {
       target.classList.add('_translate-none');
       target.style.removeProperty('top');
-      if (window.innerWidth >= 1500) {
-        target.style.top = `${topValue}px`;
-      }
+      return window.pageYOffset + target.getBoundingClientRect().top;
     }
   }
   rellaxTargetsText.forEach(target => {
     if (!target.classList.contains('_no-rellax')) {
       if (window.innerWidth > 1200) {
-        const topValue = Number(window.getComputedStyle(target).getPropertyValue('top').replace('px', ''));
-        transform(target, topValue);
+        const topPropertyValue = Number(window.getComputedStyle(target).getPropertyValue('top').replace('px', ''));
+        let topGapTarget;
+        topGapTarget = transform(target, topPropertyValue, topGapTarget, target.dataset.rellaxName);
         window.addEventListener('scroll', () => {
-          transform(target, topValue);
+          topGapTarget = transform(target, topPropertyValue, topGapTarget, target.dataset.rellaxName);
         });
       }
     }
