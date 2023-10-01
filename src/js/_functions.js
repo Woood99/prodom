@@ -45,7 +45,8 @@ if (rellaxTargetsText.length) {
             const currentTopGapTarget = windowPosition.top + target.getBoundingClientRect().top;
             const distinction = currentTopGapTarget - topGapTarget;
             if (localStorage.getItem(rellaxName)) target.style.top = localStorage.getItem(rellaxName);
-            if (distinction !== NaN && (distinction < 0 || distinction >= 0) && distinction > -20 && distinction < 20) {
+            console.log(distinction);
+            if (distinction !== NaN && (distinction < 0 || distinction >= 0) && distinction > -35 && distinction < 35) {
                 localStorage.setItem(rellaxName, `${Math.round(topPropertyValue - distinction + 1)}px`)
                 target.style.top = localStorage.getItem(rellaxName);
             }
