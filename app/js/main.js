@@ -1022,20 +1022,21 @@ if (rellaxTargetsText.length) {
       top: window.pageYOffset,
       bottom: window.pageYOffset + document.documentElement.clientHeight
     };
-    if (targetPosition.top < windowPosition.bottom - window.innerHeight / 1.65 && targetPosition.bottom > windowPosition.top - target.clientHeight - 50) {
-      target.classList.remove('_translate-none');
-      const currentTopGapTarget = windowPosition.top + target.getBoundingClientRect().top;
-      const distinction = currentTopGapTarget - topGapTarget;
-      if (localStorage.getItem(rellaxName)) target.style.top = localStorage.getItem(rellaxName);
-      console.log(distinction);
-      if (distinction !== NaN && (distinction < 0 || distinction >= 0) && distinction > -35 && distinction < 35) {
-        localStorage.setItem(rellaxName, `${Math.round(topPropertyValue - distinction + 1)}px`);
-        target.style.top = localStorage.getItem(rellaxName);
+    if (window.innerWidth > 1200) {
+      if (targetPosition.top < windowPosition.bottom - window.innerHeight / 1.65 && targetPosition.bottom > windowPosition.top - target.clientHeight - 50) {
+        target.classList.remove('_translate-none');
+        const currentTopGapTarget = windowPosition.top + target.getBoundingClientRect().top;
+        const distinction = currentTopGapTarget - topGapTarget;
+        if (localStorage.getItem(rellaxName)) target.style.top = localStorage.getItem(rellaxName);
+        if (distinction !== NaN && (distinction < 0 || distinction >= 0) && distinction > -50 && distinction < 50) {
+          localStorage.setItem(rellaxName, `${Math.round(topPropertyValue - distinction + 1)}px`);
+          target.style.top = localStorage.getItem(rellaxName);
+        }
+      } else {
+        target.classList.add('_translate-none');
+        target.style.removeProperty('top');
+        return window.pageYOffset + target.getBoundingClientRect().top;
       }
-    } else {
-      target.classList.add('_translate-none');
-      target.style.removeProperty('top');
-      return window.pageYOffset + target.getBoundingClientRect().top;
     }
   }
   rellaxTargetsText.forEach(target => {
