@@ -6,7 +6,9 @@
     &__container {}
 
     &__hero {}
-
+    .container{
+        max-width: 725px;
+    }
     &__body {
         margin-top: 32px;
 

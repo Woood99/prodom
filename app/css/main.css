@@ -162,6 +162,9 @@ a {
   .main:not(.main--no-header) {
     margin-top: calc(var(--header-height) + 16px);
   }
+  .main:not(.main--no-header).main--invite {
+    margin-top: calc(var(--header-height) + 28px);
+  }
 }
 
 .form-primary__title {
@@ -2203,7 +2206,10 @@ textarea.input-reset {
 }
 @media (max-width: 768px) {
   .header:not(.header--only-logo) .header__inner {
-    padding: 12px 0;
+    padding: 17px 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
 .header:not(.header--only-logo) .header__logo {
@@ -2212,7 +2218,7 @@ textarea.input-reset {
 }
 @media (max-width: 768px) {
   .header:not(.header--only-logo) .header__logo {
-    width: 100px;
+    width: 120px;
   }
 }
 @media (max-width: 768px) {
@@ -2228,6 +2234,12 @@ textarea.input-reset {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .header:not(.header--only-logo) .header__actions {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
 .header:not(.header--only-logo) .header__tel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2242,6 +2254,12 @@ textarea.input-reset {
   height: 20px;
   fill: var(--blue);
 }
+@media (max-width: 768px) {
+  .header:not(.header--only-logo) .header__tel svg {
+    width: 22px;
+    height: 22px;
+  }
+}
 .header:not(.header--only-logo) .header__tel span {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
@@ -2251,19 +2269,14 @@ textarea.input-reset {
   font-size: 16px;
   line-height: 1.3125;
 }
+@media (max-width: 1024px) {
+  .header:not(.header--only-logo) .header__tel span {
+    display: none;
+  }
+}
 @media (min-width: 769px) {
   .header:not(.header--only-logo) .header__tel:hover span {
     color: var(--blue);
-  }
-}
-@media (max-width: 768px) {
-  .header:not(.header--only-logo) .header__tel svg {
-    width: 16px;
-    height: 16px;
-  }
-  .header:not(.header--only-logo) .header__tel span {
-    margin-left: 5px;
-    font-size: 13px;
   }
 }
 .header:not(.header--only-logo) .header__call {
@@ -7690,6 +7703,7 @@ textarea.input-reset {
     width: 100%;
     height: 70px;
     border-radius: 24px;
+    font-size: 16px;
   }
 }
 .hero-invite__wrapper {
@@ -8565,6 +8579,9 @@ textarea.input-reset {
   padding-top: 30px;
   padding-bottom: 100px;
   background-color: #f4f5f7;
+}
+.pass .container {
+  max-width: 725px;
 }
 .pass__body {
   margin-top: 32px;
