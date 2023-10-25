@@ -1,0 +1,142 @@
+.for-whom-skud-two {
+    @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
+
+    &__title {
+        line-height: math.div(42, 38);
+        max-width: 822px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        span {
+            color: var(--blue);
+        }
+    }
+
+    &__text {
+        max-width: 822px;
+        margin-top: 32px;
+        margin-left: auto;
+        margin-right: auto;
+        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+        line-height: math.div(26, 18);
+        font-weight: 400;
+        text-align: center;
+        @media (max-width:$tablet-max){
+            margin-top: 24px;
+        }
+        @media (max-width:$smallTablet-max){
+             margin-top: 16px; 
+        }
+    }
+
+    &__wrapper {
+        margin-top: 68px;
+
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        border: 1px solid #E7EAF2;
+
+        background: #FFF;
+
+        padding: 91px 0 66px;
+        @media (max-width:$tablet-max){
+            margin-top: 32px;
+            padding: 32px 0;
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 0;
+             border: none; 
+        }
+    }
+
+    &__slider {
+        padding: 0 32px;
+            .swiper-slide {
+                text-align: center;
+                user-select: none;
+                --width: 196px;
+                overflow: hidden;
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
+                picture {
+                    flex-grow: 1;
+                    max-height: 196px;
+                    @media (max-width:$smallTablet-max){
+                         max-height: 155px; 
+                    }
+                }
+
+                img {
+                    border-radius: 36px;
+                    height: 100%;
+                    width: var(--width);
+                
+                    @media (max-width:$tablet-max) {
+                        border-radius: 24px;
+                    }
+                }
+
+                span {
+                    margin-top: 18px;
+                    display: inline-block;
+                    color: var(--dark);
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: math.div(25, 16);
+                    max-width: var(--width);
+                    transition: color $transitionSpeed $transitionFunction;
+
+                    @media (max-width:$tablet-max) {
+                        font-size: 14px;
+                        margin-top: 12px;
+                    }
+                }
+
+                @media (min-width:$tablet-min) {
+                    &:hover {
+                        span {
+                            color: var(--blue);
+                        }
+                    }
+                }
+
+                &.focus-visible {
+                    outline: none;
+
+                    span {
+                        color: var(--blue);
+                    }
+                }
+                @media (max-width:$smallTablet-max){
+                     --width: 155px;
+                }
+            }
+            @media (max-width:$tablet-max){
+                padding: 0 24px;
+            }
+            @media (max-width:$smallTablet-max){
+                 padding: 0 16px;
+                 margin: 0 -16px; 
+            }
+    }
+    &__nav{
+        margin: 30px auto 0;
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 24px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            display: none;
+        }
+    }
+    &__next {
+        margin-left: 8px;
+    }
+}

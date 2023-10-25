@@ -63,6 +63,8 @@ const spollers = () => {
                         spollerTitle.removeAttribute('tabindex');
                         if (!spollerTitle.classList.contains('_spoller-active')) {
                             spollerTitle.nextElementSibling.hidden = true;
+                        } else {
+                            spollerTitle.closest('.spollers__item').classList.add('_spollers-item-active');
                         }
                     } else {
                         spollerTitle.setAttribute('tabindex', '-1');
@@ -83,6 +85,7 @@ const spollers = () => {
                         hideSpollersBody(spollersBlock);
                     }
                     spollerTitle.classList.toggle('_spoller-active');
+                    spollerTitle.closest('.spollers__item').classList.toggle('_spollers-item-active');
                     _slideToggle(spollerTitle.nextElementSibling, 500);
                 }
                 e.preventDefault();
@@ -93,6 +96,7 @@ const spollers = () => {
             const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._spoller-active');
             if (spollerActiveTitle) {
                 spollerActiveTitle.classList.remove('_spoller-active');
+                spollerActiveTitle.closest('.spollers__item').classList.remove('_spollers-item-active');
                 _slideUp(spollerActiveTitle.nextElementSibling, 500);
             }
         }

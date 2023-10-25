@@ -1,0 +1,163 @@
+.ways-skud-two {
+    @include adaptiveValue("margin-top", 120, 75, 1296, 576, 1);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
+
+
+        padding: 74px 150px 101px 87px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::before{
+            content: '';
+            background-image: url('../img/finger-print.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: -22%;
+            right: -12%;
+
+            width: 472px;
+            height: 468px;
+             opacity: 0.06;
+            z-index: -1;
+            transform: rotate(38deg);
+        }
+        @media (max-width:$desktop){
+             flex-direction: column;
+             justify-content: center;
+             text-align: center; 
+
+             padding: 48px 32px;
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 32px 24px; 
+        }
+    }
+
+    &__left {
+        max-width: 300px;
+        @media (max-width:$desktop){
+             max-width: none; 
+        }
+    }
+
+    &__title {
+        color: var(--white);
+
+        span {
+            color: #AEC2FF;
+        }
+    }
+
+    &__descr {
+        margin-top: 24px;
+        @include adaptiveValue("font-size", 18, 14,1296,576,1);
+        color: var(--white);
+
+        @media (max-width:$tablet-max) {
+            margin-top: 16px;
+        }
+    }
+
+    &__right {
+        margin-left: 126px;
+        flex-grow: 1;
+        width: 100%;
+        text-align: left;
+        @media (max-width:$desktop){
+             margin: 48px 0 0 0;
+        }
+        @media (max-width:$smallTablet-max){
+             margin: 32px 0 0 0; 
+        }
+    }
+
+
+    .spollers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        grid-column-gap: 46px;
+        grid-row-gap: 10px;
+        >.col{
+
+        }
+        &__item {
+            @include adaptiveValue("border-radius", 39, 16, 1296, 576, 1);
+            background: #5184F3;
+            padding: 14px 17px;
+            transition: padding $transitionSpeed $transitionFunction;
+            border: none;
+          @media (min-width:$smallTablet-min){
+            &._spollers-item-active {
+                padding: 20px 25px 28px;
+            } 
+          }
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+            @media (max-width:$smallTablet-max){
+                 padding: 14px 18px; 
+            }
+        }
+
+        &__title {
+            padding: 0;
+            justify-content: start;
+
+            >div {
+                margin-right: 20px;
+                --size: 32px;
+                width: var(--size);
+                height: var(--size);
+                flex: 0 0 var(--size);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #F3F6FF;
+                border-radius: 50%;
+                transition: background-color $transitionSpeed $transitionFunction;
+                svg {
+                    width: 13px;
+                    height: 9px;
+                    fill: none;
+                    stroke: #3B5DDD;
+                    stroke-width: 1.5px;
+                    transition: stroke $transitionSpeed $transitionFunction;
+                }
+                @media (max-width:$tablet-max){
+                    --size:26px;
+                }
+            }
+            &._spoller-active{
+                >div{
+                    background-color: #FFDAF2;
+                    svg{
+                        stroke: #EA49B2;
+                    }
+                }
+            }
+        }
+
+        &__body {
+            padding: 16px 0 0 calc(32px + 20px);
+            font-size: 14px;
+            line-height: 160%;
+            @media (max-width:$smallTablet-max){
+                 padding: 16px 0 0 0; 
+            }
+        }
+        @media (max-width:$smallTablet-max){
+             grid-column-gap: 24px; 
+        }
+        @media (max-width:$mobile-max){
+             grid-template-columns: 1fr; 
+        }
+    }
+
+}

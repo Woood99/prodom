@@ -1,0 +1,91 @@
+.banner-skud-two {
+    @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
+    &__container {
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        background-color: #FBFBFB;
+        padding: 64px 84px 70px;
+
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        &::after{
+            content: '';
+            background-image: url('../img/banner.png');
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: contain;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+
+            z-index: -1;
+            @media (max-width:$smallTablet-max){
+                 display: none; 
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+
+            background-image: url('../img/vector-2.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+            @media (max-width:$smallTablet-max){
+                 opacity: 0.65; 
+            }
+        }
+        @media (max-width:$tablet-max){
+            padding: 32px;
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 24px; 
+        }
+    }
+
+    &__info {
+        max-width: 578px;
+        @media (max-width:$smallTablet-max){
+             max-width: none; 
+             text-align: center;
+        }
+    }
+
+    &__title {
+        line-height: 126%;
+        span {
+            color: var(--blue);
+        }
+    }
+
+    &__descr {
+        margin-top: 20px;
+
+        @include adaptiveValue("font-size", 18, 16,1296,576,1);
+        line-height: math.div(26 , 18);
+        font-weight: 500;
+        @media (max-width:$tablet-max){
+            margin-top: 16px;
+        }
+    }
+
+    &__btn {
+        margin-top: 59px;
+        height: 76px;
+        padding: 0 50px;
+        border-radius: 26px;
+        @media (max-width:$tablet-max){
+            margin-top: 32px;
+            height: 70px;
+            border-radius: 24px;
+        }
+        @media (max-width:$smallTablet-max){
+             width: 100%; 
+        }
+    }
+}

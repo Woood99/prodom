@@ -1,0 +1,59 @@
+.banner-api-skud-two {
+    @include adaptiveValue("margin-top", 171, 70, 1296, 576, 1);
+    &__container {
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        background: linear-gradient(358deg, #6C4FCA -7.42%, #C4B2FF 120.26%);
+
+        display: flex;
+        position: relative;
+        min-height: 387px;
+        @media (max-width:$tablet-max){
+            flex-direction: column;
+            align-items: center;
+            min-height: auto;
+
+            padding: 48px 48px 0 48px;
+            text-align: center;
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 32px 32px 0 32px; 
+        }
+        @media (max-width:$mobile-max){
+             padding: 24px 24px 0 24px; 
+        }
+    }
+
+    &__title {
+      
+        max-width: 625px;
+        padding: 93px 86px 102px;
+        line-height: 125%;
+        color: var(--white);
+        span{
+            color: #C8B7FF;
+        }
+        @media (max-width:$tablet-max){
+            padding: 0;
+            max-width: none;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: -7px;
+        right: 14.26%;
+        @media (max-width:$desktop){
+             right: 6%; 
+        }
+        @media (max-width:$tablet-max){
+            margin-top: 24px;
+            position: relative;
+            right: auto;
+            bottom: -10px;
+            max-width: 80%;
+        }
+        @media (max-width:$smallMobile-max){
+             max-width: 90%; 
+        }
+    }
+}

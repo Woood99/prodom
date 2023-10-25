@@ -1343,6 +1343,28 @@ function initSliders() {
       }
     });
   }
+  if (document.querySelector('.for-whom-skud-two__slider')) {
+    const el = document.querySelector('.for-whom-skud-two__slider');
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      speed: 800,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      initialSlide: 3,
+      navigation: {
+        nextEl: el.closest('.for-whom-skud-two__wrapper').querySelector('.for-whom-skud-two__next'),
+        prevEl: el.closest('.for-whom-skud-two__wrapper').querySelector('.for-whom-skud-two__prev')
+      },
+      breakpoints: {
+        1025: {
+          spaceBetween: 24
+        }
+      }
+    });
+  }
   if (document.querySelector('.info-home__slider')) {
     const el = document.querySelector('.info-home__slider');
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
@@ -1467,6 +1489,8 @@ const spollers = () => {
             spollerTitle.removeAttribute('tabindex');
             if (!spollerTitle.classList.contains('_spoller-active')) {
               spollerTitle.nextElementSibling.hidden = true;
+            } else {
+              spollerTitle.closest('.spollers__item').classList.add('_spollers-item-active');
             }
           } else {
             spollerTitle.setAttribute('tabindex', '-1');
@@ -1486,6 +1510,7 @@ const spollers = () => {
             hideSpollersBody(spollersBlock);
           }
           spollerTitle.classList.toggle('_spoller-active');
+          spollerTitle.closest('.spollers__item').classList.toggle('_spollers-item-active');
           (0,_support_modules_slide__WEBPACK_IMPORTED_MODULE_1__._slideToggle)(spollerTitle.nextElementSibling, 500);
         }
         e.preventDefault();
@@ -1495,6 +1520,7 @@ const spollers = () => {
       const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._spoller-active');
       if (spollerActiveTitle) {
         spollerActiveTitle.classList.remove('_spoller-active');
+        spollerActiveTitle.closest('.spollers__item').classList.remove('_spollers-item-active');
         (0,_support_modules_slide__WEBPACK_IMPORTED_MODULE_1__._slideUp)(spollerActiveTitle.nextElementSibling, 500);
       }
     }

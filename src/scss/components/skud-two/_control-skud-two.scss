@@ -1,0 +1,197 @@
+.control-skud-two {
+    @include adaptiveValue("margin-top", 176, 75, 1296, 576, 1);
+
+    &__container {
+        display: grid;
+        grid-template-columns: 526px 1fr;
+        grid-column-gap: 80px;
+        grid-row-gap: 60px;
+
+        @media (max-width:$desktop) {
+            grid-template-columns: 480px 1fr;
+            grid-column-gap: 60px;
+        }
+        @media (max-width:$tablet-max){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__left {
+        align-self: start;
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        background: linear-gradient(359deg, #348D5E -11.12%,
+                #60C28E 91.28%), linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%), #4073EF;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        height: 100%;
+        max-height: 509px;
+
+        picture {
+            width: 80%;
+            max-width: 378px;
+            height: calc(100% + 56px + 7px);
+            @media (max-width:$tablet-max){
+                max-width: 258px;
+
+                width: auto;
+                height: calc(100% + 24px + 7px);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: translateY(7px)
+        }
+        @media (max-width:$tablet-max){
+            order: 2;
+           width: 480px;
+            justify-self: center;
+        }
+        @media (max-width:$smallTablet-max){
+             width: 290px; 
+             max-height: 350px;
+        }
+        @media (max-width:$mobile-max){
+            width: 100%;
+            max-width: none;
+            min-width: auto;
+            justify-self: auto;
+        }
+    }
+
+
+    &__right {
+        transform: translateY(-40px);
+       @media (max-width:$tablet-max){
+        transform: translateY(0);
+       }
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 32, 22, 1296, 576, 1);
+        line-height: 140%;
+        font-weight: 500;
+        max-width: 590px;
+
+        span {
+            color: var(--blue);
+        }
+        @media (max-width:$tablet-max){
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    &__tabs {
+        margin-top: 32px;
+        width: 100%;
+
+        .tabs {
+            &__navigation {
+                margin: 0;
+                height: 74px;
+                width: 100%;
+                padding: 8px;
+                justify-content: space-between;
+                @media (max-width:$tablet-max){
+                    height: auto;
+                }
+            }
+
+            &__title {
+                height: 100%;
+                flex-grow: 1;
+                color: #8E8E96;
+                font-weight: 500;
+                font-size: 20px;
+
+                &._tab-active {
+                    color: var(--black);
+                }
+
+                @media (max-width:$tablet-max) {
+                    font-size: 16px;
+                    height: 38px;
+                }
+            }
+
+            &__content {
+                width: 100%;
+                margin-top: 24px;
+            }
+        }
+    }
+
+    &__spollers {
+        .spollers {
+            &__item {
+                background: #FBFBFB;
+                border: 1px solid #E7EAF2;
+                border-radius: 40px;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width:$tablet-max) {
+                    border-radius: 24px;
+                }
+            }
+
+            &__title {
+                color: var(--dark);
+                padding: 20px 44px 20px 32px;
+                justify-content: start;
+
+                span {
+                    margin-right: 24px;
+                }
+
+                @media (max-width:$tablet-max) {
+                    padding: 12px 24px;
+                }
+            }
+
+            &__body {
+                color: #868A93;
+                padding: 0 150px 40px 110px;
+
+                @media (max-width:$tablet-max) {
+                    padding: 0 24px 24px;
+                }
+            }
+
+            &__icon {
+                margin-right: 24px;
+
+                @media (max-width:$smallTablet-max) {
+                    margin-right: 16px;
+                }
+            }
+
+            &__control {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+
+
+.spollers {
+
+    &__item {}
+
+    &__title {}
+
+    &__icon {}
+
+    &__control {}
+
+    &__control-wrapper {}
+
+    &__body {}
+}

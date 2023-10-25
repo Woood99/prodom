@@ -42,6 +42,30 @@ function initSliders() {
 
         });
     }
+    if (document.querySelector('.for-whom-skud-two__slider')) {
+        const el = document.querySelector('.for-whom-skud-two__slider');
+        new Swiper(el, {
+
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            speed: 800,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            initialSlide: 3,
+            navigation: {
+                nextEl: el.closest('.for-whom-skud-two__wrapper').querySelector('.for-whom-skud-two__next'),
+                prevEl: el.closest('.for-whom-skud-two__wrapper').querySelector('.for-whom-skud-two__prev'),
+            },
+            breakpoints: {
+                1025: {
+                    spaceBetween: 24,
+                },
+            },
+
+        });
+    }
 
     if (document.querySelector('.info-home__slider')) {
         const el = document.querySelector('.info-home__slider');
