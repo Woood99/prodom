@@ -1,0 +1,85 @@
+.tags-digitale-umgebung {
+    @include adaptiveValue("margin-top", 137, 48, 1296, 576, 1);
+    @include adaptiveValue("margin-bottom", -260, -125, 1296, 576, 1);
+    @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
+    background-color: #0f0f0f;
+    position: relative;
+    @include adaptiveValue("padding-top", 251, 125, 1296, 576, 1);
+    @include adaptiveValue("padding-bottom", 200, 80, 1296, 576, 1);
+    overflow: hidden;
+
+    &__container {
+        max-width: 3550px;
+        margin: 0 auto;
+    }
+
+    &__decor {
+        position: absolute;
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (max-width:$smallTablet-max){
+             top: -20%; 
+        }
+    }
+
+    &__info {
+        max-width: 576px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: absolute;
+        @include adaptiveValue("top", 93, 48, 1296, 576, 1);
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (max-width:$smallTablet-max) {
+            max-width: calc(100% - 30px);
+        }
+    }
+
+    &__title {
+        color: var(--white);
+        text-align: center;
+
+        span {
+            color: #7290D3;
+        }
+    }
+
+    &__btn {
+        margin-top: 43px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 24px;
+        }
+    }
+
+
+    &__wrapper {}
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__tag {
+        border: none;
+        background: rgba(255, 255, 255, 0.13);
+        color: rgba(255, 255, 255, 0.45);
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        max-width: max-content;
+        min-width: max-content;
+
+        margin-right: 16px;
+    }
+
+}

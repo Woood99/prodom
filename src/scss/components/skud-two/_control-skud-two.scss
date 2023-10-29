@@ -1,5 +1,5 @@
 .control-skud-two {
-    @include adaptiveValue("margin-top", 176, 75, 1296, 576, 1);
+    @include adaptiveValue("margin-top", 176, 48, 1296, 576, 1);
 
     &__container {
         display: grid;

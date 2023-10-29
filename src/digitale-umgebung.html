@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Цифровая среда"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            @include('partials/digitale-umgebung/hero-digitale-umgebung.html')
+            @include('partials/digitale-umgebung/crm-digitale-umgebung.html')
+            @include('partials/digitale-umgebung/tags-digitale-umgebung.html')
+            @include('partials/digitale-umgebung/app-performers-digitale-umgebung.html')
+            @include('partials/digitale-umgebung/app-dweller-digitale-umgebung.html')
+            @include('partials/digitale-umgebung/app-digitale-umgebung.html')
+            @include('partials/home/newsletter-home.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

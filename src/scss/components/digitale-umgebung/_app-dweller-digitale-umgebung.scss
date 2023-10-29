@@ -1,0 +1,203 @@
+.app-dweller-digitale-umgebung {
+    @include adaptiveValue("margin-top", 150, 48, 1296, 576, 1);
+
+    &__title {
+        max-width: 485px;
+        margin: 0 auto;
+        text-align: center;
+
+        span {
+            color: var(--blue);
+        }
+    }
+
+    &__container {
+        @include adaptiveValue("margin-top", 120, 75, 1296, 576, 1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        background: linear-gradient(148deg, #6C4FCA -26.5%, #C4B2FF 128.88%);
+        height: 509px;
+        padding: 83px 72px 83px 195px;
+        position: relative;
+    }
+}
+
+.app-dweller {
+
+    &__pagination {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        position: relative;
+        height: 100%;
+        display: flex;
+        margin-right: 32px;
+
+        width: 175px;
+
+        &::before {
+            content: '';
+            height: calc(100% - 28px);
+            width: 2px;
+            background-color: var(--white);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -5px;
+        }
+    }
+
+    &__dot {
+        padding-left: 42px;
+        margin-left: -10px;
+        font-size: 18px;
+        line-height: 118%;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.50);
+        position: relative;
+
+        transition: font-size $transitionSpeedFast $transitionFunction,
+            color $transitionSpeedFast $transitionFunction;
+
+        &::after {
+            content: '';
+            width: 11px;
+            height: 11px;
+            background-color: var(--white);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-color: #8066D6;
+            border-radius: 50%;
+            border: 2px solid var(--white);
+
+            position: absolute;
+            left: -9px;
+            top: 50%;
+            transform: translateY(-50%) scale(0);
+            filter: drop-shadow(0px 0px 16px #FFF);
+
+            opacity: 0;
+
+            transition: transform $transitionSpeedFast $transitionFunction,
+                opacity $transitionSpeedFast $transitionFunction;
+        }
+
+        &._active {
+            color: var(--white);
+            font-size: 24px;
+
+            &::before {
+                opacity: 1;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+
+        @media (min-width:$desktop-min) {
+            &:hover {
+                color: var(--white);
+            }
+        }
+    }
+
+
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(5%);
+        transition: transform $transitionSpeed $transitionFunction,
+            opacity $transitionSpeed $transitionFunction;
+        opacity: 0;
+        img{
+            height: 100%;
+        }
+        &._hidden {
+            display: none;
+        }
+
+        &._active {
+            transform: translateX(-50%) translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    &__right {
+        height: 100%;
+        margin-left: 32px;
+        max-width: 325px;
+        flex: 0 0 325px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text {
+        position: relative;
+        max-width: 300px;
+        color: var(--white);
+        @include adaptiveValue("font-size", 24, 18, 1296, 576, 1);
+        line-height: math.div(30, 24);
+        font-weight: 500;
+
+        div {
+            opacity: 0;
+            transform: translateY(10%);
+            transition: opacity $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
+            position: absolute;
+
+            &._hidden {
+                display: none;
+            }
+
+            &._active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+
+
+
+		&__btns {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-column-gap: 13px;
+            grid-row-gap: 11px;
+		}
+
+		&__badge {
+            height: 45px;
+		}
+
+		&__btn {
+            font-size: 14px;
+            line-height: 130%;
+            font-weight: 500;
+            background-color: transparent;
+            color: var(--white);
+            border: 1.4px solid var(--white);
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+		}
+
+}

@@ -1,5 +1,5 @@
 .ways-skud-two {
-    @include adaptiveValue("margin-top", 120, 75, 1296, 576, 1);
+    @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
     &__container {
         display: flex;
         justify-content: space-between;

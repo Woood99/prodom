@@ -7,6 +7,7 @@ import spollers from "./functions/spollers";
 import "./functions/dynamic-adapt";
 import './functions/fix-fullheight';
 import "./functions/sliders";
+import popup from './functions/popup';
 burgerMenu();
 tabs();
 spollers();
@@ -74,6 +75,8 @@ if (rellaxTargetsText.length) {
 
 
 }
+
+popup(null, 'show-qr');
 
 
 

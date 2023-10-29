@@ -1,5 +1,5 @@
 .banner-api-skud-two {
-    @include adaptiveValue("margin-top", 171, 70, 1296, 576, 1);
+    @include adaptiveValue("margin-top", 171, 48, 1296, 576, 1);
     &__container {
         @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
         background: linear-gradient(358deg, #6C4FCA -7.42%, #C4B2FF 120.26%);
