@@ -8035,31 +8035,26 @@ textarea.input-reset {
   max-height: 449px;
   position: relative;
 }
-@media (min-width: 1025px) {
-  .possibilities-home__item--1::before {
-    --bottom-gap: 5%;
-    content: "";
-    position: absolute;
-    width: calc(69% - 24px);
-    height: calc(100% - var(--bottom-gap));
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    bottom: var(--bottom-gap);
-    background-color: #ffc5ee;
-    -webkit-box-shadow: 0px 5.1759px 31.05539px 0px #E294CC;
-    box-shadow: 0px 5.1759px 31.05539px 0px #E294CC;
-  }
-}
 .possibilities-home__item--1 picture {
+  -webkit-transition: max-height 0.3s ease-in-out;
+  -o-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
   width: 69%;
   max-width: 284px;
+  max-height: 484px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 100px 0, 100px calc(100% - 1px), 0 calc(100% - 1px));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 100px 0, 100px calc(100% - 1px), 0 calc(100% - 1px));
 }
 @media (max-width: 1024px) {
   .possibilities-home__item--1 picture {
     width: auto;
     min-height: calc(100% + 24px);
+  }
+}
+@media (max-width: 768px) {
+  .possibilities-home__item--1 picture {
+    max-height: calc(100% + 32px);
+    min-height: auto;
   }
 }
 .possibilities-home__item--1 img {
@@ -8094,6 +8089,11 @@ textarea.input-reset {
     min-width: auto;
     -ms-grid-column-align: auto;
     justify-self: auto;
+  }
+}
+@media (min-width: 1025px) {
+  .possibilities-home__item--1:hover picture {
+    max-height: 494px;
   }
 }
 .possibilities-home__item--2 {
@@ -8466,6 +8466,22 @@ textarea.input-reset {
 @media (max-width: 576px) {
   .possibilities-home__item--5 img {
     max-width: 65%;
+  }
+}
+.possibilities-home__item--2, .possibilities-home__item--3, .possibilities-home__item--4, .possibilities-home__item--5 {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+@media (min-width: 1327px) {
+  .possibilities-home__item--2:hover, .possibilities-home__item--3:hover, .possibilities-home__item--4:hover, .possibilities-home__item--5:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.075);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.075);
   }
 }
 @media (max-width: 1024px) {

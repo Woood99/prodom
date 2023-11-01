@@ -68,31 +68,21 @@
             max-height: 449px;
             position: relative;
 
-            @media (min-width:$tablet-min) {
-                &::before {
-                    --bottom-gap: 5%;
-                    content: '';
-                    position: absolute;
-                    width: calc(69% - 24px);
-                    height: calc(100% - var(--bottom-gap));
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: var(--bottom-gap);
-                    background-color: #ffc5ee;
-                    box-shadow: 0px 5.1759px 31.05539px 0px #E294CC;
-                }
-            }
-
             picture {
+                transition:  max-height $transitionSpeed $transitionFunction;
                 width: 69%;
                 max-width: 284px;
-
+                max-height: 484px;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 100px 0, 100px calc(100% - 1px), 0 calc(100% - 1px));
                 @media (max-width:$tablet-max) {
                     width: auto;
                     min-height: calc(100% + 24px);
                 }
 
-                @media (max-width:$mobile-max) {}
+                @media (max-width:$smallTablet-max){
+                     max-height: calc(100% + 32px); 
+                     min-height: auto;
+                }
             }
 
             img {
@@ -120,6 +110,25 @@
                 max-width: none;
                 min-width: auto;
                 justify-self: auto;
+            }
+            @media (min-width:$tablet-min) {
+                &:hover{
+                    picture{
+                        max-height: 494px;
+                    }
+                }
+                // &::before {
+                //     --bottom-gap: 5%;
+                //     content: '';
+                //     position: absolute;
+                //     width: calc(69% - 24px);
+                //     height: calc(100% - var(--bottom-gap));
+                //     left: 50%;
+                //     transform: translateX(-50%);
+                //     bottom: var(--bottom-gap);
+                //     background-color: #ffc5ee;
+                //     box-shadow: 0px 5.1759px 31.05539px 0px #E294CC;
+                // }
             }
         }
 
@@ -362,6 +371,20 @@
                 img {
                     max-width: 65%;
                 }
+            }
+        }
+
+        &--2,
+        &--3,
+        &--4,
+        &--5{
+            transition: transform $transitionSpeed $transitionFunction,
+            box-shadow $transitionSpeed $transitionFunction;
+            @media (min-width:$desktop-min){
+                 &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: 5px 5px 0 0 rgba(0,0,0,.075);
+                 } 
             }
         }
     }
