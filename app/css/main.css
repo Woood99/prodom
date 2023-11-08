@@ -7969,7 +7969,7 @@ textarea.input-reset {
   }
 }
 .possibilities-home__text {
-  top: -18px;
+  top: 10px;
 }
 @media (max-width: 1200px) {
   .possibilities-home__text {
@@ -8469,19 +8469,19 @@ textarea.input-reset {
   }
 }
 .possibilities-home__item--2, .possibilities-home__item--3, .possibilities-home__item--4, .possibilities-home__item--5 {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 @media (min-width: 1327px) {
   .possibilities-home__item--2:hover, .possibilities-home__item--3:hover, .possibilities-home__item--4:hover, .possibilities-home__item--5:hover {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
-    -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.075);
-    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.16);
   }
 }
 @media (max-width: 1024px) {
@@ -9131,7 +9131,7 @@ textarea.input-reset {
   }
 }
 .app-home__text {
-  top: -18px;
+  top: 10px;
 }
 @media (max-width: 1200px) {
   .app-home__text {
