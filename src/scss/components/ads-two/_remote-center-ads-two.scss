@@ -1,0 +1,25 @@
+.remote-center-ads-two {
+    @include adaptiveValue("margin-top", 158, 48, 1296, 576, 1);
+    @include adaptiveValue("margin-bottom", -260, -125, 1296, 576, 1);
+    @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
+    position: relative;
+    @include adaptiveValue("padding-top", 86, 32, 1296, 576, 1);
+    @include adaptiveValue("padding-bottom", 200, 80, 1296, 576, 1);
+
+    background: url('../img/decor-4.png'), linear-gradient(0deg, #6792FF 17.48%, #2B53E1 102.21%), linear-gradient(185deg, #F1F7FF -1.79%, rgba(237, 243, 252, 0.00) 160.26%), #FFF;;
+    background-repeat: no-repeat;
+    &__container {
+            max-width: calc(1179px + 30px);
+            margin: 0 auto;
+            padding: 0 15px;
+    }
+
+    &__title {
+    }
+
+    &__content {
+    }
+
+    &__subtitle {
+    }
+}

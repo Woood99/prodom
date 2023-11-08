@@ -1,12 +1,12 @@
 .tags-home {
-    @include adaptiveValue("margin-top", 137, 75, 1296, 576, 1);
-    @include adaptiveValue("margin-bottom", -263, -65, 1296, 576, 1);
+    @include adaptiveValue("margin-top", 137, 48, 1296, 576, 1);
+    @include adaptiveValue("margin-bottom", -260, -125, 1296, 576, 1);
     @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
     background-color: #0f0f0f;
     position: relative;
-    @include adaptiveValue("padding-top", 100, 46, 1296, 576, 1);
-    @include adaptiveValue("padding-bottom", 375, 100, 1296, 576, 1);
-
+    @include adaptiveValue("padding-top", 251, 125, 1296, 576, 1);
+    @include adaptiveValue("padding-bottom", 200, 80, 1296, 576, 1);
+    overflow: hidden;
     &__container {
         max-width: 3550px;
         margin: 0 auto;
@@ -14,16 +14,47 @@
 
     &__decor {
         position: absolute;
-        bottom: -20%;
-        right: 0;
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (max-width:$smallTablet-max){
+             top: -20%; 
+        }
+    }
+    &__info {
+        max-width: 576px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: absolute;
+        z-index: 5;
+        @include adaptiveValue("top", 93, 48, 1296, 576, 1);
+        left: 50%;
+        transform: translateX(-50%);
 
         @media (max-width:$smallTablet-max) {
-            width: 100%;
-            top: -15%;
-            bottom: auto;
+            max-width: calc(100% - 30px);
         }
     }
 
+    &__title {
+        color: var(--white);
+        text-align: center;
+
+        span {
+            color: #7290D3;
+        }
+    }
+
+    &__btn {
+        margin-top: 43px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 24px;
+        }
+    }
     &__wrapper {}
 
     &__row {

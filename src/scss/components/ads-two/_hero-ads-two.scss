@@ -1,0 +1,39 @@
+.hero-ads-two {
+
+    &__container {
+        @media (max-width:$tablet-max) {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        .popular-subtitle {
+            position: absolute;
+            top: -18px;
+            right: 32%;
+
+            transform: rotate(2.67deg);
+
+            @media (max-width:$tablet-max) {
+                top: -25px;
+            }
+        }
+    }
+
+    &__text {
+        p{
+            max-width: 693px;
+        }
+    }
+
+    &__btn {
+        margin-top: 62px;
+        width: 276px;
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
+           width: 100%;
+        }
+    }
+}
