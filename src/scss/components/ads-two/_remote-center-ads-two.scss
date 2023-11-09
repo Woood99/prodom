@@ -1,25 +1,133 @@
 .remote-center-ads-two {
-    @include adaptiveValue("margin-top", 158, 48, 1296, 576, 1);
-    @include adaptiveValue("margin-bottom", -260, -125, 1296, 576, 1);
     @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
-    position: relative;
-    @include adaptiveValue("padding-top", 86, 32, 1296, 576, 1);
-    @include adaptiveValue("padding-bottom", 200, 80, 1296, 576, 1);
 
-    background: url('../img/decor-4.png'), linear-gradient(0deg, #6792FF 17.48%, #2B53E1 102.21%), linear-gradient(185deg, #F1F7FF -1.79%, rgba(237, 243, 252, 0.00) 160.26%), #FFF;;
-    background-repeat: no-repeat;
+    @include adaptiveValue("margin-top", 158, 48, 1296, 576, 1);
+    margin-bottom: -200px;
+
+    @include adaptiveValue("padding-top", 86, 32, 1296, 576, 1);
+    @include adaptiveValue("padding-bottom", 280, 150, 1296, 576, 1);
+
+    background: linear-gradient(0deg, #6792FF 17.48%, #2B53E1 102.21%), linear-gradient(185deg, #F1F7FF -1.79%, rgba(237, 243, 252, 0.00) 160.26%), #FFF;
+
+    position: relative;
+
     &__container {
-            max-width: calc(1179px + 30px);
-            margin: 0 auto;
-            padding: 0 15px;
+        max-width: calc(1179px + 30px);
+        margin: 0 auto;
+        padding: 0 15px;
+
+        display: flex;
+        justify-content: space-between;
+
+        color: var(--white);
+
+        position: relative;
+        z-index: 1;
     }
 
     &__title {
+        max-width: 386px;
+
+        @include adaptiveValue("font-size", 60, 48, 1296, 576, 1);
+        line-height: 1;
+        font-weight: 500;
+        color: var(--white);
+
+        span {
+            color: rgba(#fff, 0.52);
+        }
     }
 
     &__content {
+        margin-left: 102px;
+
+        display: grid;
+        grid-template-columns: 246px 1px 335px;
+        justify-content: space-between;
+        grid-gap: 12px;
+        flex-grow: 1;
+
+        p {
+            @include adaptiveValue("font-size", 16, 14, 1296, 576, 1);
+            line-height: 175%;
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        .col:nth-child(1) {
+            p {
+                &:nth-child(2) {
+                    max-width: 223px;
+                }
+
+                &:nth-child(3) {
+                    max-width: 222px;
+                }
+            }
+        }
+
+        .col:nth-child(2) {
+            height: 100%;
+            width: 1px;
+            background: linear-gradient(270deg, #5781F7 14.12%, #638BFB 93.51%);
+        }
+
+        .col:nth-child(3) {
+            p {
+                &:nth-child(2) {
+                    max-width: 223px;
+                }
+
+                &:nth-child(3) {
+                    max-width: 248px;
+                }
+            }
+        }
     }
 
     &__subtitle {
+
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("font-size", 24, 18, 1296, 576, 1);
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.24px;
+        color: #89A7F9;
+        margin-bottom: 40px;
+
+        >span {
+            &:nth-child(1) {
+                margin-right: 18px;
+                @include adaptiveValue("font-size", 32, 18, 1296, 576, 1);
+            }
+
+            &:nth-child(2) {
+                span {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5%;
+        width: 130%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 80%;
+        background: url('../img/decor-4.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
     }
 }

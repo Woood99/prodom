@@ -8,9 +8,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #F0F5FF;
+        background-color: #E7EAF2;
         border-radius: 48px;
-        height: 68px;
+        height: 74px;
         padding: 0 8px;
 
         @media (max-width:$tablet-max) {
@@ -24,14 +24,14 @@
     }
 
     &__title {
-        height: 52px;
+     height: 58px;
         border-radius: 48px;
-        padding: 0 28px;
+        padding: 0 58px;
         font-size: 18px;
         line-height: math.div(28, 18);
         font-weight: 500;
         border: 1px solid transparent;
-        color: var(--blue);
+        color: #969BA9;
         white-space: nowrap;
 
         &._tab-active {

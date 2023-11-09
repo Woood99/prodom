@@ -3,7 +3,7 @@
 
     &__container {
         display: grid;
-        grid-template-columns: 526px 1fr;
+        grid-template-columns: 526px 636px;
         grid-column-gap: 80px;
         grid-row-gap: 60px;
 
@@ -88,44 +88,10 @@
     &__tabs {
         margin-top: 32px;
         width: 100%;
-
-        .tabs {
-            &__navigation {
-                margin: 0;
-                height: 74px;
-                width: 100%;
-                padding: 8px;
-                justify-content: space-between;
-                @media (max-width:$tablet-max){
-                    height: auto;
-                }
-            }
-
-            &__title {
-                height: 100%;
-                flex-grow: 1;
-                color: #8E8E96;
-                font-weight: 500;
-                font-size: 20px;
-
-                &._tab-active {
-                    color: var(--black);
-                }
-
-                @media (max-width:$tablet-max) {
-                    font-size: 16px;
-                    height: 38px;
-                }
-            }
-
-            &__content {
-                width: 100%;
-                margin-top: 24px;
-            }
-        }
     }
 
     &__spollers {
+        margin-top: 42px;
         .spollers {
             &__item {
                 background: #FBFBFB;
@@ -143,7 +109,7 @@
 
             &__title {
                 color: var(--dark);
-                padding: 20px 44px 20px 32px;
+                padding: 20px 32px 16px 45px;
                 justify-content: start;
 
                 span {
@@ -156,8 +122,9 @@
             }
 
             &__body {
-                color: #868A93;
-                padding: 0 150px 40px 110px;
+                color: var(--black);
+                font-weight: 400;
+                padding: 0 87px 49px 119px;
 
                 @media (max-width:$tablet-max) {
                     padding: 0 24px 24px;
@@ -176,22 +143,8 @@
                 margin-left: auto;
             }
         }
+        @media (max-width:$tablet-max){
+            margin-top: 32px;
+        }
     }
-}
-
-
-
-.spollers {
-
-    &__item {}
-
-    &__title {}
-
-    &__icon {}
-
-    &__control {}
-
-    &__control-wrapper {}
-
-    &__body {}
 }

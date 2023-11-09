@@ -1,5 +1,5 @@
-.app-skud-two {
-    margin-top: 67px;
+.connect-ads-two {
+    @include adaptiveValue("margin-top", 100, 32,1296,576,1);
     &__container {
         position: relative;
     }
@@ -35,10 +35,7 @@
     }
 
     &__text {
-        top: 10px;
-        @media (max-width:1200px) {
-            top: 18px;
-        }
+        top: 18px;
 
         &._translate-none {
             transform: translate(0) !important;

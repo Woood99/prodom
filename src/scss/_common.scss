@@ -288,7 +288,8 @@
             }
 
             .volume__controls {
-                bottom: 52px !important; // need hack :(
+                bottom: 33px !important; // need hack :(
+                    height: 65px;
             }
 
             .volume__controls .volume__slider .volume__progress .volume__pin {

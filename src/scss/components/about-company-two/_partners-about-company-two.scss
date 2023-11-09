@@ -1,0 +1,132 @@
+.partners-about-company {
+    margin-top: 32px;
+
+    &__container {}
+
+    &__top {
+        max-width: 700px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 16px;
+        color: var(--dark);
+        font-size: 18px;
+        line-height: math.div(32, 18);
+        font-weight: 500;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+
+                @media (max-width:$tablet-max) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            font-size: 16px;
+        }
+    }
+
+    &__slider {
+        max-width: 1680px;
+        margin: 72px auto 0;
+
+        .swiper-slide {
+            text-align: center;
+            user-select: none;
+            --width: 260px;
+            overflow: hidden;
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+
+            picture {
+                flex-grow: 1;
+            }
+
+            img {
+                border-radius: 48px;
+                height: 100%;
+                width: var(--width);
+
+                @media (max-width:$tablet-max) {
+                    border-radius: 24px;
+                }
+            }
+
+            span {
+                margin-top: 24px;
+                display: inline-block;
+                color: var(--dark);
+                font-weight: 500;
+                font-size: 20px;
+                line-height: math.div(25, 20);
+                max-width: var(--width);
+                transition: color $transitionSpeed $transitionFunction;
+
+                @media (max-width:$tablet-max) {
+                    font-size: 16px;
+                    margin-top: 16px;
+                }
+
+                @media (max-width:$mobile-max) {
+                    font-size: 14px;
+                    margin-top: 12px;
+                }
+            }
+
+            @media (min-width:$tablet-min) {
+                &:hover {
+                    span {
+                        color: var(--blue);
+                    }
+                }
+            }
+
+            @media (max-width:$tablet-max) {
+                --width: 235px;
+            }
+
+            @media (max-width:$smallTablet-max) {
+                --width: 175px;
+            }
+
+            &.focus-visible {
+                outline: none;
+
+                span {
+                    color: var(--blue);
+                }
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            margin: 32px auto 0;
+        }
+    }
+
+    &__nav {
+        margin: 72px auto 0;
+        max-width: 1680px;
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            display: none;
+        }
+    }
+
+    &__prev {}
+
+    &__next {
+        margin-left: 8px;
+    }
+}
