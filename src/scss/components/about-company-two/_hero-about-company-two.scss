@@ -60,33 +60,41 @@
                 width: 381px;
 
                 .card-info-third {
-                    height: 270px;
                     transition: transform $transitionSpeed ease-out;
-                    &:nth-child(1){
-                        @media (min-width:$desktop-min){
-                            &:hover{
-                               +.card-info-third{
-                                   transform: translateY(-12%);
-                                   +.card-info-third{
-                                    transform: translateY(-61%);
+                    &:nth-child(1) {
+                        min-height: 360px;
+                        height: 360px;
+                        @media (min-width:$desktop-min) {
+                            &:hover {
+                                +.card-info-third {
+                                    transform: translateY(-31.5%);
+
+                                    +.card-info-third {
+                                        transform: translateY(-123%);
+                                    }
                                 }
-                               }
-                            } 
-                       }
+                            }
+                        }
                     }
+
                     &:nth-child(2) {
-                        transform: translateY(-47.5%);
-                        @media (min-width:$desktop-min){
-                             &:hover{
-                                +.card-info-third{
-                                    transform: translateY(-61%);
+                        min-height: 360px;
+                        height: 360px;
+                        transform: translateY(-61.5%);
+
+                        @media (min-width:$desktop-min) {
+                            &:hover {
+                                +.card-info-third {
+                                    transform: translateY(-125%);
                                 }
-                             } 
+                            }
                         }
                     }
 
                     &:nth-child(3) {
-                        transform: translateY(-96.5%); // 49 + 47.5
+                        min-height: 270px;
+                        height: 270px;
+                        transform: translateY(-163%);
                     }
                 }
             }

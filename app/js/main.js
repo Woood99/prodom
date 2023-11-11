@@ -1582,6 +1582,28 @@ function initSliders() {
       }
     });
   }
+  if (document.querySelector('.partners-about-company-two__slider')) {
+    const el = document.querySelector('.partners-about-company-two__slider');
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      speed: 800,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      initialSlide: 2,
+      navigation: {
+        nextEl: el.closest('.partners-about-company-two').querySelector('.partners-about-company-two__next'),
+        prevEl: el.closest('.partners-about-company-two').querySelector('.partners-about-company-two__prev')
+      },
+      breakpoints: {
+        1025: {
+          spaceBetween: 24
+        }
+      }
+    });
+  }
   if (document.querySelector('.for-whom-skud-two__slider')) {
     const el = document.querySelector('.for-whom-skud-two__slider');
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {

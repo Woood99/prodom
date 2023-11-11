@@ -8372,41 +8372,48 @@ textarea.input-reset {
   width: 381px;
 }
 .hero-about-company-two__content .col:nth-child(2) .card-info-third {
-  height: 270px;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   -o-transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
+.hero-about-company-two__content .col:nth-child(2) .card-info-third:nth-child(1) {
+  min-height: 360px;
+  height: 360px;
+}
 @media (min-width: 1327px) {
   .hero-about-company-two__content .col:nth-child(2) .card-info-third:nth-child(1):hover + .card-info-third {
-    -webkit-transform: translateY(-12%);
-    -ms-transform: translateY(-12%);
-    transform: translateY(-12%);
+    -webkit-transform: translateY(-31.5%);
+    -ms-transform: translateY(-31.5%);
+    transform: translateY(-31.5%);
   }
   .hero-about-company-two__content .col:nth-child(2) .card-info-third:nth-child(1):hover + .card-info-third + .card-info-third {
-    -webkit-transform: translateY(-61%);
-    -ms-transform: translateY(-61%);
-    transform: translateY(-61%);
+    -webkit-transform: translateY(-123%);
+    -ms-transform: translateY(-123%);
+    transform: translateY(-123%);
   }
 }
 .hero-about-company-two__content .col:nth-child(2) .card-info-third:nth-child(2) {
-  -webkit-transform: translateY(-47.5%);
-  -ms-transform: translateY(-47.5%);
-  transform: translateY(-47.5%);
+  min-height: 360px;
+  height: 360px;
+  -webkit-transform: translateY(-61.5%);
+  -ms-transform: translateY(-61.5%);
+  transform: translateY(-61.5%);
 }
 @media (min-width: 1327px) {
   .hero-about-company-two__content .col:nth-child(2) .card-info-third:nth-child(2):hover + .card-info-third {
-    -webkit-transform: translateY(-61%);
-    -ms-transform: translateY(-61%);
-    transform: translateY(-61%);
+    -webkit-transform: translateY(-125%);
+    -ms-transform: translateY(-125%);
+    transform: translateY(-125%);
   }
 }
 .hero-about-company-two__content .col:nth-child(2) .card-info-third:nth-child(3) {
-  -webkit-transform: translateY(-96.5%);
-  -ms-transform: translateY(-96.5%);
-  transform: translateY(-96.5%);
+  min-height: 270px;
+  height: 270px;
+  -webkit-transform: translateY(-163%);
+  -ms-transform: translateY(-163%);
+  transform: translateY(-163%);
 }
 .hero-about-company-two__tags {
   display: -webkit-box;
@@ -8501,37 +8508,89 @@ textarea.input-reset {
   }
 }
 
-.partners-about-company {
-  margin-top: 32px;
+@media (min-width: 81em) {
+  .partners-about-company-two {
+    margin-top: 5.4375rem;
+  }
 }
-.partners-about-company__top {
-  max-width: 700px;
-  text-align: center;
+@media (min-width: 36em) and (max-width: 81em) {
+  .partners-about-company-two {
+    margin-top: calc(2rem + 3.4375 * (((100vw - 36rem)) / ((45))));
+  }
+}
+@media (max-width: 36em) {
+  .partners-about-company-two {
+    margin-top: 2rem;
+  }
+}
+.partners-about-company-two__top {
   margin: 0 auto;
-  padding: 0 16px;
+  max-width: 626px;
+  text-align: center;
   color: var(--dark);
-  font-size: 18px;
   line-height: 1.7777777778;
-  font-weight: 500;
+  font-weight: 400;
 }
-.partners-about-company__top p:not(:last-child) {
+@media (min-width: 81em) {
+  .partners-about-company-two__top {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 36em) and (max-width: 81em) {
+  .partners-about-company-two__top {
+    font-size: calc(0.875rem + 0.25 * (((100vw - 36rem)) / ((45))));
+  }
+}
+@media (max-width: 36em) {
+  .partners-about-company-two__top {
+    font-size: 0.875rem;
+  }
+}
+.partners-about-company-two__top p:not(:last-child) {
   margin-bottom: 32px;
 }
 @media (max-width: 1024px) {
-  .partners-about-company__top p:not(:last-child) {
+  .partners-about-company-two__top p:not(:last-child) {
     margin-bottom: 24px;
   }
 }
-@media (max-width: 1024px) {
-  .partners-about-company__top {
-    font-size: 16px;
+.partners-about-company-two__wrapper {
+  border: 1px solid #E7EAF2;
+  background: #FFF;
+  padding: 84px 0 72px;
+  margin: 68px 0 0;
+}
+@media (min-width: 81em) {
+  .partners-about-company-two__wrapper {
+    border-radius: 4.375rem;
   }
 }
-.partners-about-company__slider {
-  max-width: 1680px;
-  margin: 72px auto 0;
+@media (min-width: 36em) and (max-width: 81em) {
+  .partners-about-company-two__wrapper {
+    border-radius: calc(1.5rem + 2.875 * (((100vw - 36rem)) / ((45))));
+  }
 }
-.partners-about-company__slider .swiper-slide {
+@media (max-width: 36em) {
+  .partners-about-company-two__wrapper {
+    border-radius: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .partners-about-company-two__wrapper {
+    margin-top: 32px;
+    padding: 32px 0;
+  }
+}
+@media (max-width: 768px) {
+  .partners-about-company-two__wrapper {
+    padding: 0;
+    border: none;
+  }
+}
+.partners-about-company-two__slider {
+  padding: 0 32px;
+}
+.partners-about-company-two__slider .swiper-slide {
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -8549,72 +8608,67 @@ textarea.input-reset {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.partners-about-company__slider .swiper-slide picture {
+.partners-about-company-two__slider .swiper-slide picture {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-.partners-about-company__slider .swiper-slide img {
-  border-radius: 48px;
+.partners-about-company-two__slider .swiper-slide img {
+  border-radius: 36px;
   height: 100%;
   width: var(--width);
 }
 @media (max-width: 1024px) {
-  .partners-about-company__slider .swiper-slide img {
+  .partners-about-company-two__slider .swiper-slide img {
     border-radius: 24px;
   }
 }
-.partners-about-company__slider .swiper-slide span {
-  margin-top: 24px;
+.partners-about-company-two__slider .swiper-slide span {
+  margin-top: 18px;
   display: inline-block;
   color: var(--dark);
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.25;
+  font-size: 16px;
+  line-height: 1.5625;
   max-width: var(--width);
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 @media (max-width: 1024px) {
-  .partners-about-company__slider .swiper-slide span {
-    font-size: 16px;
-    margin-top: 16px;
-  }
-}
-@media (max-width: 576px) {
-  .partners-about-company__slider .swiper-slide span {
+  .partners-about-company-two__slider .swiper-slide span {
     font-size: 14px;
     margin-top: 12px;
   }
 }
 @media (min-width: 1025px) {
-  .partners-about-company__slider .swiper-slide:hover span {
+  .partners-about-company-two__slider .swiper-slide:hover span {
     color: var(--blue);
   }
 }
+.partners-about-company-two__slider .swiper-slide.focus-visible {
+  outline: none;
+}
+.partners-about-company-two__slider .swiper-slide.focus-visible span {
+  color: var(--blue);
+}
+@media (max-width: 768px) {
+  .partners-about-company-two__slider .swiper-slide {
+    --width: 155px;
+  }
+}
 @media (max-width: 1024px) {
-  .partners-about-company__slider .swiper-slide {
-    --width: 235px;
+  .partners-about-company-two__slider {
+    padding: 0 24px;
   }
 }
 @media (max-width: 768px) {
-  .partners-about-company__slider .swiper-slide {
-    --width: 175px;
+  .partners-about-company-two__slider {
+    padding: 0 16px;
+    margin: 0 -16px;
   }
 }
-.partners-about-company__slider .swiper-slide.focus-visible {
-  outline: none;
-}
-.partners-about-company__slider .swiper-slide.focus-visible span {
-  color: var(--blue);
-}
-@media (max-width: 1024px) {
-  .partners-about-company__slider {
-    margin: 32px auto 0;
-  }
-}
-.partners-about-company__nav {
+.partners-about-company-two__nav {
   margin: 72px auto 0;
   max-width: 1680px;
   padding: 0 16px;
@@ -8629,128 +8683,214 @@ textarea.input-reset {
   align-items: center;
 }
 @media (max-width: 1024px) {
-  .partners-about-company__nav {
+  .partners-about-company-two__nav {
     margin-top: 32px;
   }
 }
 @media (max-width: 768px) {
-  .partners-about-company__nav {
+  .partners-about-company-two__nav {
     display: none;
   }
 }
-.partners-about-company__next {
+.partners-about-company-two__next {
   margin-left: 8px;
 }
 
-.form-about-company {
-  margin-bottom: 47px;
-}
 @media (min-width: 81em) {
-  .form-about-company {
-    margin-top: 17.5rem;
+  .question-about-company-two {
+    margin-top: 6.25rem;
   }
 }
 @media (min-width: 36em) and (max-width: 81em) {
-  .form-about-company {
-    margin-top: calc(7.8125rem + 9.6875 * (((100vw - 36rem)) / ((45))));
+  .question-about-company-two {
+    margin-top: calc(2rem + 4.25 * (((100vw - 36rem)) / ((45))));
   }
 }
 @media (max-width: 36em) {
-  .form-about-company {
-    margin-top: 7.8125rem;
+  .question-about-company-two {
+    margin-top: 2rem;
   }
 }
-.form-about-company .container {
-  max-width: 1224px;
+@media (min-width: 81em) {
+  .question-about-company-two {
+    margin-bottom: 7.3125rem;
+  }
 }
-.form-about-company__container {
+@media (min-width: 36em) and (max-width: 81em) {
+  .question-about-company-two {
+    margin-bottom: calc(1.5rem + 5.8125 * (((100vw - 36rem)) / ((45))));
+  }
+}
+@media (max-width: 36em) {
+  .question-about-company-two {
+    margin-bottom: 1.5rem;
+  }
+}
+.question-about-company-two__container {
   position: relative;
 }
-@media (min-width: 1025px) {
-  .form-about-company__container {
-    background-color: #0F0F0F;
-    border-radius: 45px;
-    z-index: 1;
-  }
-  .form-about-company__container::before {
-    content: "";
-    background-image: url("../img/gradient-block-2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-radius: 45px;
-  }
-}
-.form-about-company__form {
-  max-width: 688px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 62px 120px 90px;
-  background-color: var(--white);
-  border: 1px solid #E7EAF2;
-  border-radius: 45px;
-  text-align: center;
-  position: relative;
-  top: -130px;
+.question-about-company-two__top {
+  background: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 @media (max-width: 1024px) {
-  .form-about-company__form {
-    top: 0;
-    padding: 45px 32px 32px;
+  .question-about-company-two__top {
+    padding: 32px 0;
   }
 }
 @media (max-width: 768px) {
-  .form-about-company__form {
-    border-radius: 32px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    border-radius: 0;
+  .question-about-company-two__top {
+    padding: 24px 0;
   }
 }
-.form-about-company__title {
-  margin-bottom: 24px;
-  color: var(--black);
-  font-size: 36px;
-  line-height: 1.6666666667;
-  font-weight: 500;
+.question-about-company-two__title {
+  letter-spacing: -3.24px;
+  font-weight: 600;
+}
+@media (min-width: 81em) {
+  .question-about-company-two__title {
+    font-size: 8.25rem;
+  }
+}
+@media (min-width: 26.25em) and (max-width: 81em) {
+  .question-about-company-two__title {
+    font-size: calc(3.25rem + 5 * (((100vw - 26.25rem)) / ((54.75))));
+  }
+}
+@media (max-width: 26.25em) {
+  .question-about-company-two__title {
+    font-size: 3.25rem;
+  }
 }
 @media (max-width: 1024px) {
-  .form-about-company__title {
-    font-size: 26px;
-    margin-bottom: 16px;
+  .question-about-company-two__title {
+    letter-spacing: -1.56px;
+    white-space: normal;
+    text-align: center;
+    max-width: 925px;
   }
 }
-.form-about-company__descr {
-  margin-bottom: 54px;
-  font-size: 16px;
-  line-height: 1.75;
-  font-weight: 400;
-  color: var(--dark);
-  text-align: center;
+@media (max-width: 768px) {
+  .question-about-company-two__title {
+    max-width: 400px;
+  }
+}
+.question-about-company-two__text {
+  top: 18px;
+}
+.question-about-company-two__text._translate-none {
+  -webkit-transform: translate(0) !important;
+  -ms-transform: translate(0) !important;
+  transform: translate(0) !important;
+}
+.question-about-company-two__text p {
+  max-width: 617px;
+}
+@media (max-width: 576px) {
+  .question-about-company-two__text p {
+    display: inline;
+  }
+}
+.question-about-company-two__form {
+  max-width: 518px;
+  margin: 0 auto;
 }
 @media (max-width: 1024px) {
-  .form-about-company__descr {
-    margin-bottom: 24px;
-    font-size: 14px;
+  .question-about-company-two__form {
+    margin-top: 16px;
   }
 }
-.form-about-company .form-primary__btn {
+@media (max-width: 768px) {
+  .question-about-company-two__form {
+    max-width: none;
+  }
+}
+.question-about-company-two__btn {
   margin-top: 40px;
 }
 @media (max-width: 1024px) {
-  .form-about-company .form-primary__btn {
-    margin-top: 32px;
+  .question-about-company-two__btn {
+    margin-top: 24px;
+    height: 58px;
+  }
+}
+.question-about-company-two__decor-lightning {
+  position: absolute;
+  z-index: 1;
+}
+.question-about-company-two__decor-lightning--1 {
+  top: 2.5%;
+  left: 20%;
+}
+@media (max-width: 1024px) {
+  .question-about-company-two__decor-lightning--1 {
+    top: 15%;
+    left: auto;
+    right: 3%;
+    width: 20px;
+  }
+}
+.question-about-company-two__decor-lightning--2 {
+  top: 35%;
+  left: 10%;
+}
+@media (max-width: 1024px) {
+  .question-about-company-two__decor-lightning--2 {
+    top: 0%;
+    left: auto;
+    right: 11%;
+    width: 58px;
+  }
+}
+.question-about-company-two__decor-lightning--3 {
+  top: 51%;
+  left: 4%;
+}
+@media (max-width: 1024px) {
+  .question-about-company-two__decor-lightning--3 {
+    top: 39%;
+    left: 10%;
+    width: 32px;
+  }
+}
+.question-about-company-two__decor-lightning--4 {
+  top: 75%;
+  left: 16%;
+}
+@media (max-width: 1024px) {
+  .question-about-company-two__decor-lightning--4 {
+    top: 28%;
+    left: 1%;
+    width: 35px;
+    z-index: -1;
+  }
+}
+.question-about-company-two__decor-lightning--5 {
+  top: 28%;
+  right: -3%;
+  z-index: -1;
+}
+@media (max-width: 1024px) {
+  .question-about-company-two__decor-lightning--5 {
+    top: 32%;
+    left: auto;
+    right: -9%;
+    width: 107px;
+  }
+}
+.question-about-company-two__decor-lightning--6 {
+  top: 56%;
+  right: 17%;
+}
+@media (max-width: 1024px) {
+  .question-about-company-two__decor-lightning--6 {
+    display: none;
   }
 }
 @media (max-width: 1024px) {
-  .form-about-company {
-    margin-top: 56px;
-    margin-bottom: 56px;
+  .question-about-company-two {
+    margin-top: 32px;
   }
 }
 

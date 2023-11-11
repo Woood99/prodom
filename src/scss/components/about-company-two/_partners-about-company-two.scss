@@ -1,17 +1,15 @@
-.partners-about-company {
-    margin-top: 32px;
-
+.partners-about-company-two {
+    @include adaptiveValue("margin-top", 87, 32,1296,576,1);
     &__container {}
 
     &__top {
-        max-width: 700px;
-        text-align: center;
         margin: 0 auto;
-        padding: 0 16px;
+        max-width: 626px;
+        text-align: center;
         color: var(--dark);
-        font-size: 18px;
+        @include adaptiveValue("font-size", 18, 14,1296,576,1);
         line-height: math.div(32, 18);
-        font-weight: 500;
+        font-weight: 400;
 
         p {
             &:not(:last-child) {
@@ -22,16 +20,28 @@
                 }
             }
         }
+    }
+    &__wrapper{
 
-        @media (max-width:$tablet-max) {
-            font-size: 16px;
+
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        border: 1px solid #E7EAF2;
+
+        background: #FFF;
+
+        padding: 84px 0 72px;
+        margin: 68px 0 0;
+        @media (max-width:$tablet-max){
+            margin-top: 32px;
+            padding: 32px 0;
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 0;
+             border: none; 
         }
     }
-
     &__slider {
-        max-width: 1680px;
-        margin: 72px auto 0;
-
+        padding: 0 32px;
         .swiper-slide {
             text-align: center;
             user-select: none;
@@ -47,31 +57,26 @@
             }
 
             img {
-                border-radius: 48px;
+                border-radius: 36px;
                 height: 100%;
                 width: var(--width);
-
+            
                 @media (max-width:$tablet-max) {
                     border-radius: 24px;
                 }
             }
 
             span {
-                margin-top: 24px;
+                margin-top: 18px;
                 display: inline-block;
                 color: var(--dark);
                 font-weight: 500;
-                font-size: 20px;
-                line-height: math.div(25, 20);
+                font-size: 16px;
+                line-height: math.div(25, 16);
                 max-width: var(--width);
                 transition: color $transitionSpeed $transitionFunction;
 
                 @media (max-width:$tablet-max) {
-                    font-size: 16px;
-                    margin-top: 16px;
-                }
-
-                @media (max-width:$mobile-max) {
                     font-size: 14px;
                     margin-top: 12px;
                 }
@@ -85,14 +90,6 @@
                 }
             }
 
-            @media (max-width:$tablet-max) {
-                --width: 235px;
-            }
-
-            @media (max-width:$smallTablet-max) {
-                --width: 175px;
-            }
-
             &.focus-visible {
                 outline: none;
 
@@ -100,10 +97,16 @@
                     color: var(--blue);
                 }
             }
+            @media (max-width:$smallTablet-max){
+                 --width: 155px;
+            }
         }
-
-        @media (max-width:$tablet-max) {
-            margin: 32px auto 0;
+        @media (max-width:$tablet-max){
+            padding: 0 24px;
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 0 16px;
+             margin: 0 -16px; 
         }
     }
 
