@@ -119,4 +119,7 @@
             height: 58px;
         }
     }
+    &.newsletter-contacts{
+        @include adaptiveValue("margin-top", 100, 48,1296,576,1);
+    }
 }

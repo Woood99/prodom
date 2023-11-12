@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Контакты 2"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            @include('partials/contacts-two/hero-contacts-two.html')
+            @include('partials/contacts-two/form-contacts-two.html')
+            <section class="newsletter-home newsletter-contacts">
+                <div class="container">
+                    <div class="newsletter-home__wrapper">
+                        <h2 class="newsletter-home__title">
+                            А это рассылка :)
+                        </h2>
+                        <p class="newsletter-home__descr">
+                            Подпишитесь, и будьте в курсе наших обновлений
+                        </p>
+                        <form action="#" class="newsletter-home__form form-primary">
+                            <label class="form-primary__label label-primary newsletter-home__input">
+                                <input type="email" name="email" class="input-reset input-primary label-primary__input" placeholder="E-mail">
+                            </label>
+                            <button type="submit" class="btn btn-reset btn-primary btn-primary--blue form-primary__btn newsletter-home__btn">
+                                Подписаться!
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+
+</html>

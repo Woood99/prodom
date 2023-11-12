@@ -40,9 +40,8 @@
     }
 
     &__agree {
-        margin-top: 21px;
+        @include adaptiveValue("margin-top", 48, 24,1296,576,1);
         @media (max-width:$tablet-max){
-            margin-top: 14px;
             margin-left: 12px;
             .checkbox__text{
                 font-size: 10px;
@@ -69,7 +68,7 @@
 
         span {
             display: block;
-            margin-bottom: 32px;
+            margin-bottom: 20px;
 
             font-size: 16px;
             line-height: math.div(25, 16);
@@ -77,6 +76,7 @@
 
             @media (max-width:$tablet-max) {
                 margin-bottom: 24px;
+                font-size: 14px;
             }
         }
 
