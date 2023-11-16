@@ -3,10 +3,9 @@
 
     &__title {
         line-height: math.div(42, 38);
-        max-width: 822px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         text-align: center;
+        font-weight: 700;
         span {
             color: var(--blue);
         }

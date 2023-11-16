@@ -1,0 +1,76 @@
+.hero-implement {
+
+    &__container {
+        margin-top: 12px;
+        background: linear-gradient(6.56deg, #FFFFFF -6.06%, #F3F5F8 135.59%);
+        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        text-align: center;
+        position: relative;
+    }
+
+    &__content {
+        padding: 45px 0 167px;
+        max-width: 595px;
+        margin: 0 auto;
+
+        @media (max-width:$tablet-max) {
+            padding: 32px 0;
+        }
+    }
+
+    &__subtitle {
+        border-radius: 42px;
+        background: #E0E9FF;
+        text-transform: uppercase;
+        padding: 0 20px;
+        height: 34px;
+        color: var(--blue);
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 1;
+        letter-spacing: 1.1px;
+
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        margin: 34px auto 0;
+        text-align: center;
+
+        span {
+            color: var(--blue);
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 16px;
+        }
+    }
+
+    &__text {
+        margin: 26px auto 0;
+        text-align: center;
+
+        color: var(--black);
+        font-weight: 400;
+        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+        line-height: 175%;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 16px;
+        }
+    }
+
+
+
+    &__btn {
+        margin-top: 76px;
+        width: 276px;
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
+            width: 100%;
+        }
+    }
+}

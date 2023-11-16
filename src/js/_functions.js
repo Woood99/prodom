@@ -14,21 +14,8 @@ spollers();
 
 // ========================================================================================
 
-import Rellax from 'rellax';;
-const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
-const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
-rellaxTargetsTitlte.forEach(target => {
-    if (!target.classList.contains('_no-rellax')) {
-        const heroRellax = new Rellax(target);
-    }
-})
-rellaxTargetsText.forEach(target => {
-    if (!target.classList.contains('_no-rellax')) {
-        const heroRellax = new Rellax(target, {
-            breakpoints: [577, 769, 1201],
-        });
-    }
-})
+
+
 // if (rellaxTargetsText.length) {
 
 //     function transform(target, topPropertyValue, topGapTarget, rellaxName) {

@@ -25,12 +25,11 @@
             grid-column: 1/-1;
 
             display: grid;
-            align-items: center;
             grid-column-gap: 62px;
-            grid-template-columns: percent(745, 1296) percent(405,1296);
+            grid-template-columns: percent(745, 1296) percent(416,1296);
 
             .crm-digitale-umgebung__info {
-                margin-bottom: 45px;
+                margin-top: 42px;
                 @media (max-width:$smallTablet-max){
                      text-align: center;
                      margin-bottom: 74px; 
@@ -55,15 +54,20 @@
                 }
             }
             .crm-digitale-umgebung__title{
+                font-weight: 700;
                 span{
+                    display: block;
                     color: var(--blue);
                 }
             }
             .crm-digitale-umgebung__descr {
-                margin-top: 32px;
+                margin-top: 24px;
 
                 @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
                 line-height: 160%;
+                span{
+                    font-weight: 500;
+                }
                 @media (max-width:$smallTablet-max){
                      margin-top: 16px; 
                 }
@@ -192,8 +196,7 @@
     }
 
     &__btn {
-        margin-top: 72px;
-        align-self: center;
+        margin-top: 36px;
 
         @media (max-width:$tablet-max) {
             margin-top: 50px;

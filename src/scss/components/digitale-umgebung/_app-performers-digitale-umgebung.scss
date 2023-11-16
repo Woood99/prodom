@@ -4,19 +4,16 @@
     @include adaptiveValue("padding-top", 164, 48, 1296, 576, 1);
     background-color: var(--white);
     position: relative;
-
+    z-index: 5;
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 26px;
+        grid-column-gap: 24px;
         grid-row-gap: 40px;
-
-        @media (max-width:$tablet-max) {
-            grid-row-gap: 16px;
-        }
     }
 
     &__title {
+        font-weight: 700;
         span {
             color: var(--blue);
         }
@@ -36,7 +33,7 @@
             }
 
             &__descr {
-                margin-top: 32px;
+                margin-top: 24px;
                 font-weight: 500;
                 @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
                 line-height: 160%;
@@ -49,15 +46,12 @@
             }
 
             &__elements {
-                margin-top: 28px;
+                margin-top: 32px;
 
                 li {
                     display: flex;
                     &:not(:last-child) {
-                        margin-bottom: 18px;
-                        @media (max-width:$smallTablet-max){
-                             margin-bottom: 10px; 
-                        }
+                        margin-bottom: 12px;
                     }
 
                     div {

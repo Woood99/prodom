@@ -2,10 +2,10 @@
     @include adaptiveValue("margin-top", 150, 48, 1296, 576, 1);
 
     &__title {
-        max-width: 485px;
+        max-width: 493px;
         margin: 0 auto;
         text-align: center;
-
+        font-weight: 700;
         span {
             color: var(--blue);
         }

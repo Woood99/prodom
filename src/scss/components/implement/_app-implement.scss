@@ -1,0 +1,158 @@
+.app-implement {
+    @include adaptiveValue("margin-top", 120, 48,1296,576,1);
+    @include adaptiveValue("margin-bottom", 143, 48,1296,576,1);
+    &__container {
+        position: relative;
+    }
+
+    &__top {
+        background: none;
+        padding-left: 0;
+        padding-right: 0;
+
+        @media (max-width:$tablet-max) {
+            padding: 32px 0;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 24px 0;
+        }
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 132, 52, 1296, 420, 1);
+        letter-spacing: -3.24px;
+        font-weight: 600;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        height: 162px;
+
+        @media (max-width:$tablet-max) {
+            letter-spacing: -1.56px;
+            white-space: normal;
+            text-align: center;
+            max-width: 925px;
+        }
+        @media (max-width:$smallTablet-max){
+             max-width: 400px; 
+        }
+    }
+
+    &__text {
+        top: -5px;
+        @media (max-width:1200px) {
+            top: 18px;
+        }
+
+        p {
+            max-width: 750px;
+
+            @media (max-width:$mobile-max) {
+                display: inline;
+            }
+        }
+
+    }
+
+    &__form {
+        max-width: 518px;
+        margin: 0 auto;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 16px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            max-width: none;
+        }
+    }
+
+    &__btn {
+        margin-top: 40px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 24px;
+            height: 58px;
+        }
+    }
+
+    &__decor-lightning {
+        position: absolute;
+        z-index: 1;
+
+        &--1 {
+            top: 2.5%;
+            left: 20%;
+
+            @media (max-width:$tablet-max) {
+                top: 15%;
+                left: auto;
+                right: 3%;
+                width: 20px;
+            }
+        }
+
+        &--2 {
+            top: 35%;
+            left: 10%;
+
+            @media (max-width:$tablet-max) {
+                top: 0%;
+                left: auto;
+                right: 11%;
+                width: 58px;
+            }
+        }
+
+        &--3 {
+            top: 51%;
+            left: 4%;
+            
+            @media (max-width:$tablet-max) {
+                top: 39%; 
+                left: 10%;
+                width: 32px;
+            }
+        }
+
+        &--4 {
+            top: 75%;
+            left: 16%;
+            @media (max-width:$tablet-max) {
+                top: 28%;
+                left: 1%;
+                width: 35px;
+                z-index: -1;
+            }
+        }
+
+        &--5 {
+            top: 28%;
+            right: -3%;
+            z-index: -1;
+         
+            @media (max-width:$tablet-max) {
+                top: 32%;
+                left: auto;
+                right: -9%;
+                width: 107px;
+            }
+        }
+
+        &--6 {
+            top: 56%;
+            right: 17%;
+            @media (max-width:$tablet-max){
+                display: none;
+            }
+        }
+
+        @media (max-width:$tablet-max) {}
+    }
+    @media (max-width:$tablet-max){
+        margin-top: 32px;
+    }
+}

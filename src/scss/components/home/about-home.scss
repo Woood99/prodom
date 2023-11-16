@@ -4,7 +4,7 @@
     @include adaptiveValue("padding-top", 90, 46, 1296, 576, 1);
     background-color: var(--white);
     position: relative;
-
+    z-index: 5;
     &__top {
         display: flex;
         align-items: center;
@@ -17,12 +17,12 @@
 
     &__title {
         color: var(--black);
-        @include adaptiveValue("font-size", 32, 16, 1296, 576, 1);
-        font-weight: 500;
-        line-height: math.div(42, 32);
+        @include adaptiveValue("font-size", 38, 22, 1296, 576, 1);
+        font-weight: 700;
+        line-height: math.div(50, 38);
         letter-spacing: -0.32px;
         margin-right: 24px;
-
+        margin-left: 60px;
         span {
             color: var(--blue);
         }
@@ -127,16 +127,16 @@
     &__item-subtitle {
         margin-top: -44px;
         color: #141414;
-        @include adaptiveValue("font-size", 18, 13, 1296, 576, 1);
-        font-weight: 400;
+        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+        font-weight: 600;
         line-height: 150%;
         letter-spacing: -0.13px;
     }
 
     &__item-title {
         color: #141414;
-        @include adaptiveValue("font-size", 60, 43, 1296, 576, 1);
-        font-weight: 500;
+        @include adaptiveValue("font-size", 60, 42, 1296, 576, 1);
+        font-weight: 700;
         line-height: 120%;
         letter-spacing: -1px;
         @media (max-width:$tablet-max){
@@ -146,18 +146,20 @@
 
     &__item-descr {
         color: var(--black);
-        @include adaptiveValue("font-size", 18, 13, 1296, 576, 1);
-        font-weight: 400;
-        line-height: 166%;
+        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+        font-weight: 600;
+        line-height: 150%;
         max-width: 244px;
-        max-width: 174px;
+        span{
+            display: block;
+        }
     }
 
     &__item-link {
         margin-top: 32px;
         color: var(--blue);
         @include adaptiveValue("font-size", 16, 12, 1296, 576, 1);
-        font-weight: 500;
+        font-weight: 600;
         line-height: 140%;
 
         @media (max-width:$tablet-max) {

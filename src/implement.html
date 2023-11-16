@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Внедрение"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            @include('partials/implement/hero-implement.html')
+            @include('partials/implement/progress-implement.html')
+            @include('partials/implement/info-implement.html')
+            @include('partials/implement/app-implement.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+
+</html>

@@ -7,7 +7,7 @@
 
         &__title {
             margin: 0;
-
+            font-weight: 700;
             span {
                 color: var(--blue-dark);
             }
@@ -119,7 +119,7 @@
     }
 
     &__item--big {
-        background: var(--blue-dark);
+        background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%), #0A5DFF;
         grid-column: 2 span;
 
         display: flex;
@@ -172,7 +172,7 @@
 
             &__list {
              @media (min-width:$tablet-min){
-                margin-top: 68px; 
+                margin-top: 56px; 
              }
             }
 

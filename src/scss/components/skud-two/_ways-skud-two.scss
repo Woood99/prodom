@@ -1,14 +1,15 @@
 .ways-skud-two {
     @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
     &__container {
-        display: flex;
+        display: grid;
+        grid-template-columns: 345px 1fr;
         justify-content: space-between;
         width: 100%;
         @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
         background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
 
 
-        padding: 74px 150px 101px 87px;
+        padding: 74px 150px 101px 86px;
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -40,7 +41,6 @@
     }
 
     &__left {
-        max-width: 300px;
         @media (max-width:$desktop){
              max-width: none; 
         }
@@ -55,17 +55,13 @@
     }
 
     &__descr {
-        margin-top: 24px;
+        margin-top: 16px;
         @include adaptiveValue("font-size", 18, 14,1296,576,1);
         color: var(--white);
-
-        @media (max-width:$tablet-max) {
-            margin-top: 16px;
-        }
     }
 
     &__right {
-        margin-left: 126px;
+        margin-left: 114px;
         flex-grow: 1;
         width: 100%;
         text-align: left;
@@ -109,7 +105,7 @@
         &__title {
             padding: 0;
             justify-content: start;
-
+            @include adaptiveValue("font-size", 18, 14,1296,576,1);
             >div {
                 margin-right: 20px;
                 --size: 32px;

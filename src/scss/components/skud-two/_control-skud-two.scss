@@ -1,7 +1,17 @@
 .control-skud-two {
-    @include adaptiveValue("margin-top", 176, 48, 1296, 576, 1);
-
+    @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
+    &__title {
+        line-height: 140%;
+        max-width: 658px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 auto;
+        span {
+            color: var(--blue);
+        }
+    }
     &__container {
+        margin-top: calc(56px + 68px);
         display: grid;
         grid-template-columns: 526px 636px;
         grid-column-gap: 80px;
@@ -70,20 +80,6 @@
        }
     }
 
-    &__title {
-        @include adaptiveValue("font-size", 32, 22, 1296, 576, 1);
-        line-height: 140%;
-        font-weight: 500;
-        max-width: 590px;
-
-        span {
-            color: var(--blue);
-        }
-        @media (max-width:$tablet-max){
-            text-align: center;
-            margin: 0 auto;
-        }
-    }
 
     &__tabs {
         margin-top: 32px;

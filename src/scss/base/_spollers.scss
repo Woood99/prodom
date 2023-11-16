@@ -123,11 +123,11 @@
     }
 
     &__body {
-        padding-bottom: 20px;
+        padding-bottom: 40px;
         color: var(--white);
-        font-size: 16px;
-        line-height: math.div(22, 16);
-        font-weight: 400;
+        @include adaptiveValue("font-size", 18, 14,1296,576,1);
+        line-height: math.div(32, 18);
+        font-weight: 500;
 
         p {
             &:not(:last-child) {
@@ -138,7 +138,9 @@
                 }
             }
         }
-
+        a{
+            color: #728FFF;
+        }
         @media (max-width:$tablet-max) {
             padding-bottom: 16px;
             font-size: 14px;

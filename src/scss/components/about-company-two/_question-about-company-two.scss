@@ -24,6 +24,11 @@
         letter-spacing: -3.24px;
         font-weight: 600;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        height: 162px;
         @media (max-width:$tablet-max) {
             letter-spacing: -1.56px;
             white-space: normal;
@@ -36,11 +41,8 @@
     }
 
     &__text {
-        top: 18px;
+        top: -5px;
 
-        &._translate-none {
-            transform: translate(0) !important;
-        }
         p {
             max-width: 617px;
 

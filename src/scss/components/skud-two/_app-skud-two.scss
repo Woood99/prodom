@@ -23,26 +23,25 @@
         letter-spacing: -3.24px;
         font-weight: 600;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        height: 162px;
+
         @media (max-width:$tablet-max) {
             letter-spacing: -1.56px;
             white-space: normal;
             text-align: center;
             max-width: 925px;
         }
-        @media (max-width:$smallTablet-max){
-             max-width: 400px; 
-        }
     }
 
     &__text {
-        top: 10px;
-        @media (max-width:1200px) {
-            top: 18px;
-        }
-
-        &._translate-none {
-            transform: translate(0) !important;
-        }
+        top: -5px;
+      @media (max-width:$desktop){
+        top: 18px; 
+      }
         p {
             max-width: 750px;
 
@@ -50,6 +49,7 @@
                 display: inline;
             }
         }
+
 
     }
 
