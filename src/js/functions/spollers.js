@@ -85,7 +85,9 @@ const spollers = () => {
                         hideSpollersBody(spollersBlock);
                     }
                     spollerTitle.classList.toggle('_spoller-active');
-                    spollerTitle.closest('.spollers__item').classList.toggle('_spollers-item-active');
+                    if (spollerTitle.closest('.spollers__item')) {
+                        spollerTitle.closest('.spollers__item').classList.toggle('_spollers-item-active');
+                    }
                     _slideToggle(spollerTitle.nextElementSibling, 500);
                 }
                 e.preventDefault();

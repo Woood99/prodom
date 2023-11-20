@@ -1,114 +1,121 @@
 .header {
     &:not(.header--only-logo) {
-        margin-top: 16px;
-        .header{
+        height: 102px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        padding-top: 16px;
+        background-color: var(--white);
+        position: relative;
+        z-index: 99;
+
+        .header {
+            &__container {
+                height: 100%;
+            }
+
             &__inner {
                 display: flex;
                 align-items: center;
-    
-    
-                padding: 16px 0;
-    
-                @media (max-width:$tablet-max) {
-                    padding: 8px 0;
-                    justify-content: space-between;
-                }
-    
-                @media (max-width:$smallTablet-max) {
-                    padding: 17px 0;
-                    justify-content: start;
-                }
+                position: relative;
+                height: 100%;
+
+              @media (max-width:$desktop){
+                justify-content: space-between;
+                padding: 17px 0;
+                justify-content: start; 
+              }
             }
-    
+
             &__logo {
                 flex-shrink: 0;
-    
-                @media (max-width:$smallTablet-max) {
-                    width: 120px;
-                }
+
+               @media (max-width:$desktop){
+                width: 120px; 
+               }
             }
-    
+
             &__nav {
-                @media (max-width:$smallTablet-max) {
-                    .header__call {
-                        display: block;
-                    }
-                }
+               @media (max-width:$desktop){
+                .header__call {
+                    display: block;
+                } 
+               }
             }
-    
+
             &__actions {
                 display: flex;
                 align-items: center;
-                @media (max-width:$smallTablet-max){
-                     margin-left: auto;
-                     margin-right: 20px; 
-                }
+
+             @media (max-width:$desktop){
+                margin-left: auto;
+                margin-right: 20px; 
+             }
             }
-    
+
             &__tel {
                 display: flex;
                 align-items: center;
                 white-space: nowrap;
-    
+
                 svg {
                     width: 20px;
                     height: 20px;
                     fill: var(--blue);
-                    @media (max-width:$smallTablet-max){
-                         width: 22px;
-                         height: 22px; 
-                    }
+
+                 @media (max-width:$desktop){
+                    width: 22px;
+                    height: 22px; 
+                 }
                 }
-    
+
                 span {
                     transition: color $transitionSpeed $transitionFunction;
                     color: var(--dark);
-    
+
                     margin-left: 11px;
-    
+
                     font-size: 16px;
                     line-height: math.div(21, 16);
-                    @media (max-width:$tablet-max){
-                        display: none;
-                    }
+
+                 @media (max-width:$desktop){
+                    display: none; 
+                 }
                 }
-    
-                @media (min-width:$smallTablet-min) {
-                    &:hover {
-                        span {
-                            color: var(--blue);
-                        }
+
+               @media (min-width:$desktop-min){
+                &:hover {
+                    span {
+                        color: var(--blue);
                     }
-                }
+                } 
+               }
             }
-    
+
             &__call {
                 margin-left: 35px;
                 border-radius: 19px;
-    
-                @media (max-width:$tablet-max) {
-                    margin-left: 20px;
-                    margin-right: 20px;
-                }
-    
-                @media (max-width:$smallTablet-max) {
+
+                @media (max-width:$desktop) {
                     display: none;
                     margin: auto 0 0;
                     width: 80%;
+                    flex-shrink: 0;
                 }
+
             }
-    
+
             &__burger {
-    
-                @media (min-width:$tablet-min) {
+
+                @media (min-width:$desktop-min) {
                     display: none;
                 }
             }
         }
 
-        @media (max-width:$tablet-max) {
-            margin-top: 0;
-
+        @media (max-width:$desktop) {
+            height: 60px;
+            padding-top: 0;
+            border-radius: 0;
             position: fixed;
             top: 0;
             left: 0;

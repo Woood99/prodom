@@ -29,6 +29,9 @@
         justify-content: center;
         line-height: 1;
         height: 162px;
+        @media (max-width:$desktop){
+             height: auto; 
+        }
         @media (max-width:$tablet-max) {
             letter-spacing: -1.56px;
             white-space: normal;
@@ -42,7 +45,9 @@
 
     &__text {
         top: -5px;
-
+        @media (max-width:$desktop){
+            top: 18px; 
+        }
         p {
             max-width: 617px;
 

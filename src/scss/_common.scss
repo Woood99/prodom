@@ -45,6 +45,7 @@
         padding: 8px 16px;
     }
 }
+
 .popular-subtitle {
     background-color: #ff604a;
     color: var(--white);
@@ -289,7 +290,7 @@
 
             .volume__controls {
                 bottom: 33px !important; // need hack :(
-                    height: 65px;
+                height: 65px;
             }
 
             .volume__controls .volume__slider .volume__progress .volume__pin {
@@ -424,9 +425,81 @@
 }
 
 
-.ticker-slider{
-    .marquee3k__copy{
+.ticker-slider {
+    .marquee3k__copy {
         display: inline-flex !important;
         align-items: center !important;
+    }
+}
+
+.banner-info {
+    @include adaptiveValue("border-radius", 50, 24, 1296, 576, 1);
+    position: relative;
+    overflow: hidden;
+
+    &__info {
+        padding: 36px 23px 44px 44px;
+        border-radius: 50px;
+        background: linear-gradient(355deg, #000 -248.96%, rgba(0, 0, 0, 0.00) 105.66%);
+
+        backdrop-filter: blur(5px);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    &__title {
+        color: var(--white);
+    }
+
+    &__descr {
+        color: var(--white);
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: math.div(22, 14);
+    }
+}
+
+
+.banner-stub {
+    @include adaptiveValue("border-radius", 50, 24, 1296, 576, 1);
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/card-7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 9.63389px 42.03881px 0px rgba(182, 179, 192, 0.20);
+
+    padding: 39px 40px 44px 44px;
+
+    flex-direction: column;
+
+    &__title {
+        color: var(--white);
+
+        @include adaptiveValue("font-size", 34, 22, 1296, 576, 1);
+        line-height: math.div(36, 34);
+        font-weight: 500;
+    }
+
+    &__descr {
+        color: var(--white);
+
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: math.div(22, 14);
+    }
+
+    &__btn {
+        margin-top: auto;
+        height: 55px;
+
+        padding: 0 28px;
+        font-size: 14px;
+        align-self: start;
+        border-radius: 20px;
     }
 }

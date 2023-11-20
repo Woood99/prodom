@@ -63,6 +63,9 @@
                 height: 100%;
                 width: 100%;
                 max-height: 283px;
+                @media (max-width:$tablet-max){
+                    max-height: none;
+                }
                 @media (max-width:$tablet-max) {
                     border-radius: 24px;
                 }
@@ -209,5 +212,8 @@
         @media (max-width:$mobile-max) {
             width: 100%;
         }
+    }
+    @media (max-width:$tablet-max){
+        max-height: none;
     }
 }

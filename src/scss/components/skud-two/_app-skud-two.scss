@@ -1,5 +1,6 @@
 .app-skud-two {
     margin-top: 67px;
+
     &__container {
         position: relative;
     }
@@ -29,6 +30,10 @@
         line-height: 1;
         height: 162px;
 
+        @media (max-width:$desktop) {
+            height: auto;
+        }
+
         @media (max-width:$tablet-max) {
             letter-spacing: -1.56px;
             white-space: normal;
@@ -39,9 +44,11 @@
 
     &__text {
         top: -5px;
-      @media (max-width:$desktop){
-        top: 18px; 
-      }
+
+        @media (max-width:$desktop) {
+            top: 18px;
+        }
+
         p {
             max-width: 750px;
 
@@ -106,9 +113,9 @@
         &--3 {
             top: 51%;
             left: 4%;
-            
+
             @media (max-width:$tablet-max) {
-                top: 39%; 
+                top: 39%;
                 left: 10%;
                 width: 32px;
             }
@@ -117,6 +124,7 @@
         &--4 {
             top: 75%;
             left: 16%;
+
             @media (max-width:$tablet-max) {
                 top: 28%;
                 left: 1%;
@@ -129,7 +137,7 @@
             top: 28%;
             right: -3%;
             z-index: -1;
-         
+
             @media (max-width:$tablet-max) {
                 top: 32%;
                 left: auto;
@@ -141,14 +149,16 @@
         &--6 {
             top: 56%;
             right: 17%;
-            @media (max-width:$tablet-max){
+
+            @media (max-width:$tablet-max) {
                 display: none;
             }
         }
 
         @media (max-width:$tablet-max) {}
     }
-    @media (max-width:$tablet-max){
+
+    @media (max-width:$tablet-max) {
         margin-top: 32px;
     }
 }
