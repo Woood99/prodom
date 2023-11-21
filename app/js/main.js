@@ -1223,14 +1223,18 @@ const navDropdown = () => {
         const currentBanner = item.querySelector(`[data-nav-dropdown-banner='${currentIndexLink}']`);
         currentBanner.classList.remove('_active');
       });
-      if (link.hasAttribute('data-nav-dropdown-item-stub')) {
-        link.addEventListener('click', e => {
-          if (window.innerWidth <= 1326) return;
+      link.addEventListener('click', e => {
+        if (link.hasAttribute('data-nav-dropdown-item-stub') && window.innerWidth > 1326) {
           e.preventDefault();
           banners.forEach(banner => banner.classList.remove('_active'));
           bannerStub.classList.add('_active');
-        });
-      }
+        } else {
+          removeActiveNav();
+          setTimeout(() => {
+            toggleMask();
+          }, 250);
+        }
+      });
     });
   });
   function toggleMask() {
@@ -1240,6 +1244,7 @@ const navDropdown = () => {
   }
   function removeActiveNav() {
     const activeItem = container.querySelector('.nav-dropdown._active');
+    console.log(activeItem);
     if (activeItem) activeItem.classList.remove('_active');
   }
 };

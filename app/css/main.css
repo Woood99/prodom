@@ -2805,9 +2805,6 @@ textarea.input-reset {
   .nav__item:last-child {
     margin-left: auto;
   }
-  .nav__item:hover .nav__link {
-    color: var(--blue);
-  }
 }
 @media (max-width: 1326px) {
   .nav__item {
@@ -2836,6 +2833,11 @@ textarea.input-reset {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+@media (min-width: 1327px) {
+  .nav__link:hover {
+    color: var(--blue);
   }
 }
 @media (max-width: 1326px) {
@@ -2926,13 +2928,16 @@ textarea.input-reset {
     padding: 8px 16px;
   }
 }
-@media (min-width: 1326px) {
+@media (min-width: 1327px) {
   .nav-dropdown._active .nav-dropdown__container {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+  }
+  .nav-dropdown._active .nav__link {
+    color: var(--blue);
   }
 }
 @media (max-width: 1326px) {

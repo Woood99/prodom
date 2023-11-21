@@ -34,12 +34,6 @@
             &:last-child {
                 margin-left: auto;
             }
-
-            &:hover {
-                .nav__link {
-                    color: var(--blue);
-                }
-            }
         }
 
         @media (max-width:$desktop) {
@@ -61,6 +55,12 @@
             padding: 25px 0;
             width: 100%;
             justify-content: center;
+        }
+
+        @media (min-width:$desktop-min){
+             &:hover{
+                color: var(--blue);
+             } 
         }
     }
 
@@ -135,15 +135,17 @@
          padding: 8px 16px;
         }
     }
-
-    @media (min-width:$desktop) {
+    @media (min-width:$desktop-min){
         &._active {
             .nav-dropdown__container {
                 opacity: 1;
                 visibility: visible;
                 transform: translateY(0);
             }
-        }
+            .nav__link {
+                color: var(--blue);
+            }
+        }   
     }
 
     @media (max-width:$desktop) {
