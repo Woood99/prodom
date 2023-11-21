@@ -9,7 +9,7 @@
             margin: 0;
             font-weight: 700;
             span {
-                color: var(--blue-dark);
+                color: var(--blue);
             }
         }
 
@@ -94,11 +94,11 @@
 
     &__title {
         margin-top: 24px;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 20px;
         line-height: math.div(27, 20);
         color: var(--dark);
-
+        max-width: 225px;
         @media (max-width:$tablet-max) {
             margin-top: 16px;
             font-size: 16px;
@@ -205,7 +205,7 @@
                 .results-skud__descr{
                     font-size: 30px;
                     line-height: 125%;
-                    font-weight: 500;
+                    font-weight: 700;
                 } 
                }
             }

@@ -11,7 +11,7 @@ const navDropdown = () => {
                 time = setTimeout(() => {
                     item.classList.add('_active');
                     toggleMask();
-                }, 400);
+                }, 250);
             }
         })
         item.addEventListener('mouseleave', (e) => {
@@ -20,7 +20,7 @@ const navDropdown = () => {
             removeActiveNav();
             setTimeout(() => {
                 toggleMask();
-            }, 400);
+            }, 250);
         });
 
         const links = item.querySelectorAll('[data-nav-dropdown-item]');

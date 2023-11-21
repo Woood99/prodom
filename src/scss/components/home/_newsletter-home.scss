@@ -1,5 +1,5 @@
 .newsletter-home {
-    @include adaptiveValue("margin-top", 185, 48,1296,576,1);
+    @include adaptiveValue("margin-top", 170, 48,1296,576,1);
     @include adaptiveValue("margin-bottom", 80, 48,1296,576,1);
 
     &__wrapper {

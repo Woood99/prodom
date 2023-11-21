@@ -148,6 +148,12 @@
         &:nth-child(5) {
             transform: translateX(-85%);
 
+            @media (min-width:$tablet-min) {
+                &:hover {
+                    transform: translateX(calc(-85% + var(--active-prc)));
+                }
+            }
+
             @media (max-width:$tablet-max) {
                 transform: translateX(-199%);
             }

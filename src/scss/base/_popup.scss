@@ -15,7 +15,6 @@
     right: 0;
     bottom: 0;
     z-index: 1051;
-    background-color: rgba(34, 41, 102, 0.4);
     cursor: pointer;
     overflow-y: auto;
     overflow-x: hidden;
@@ -23,6 +22,9 @@
     visibility: hidden;
     transition: opacity var(--transition-time), visibility var(--transition-time);
     text-align: center;
+
+    background: rgba(67, 67, 67, 0.78);
+    backdrop-filter: blur(11px);
 
     &__container {
         position: relative;
@@ -122,8 +124,6 @@
         align-items: center;
         justify-content: center;
 
-
-
         .popup-primary {
             &__container {
                 min-height: auto;
@@ -147,8 +147,6 @@
     }
 
 }
-
-
 
 
 .show-qr {
@@ -258,6 +256,12 @@
     .form-primary {
         &__agree {
             margin-top: 16px;
+            .checkbox__text{
+                a{
+                    color: var(--blue);
+                    text-decoration: none;
+                }
+            }
         }
 
         &__btn {

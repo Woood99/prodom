@@ -71,6 +71,10 @@
         @media (max-width:$smallTablet-max) {
             max-width: none;
         }
+
+        .form-primary__agree{
+            margin-top: 16px;
+        }
     }
 
     &__btn {

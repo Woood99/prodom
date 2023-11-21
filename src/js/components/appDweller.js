@@ -29,34 +29,34 @@ const appDweller = () => {
 
                             if (el === dot) clearInterval(interval);
 
-                        }, 150);
+                        }, 100);
                     }
 
                     function toggleImage() {
                         activeImage.classList.remove('_active');
                         setTimeout(() => {
                             activeImage.classList.add('_hidden');
-                        }, 200);
+                        }, 150);
 
                         images[index].classList.remove('_hidden');
                         setTimeout(() => {
                             images[index].classList.add('_active');
-                        }, 400);
+                        }, 300);
                     }
 
                     function toggletext() {
                         setTimeout(() => {
                             activeText.classList.remove('_active');
-                        }, 200);
+                        }, 125);
                         setTimeout(() => {
                             activeText.classList.add('_hidden');
-                        }, 400);
+                        }, 250);
 
                         text[index].classList.remove('_hidden');
                         setTimeout(() => {
                             text[index].classList.add('_active');
                             container.classList.remove('_change');
-                        }, 600);
+                        }, 375);
                     }
 
                 }
