@@ -115,8 +115,7 @@
 
     &__container {
         @media (min-width:$desktop-min) {
-            padding: 16px 0 0;
-            height: 100%;
+            padding: 16px 0 50px;
             top: 100%;
             left: 0;
             transform: translateY(20px);

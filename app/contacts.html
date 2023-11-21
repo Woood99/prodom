@@ -233,7 +233,8 @@
                         +7 495 135-56-51
                     </span>
                 </a>
-                <button type="button" class="btn btn-reset btn-secondary header__call" data-da=".header__nav,1326,3">
+                <button type="button" class="btn btn-reset btn-secondary header__call" data-da=".header__nav,1326,3" 
+                data-popup-path="order-call">
                     Заказать звонок
                 </button>
             </div>
@@ -439,6 +440,71 @@
 </footer>
 
     </div>
+    <div class="popup popup-primary popup-primary--show-qr">
+    <div class="popup__container popup-primary__container" role="dialog" aria-modal="true" data-popup-target="show-qr">
+        <button class="btn-reset js-popup-close popup__close popup-primary__close" aria-label="Закрыть модальное окно">
+            <svg>
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content popup-primary__content show-qr">
+            <h2 class="show-qr__title">
+                <span>Скачайте</span>
+                приложение &laquo;Продом&raquo; прямо сейчас
+            </h2>
+            <div class="show-qr__qrs">
+                <div class="show-qr__qr">
+                    <img loading="lazy" src="img/ios-qr-2.svg" width="210" height="210" alt="">
+                    <span>IOS</span>
+                </div>
+                <div class="show-qr__qr">
+                    <img loading="lazy" src="img/android-qr-2.svg" width="210" height="210" alt="">
+                    <span>Android</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-primary popup-primary--order-call">
+        <div class="popup__container popup-primary__container" role="dialog" aria-modal="true" data-popup-target="order-call">
+            <button class="btn-reset js-popup-close popup__close popup-primary__close" aria-label="Закрыть модальное окно">
+                <svg>
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="popup__content popup-primary__content order-call">
+                <h2 class="order-call__title title-1">
+                    Заявка
+                    на звонок
+                </h2>
+                <form action="#" class="order-call__form form-primary">
+                    <p class="order-call__descr">
+                        Оставьте свои данные — мы свяжемся с вами в самое ближайшее время
+                    </p>
+                    <div class="order-call__wrapper">
+                        <label class="form-primary__label label-primary">
+                            <input type="text" name="Имя" class="input-reset input-primary label-primary__input" placeholder="Имя">
+                        </label>
+                        <label class="form-primary__label label-primary">
+                            <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
+                        </label>
+                        <div class="form-primary__agree checkbox">
+                            <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                            <label for="c_1" class="checkbox__label">
+                                <span class="checkbox__text">
+                                    Соглашаюсь на <span>обработку персональных данных</span>
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-reset btn-primary form-primary__btn">
+                            Заказать звонок
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+
 </body>
 
 

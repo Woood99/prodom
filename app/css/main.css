@@ -1252,6 +1252,39 @@ textarea.input-reset {
     align-items: end;
   }
 }
+.popup-primary--order-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.popup-primary--order-call .popup-primary__container {
+  min-height: auto;
+  width: 1076px;
+  border-radius: 70px;
+  padding: 68px 102px 102px 84px;
+}
+@media (max-width: 1024px) {
+  .popup-primary--order-call .popup-primary__container {
+    border-radius: 24px 24px 0 0;
+    padding: 65px 24px 32px;
+    max-width: none;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .popup-primary--order-call {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
+  }
+}
 
 .show-qr {
   display: -webkit-box;
@@ -1351,6 +1384,66 @@ textarea.input-reset {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+}
+
+.order-call__title {
+  line-height: 0.9166666667;
+  font-weight: 500;
+  max-width: 234px;
+}
+.order-call__title span {
+  color: var(--blue);
+  display: block;
+}
+@media (max-width: 1024px) {
+  .order-call__title span {
+    display: inline-block;
+  }
+}
+@media (max-width: 1024px) {
+  .order-call__title {
+    text-align: center;
+    max-width: none;
+    margin-bottom: 24px;
+  }
+}
+.order-call__form {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.order-call__descr {
+  line-height: 1.7777777778;
+  font-weight: 500;
+  max-width: 358px;
+}
+@media (min-width: 81em) {
+  .order-call__descr {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 36em) and (max-width: 81em) {
+  .order-call__descr {
+    font-size: calc(0.875rem + 0.25 * (((100vw - 36rem)) / ((45))));
+  }
+}
+@media (max-width: 36em) {
+  .order-call__descr {
+    font-size: 0.875rem;
+  }
+}
+.order-call__wrapper {
+  margin-left: 67px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.order-call .form-primary__agree {
+  margin-top: 16px;
+}
+.order-call .form-primary__btn {
+  margin-top: 43px;
 }
 
 .fade {
@@ -2802,8 +2895,7 @@ textarea.input-reset {
 }
 @media (min-width: 1327px) {
   .nav-dropdown__container {
-    padding: 16px 0 0;
-    height: 100%;
+    padding: 16px 0 50px;
     top: 100%;
     left: 0;
     -webkit-transform: translateY(20px);
