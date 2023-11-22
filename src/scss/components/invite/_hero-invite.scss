@@ -21,8 +21,7 @@
         margin-top: 28px;
         color: var(--black);
 
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: math.div(32, 18);
+        font: var(--text-1);
     }
 
     &__btn {
@@ -225,16 +224,10 @@
         text-align: left;
 
         .hero-invite__item-title {
-            @include adaptiveValue("font-size", 26, 18, 1296, 576, 1);
-            font-weight: 500;
-            line-height: 125%;
+            font: var(--subtitle-1);
 
             span {
                 color: var(--blue);
-            }
-
-            @media (max-width:$tablet-max) {
-                font-weight: 600;
             }
         }
 

@@ -14,9 +14,7 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 26, 18, 1296, 576, 1);
-        line-height: math.div(32, 26);
-        font-weight: 500;
+        font: var(--subtitle-1);
         color: var(--dark);
     }
 
@@ -37,12 +35,9 @@
 
 
         color: var(--black);
-        font-size: 16px;
-        line-height: math.div(25, 16);
-        font-weight: 400;
+        font: var(--text-2);
 
         @media (max-width:$tablet-max) {
-            font-size: 14px;
             margin-top: 30px;
             margin-bottom: 30px;
         }
@@ -55,9 +50,7 @@
 
         color: var(--blue);
 
-        font-size: 16px;
-        line-height: math.div(22, 16);
-        font-weight: 500;
+        font: var(--text-2);
         transition: color $transitionSpeed $transitionFunction;
 
         svg {
@@ -74,7 +67,6 @@
         }
 
         @media (max-width:$tablet-max) {
-            font-size: 14px;
             align-self: start;
 
             svg {
@@ -98,26 +90,17 @@
     padding: 48px 33px;
 
     &__number {
-        font-size: 18px;
-        line-height: math.div(26, 18);
-        font-weight: 500;
+        font: var(--text-1);
         color: #6C7EA7;
-
-        @media (max-width:$tablet-max) {
-            font-size: 16px;
-        }
     }
 
     &__descr {
         margin-top: 24px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: math.div(23, 16);
+        font: var(--text-2);
         color: var(--white);
 
         @media (max-width:$tablet-max) {
             margin-top: 16px;
-            font-size: 14px;
         }
     }
 
@@ -159,9 +142,7 @@
 
     &__title {
         margin-top: 23px;
-        @include adaptiveValue("font-size", 20, 16, 1296, 576, 1);
-        line-height: math.div(27, 20);
-        font-weight: 500;
+        font: var(--subtitle-3);
         color: var(--dark);
 
         @media (max-width:$tablet-max) {
@@ -171,8 +152,7 @@
 
     &__descr {
         margin-top: 23px;
-        @include adaptiveValue("font-size", 16, 14, 1296, 576, 1);
-        line-height: math.div(28, 16);
+        font: var(--text-2);
         color: var(--black);
 
         @media (max-width:$tablet-max) {
@@ -234,10 +214,7 @@
 
     &__title {
         margin-top: 42px;
-
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: math.div(27, 17);
-        font-weight: 600;
+        font: var(--text-1);
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;
@@ -246,13 +223,10 @@
 
     &__descr {
         margin-top: 12px;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: math.div(24, 14);
+        font: var(--text-3);
 
         @media (max-width:$tablet-max) {
             margin-top: 8px;
-            font-size: 12px;
         }
     }
 

@@ -23,10 +23,8 @@
 
     border-radius: 28px;
 
-    font-size: 16px;
-    line-height: math.div(22, 16);
+    font: var(--text-2);
     font-weight: 500;
-
 
     display: inline-flex;
     align-items: center;
@@ -38,10 +36,12 @@
             background-color: var(--blue);
         }
     }
-    &:active{
+
+    &:active {
         color: var(--white);
         background-color: var(--blue-dark);
     }
+
     &.focus-visible {
         color: var(--white);
         background-color: var(--blue);
@@ -50,12 +50,10 @@
     @media (max-width:$tablet-max) {
         height: 70px;
         border-radius: 24px;
-        font-size: 12px;
     }
 
     &--big-size {
-        font-size: 20px;
-        line-height: math.div(22, 20);
+        font: var(--subtitle-3);
         font-weight: 500;
         border-radius: 18px;
         height: 68px;
@@ -64,7 +62,6 @@
         @media (max-width:$smallTablet-max) {
             height: 50px;
             padding: 14px 38px;
-            font-size: 14px;
             width: 80%;
         }
     }
@@ -97,8 +94,7 @@
 
     border-radius: 20px;
 
-    font-size: 16px;
-    line-height: math.div(22, 16);
+    font: var(--text-2);
     font-weight: 500;
 
     display: inline-flex;
@@ -110,7 +106,8 @@
             color: var(--blue);
         }
     }
-    &:active{
+
+    &:active {
         color: var(--blue-dark);
     }
 
@@ -122,7 +119,6 @@
     @media (max-width:$tablet-max) {
         height: 44px;
         padding: 0 22px;
-        font-size: 12px;
     }
 
     &--blue {

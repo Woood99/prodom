@@ -40,18 +40,13 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 32, 24,1296,576,1);
-        font-weight: 500;
-        line-height: 166.943%;
+        font: var(--title-3);
         letter-spacing: -1px;
     }
 
     &__descr {
-        margin-top: 1px;
-
-        @include adaptiveValue("font-size", 16, 14,1296,576,1);
-        font-weight: 400;
-        line-height: 159.299%;
+        margin-top: 8px;
+        font: var(--text-1);
     }
 
     &__form {
@@ -78,7 +73,7 @@
             border: none;
             background: rgba(255, 255, 255, 0.37);
             backdrop-filter: blur(11.5px);
-            font-size: 18px;
+            font: var(--text-1);
             color: var(--white);
 
             &::placeholder {
@@ -87,9 +82,6 @@
 
             &.focus-visible {
                 border: none;
-            }
-            @media (max-width:$tablet-max){
-                font-size: 14px;
             }
         }
         @media (max-width:$tablet-max){

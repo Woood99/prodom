@@ -39,11 +39,8 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 48, 28, 1296, 576, 1);
-        line-height: 120%;
-        font-weight: 600;
         color: var(--black);
-
+        font: var(--title-2);
         span {
             color: var(--blue);
         }
@@ -52,9 +49,7 @@
     &__descr {
         margin-top: 20px;
         color: var(--black);
-        font-weight: 400;
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: 175%;
+        font: var(--text-1);
         max-width: 430px;
 
         @media (max-width:$tablet-max) {

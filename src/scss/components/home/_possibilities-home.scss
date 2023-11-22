@@ -170,26 +170,18 @@
 
             .possibilities-home__item-title {
                 color: var(--white);
-                @include adaptiveValue("font-size", 32, 18, 1296, 576, 1);
-                line-height: 125%;
-                font-weight: 500;
+                font: var(--subtitle-1);
                 max-width: 322px;
 
                 span {
                     color: #aec2ff;
-                }
-
-                @media (max-width:$tablet-max) {
-                    font-weight: 600;
                 }
             }
 
             .possibilities-home__item-descr {
                 margin-top: 24px;
                 color: var(--white);
-                font-weight: 400;
-                @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-                line-height: 160%;
+                font: var(--text-1);
             }
 
             img {
@@ -244,22 +236,17 @@
 
             .possibilities-home__item-title {
                 margin-top: 75px;
-                @include adaptiveValue("font-size", 31, 18, 1296, 576, 1);
-                font-weight: 500;
-                line-height: 125%;
+                font: var(--subtitle-1);
 
                 @media (max-width:$tablet-max) {
                     margin-top: 32px;
-                    font-weight: 600;
                 }
             }
 
             .possibilities-home__item-descr {
                 margin-top: 16px;
 
-                @include adaptiveValue("font-size", 18, 16, 1296, 576, 1);
-                font-weight: 400;
-                line-height: 160%;
+                font: var(--text-1);
             }
 
             @media (max-width:$tablet-max) {
@@ -283,17 +270,11 @@
             overflow: hidden;
 
             .possibilities-home__item-title {
-                @include adaptiveValue("font-size", 31, 18, 1296, 576, 1);
-                font-weight: 500;
-                line-height: 125%;
+                font: var(--subtitle-1);
                 margin-bottom: 24px;
 
                 span {
                     color: var(--blue);
-                }
-
-                @media (max-width:$tablet-max) {
-                    font-weight: 600;
                 }
             }
 
@@ -346,9 +327,7 @@
             overflow: hidden;
 
             .possibilities-home__item-title {
-                @include adaptiveValue("font-size", 31, 18, 1296, 576, 1);
-                font-weight: 500;
-                line-height: 125%;
+                font: var(--subtitle-1);
                 margin-right: 44px;
 
                 span {
@@ -357,7 +336,6 @@
 
                 @media (max-width:$smallTablet-max) {
                     margin-right: 24px;
-                    font-weight: 600;
                 }
             }
 

@@ -79,7 +79,7 @@
         position: absolute;
         top: 100%;
         left: -16px;
-        z-index: var(--index-4);
+        z-index: 4;
         width: calc(100% + 32px);
         height: 100%;
         min-height: calc(var(--vh) - var(--header-height));
@@ -275,10 +275,7 @@
 
         >span {
             color: var(--black);
-            font-weight: 500;
-            font-size: 14px;
-            line-height: math.div(20, 14);
-
+            font: var(--text-3);
             &:nth-child(2) {
                 transition: color $transitionSpeed $transitionFunction;
                 grid-column: 2/3;
@@ -292,9 +289,6 @@
 
                 grid-column: 2/3;
                 grid-row: 2/3;
-            }
-            @media (max-width:$desktop){
-                 font-size: 13px; 
             }
 
         }

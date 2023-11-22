@@ -38,15 +38,11 @@
 
     &__descr {
         margin-top: 40px;
-        font-size: 18px;
-        line-height: math.div(32, 18);
-        font-weight: 400;
+        font: var(--text-1);
         color: var(--dark);
         text-align: center;
-
         @media (max-width:$tablet-max) {
             margin-top: 32px;
-            font-size: 16px;
         }
 
         @media (max-width:$smallTablet-max) {

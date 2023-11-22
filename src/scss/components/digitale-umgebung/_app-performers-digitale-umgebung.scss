@@ -34,9 +34,7 @@
 
             &__descr {
                 margin-top: 24px;
-                font-weight: 500;
-                @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-                line-height: 160%;
+                font: var(--text-1);
                 @media (max-width:$tablet-max){
                     margin-top: 16px;
                 }
@@ -86,8 +84,7 @@
                         }
                     }
                     span{
-                        @include adaptiveValue("font-size", 18, 14,1296,576,1);
-                        line-height: math.div(32 ,18 );
+                        font: var(--text-1);
                     }
                 }
                 @media (max-width:$tablet-max){
@@ -169,9 +166,7 @@
 
             .app-performers-digitale-umgebung__title {
                 color: var(--dark);
-                @include adaptiveValue("font-size", 24, 16, 1296, 576, 1);
-                line-height: math.div(30, 24);
-                font-weight: 500;
+                font: var(--subtitle-2);
             }
 
             @media (max-width:$tablet-max) {

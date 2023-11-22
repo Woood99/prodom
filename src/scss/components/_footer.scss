@@ -77,7 +77,7 @@
     }
 
     &__policy {
-        @include adaptiveValue("font-size", 16, 14, 1296, 576, 1);
+        font: var(--text-2);
         line-height: math.div(21, 16);
         font-weight: 400;
     }
@@ -90,9 +90,7 @@
     &__item {
         transition: color $transitionSpeed $transitionFunction;
 
-        @include adaptiveValue("font-size", 16, 14, 1296, 576, 1);
-        line-height: math.div(21, 16);
-        font-weight: 400;
+        font: var(--text-2);
 
        @media (min-width:$smallTablet-min){
         &:hover {
@@ -110,12 +108,8 @@
 
     &__title {
         margin-bottom: 24px;
-
         color: #728FFF;
-
-        @include adaptiveValue("font-size", 16, 14, 1296, 576, 1);
-        line-height: math.div(22, 16);
-        font-weight: 500;
+        font: var(--text-2);
 
         @media (max-width:$smallTablet-max) {
             margin-bottom: 16px;
@@ -136,11 +130,7 @@
 
     &__link {
         transition: color $transitionSpeed $transitionFunction;
-
-        @include adaptiveValue("font-size", 16, 13, 1296, 576, 1);
-        line-height: math.div(21, 16);
-        font-weight: 400;
-
+        font: var(--text-2);
         @media (min-width:$smallTablet-min) {
             &:hover {
                 color: var(--blue);

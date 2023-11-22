@@ -11,40 +11,6 @@ $containerWidth: calc($contentWidth + ($containerOffset * 2));
 $bodyColor: #fff; // Цвет body по умолчаниюу
 $mainColor: #000; // Цвет шрифта по умолчанию
 
-:root {
-
-    // colors
-    --white: #fff;
-    --black: #000;
-    --blue: #0a5dff;
-    --blue-light: #91A8F8;
-    --blue-dark: #3b5ddd;
-    --dark: #212121;
-    --silver: #e0e9ff;
-    --purple: #b09af8;
-    --gray: #888;
-
-    --green: #29ce63;
-    --red: #d31c1c;
-    
-    // z-index
-    --index-1: 1;
-    --index-2: 2;
-    --index-3: 3;
-    --index-4: 4;
-    --index-5: 5;
-    --index-max: 10;
-}
-
-
-
-// others vars
-$transitionSpeed: 0.3s;
-$transitionSpeedFast: 0.12s;
-$transitionFunction: ease-in-out;
-
-// ================================================================================================
-
 // break points
 $desktop: $containerWidth+px;
 $desktop-min: ($containerWidth + 1)+px;
@@ -60,6 +26,108 @@ $mobile-min: 577px;
 
 $smallMobile-max: 480px;
 $smallMobile-min: 481px;
+
+:root {
+
+    --white: #fff;
+    --black: #000;
+    --blue: #0a5dff;
+    --blue-light: #91A8F8;
+    --blue-dark: #3b5ddd;
+    --dark: #212121;
+    --silver: #e0e9ff;
+    --purple: #b09af8;
+    --gray: #888;
+
+    --green: #29ce63;
+    --red: #d31c1c;
+
+     // ========================================
+
+    --title-fz-1: 60px;
+    --title-fz-2: 48px;
+    --title-fz-3: 38px;
+
+    --subtitle-fz-1: 28px;
+    --subtitle-fz-2: 24px;
+    --subtitle-fz-3: 20px;
+
+    --text-fz-1: 18px;
+    --text-fz-2: 16px;
+    --text-fz-3: 14px;
+
+    --small-fz: 12px;
+    --very-small-fz: 10px;
+
+    @media (max-width:$desktop){
+        --title-fz-1: 50px;
+        --title-fz-2: 38px;
+        --title-fz-3: 30px;
+    
+        --subtitle-fz-1: 24px;
+        --subtitle-fz-2: 20px;
+        --subtitle-fz-3: 18px;
+    
+        --text-fz-1: 16px;
+        --text-fz-2: 14px;
+        --text-fz-3: 13px;
+    }
+    @media (max-width:$smallTablet-max){
+        --title-fz-1: 40px;
+        --title-fz-2: 28px;
+        --title-fz-3: 22px;
+    
+        --subtitle-fz-1: 20px;
+        --subtitle-fz-2: 18px;
+        --subtitle-fz-3: 16px;
+    
+        --text-fz-1: 14px;
+        --text-fz-2: 12px;
+        --text-fz-3: 12px;
+    }
+    // ========================================
+
+    --title-lh-1: 120%;
+    --title-lh-2: 120%;
+    --title-lh-3: 120%;
+
+    --subtitle-lh-1: 120%;
+    --subtitle-lh-2: 120%;
+    --subtitle-lh-3: 140%;
+
+    --text-lh-1: 170%;
+    --text-lh-2: 160%;
+    --text-lh-3: 170%;
+
+    // ========================================
+
+    --title-1: 600 var(--title-fz-1)/var(--title-lh-1) 'Manrope', sans-serif;
+    --title-2: 700 var(--title-fz-2)/var(--title-lh-2) 'Manrope', sans-serif;
+    --title-3: 600 var(--title-fz-3)/var(--title-lh-3) 'Manrope', sans-serif;
+
+    --subtitle-1: 500 var(--subtitle-fz-1)/var(--subtitle-lh-1) 'Manrope', sans-serif;
+    --subtitle-2: 500 var(--subtitle-fz-2)/var(--subtitle-lh-2) 'Manrope', sans-serif;
+    --subtitle-3: 500 var(--subtitle-fz-3)/var(--subtitle-lh-3) 'Manrope', sans-serif;
+
+    --text-1: 400 var(--text-fz-1)/var(--text-lh-1) 'Manrope', sans-serif;
+    --text-2: 500 var(--text-fz-2)/var(--text-lh-2) 'Manrope', sans-serif;
+    --text-3: 400 var(--text-fz-3)/var(--text-lh-3) 'Manrope', sans-serif;
+
+    --small-text: 400 var(--small-fz)/120% 'Manrope', sans-serif;
+    --very-small-text: 400 var(--very-small-fz)/120% 'Manrope', sans-serif;
+
+}
+
+
+
+// others vars
+$transitionSpeed: 0.3s;
+$transitionSpeedFast: 0.12s;
+$transitionFunction: ease-in-out;
+
+// ================================================================================================
+
+
 
 
 

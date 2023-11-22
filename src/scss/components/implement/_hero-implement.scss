@@ -26,8 +26,7 @@
         height: 34px;
         color: var(--blue);
         font-weight: 700;
-        font-size: 10px;
-        line-height: 1;
+        font: var(--very-small-text);
         letter-spacing: 1.1px;
 
 
@@ -54,9 +53,7 @@
         text-align: center;
 
         color: var(--black);
-        font-weight: 400;
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: 175%;
+        font: var(--text-1);
 
         @media (max-width:$tablet-max) {
             margin-top: 16px;

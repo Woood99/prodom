@@ -18,20 +18,16 @@
     &__name {
         margin-left: 11px;
 
-        font-size: 11px;
-        line-height: math.div(15, 11);
-        color: var(--black);
+        font: var(--small-text);
         font-weight: 500;
+        color: var(--black);
     }
 
     &__time {
         margin-left: 7px;
         padding-left: 7px;
         color: rgba(0, 0, 0, 0.56);
-        ;
-        font-size: 10px;
-        line-height: math.div(12, 10);
-        font-weight: 400;
+        font: var(--very-small-text);
 
         position: relative;
 
@@ -53,9 +49,7 @@
 
         color: rgba(0, 0, 0, 0.8);
 
-        font-size: 11px;
-        line-height: math.div(15, 11);
-        font-weight: 500;
+        font: var(--small-text);
     }
 
     &__like {

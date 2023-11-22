@@ -2,20 +2,16 @@
 
     &__title {
         color: var(--dark);
-        font-size: 40px;
-        line-height: math.div(48, 40);
+        font: var(--title-3);
     }
 
     &__descr {
         margin-top: 40px;
-        font-size: 18px;
-        line-height: math.div(32, 18);
-        font-weight: 500;
+        font: var(--text-1);
         color: var(--dark);
 
         @media (max-width:$tablet-max) {
             margin-top: 20px;
-            font-size: 14px;
         }
     }
 
@@ -29,7 +25,8 @@
 
         &:not(:last-child) {
             margin-bottom: 14px;
-            @media (max-width:$tablet-max){
+
+            @media (max-width:$tablet-max) {
                 margin-bottom: 7px;
             }
         }
@@ -40,13 +37,20 @@
     }
 
     &__agree {
-        @include adaptiveValue("margin-top", 48, 24,1296,576,1);
-        @media (max-width:$tablet-max){
-            margin-left: 12px;
-            .checkbox__text{
-                font-size: 10px;
+        margin-left: 24px;
+        margin-top: 16px;
+
+        .checkbox__text {
+            font: var(--text-3);
+
+            @media (max-width:$tablet-max) {
                 margin-left: 8px;
             }
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 12px;
+            margin-left: 12px;
         }
     }
 
@@ -70,13 +74,9 @@
             display: block;
             margin-bottom: 20px;
 
-            font-size: 16px;
-            line-height: math.div(25, 16);
-            font-weight: 400;
-
+            font: var(--text-2);
             @media (max-width:$tablet-max) {
                 margin-bottom: 24px;
-                font-size: 14px;
             }
         }
 
@@ -86,36 +86,7 @@
     }
 }
 
-
-
-// =============================================================================
-
-// button
 @import "button";
-
-// =============================================================================
-
-// input
 @import "input";
-
-// =============================================================================
-
-// checkbox
 @import "checkbox";
-
-// =============================================================================
-
-// rating
-// @import "rating";
-
-// =============================================================================
-
-// quantity
-// @import "quantity";
-
-// =============================================================================
-
-// radio
 @import "radio";
-
-// =============================================================================

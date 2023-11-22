@@ -17,9 +17,7 @@
 
     &__title {
         color: var(--black);
-        @include adaptiveValue("font-size", 38, 22, 1296, 576, 1);
-        font-weight: 700;
-        line-height: math.div(50, 38);
+        font: var(--title-3);
         letter-spacing: -0.32px;
         margin-right: 24px;
         margin-left: 60px;
@@ -127,17 +125,13 @@
     &__item-subtitle {
         margin-top: -44px;
         color: #141414;
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        font-weight: 600;
-        line-height: 150%;
+        font: var(--text-1);
         letter-spacing: -0.13px;
     }
 
     &__item-title {
         color: #141414;
-        @include adaptiveValue("font-size", 60, 42, 1296, 576, 1);
-        font-weight: 700;
-        line-height: 120%;
+        font: var(--title-1);
         letter-spacing: -1px;
         @media (max-width:$tablet-max){
             letter-spacing: -0.722px;
@@ -146,9 +140,7 @@
 
     &__item-descr {
         color: var(--black);
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        font-weight: 600;
-        line-height: 150%;
+        font: var(--text-1);
         max-width: 244px;
         span{
             display: block;
@@ -158,9 +150,7 @@
     &__item-link {
         margin-top: 32px;
         color: var(--blue);
-        @include adaptiveValue("font-size", 16, 12, 1296, 576, 1);
-        font-weight: 600;
-        line-height: 140%;
+        font: var(--text-2);
 
         @media (max-width:$tablet-max) {
             margin-top: 20px;

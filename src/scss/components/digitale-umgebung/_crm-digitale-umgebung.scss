@@ -63,8 +63,7 @@
             .crm-digitale-umgebung__descr {
                 margin-top: 24px;
 
-                @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-                line-height: 160%;
+                font: var(--text-1);
                 span{
                     font-weight: 500;
                 }
@@ -99,9 +98,7 @@
             .crm-digitale-umgebung__title {
                 color: var(--dark);
         
-                @include adaptiveValue("font-size", 24, 18, 1296, 576, 1);
-                line-height: math.div(30, 24);
-                font-weight: 500;
+                font: var(--subtitle-2);
                 span {
                     color: var(--blue);
                 }

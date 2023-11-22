@@ -109,7 +109,7 @@
     &__item-title {
         max-width: 260px;
         flex: 1 0 260px;
-
+        font: var(--subtitle-2);
         span {
             color: var(--blue);
         }

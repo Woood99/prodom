@@ -78,15 +78,11 @@
 
     &__info {
         color: var(--white);
-        font-size: 14px;
-        line-height: math.div(23, 14);
-        font-weight: 500;
+        font: var(--text-3);
 
         span {
             display: block;
-            @include adaptiveValue("font-size", 56, 32, 1296, 576, 1);
-            line-height: math.div(92, 56);
-            font-weight: 500;
+            font: var(--title-1);
         }
 
         @media (max-width:$tablet-max) {

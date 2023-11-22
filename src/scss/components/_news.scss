@@ -66,8 +66,7 @@
 
         span {
             color: var(--blue);
-            font-size: 12px;
-            line-height: math.div(17, 12);
+            font: var(--small-text);
             font-weight: 500;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -78,7 +77,6 @@
 
             @media (max-width:$tablet-max) {
                 padding: 3.5px 10px;
-                font-size: 10px;
                 border-radius: 26px;
             }
         }
@@ -87,26 +85,17 @@
     &__time {
         margin-left: 16px;
         color: var(--dark);
-        font-weight: 500;
-        font-size: 16px;
-        line-height: math.div(20, 16);
+        font: var(--text-2);
         white-space: nowrap;
-
-        @media (max-width:$tablet-max) {
-            font-size: 14px;
-        }
     }
 
     &__title {
         margin-top: 80px;
         color: var(--dark);
-        font-size: 30px;
-        line-height: math.div(40, 30);
-        font-weight: 500;
+        font: var(--subtitle-1);
         transition: color $transitionSpeed $transitionFunction;
 
         @media (max-width:$tablet-max) {
-            font-size: 22px;
             margin-top: 48px;
         }
 
@@ -118,9 +107,7 @@
     &__text {
         margin-top: 48px;
 
-        font-size: 16px;
-        line-height: math.div(24, 16);
-        font-weight: 400;
+        font: var(--text-2);
         color: var(--dark);
 
         p {
@@ -134,11 +121,6 @@
         }
 
         @media (max-width:$tablet-max) {
-            font-size: 14px;
-            margin-top: 32px;
-        }
-
-        @media (max-width:$smallTablet-max) {
             margin-top: 24px;
         }
     }

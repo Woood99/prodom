@@ -83,17 +83,13 @@
 
     &__subtitle {
         color: var(--white);
-        @include adaptiveValue("font-size", 32, 18, 1296, 576, 1);
-        font-weight: 500;
-        line-height: math.div(60, 32);
+        font: var(--subtitle-1);
     }
 
     &__descr {
         margin-top: 9px;
         color: #BFBFBF;
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: math.div(23, 18);
-        font-weight: 400;
+        font: var(--text-1);
 
         max-width: 293px;
 
@@ -128,10 +124,7 @@
             display: block;
             margin-top: 8px;
             color: var(--white);
-            font-size: 32px;
-            @include adaptiveValue("font-size", 32, 18, 1296, 576, 1);
-            font-weight: 500;
-            line-height: math.div(47, 32);
+            font: var(--subtitle-1);
         }
 
         @media (max-width:$tablet-max) {

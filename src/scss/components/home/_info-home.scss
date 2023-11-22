@@ -78,19 +78,13 @@
                 transition: color $transitionSpeed $transitionFunction;
 
                 &:nth-child(2) {
-                    font-size: 16px;
-                    line-height: 128%;
+                 font: var(--text-2);
                     color: var(--dark);
-
-                    @media (max-width:$tablet-max) {
-                        font-size: 14px;
-                    }
                 }
 
                 &:nth-child(3) {
                     margin-top: 4px;
-                    font-size: 12px;
-                    line-height: math.div(21, 12);
+                    font: var(--small-text);
                     color: #8f8f90;
                 }
 
@@ -192,9 +186,7 @@
     &__descr {
         margin-top: 28px;
         color: var(--black);
-        @include adaptiveValue("font-size", 18, 16, 1296, 576, 1);
-        line-height: math.div(31, 18);
-        font-weight: 400;
+        font: var(--text-1);
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;

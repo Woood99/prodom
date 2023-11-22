@@ -51,21 +51,12 @@
 
     &__content-title {
         color: var(--black);
-        font-size: 18px;
-        line-height: math.div(23, 18);
-        font-weight: 500;
-
-        @media (max-width:$tablet-max) {
-            font-size: 16px;
-        }
+        font: var(--text-1);
     }
 
     &__content-wrapper {
         margin-top: 24px;
-        font-size: 16px;
-        line-height: math.div(28, 16);
-        font-weight: 400;
-
+        font: var(--text-2);
         a {
             display: block;
             transition: color $transitionSpeed $transitionFunction;
@@ -79,7 +70,6 @@
 
         @media (max-width:$tablet-max) {
             margin-top: 16px;
-            font-size: 14px;
         }
     }
 }

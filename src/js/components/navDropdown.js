@@ -65,7 +65,6 @@ const navDropdown = () => {
 
     function removeActiveNav() {
         const activeItem = container.querySelector('.nav-dropdown._active');
-        console.log(activeItem);
         if (activeItem) activeItem.classList.remove('_active');
     }
 };

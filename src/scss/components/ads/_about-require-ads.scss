@@ -89,10 +89,8 @@
     }
 
     &__descr {
-        font-size: 28px;
-        line-height: math.div(40, 28);
+        font: var(--subtitle-1);
         letter-spacing: -0.896394px;
-        font-weight: 500;
         max-width: 499px;
 
         span {
@@ -100,13 +98,8 @@
         }
 
         @media (max-width:$tablet-max) {
-            font-size: 18px;
             max-width: none;
             text-align: center;
-        }
-
-        @media (max-width:$smallTablet-max) {
-            font-size: 16px;
         }
     }
 
@@ -117,12 +110,9 @@
             display: block;
             margin-bottom: 16px;
 
-            font-size: 18px;
-            line-height: math.div(32, 18);
-            font-weight: 500;
+            font: var(--text-1);
 
             @media (max-width:$tablet-max) {
-                font-size: 14px;
                 text-align: center;
             }
 

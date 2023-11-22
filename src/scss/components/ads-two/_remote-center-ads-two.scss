@@ -27,12 +27,8 @@
 
     &__title {
         max-width: 386px;
-
-        @include adaptiveValue("font-size", 60, 48, 1296, 576, 1);
-        line-height: 1;
-        font-weight: 500;
         color: var(--white);
-
+        font: var(--title-1);
         span {
             color: rgba(#fff, 0.52);
         }
@@ -48,8 +44,7 @@
         flex-grow: 1;
 
         p {
-            @include adaptiveValue("font-size", 16, 14, 1296, 576, 1);
-            line-height: 175%;
+            font: var(--text-2);
 
             &:not(:last-child) {
                 margin-bottom: 24px;
@@ -95,9 +90,7 @@
 
         display: flex;
         align-items: center;
-        @include adaptiveValue("font-size", 24, 18, 1296, 576, 1);
-        font-weight: 500;
-        line-height: 1;
+        font: var(--subtitle-2);
         letter-spacing: -0.24px;
         color: #89A7F9;
         margin-bottom: 40px;
@@ -105,7 +98,7 @@
         >span {
             &:nth-child(1) {
                 margin-right: 18px;
-                @include adaptiveValue("font-size", 32, 18, 1296, 576, 1);
+                @include adaptiveValue("font-size", 32, 18, 1296, 576, 1); // need
             }
 
             &:nth-child(2) {

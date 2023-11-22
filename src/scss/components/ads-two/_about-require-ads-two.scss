@@ -78,9 +78,7 @@
     }
 
     &__descr {
-        @include adaptiveValue("font-size", 28, 18, 1296, 576, 1);
-        line-height: math.div(40, 28);
-        font-weight: 500;
+        font: var(--subtitle-1);
         max-width: 561px;
 
         span {
@@ -124,9 +122,7 @@
 
                 span {
                     margin-left: 10px;
-                    @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-                    line-height: math.div(28, 18);
-                    font-weight: 500;
+                    font: var(--text-1);
                     color: rgba(#fff, 0.5);
                     transition: color $transitionSpeed $transitionFunction;
                 }

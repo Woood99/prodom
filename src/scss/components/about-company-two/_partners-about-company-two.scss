@@ -7,9 +7,7 @@
         max-width: 626px;
         text-align: center;
         color: var(--dark);
-        @include adaptiveValue("font-size", 18, 14,1296,576,1);
-        line-height: math.div(32, 18);
-        font-weight: 400;
+        font: var(--text-1);
 
         p {
             &:not(:last-child) {
@@ -70,14 +68,12 @@
                 margin-top: 18px;
                 display: inline-block;
                 color: var(--dark);
+                font: var(--text-2);
                 font-weight: 500;
-                font-size: 16px;
-                line-height: math.div(25, 16);
                 max-width: var(--width);
                 transition: color $transitionSpeed $transitionFunction;
 
                 @media (max-width:$tablet-max) {
-                    font-size: 14px;
                     margin-top: 12px;
                 }
             }

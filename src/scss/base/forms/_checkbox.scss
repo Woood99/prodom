@@ -63,10 +63,7 @@
     &__text {
         margin-left: 12px;
         color: var(--black);
-        font-weight: 500;
-        font-size: 14px;
-   line-height: 100%;
-
+        font: var(--text-3);
         a {
             text-decoration: underline;
             transition: color $transitionSpeed $transitionFunction;
@@ -74,10 +71,6 @@
             &:hover {
                 color: var(--red);
             }
-        }
-
-        @media (max-width:$smallTablet-max) {
-            font-size: 12px;
         }
     }
 }

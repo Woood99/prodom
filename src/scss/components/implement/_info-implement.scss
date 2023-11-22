@@ -38,8 +38,7 @@
     &__text {
         margin-top: 38px;
 
-        @include adaptiveValue("font-size", 18, 14,1296,576,1);
-        line-height: math.div(29 , 18);
+        font: var(--text-1);
         p{
         font-weight: 500;
         }

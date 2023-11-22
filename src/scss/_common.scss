@@ -1,25 +1,11 @@
 .title-1 {
     color: var(--dark);
-
-    @include adaptiveValue("font-size", 48, 26, 1296, 576, 1);
-    line-height: math.div(58, 48);
-    font-weight: 700;
+    font: var(--title-2);
 }
 
 .title-2 {
     color: var(--dark);
-
-    @include adaptiveValue("font-size", 38, 22, 1296, 576, 1);
-    line-height: math.div(42, 38);
-    font-weight: 500;
-}
-
-.title-3 {
-    color: var(--dark);
-
-    @include adaptiveValue("font-size", 22, 16, 1296, 576, 1);
-    line-height: math.div(30, 22);
-    font-weight: 500;
+    font: var(--title-3);
 }
 
 .subtitle-number {
@@ -27,9 +13,7 @@
     background-color: #F3F6FF;
 
     letter-spacing: 0.11em;
-    font-size: 20px;
-    line-height: math.div(21, 20);
-    font-weight: 700;
+    font: var(--subtitle-3);
     text-transform: uppercase;
 
     display: flex;
@@ -40,7 +24,6 @@
     border-radius: 42px;
 
     @media (max-width:$smallTablet-max) {
-        font-size: 14px;
         border-radius: 28px;
         padding: 8px 16px;
     }
@@ -51,9 +34,7 @@
     color: var(--white);
     border-radius: 32px;
 
-    font-size: 14px;
-    line-height: math.div(19, 14);
-    font-weight: 500;
+    font: var(--text-3);
     padding: 9px 20px;
 
     display: inline-flex;
@@ -67,7 +48,6 @@
     }
 
     @media (max-width:$smallTablet-max) {
-        font-size: 12px;
         padding: 6px 12px;
         border-radius: 20px;
 
@@ -120,13 +100,9 @@
         max-width: 842px;
 
         color: var(--black);
-
-        font-size: 18px;
-        line-height: math.div(32, 18);
-        font-weight: 400;
+        font:var(--text-1);
 
         @media (max-width:$tablet-max) {
-            font-size: 14px;
             margin-top: 20px;
         }
     }
@@ -162,10 +138,8 @@
         padding: 46px 32px;
         text-align: center;
 
-        font-size: 18px;
-        line-height: math.div(32, 18);
-        font-weight: 500;
 
+        font: var(--text-1);
         p {
             margin: 0 auto;
             max-width: 705px;
@@ -177,13 +151,11 @@
 
         @media (max-width:$tablet-max) {
             padding: 32px 24px;
-            font-size: 14px;
             top: -3px;
             border-radius: 24px;
         }
 
         @media (max-width:$smallTablet-max) {
-            font-size: 12px;
             padding: 16px;
         }
     }
@@ -216,18 +188,12 @@
 
         .controls__current-time {
             color: #fff;
-            font-size: 14px;
-            line-height: math.div(16, 14);
+            font: var(--text-3);
             order: 1;
-
-            @media (max-width:$smallTablet-max) {
-                font-size: 12px;
-            }
         }
 
         .controls__total-time {
-            font-size: 14px;
-            line-height: math.div(16, 14);
+            font: var(--text-3);
             color: #fff;
             order: 2;
             margin-left: 10px;
@@ -236,10 +202,6 @@
                 content: '/';
                 position: relative;
                 left: -5px;
-            }
-
-            @media (max-width:$smallTablet-max) {
-                font-size: 12px;
             }
         }
 
@@ -315,9 +277,7 @@
     height: 42px;
     background-color: #3a60e8;
     border-radius: 42px;
-    font-size: 14px;
-    line-height: math.div(21, 14);
-    font-weight: 500;
+    font: var(--text-3);
     padding: 0 16px;
     color: var(--white);
 
@@ -326,7 +286,6 @@
     justify-content: center;
 
     @media (max-width:$tablet-max) {
-        font-size: 12px;
         height: 36px;
         padding: 0 14px;
         border-radius: 18px;
@@ -339,17 +298,15 @@
     }
 
     &.tag--big {
-        font-size: 15px;
         letter-spacing: -0.158px;
         border-radius: 36px;
         height: 52px;
         padding: 0 24px;
-
+        font: var(--text-2);
         @media (max-width:$tablet-max) {
             padding: 0 20px;
             height: 44px;
             border-radius: 18px;
-            font-size: 13px;
         }
 
         @media (max-width:$smallTablet-max) {
@@ -359,22 +316,18 @@
     }
 
     &.tag--very-big {
-        font-size: 24px;
+        font: var(--subtitle-2);
         letter-spacing: -0.245px;
         border-radius: 56px;
         height: 79px;
         padding: 0 38px;
-        font-weight: 400;
-
         @media (max-width:$tablet-max) {
             padding: 0 30px;
             height: 56px;
             border-radius: 24px;
-            font-size: 18px;
         }
 
         @media (max-width:$smallTablet-max) {
-            font-size: 14px;
             height: 50px;
             padding: 0 22px;
         }
@@ -458,8 +411,7 @@
     &__descr {
         color: var(--white);
         margin-top: 12px;
-        font-size: 14px;
-        line-height: math.div(22, 14);
+        font: var(--text-3);
     }
 }
 
@@ -479,18 +431,14 @@
 
     &__title {
         color: var(--white);
-
-        @include adaptiveValue("font-size", 34, 22, 1296, 576, 1);
-        line-height: math.div(36, 34);
-        font-weight: 500;
+        font: var(--title-3);
     }
 
     &__descr {
         color: var(--white);
 
         margin-top: 16px;
-        font-size: 14px;
-        line-height: math.div(22, 14);
+        font: var(--text-3);
     }
 
     &__btn {
@@ -498,7 +446,7 @@
         height: 55px;
 
         padding: 0 28px;
-        font-size: 14px;
+        font: var(--text-3);
         align-self: start;
         border-radius: 20px;
     }

@@ -154,7 +154,7 @@
     align-items: center;
 
     &__title {
-        @include adaptiveValue("font-size", 24, 18, 1296, 576, 1);
+        font: var(--subtitle-2);
         line-height: 120%;
         font-weight: 500;
         max-width: 297px;
@@ -197,7 +197,7 @@
             display: block;
             margin-top: 15px;
             color: var(--black);
-            @include adaptiveValue("font-size", 24, 18, 1296, 576, 1);
+            font: var(--subtitle-2);
             font-weight: 500;
             line-height: 130%;
             text-align: center;
@@ -241,10 +241,7 @@
     }
 
     &__descr {
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: math.div(32, 18);
-        font-weight: 500;
-
+        font: var(--text-1);
         max-width: 358px;
     }
 
@@ -255,7 +252,6 @@
 
     .form-primary {
         &__agree {
-            margin-top: 16px;
             .checkbox__text{
                 a{
                     color: var(--blue);

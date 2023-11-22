@@ -163,9 +163,7 @@
         transform: translateX(-50%) translateY(100%);
 
         max-width: 193px;
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: math.div(29, 18);
-        font-weight: 500;
+        font: var(--text-1);
         text-align: center;
         z-index: 1;
 
@@ -220,8 +218,7 @@
     &__stage {
         position: absolute;
         width: 300px;
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: math.div(29, 18);
+        font: var(--text-1);
 
 
         display: flex;

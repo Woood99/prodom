@@ -18,9 +18,7 @@
         max-width: 746px;
         margin: 26px auto 0;
         color: var(--black);
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
-        line-height: math.div(32, 18);
-        font-weight: 500;
+        font: var(--text-1);
     }
 
     &__wrapper {

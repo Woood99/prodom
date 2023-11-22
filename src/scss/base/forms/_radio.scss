@@ -95,8 +95,7 @@
         cursor: pointer;
 
         color: var(--black);
-      font-size: 16px;
-        line-height: math.div(20, 16);
+        font: var(--text-2);
         font-weight: 500;
         border: 1px solid #E7EAF2;
         background-color: var(--white);
@@ -111,7 +110,6 @@
             border: 1px solid var(--blue);
         }
         @media (max-width:$tablet-max){
-            font-size: 14px;
             border-radius: 24px;
         }
     }

@@ -75,13 +75,9 @@
                     flex-grow: 1;
                     max-width: 417px;
                     color: var(--white);
-
+                    font: var(--text-2);
                     span {
                         color: #9FB6FE;
-                    }
-
-                    @media (max-width:$tablet-max) {
-                        font-size: 16px;
                     }
                 }
 
@@ -254,13 +250,7 @@
     &__image {}
 
     &__descr {
-        font-size: 22px;
-        line-height: math.div(30, 22);
-        font-weight: 500;
-
-        @media (max-width:$tablet-max) {
-            font-size: 18px;
-        }
+        font: var(--subtitle-2);
     }
 
     &__audio {}

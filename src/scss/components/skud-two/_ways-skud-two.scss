@@ -21,7 +21,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
-         top: 0;
+            top: 0;
             right: -12%;
 
             width: 472px;
@@ -60,7 +60,7 @@
 
     &__descr {
         margin-top: 16px;
-        @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+        font: var(--text-1);
         color: var(--white);
     }
 
@@ -114,7 +114,7 @@
         &__title {
             padding: 0;
             justify-content: start;
-            @include adaptiveValue("font-size", 18, 14, 1296, 576, 1);
+            font: var(--text-1);
 
             >div {
                 margin-right: 20px;
@@ -156,11 +156,12 @@
 
         &__body {
             padding: 16px 0 0 calc(32px + 20px);
-            font-size: 14px;
-            line-height: 160%;
-            p{
-         max-width: 184px;
+            font: var(--text-3);
+
+            p {
+                max-width: 184px;
             }
+
             @media (max-width:$smallTablet-max) {
                 padding: 16px 0 0 0;
             }

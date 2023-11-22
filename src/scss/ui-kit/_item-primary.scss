@@ -47,13 +47,8 @@
         grid-row: 1/2;
 
         color: var(--black);
-        font-size: 12px;
-        line-height: math.div(17, 12);
+        font: var(--small-text);
         font-weight: 500;
-
-        @media (max-width:$smallTablet-max) {
-            font-size: 11px;
-        }
     }
 
     &__descr {
@@ -62,9 +57,7 @@
 
         color: var(--gray);
 
-        font-size: 10px;
-        line-height: math.div(16, 10);
-        font-weight: 400;
+        font: var(--very-small-text);
     }
 
     &--orange {
