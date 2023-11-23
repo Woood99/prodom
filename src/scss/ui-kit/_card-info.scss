@@ -215,7 +215,7 @@
     &__title {
         margin-top: 42px;
         font: var(--text-1);
-
+        font-weight: 500;
         @media (max-width:$tablet-max) {
             margin-top: 24px;
         }

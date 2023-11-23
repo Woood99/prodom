@@ -77,7 +77,9 @@
 
         &:nth-child(2) {
             transform: translateX(-22%);
-
+            .card-info-four__descr{
+                max-width: 178px;
+            }
             @media (min-width:$tablet-min) {
                 &:hover {
                     transform: translateX(calc(-22% - var(--active-prc)));
@@ -172,7 +174,7 @@
 
     &__btn {
         margin-top: 56px;
-
+        width: 276px;
         @media (max-width:$tablet-max) {
             margin-top: 32px;
             width: 100%;

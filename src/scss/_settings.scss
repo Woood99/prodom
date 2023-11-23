@@ -46,7 +46,6 @@ p {
         right: 0;
 
         background: rgba(67, 67, 67, 0.78);
-
         backdrop-filter: blur(11px);
         z-index: 98;
 
@@ -76,7 +75,11 @@ a {
     display: inline-block;
 }
 
-
+br{
+    @media (max-width:$desktop){
+         display: none; 
+    }
+}
 
 
 

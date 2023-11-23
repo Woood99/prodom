@@ -1,9 +1,7 @@
 .control-skud-two {
     @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
     &__title {
-        line-height: 140%;
         max-width: 658px;
-        font-weight: 700;
         text-align: center;
         margin: 0 auto;
         span {

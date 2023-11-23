@@ -7,7 +7,6 @@
 
         &__title {
             margin: 0;
-            font-weight: 700;
 
             span {
                 color: var(--blue);
@@ -18,7 +17,7 @@
             max-width: 540px;
 
             span {
-                font-weight: 500;
+                font-weight: 600;
             }
         }
     }
@@ -98,20 +97,16 @@
         font: var(--subtitle-3);
         color: var(--dark);
         max-width: 225px;
-
+        font-weight: 600;
         @media (max-width:$tablet-max) {
             margin-top: 16px;
         }
     }
 
     &__descr {
-        margin-top: 24px;
+        margin-top: 16px;
         color: var(--dark);
-        font: var(--text-3);
-
-        @media (max-width:$tablet-max) {
-            margin-top: 16px;
-        }
+        font: var(--text-2);
     }
 
     &__item--big {
@@ -138,7 +133,7 @@
 
             &__descr {
                 margin-top: auto;
-                font: var(--subtitle-2);
+                font: var(--subtitle-1);
                 color: var(--white);
 
                 span {
@@ -174,13 +169,6 @@
 
                 &:not(.results-skud__item--big) {
                     background: var(--white);
-
-                    @media (min-width:$tablet-min) {
-                        .results-skud__descr {
-                            margin-top: 16px;
-                            font: var(--text-3);
-                        }
-                    }
                 }
             }
 
@@ -194,10 +182,6 @@
             &__item--big {
                 @media (min-width:$tablet-min) {
                     padding: 56px;
-
-                    .results-skud__descr {
-                        font: var(--subtitle-1);
-                    }
                 }
             }
         }

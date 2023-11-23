@@ -1,6 +1,7 @@
 .faq-ads-two {
-    @include adaptiveValue("margin-top", 135, 48,1296,576,1);
-    @include adaptiveValue("margin-bottom", 80, 24,1296,576,1);
+    @include adaptiveValue("margin-top", 135, 48, 1296, 576, 1);
+    @include adaptiveValue("margin-bottom", 80, 24, 1296, 576, 1);
+
     .container {
         @media (max-width:$tablet-max) {
             padding: 0;
@@ -9,9 +10,9 @@
 
     &__wrapper {
         padding: 106px 0 127px;
-background: linear-gradient(0deg, #000 0%, #000 100%), #FBFBFB;
+        background: linear-gradient(0deg, #000 0%, #000 100%), #FBFBFB;
         border: 1px solid #E7EAF2;
-        @include adaptiveValue("border-radius", 70, 40,1296,576,1);
+        @include adaptiveValue("border-radius", 70, 40, 1296, 576, 1);
         position: relative;
         overflow: hidden;
         z-index: 1;
@@ -41,11 +42,42 @@ background: linear-gradient(0deg, #000 0%, #000 100%), #FBFBFB;
     }
 
     &__spollers {
-        max-width: 732px;
+        max-width: 737px;
         margin: 0 auto;
 
         @media (max-width:$tablet-max) {
             max-width: none;
+        }
+    }
+
+    &__element {
+        display: flex;
+        >div {
+            width: 22px;
+            height: 22px;
+            flex: 0 0 22px;
+            background: #35B462;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(5px);
+            svg {
+                width: 12px;
+                height: 12px;
+                stroke: var(--white);
+                stroke-width: 1.5px;
+                fill: none;
+            }
+        }
+
+        >span {
+            margin-left: 17px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
         }
     }
 

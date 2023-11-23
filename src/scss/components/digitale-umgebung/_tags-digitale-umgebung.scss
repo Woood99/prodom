@@ -33,7 +33,7 @@
 
         position: absolute;
         z-index: 5;
-        @include adaptiveValue("top", 93, 48, 1296, 576, 1);
+        @include adaptiveValue("top", 98, 48, 1296, 576, 1);
         left: 50%;
         transform: translateX(-50%);
 
@@ -52,7 +52,7 @@
     }
 
     &__btn {
-        margin-top: 43px;
+        margin-top: 55px;
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;

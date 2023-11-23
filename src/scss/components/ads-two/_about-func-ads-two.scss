@@ -1,5 +1,6 @@
 .about-func-ads-two {
     @include adaptiveValue("margin-top", 64, 32, 1296, 576, 1);
+
     &__top {}
 
     &__inner {
@@ -9,11 +10,13 @@
             margin-top: 32px;
         }
     }
-    .top-section-info__descr{
-        span{
+
+    .top-section-info__descr {
+        span {
             display: inline-block;
         }
     }
+
     &__row {
         display: flex;
 
@@ -80,6 +83,7 @@
                     max-width: 417px;
                     color: var(--white);
                     font: var(--text-2);
+
                     span {
                         color: #9FB6FE;
                     }
@@ -154,11 +158,29 @@
                         width: 250px;
                         height: 250px;
                         position: absolute;
-                        top: 120%;
+                        top: 190%;
                         left: 8%;
                         transform: translateY(-50%) translateX(-50%);
                         background-repeat: no-repeat;
                         background-size: contain;
+
+                        transition: top $transitionSpeed $transitionFunction;
+                    }
+
+                    &::after {
+                        content: '';
+                        background-image: url('../img/like.png');
+                        width: 26px;
+                        height: 26px;
+                        position: absolute;
+                        top: 63%;
+                        left: 17%;
+                        transform: translateY(-50%) translateX(-50%);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        opacity: 0;
+                        transition: top $transitionSpeed $transitionFunction,
+                        opacity $transitionSpeed $transitionFunction;
                     }
 
                     @media (max-width:$smallTablet-max) {
@@ -256,6 +278,7 @@
 
     &__descr {
         font: var(--subtitle-2);
+        font-weight: 600;
     }
 
     &__audio {}
@@ -270,6 +293,21 @@
         @media (max-width:$tablet-max) {
             margin: 32px auto 0;
             width: 100%;
+        }
+    }
+
+    &._current-screen {
+        .about-func-ads-two__item--3 {
+            .about-func-ads-two__image {
+                &::before {
+                    top: 120%;
+                }
+
+                &::after {
+                    top: 61%;
+                    opacity: 1;
+                }
+            }
         }
     }
 }

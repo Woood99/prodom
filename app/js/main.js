@@ -986,6 +986,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+  const aboutFuncAds = document.querySelector('.about-func-ads-two');
+  if (aboutFuncAds) {
+    const target = aboutFuncAds.querySelector('.about-func-ads-two__inner');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset >= target.offsetTop && window.pageYOffset < target.offsetTop + target.clientHeight) {
+        aboutFuncAds.classList.add('_current-screen');
+      } else {
+        aboutFuncAds.classList.remove('_current-screen');
+      }
+    });
+  }
 });
 
 /***/ }),

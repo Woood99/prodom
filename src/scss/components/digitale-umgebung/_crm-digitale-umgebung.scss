@@ -1,5 +1,5 @@
 .crm-digitale-umgebung {
-   @include adaptiveValue("margin-top", 96, 32,1296,576,1);
+    @include adaptiveValue("margin-top", 96, 32, 1296, 576, 1);
 
     &__container {
         display: grid;
@@ -26,16 +26,18 @@
 
             display: grid;
             grid-column-gap: 62px;
-            grid-template-columns: percent(745, 1296) percent(416,1296);
+            grid-template-columns: percent(745, 1296) percent(416, 1296);
 
             .crm-digitale-umgebung__info {
                 margin-top: 42px;
-                @media (max-width:$smallTablet-max){
-                     text-align: center;
-                     margin-bottom: 74px; 
+
+                @media (max-width:$smallTablet-max) {
+                    text-align: center;
+                    margin-bottom: 74px;
                 }
-                @media (max-width:$mobile-max){
-                     margin-bottom: 52px; 
+
+                @media (max-width:$mobile-max) {
+                    margin-bottom: 52px;
                 }
             }
 
@@ -45,38 +47,71 @@
 
                 display: flex;
                 justify-content: center;
-                picture{
-                    max-width: percent(625,745);
+                picture {
+                    max-width: percent(625, 745);
                     transform: translateY(-14.2%);
+                    position: relative;
+
+                    transition: transform $transitionSpeed $transitionFunction;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -5%;
+                        right: 0;
+                        width: 98%;
+                        height: 88%;
+                        z-index: -1;
+                        @include adaptiveValue("border-radius", 54, 18, 1296, 576, 1);
+                        background: #328157;
+                        filter: blur(22.5px);
+
+                        transition: transform $transitionSpeed $transitionFunction;
+                    }
                 }
-                @media (max-width:$smallTablet-max){
-                     order: 2; 
+
+                @media (min-width:$desktop-min){
+                     &:hover{
+                        picture{
+                            transform: translateY(-15.7%);
+                            &::before{
+                                transform: translateY(-1.5%);
+                            }
+                        }
+                     } 
+                }
+                @media (max-width:$smallTablet-max) {
+                    order: 2;
                 }
             }
-            .crm-digitale-umgebung__title{
-                font-weight: 700;
-                span{
+
+            .crm-digitale-umgebung__title {
+                span {
                     display: block;
                     color: var(--blue);
                 }
             }
+
             .crm-digitale-umgebung__descr {
                 margin-top: 24px;
-
                 font: var(--text-1);
-                span{
-                    font-weight: 500;
+                max-width: 404px;
+
+                span {
+                    font-weight: 600;
                 }
-                @media (max-width:$smallTablet-max){
-                     margin-top: 16px; 
+
+                @media (max-width:$smallTablet-max) {
+                    margin-top: 16px;
                 }
             }
-            @media (max-width:$tablet-max){
+
+            @media (max-width:$tablet-max) {
                 grid-template-columns: percent(745, 1296) 1fr;
                 grid-column-gap: 48px;
             }
-            @media (max-width:$smallTablet-max){
-                 grid-template-columns: 1fr; 
+
+            @media (max-width:$smallTablet-max) {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -97,17 +132,18 @@
 
             .crm-digitale-umgebung__title {
                 color: var(--dark);
-        
                 font: var(--subtitle-2);
+                font-weight: 600;
+
                 span {
                     color: var(--blue);
                 }
-        
+
                 &:last-child {
                     margin-top: auto;
                 }
             }
-        
+
         }
 
 
@@ -115,9 +151,11 @@
             .crm-digitale-umgebung__images {
                 margin-top: auto;
             }
-            .crm-digitale-umgebung__title{
+
+            .crm-digitale-umgebung__title {
                 margin-bottom: 36px;
-                @media (max-width:$tablet-max){
+
+                @media (max-width:$tablet-max) {
                     margin-bottom: 24px;
                 }
             }
@@ -136,12 +174,15 @@
             .crm-digitale-umgebung__elements {
                 margin-top: auto;
             }
-            .crm-digitale-umgebung__title{
+
+            .crm-digitale-umgebung__title {
                 margin-bottom: 25px;
-                @media (max-width:$tablet-max){
+
+                @media (max-width:$tablet-max) {
                     margin-bottom: 24px;
                 }
             }
+
             @media (max-width:$tablet-max) {
                 grid-column: 1/-1;
             }

@@ -5,7 +5,6 @@
         max-width: 493px;
         margin: 0 auto;
         text-align: center;
-        font-weight: 700;
         span {
             color: var(--blue);
         }
@@ -146,8 +145,6 @@
     &__text {
         position: relative;
         max-width: 300px;
-        color: var(--white);
-        font: var(--subtitle-2);
 
         div {
             opacity: 0;
@@ -155,7 +152,10 @@
             transition: opacity $transitionSpeed $transitionFunction,
             transform $transitionSpeed $transitionFunction;
             position: absolute;
-
+            p{
+                color: var(--white);
+                font: var(--subtitle-2);
+            }
             &._hidden {
                 display: none;
             }
