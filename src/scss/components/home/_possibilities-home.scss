@@ -152,7 +152,7 @@
             overflow: hidden;
 
             .col {
-                max-width: 380px;
+                max-width: 378px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -171,7 +171,7 @@
             .possibilities-home__item-title {
                 color: var(--white);
                 font: var(--subtitle-1);
-                max-width: 322px;
+                max-width: 278px;
 
                 span {
                     color: #aec2ff;
@@ -358,8 +358,14 @@
                 }
             }
         }
-
-        &--2,
+        &--2{
+            transition: transform 0.5s $transitionFunction;
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
         &--3,
         &--4,
         &--5 {

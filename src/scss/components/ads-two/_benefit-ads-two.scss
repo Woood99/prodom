@@ -113,11 +113,12 @@
         grid-column: 2/3;
         color: var(--dark);
         font: var(--text-1);
+        font-weight: 500;
     }
 
     &__descr {
         grid-column: 1/-1;
-        font: var(--text-2);
+        font: var(--text-2-400);
         color: #8A8A8E;
     }
 

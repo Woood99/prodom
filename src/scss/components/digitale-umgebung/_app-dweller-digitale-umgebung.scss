@@ -53,6 +53,7 @@
         padding-left: 42px;
         margin-left: -10px;
         font: var(--text-1);
+        line-height: 170%;
         color: rgba(255, 255, 255, 0.50);
         position: relative;
 
@@ -94,7 +95,7 @@
         &._active {
             color: var(--white);
             font: var(--subtitle-2);
-
+            line-height: 170%;
             &::before {
                 opacity: 1;
                 transform: translateY(-50%) scale(1);

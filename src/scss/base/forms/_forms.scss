@@ -42,7 +42,7 @@
 
         .checkbox__text {
             font: var(--text-3);
-            line-height: 0;
+            line-height: 1;
             @media (max-width:$tablet-max) {
                 margin-left: 8px;
             }
@@ -74,7 +74,7 @@
             display: block;
             margin-bottom: 20px;
 
-            font: var(--text-2);
+            font: var(--text-2-500);
             @media (max-width:$tablet-max) {
                 margin-bottom: 24px;
             }

@@ -959,6 +959,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
 /* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_navDropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/navDropdown */ "./src/js/components/navDropdown.js");
+/* harmony import */ var _components_animationScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/animationScroll */ "./src/js/components/animationScroll.js");
+
 
 
 
@@ -972,6 +974,7 @@ document.addEventListener('DOMContentLoaded', () => {
   (0,_components_appDweller__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_components_progressImplement__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_components_navDropdown__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_components_animationScroll__WEBPACK_IMPORTED_MODULE_5__["default"])();
   const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
   const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
   rellaxTargetsTitlte.forEach(target => {
@@ -987,16 +990,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   const aboutFuncAds = document.querySelector('.about-func-ads-two');
-  if (aboutFuncAds) {
-    const target = aboutFuncAds.querySelector('.about-func-ads-two__inner');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset >= target.offsetTop && window.pageYOffset < target.offsetTop + target.clientHeight) {
-        aboutFuncAds.classList.add('_current-screen');
-      } else {
-        aboutFuncAds.classList.remove('_current-screen');
-      }
-    });
-  }
+  // if (aboutFuncAds) {
+  //     const target = aboutFuncAds.querySelector('.about-func-ads-two__inner');
+  //     window.addEventListener('scroll', () => {
+  //         if (window.pageYOffset >= target.offsetTop && window.pageYOffset < target.offsetTop + target.clientHeight) {
+  //           aboutFuncAds.classList.add('_current-screen');
+  //         } else {
+  //             aboutFuncAds.classList.remove('_current-screen');
+  //         }
+  //     })
+  // }
 });
 
 /***/ }),
@@ -1112,6 +1115,56 @@ Marquee3k.init();
 
 /***/ }),
 
+/***/ "./src/js/components/animationScroll.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/animationScroll.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const animationScroll = () => {
+  const items = document.querySelectorAll('[data-animation-item]');
+  if (items.length > 0) {
+    animOnScroll();
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll() {
+      for (let index = 0; index < items.length; index++) {
+        const animItem = items[index];
+        const animItemHeight = animItem.offsetHeight;
+        const animItemOffset = offset(animItem).top;
+        const animStartDefault = 4;
+        const animDelay = animItem.dataset.animationItemDelay ? animItem.dataset.animationItemDelay : 0;
+        const animStart = animItem.dataset.animationItemStart ? animItem.dataset.animationItemStart : animStartDefault;
+        let animItemPoint = window.innerHeight - animItemHeight / animStart;
+        if (animItemHeight > window.innerHeight) animItemPoint = window.innerHeight - window.innerHeight / animStart;
+        if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
+          setTimeout(() => {
+            animItem.classList.add('_animation-active');
+          }, animDelay);
+        } else {
+          if (animItem.hasAttribute('data-animation-item-repeat')) animItem.classList.remove('_animation-active');
+        }
+      }
+    }
+    function offset(el) {
+      const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
+      };
+    }
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (animationScroll);
+
+/***/ }),
+
 /***/ "./src/js/components/appDweller.js":
 /*!*****************************************!*\
   !*** ./src/js/components/appDweller.js ***!
@@ -1158,20 +1211,18 @@ const appDweller = () => {
             images[index].classList.remove('_hidden');
             setTimeout(() => {
               images[index].classList.add('_active');
-            }, 300);
+            }, 250);
           }
           function toggletext() {
-            setTimeout(() => {
-              activeText.classList.remove('_active');
-            }, 125);
+            activeText.classList.remove('_active');
             setTimeout(() => {
               activeText.classList.add('_hidden');
-            }, 250);
+            }, 150);
             text[index].classList.remove('_hidden');
             setTimeout(() => {
               text[index].classList.add('_active');
               container.classList.remove('_change');
-            }, 375);
+            }, 250);
           }
         }
       }
@@ -1281,29 +1332,44 @@ const progressImplement = () => {
     const finish = progressImplement.querySelector('.progress-implement__finish');
     const states = progressImplement.querySelectorAll('.progress-implement__state');
     const lineDefaultHeight = line.offsetHeight;
+    const stap = 150;
     body();
     window.addEventListener('scroll', e => {
       body();
     });
     function body() {
       const topOffset = line.getBoundingClientRect().top + window.pageYOffset;
-      const topOffsetNegative = ~topOffset + 1 + headerHeight + 300;
+      const topOffsetNegativePrc = (~topOffset + 1) / 100;
+      let topOffsetValue;
+      if (window.innerWidth >= 1920) {
+        topOffsetValue = topOffsetNegativePrc;
+      } else if (window.innerWidth > 1326) {
+        topOffsetValue = topOffsetNegativePrc * 60;
+      } else {
+        topOffsetValue = topOffsetNegativePrc * 30;
+      }
       const scrolled = window.pageYOffset;
-      const currentHeightLine = topOffsetNegative + scrolled;
-      if (scrolled > topOffsetNegative && lineDefaultHeight >= currentHeightLine && currentHeightLine >= 0) line.style.setProperty('--height', `${currentHeightLine}px`);
+      const currentHeightLine = topOffsetValue + scrolled;
+      if (scrolled > topOffsetValue && lineDefaultHeight >= currentHeightLine && currentHeightLine >= 0) line.style.setProperty('--height', `${currentHeightLine}px`);
       if (lineDefaultHeight < currentHeightLine) line.style.setProperty('--height', `${lineDefaultHeight}px`);
-      topOffsetNegative + scrolled > 0 ? states[0].classList.add('_active') : states[0].classList.remove('_active');
-      topOffsetNegative + scrolled > 158 ? states[1].classList.add('_active') : states[1].classList.remove('_active');
-      topOffsetNegative + scrolled > 158 * 2 ? states[2].classList.add('_active') : states[2].classList.remove('_active');
-      topOffsetNegative + scrolled > 158 * 3 ? states[3].classList.add('_active') : states[3].classList.remove('_active');
-      topOffsetNegative + scrolled > 158 * 4 ? states[4].classList.add('_active') : states[4].classList.remove('_active');
-      topOffsetNegative + scrolled > 158 * 5 - 15 ? finish.classList.add('_active') : finish.classList.remove('_active');
+      topOffsetValue + scrolled > 0 ? states[0].classList.add('_active') : states[0].classList.remove('_active');
+      topOffsetValue + scrolled > stap ? states[1].classList.add('_active') : states[1].classList.remove('_active');
+      topOffsetValue + scrolled > stap * 2 ? states[2].classList.add('_active') : states[2].classList.remove('_active');
+      topOffsetValue + scrolled > stap * 3 ? states[3].classList.add('_active') : states[3].classList.remove('_active');
+      topOffsetValue + scrolled > stap * 4 ? states[4].classList.add('_active') : states[4].classList.remove('_active');
+      topOffsetValue + scrolled > stap * 5 - 15 ? finish.classList.add('_active') : finish.classList.remove('_active');
       const activeStates = progressImplement.querySelectorAll('.progress-implement__state._active');
       states.forEach(state => state.classList.remove('_current-active'));
       if (activeStates.length > 0) {
         const currentState = activeStates[activeStates.length - 1];
         currentState.classList.add('_current-active');
+      } else {
+        line.style.removeProperty('--height');
       }
+    }
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
     }
   }
 };

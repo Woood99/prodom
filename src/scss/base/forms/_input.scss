@@ -24,7 +24,7 @@ textarea.input-reset {
     width: 100%;
 
     color: var(--black);
-    font: var(--text-2);
+    font: var(--text-2-500);
 
     padding: 0 36px;
 
@@ -58,7 +58,7 @@ textarea.input-reset {
     color: var(--dark);
     border: 1px solid #E0E7FF;
     border-radius: 22px;
-    font: var(--text-2);
+    font: var(--text-2-500);
     transition: border $transitionSpeed $transitionFunction;
 
     &::placeholder {

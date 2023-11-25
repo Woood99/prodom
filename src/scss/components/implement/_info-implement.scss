@@ -6,16 +6,18 @@
     }
 
     &__item {
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-bottom: 96px;
         }
-        &:nth-child(2){
-            .info-implement-item__info{
+
+        &:nth-child(2) {
+            .info-implement-item__info {
                 padding-top: 38px;
             }
         }
-        &:nth-child(3){
-            .info-implement-item__info{
+
+        &:nth-child(3) {
+            .info-implement-item__info {
                 padding-top: 31px;
             }
         }
@@ -26,6 +28,7 @@
     display: grid;
     grid-template-columns: percent(580, 1188) 1fr;
     grid-gap: 68px;
+
     &__image {
         @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
         overflow: hidden;
@@ -36,13 +39,10 @@
     &__title {}
 
     &__text {
-        margin-top: 38px;
-
+        margin-top: 36px;
         font: var(--text-1);
-        p{
-        font-weight: 500;
-        }
-        span{
+
+        span {
             color: var(--blue);
         }
     }

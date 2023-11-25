@@ -99,8 +99,8 @@
 
         @media (min-width:$tablet-min) {
             &:hover {
-                background-color: var(--blue-dark);
-                color: var(--white);
+                background-color: var(--white);
+                color: var(--blue);
             }
         }
         @media (max-width:$tablet-max){

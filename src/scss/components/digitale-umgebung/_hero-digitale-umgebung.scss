@@ -41,10 +41,6 @@ background-clip: text;
         color: var(--black);
         font: var(--text-1);
 
-        span {
-            font-weight: 600;
-        }
-
         @media (max-width:$tablet-max) {
             margin-top: 24px;
         }

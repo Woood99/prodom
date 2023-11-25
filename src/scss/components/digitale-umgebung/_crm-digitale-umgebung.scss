@@ -96,10 +96,6 @@
                 font: var(--text-1);
                 max-width: 404px;
 
-                span {
-                    font-weight: 600;
-                }
-
                 @media (max-width:$smallTablet-max) {
                     margin-top: 16px;
                 }
@@ -133,7 +129,6 @@
             .crm-digitale-umgebung__title {
                 color: var(--dark);
                 font: var(--subtitle-2);
-                font-weight: 600;
 
                 span {
                     color: var(--blue);

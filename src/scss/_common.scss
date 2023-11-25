@@ -302,7 +302,7 @@
         border-radius: 36px;
         height: 52px;
         padding: 0 24px;
-        font: var(--text-2);
+        font: var(--text-2-500);
         @media (max-width:$tablet-max) {
             padding: 0 20px;
             height: 44px;
@@ -406,6 +406,7 @@
 
     &__title {
         color: var(--white);
+        font-weight: 500;
     }
 
     &__descr {

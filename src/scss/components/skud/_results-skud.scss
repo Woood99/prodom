@@ -15,10 +15,6 @@
 
         &__descr {
             max-width: 540px;
-
-            span {
-                font-weight: 600;
-            }
         }
     }
 
@@ -97,7 +93,6 @@
         font: var(--subtitle-3);
         color: var(--dark);
         max-width: 225px;
-        font-weight: 600;
         @media (max-width:$tablet-max) {
             margin-top: 16px;
         }
@@ -106,7 +101,7 @@
     &__descr {
         margin-top: 16px;
         color: var(--dark);
-        font: var(--text-2);
+        font: var(--text-2-400);
     }
 
     &__item--big {

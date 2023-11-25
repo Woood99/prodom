@@ -1,17 +1,19 @@
 .about-home {
     @include adaptiveValue("border-top-left-radius", 65, 16, 1296, 576, 1);
     @include adaptiveValue("border-top-right-radius", 65, 16, 1296, 576, 1);
-    @include adaptiveValue("padding-top", 90, 46, 1296, 576, 1);
+    @include adaptiveValue("padding-top", 90, 42, 1296, 576, 1);
     background-color: var(--white);
     position: relative;
     z-index: 5;
     &__top {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-
+        padding: 0 60px;
         @media (max-width:$tablet-max) {
-            margin-left: 25px;
+            padding: 0;
+        }
+        @media (max-width:$smallTablet-max){
+             justify-content: center; 
         }
     }
 
@@ -19,16 +21,20 @@
         color: var(--black);
         font: var(--title-3);
         letter-spacing: -0.32px;
-        margin-right: 24px;
-        margin-left: 60px;
+        margin-right: 32px;
         span {
             color: var(--blue);
         }
-        @media (max-width:$tablet-max){
-            font-weight: 600;
+        @media (max-width:$smallTablet-max){
+             margin-right: 0;
+             text-align: center; 
         }
     }
-
+    &__badge{
+        @media (max-width:$smallTablet-max){
+             display: none; 
+        }
+    }
     &__content {
         margin-top: 155px;
         border-radius: 74px;
@@ -68,7 +74,7 @@
         align-items: start;
         text-align: left;
         white-space: normal;
-        padding: 24px 24px 48px 32px;
+        padding: 24px 24px 42px 42px;
 
         &--1 {
             .about-home__item-icon {
@@ -126,7 +132,7 @@
         margin-top: -44px;
         color: #141414;
         font: var(--text-1);
-        letter-spacing: -0.13px;
+        font-weight: 500;
     }
 
     &__item-title {
@@ -141,6 +147,7 @@
     &__item-descr {
         color: var(--black);
         font: var(--text-1);
+        font-weight: 500;
         max-width: 244px;
         span{
             display: block;
@@ -150,7 +157,7 @@
     &__item-link {
         margin-top: 32px;
         color: var(--blue);
-        font: var(--text-2);
+        font: var(--text-2-400);
 
         @media (max-width:$tablet-max) {
             margin-top: 20px;

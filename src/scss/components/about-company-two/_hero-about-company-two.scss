@@ -81,7 +81,9 @@
                         min-height: 360px;
                         height: 360px;
                         transform: translateY(-61.5%);
-
+                        .card-info-third__descr{
+                            max-width: 255px;
+                        }
                         @media (min-width:$desktop-min) {
                             &:hover {
                                 +.card-info-third {
@@ -120,7 +122,7 @@
         border: 1.8px solid rgba(180, 199, 245, 0.00);
         background: rgba(255, 255, 255, 0.13);
         padding: 0 32px;
-        font: var(--text-2);
+        font: var(--text-2-500);
     }
 
     &__info {

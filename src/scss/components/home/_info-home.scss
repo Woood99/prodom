@@ -78,7 +78,7 @@
                 transition: color $transitionSpeed $transitionFunction;
 
                 &:nth-child(2) {
-                 font: var(--text-2);
+                    font: var(--text-2-400);
                     color: var(--dark);
                 }
 
@@ -94,16 +94,6 @@
 
                 @media (max-width:$mobile-max) {
                     margin-top: 12px;
-                }
-            }
-
-            @media (min-width:$tablet-min) {
-                &:hover {
-                    span {
-                        &:nth-child(2) {
-                            color: var(--blue);
-                        }
-                    }
                 }
             }
 

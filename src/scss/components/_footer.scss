@@ -77,7 +77,7 @@
     }
 
     &__policy {
-        font: var(--text-2);
+        font: var(--text-2-500);
         line-height: math.div(21, 16);
         font-weight: 400;
     }
@@ -90,7 +90,7 @@
     &__item {
         transition: color $transitionSpeed $transitionFunction;
 
-        font: var(--text-2);
+        font: var(--text-2-500);
 
        @media (min-width:$smallTablet-min){
         &:hover {
@@ -109,7 +109,7 @@
     &__title {
         margin-bottom: 24px;
         color: #728FFF;
-        font: var(--text-2);
+        font: var(--text-2-500);
 
         @media (max-width:$smallTablet-max) {
             margin-bottom: 16px;
@@ -130,7 +130,7 @@
 
     &__link {
         transition: color $transitionSpeed $transitionFunction;
-        font: var(--text-2);
+        font: var(--text-2-500);
         @media (min-width:$smallTablet-min) {
             &:hover {
                 color: var(--blue);

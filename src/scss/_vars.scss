@@ -69,8 +69,8 @@ $smallMobile-min: 481px;
         --subtitle-fz-3: 18px;
     
         --text-fz-1: 16px;
-        --text-fz-2: 14px;
-        --text-fz-3: 13px;
+        --text-fz-2: 15px;
+        --text-fz-3: 14px;
     }
     @media (max-width:$smallTablet-max){
         --title-fz-1: 40px;
@@ -80,10 +80,6 @@ $smallMobile-min: 481px;
         --subtitle-fz-1: 20px;
         --subtitle-fz-2: 18px;
         --subtitle-fz-3: 16px;
-    
-        --text-fz-1: 14px;
-        --text-fz-2: 12px;
-        --text-fz-3: 12px;
     }
     // ========================================
 
@@ -110,7 +106,8 @@ $smallMobile-min: 481px;
     --subtitle-3: 500 var(--subtitle-fz-3)/var(--subtitle-lh-3) 'Manrope', sans-serif;
 
     --text-1: 400 var(--text-fz-1)/var(--text-lh-1) 'Manrope', sans-serif;
-    --text-2: 500 var(--text-fz-2)/var(--text-lh-2) 'Manrope', sans-serif;
+    --text-2-500: 500 var(--text-fz-2)/var(--text-lh-2) 'Manrope', sans-serif;
+    --text-2-400: 400 var(--text-fz-2)/var(--text-lh-2) 'Manrope', sans-serif;
     --text-3: 400 var(--text-fz-3)/var(--text-lh-3) 'Manrope', sans-serif;
 
     --small-text: 400 var(--small-fz)/120% 'Manrope', sans-serif;

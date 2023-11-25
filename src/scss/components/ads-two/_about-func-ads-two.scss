@@ -82,7 +82,7 @@
                     flex-grow: 1;
                     max-width: 417px;
                     color: var(--white);
-                    font: var(--text-2);
+                    font: var(--subtitle-2);
 
                     span {
                         color: #9FB6FE;
@@ -180,7 +180,7 @@
                         background-size: contain;
                         opacity: 0;
                         transition: top $transitionSpeed $transitionFunction,
-                        opacity $transitionSpeed $transitionFunction;
+                            opacity $transitionSpeed $transitionFunction;
                     }
 
                     @media (max-width:$smallTablet-max) {
@@ -198,6 +198,19 @@
                 align-items: center;
                 text-align: center;
                 flex-direction: column;
+            }
+
+            &._animation-active {
+                .about-func-ads-two__image {
+                    &::before {
+                        top: 120%;
+                    }
+
+                    &::after {
+                        top: 61%;
+                        opacity: 1;
+                    }
+                }
             }
         }
 
@@ -278,7 +291,6 @@
 
     &__descr {
         font: var(--subtitle-2);
-        font-weight: 600;
     }
 
     &__audio {}
@@ -293,21 +305,6 @@
         @media (max-width:$tablet-max) {
             margin: 32px auto 0;
             width: 100%;
-        }
-    }
-
-    &._current-screen {
-        .about-func-ads-two__item--3 {
-            .about-func-ads-two__image {
-                &::before {
-                    top: 120%;
-                }
-
-                &::after {
-                    top: 61%;
-                    opacity: 1;
-                }
-            }
         }
     }
 }

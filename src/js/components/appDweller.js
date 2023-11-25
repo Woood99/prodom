@@ -41,22 +41,20 @@ const appDweller = () => {
                         images[index].classList.remove('_hidden');
                         setTimeout(() => {
                             images[index].classList.add('_active');
-                        }, 300);
+                        }, 250);
                     }
 
                     function toggletext() {
-                        setTimeout(() => {
-                            activeText.classList.remove('_active');
-                        }, 125);
+                        activeText.classList.remove('_active');
                         setTimeout(() => {
                             activeText.classList.add('_hidden');
-                        }, 250);
+                        }, 150);
 
                         text[index].classList.remove('_hidden');
                         setTimeout(() => {
                             text[index].classList.add('_active');
                             container.classList.remove('_change');
-                        }, 375);
+                        }, 250);
                     }
 
                 }

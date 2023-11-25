@@ -20,12 +20,14 @@
         transform: translateX(-50%);
         z-index: 4;
         @media (max-width:$smallTablet-max){
-             top: -20%; 
+             top: 5%;
+             min-width: 600px; 
         }
     }
 
     &__info {
-        max-width: 576px;
+        padding: 0 15px;
+        max-width: calc(576px + 30px);
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -33,13 +35,9 @@
 
         position: absolute;
         z-index: 5;
-        @include adaptiveValue("top", 98, 48, 1296, 576, 1);
+        @include adaptiveValue("top", 95, 48, 1296, 576, 1);
         left: 50%;
         transform: translateX(-50%);
-
-        @media (max-width:$smallTablet-max) {
-            max-width: calc(100% - 30px);
-        }
     }
 
     &__title {
@@ -56,6 +54,12 @@
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;
+        }
+        @media (min-width:$desktop-min){
+            &:hover{
+                background-color: var(--white);
+                color: var(--black); 
+            }
         }
     }
 
