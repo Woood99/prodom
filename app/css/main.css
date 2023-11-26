@@ -8551,18 +8551,10 @@ textarea.input-reset {
   font: var(--text-2-500);
   font-weight: 500;
   max-width: var(--width);
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
 }
 @media (max-width: 1024px) {
   .partners-about-company-two__slider .swiper-slide span {
     margin-top: 12px;
-  }
-}
-@media (min-width: 1025px) {
-  .partners-about-company-two__slider .swiper-slide:hover span {
-    color: var(--blue);
   }
 }
 .partners-about-company-two__slider .swiper-slide.focus-visible {
@@ -13089,6 +13081,7 @@ textarea.input-reset {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  min-height: 306px;
 }
 @media (min-width: 81em) {
   .app-performers-digitale-umgebung__item:nth-child(2), .app-performers-digitale-umgebung__item:nth-child(3) {
@@ -13115,15 +13108,105 @@ textarea.input-reset {
     padding: 20px;
   }
 }
+.app-performers-digitale-umgebung__item:nth-child(2) {
+  position: relative;
+  overflow: visible;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badges {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100% + 14px);
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge {
+  position: absolute;
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge--1 {
+  top: -2.7%;
+  right: 13.2%;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.25s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.25s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge--2 {
+  top: 30.5%;
+  right: 21.6%;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge--3 {
+  top: 45%;
+  right: 23%;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.35s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.35s ease-in-out;
+  -o-transition: transform 0.35s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.35s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.35s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.35s ease-in-out;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge--4 {
+  top: 54.1%;
+  right: 1%;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge--5 {
+  top: 70%;
+  right: 28.5%;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.45s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.45s ease-in-out;
+  -o-transition: transform 0.45s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.45s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.45s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.45s ease-in-out;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge--6 {
+  top: 77%;
+  right: 42.6%;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__badge--7 {
+  top: 69.1%;
+  right: 1.7%;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.55s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.55s ease-in-out;
+  -o-transition: transform 0.55s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.55s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.55s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.55s ease-in-out;
+}
 .app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__title {
   max-width: 291px;
   margin-top: 17px;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 1024px) {
   .app-performers-digitale-umgebung__item:nth-child(2) .app-performers-digitale-umgebung__title {
     margin-top: 0;
     max-width: 200px;
   }
+}
+.app-performers-digitale-umgebung__item:nth-child(2)._animation-active .app-performers-digitale-umgebung__badge {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 @media (max-width: 1024px) {
   .app-performers-digitale-umgebung__item:nth-child(2) {
@@ -13153,7 +13236,10 @@ textarea.input-reset {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 340px;
   flex: 0 0 340px;
-  margin-left: 73px;
+  margin-left: 185px;
+  -webkit-transition: margin 0.3s ease-in-out;
+  -o-transition: margin 0.3s ease-in-out;
+  transition: margin 0.3s ease-in-out;
 }
 @media (max-width: 1024px) {
   .app-performers-digitale-umgebung__item:nth-child(3) .app-performers-digitale-umgebung__card {
@@ -13163,6 +13249,9 @@ textarea.input-reset {
     padding: 20px;
     border-radius: 18px;
   }
+}
+.app-performers-digitale-umgebung__item:nth-child(3)._animation-active .app-performers-digitale-umgebung__card {
+  margin-left: 73px;
 }
 
 @media (min-width: 81em) {
