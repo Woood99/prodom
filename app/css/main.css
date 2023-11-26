@@ -10313,7 +10313,7 @@ textarea.input-reset {
     max-width: 65%;
   }
 }
-.possibilities-home__item--2 {
+.possibilities-home__item--2, .possibilities-home__item--3, .possibilities-home__item--4, .possibilities-home__item--5 {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   -o-transition: transform 0.5s ease-in-out;
@@ -10321,26 +10321,10 @@ textarea.input-reset {
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 @media (min-width: 1327px) {
-  .possibilities-home__item--2:hover {
+  .possibilities-home__item--2:hover, .possibilities-home__item--3:hover, .possibilities-home__item--4:hover, .possibilities-home__item--5:hover {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
-  }
-}
-.possibilities-home__item--3, .possibilities-home__item--4, .possibilities-home__item--5 {
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  -o-transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-}
-@media (min-width: 1327px) {
-  .possibilities-home__item--3:hover, .possibilities-home__item--4:hover, .possibilities-home__item--5:hover {
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
-    -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.09);
-    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.09);
   }
 }
 @media (max-width: 1024px) {
