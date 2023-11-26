@@ -94,12 +94,10 @@
         letter-spacing: -0.24px;
         color: #89A7F9;
         margin-bottom: 40px;
-
+        >img:nth-child(1){
+            margin-right: 18px;
+        }
         >span {
-            &:nth-child(1) {
-                margin-right: 18px;
-                 @include adaptiveValue("font-size", 32, 18, 1296, 576, 1); // need
-            }
 
             &:nth-child(2) {
                 span {

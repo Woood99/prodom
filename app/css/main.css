@@ -5198,23 +5198,8 @@ textarea.input-reset {
   color: #89A7F9;
   margin-bottom: 40px;
 }
-.remote-center-ads-two__subtitle > span:nth-child(1) {
+.remote-center-ads-two__subtitle > img:nth-child(1) {
   margin-right: 18px;
-}
-@media (min-width: 81em) {
-  .remote-center-ads-two__subtitle > span:nth-child(1) {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 36em) and (max-width: 81em) {
-  .remote-center-ads-two__subtitle > span:nth-child(1) {
-    font-size: calc(1.125rem + 0.875 * (((100vw - 36rem)) / ((45))));
-  }
-}
-@media (max-width: 36em) {
-  .remote-center-ads-two__subtitle > span:nth-child(1) {
-    font-size: 1.125rem;
-  }
 }
 .remote-center-ads-two__subtitle > span:nth-child(2) span {
   display: block;
