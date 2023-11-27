@@ -979,8 +979,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
   rellaxTargetsTitlte.forEach(target => {
     if (!target.classList.contains('_no-rellax')) {
-      target.classList.add('_init');
-      const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())(target);
+      if (!target.classList.contains('_init')) {
+        target.classList.add('_init');
+        const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())(target);
+      }
     }
   });
   rellaxTargetsText.forEach(target => {
