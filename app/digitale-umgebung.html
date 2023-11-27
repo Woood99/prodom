@@ -521,7 +521,15 @@
                 <div class="app-performers-digitale-umgebung__image">
                     <picture>
                         <source srcset="./img/phone-info-7.webp" type="image/webp">
-                        <img loading="lazy" src="./img/phone-info-7.png" width="433" height="586" alt="">
+                        <img loading="lazy" src="./img/phone-info-7.png" width="378" height="565" alt="">
+                    </picture>
+                    <picture data-animation-item data-animation-item-start="1.2" data-animation-item-repeat>
+                        <source srcset="./img/mini-card-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/phone-info-7-2.png" width="321" height="142" alt="">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/mini-card-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/phone-info-7-2.png" width="433" height="586" alt="">
                     </picture>
                 </div>
             </div>
@@ -531,13 +539,20 @@
                     задачи
                 </h3>
                 <div class="app-performers-digitale-umgebung__badges">
-                    <img loading="lazy" src="./img/app-performers-badge-1.png" width="118" height="43" class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--1" alt="">
-                    <img loading="lazy" src="./img/app-performers-badge-2.png" width="164" height="43" class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--2" alt="">
-                    <img loading="lazy" src="./img/app-performers-badge-3.png" width="144" height="43" class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--3" alt="">
-                    <img loading="lazy" src="./img/app-performers-badge-4.png" width="180" height="43" class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--4" alt="">
-                    <img loading="lazy" src="./img/app-performers-badge-5.png" width="178" height="43" class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--5" alt="">
-                    <img loading="lazy" src="./img/app-performers-badge-6.png" width="168" height="43" class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--6" alt="">
-                    <img loading="lazy" src="./img/app-performers-badge-7.png" width="156" height="43" class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--7" alt="">
+                    <img loading="lazy" src="./img/app-performers-badge-1.png" width="118" height="43"
+                        class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--1" alt="">
+                    <img loading="lazy" src="./img/app-performers-badge-2.png" width="164" height="43"
+                        class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--2" alt="">
+                    <img loading="lazy" src="./img/app-performers-badge-3.png" width="144" height="43"
+                        class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--3" alt="">
+                    <img loading="lazy" src="./img/app-performers-badge-4.png" width="180" height="43"
+                        class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--4" alt="">
+                    <img loading="lazy" src="./img/app-performers-badge-5.png" width="178" height="43"
+                        class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--5" alt="">
+                    <img loading="lazy" src="./img/app-performers-badge-6.png" width="168" height="43"
+                        class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--6" alt="">
+                    <img loading="lazy" src="./img/app-performers-badge-7.png" width="156" height="43"
+                        class="app-performers-digitale-umgebung__badge app-performers-digitale-umgebung__badge--7" alt="">
                 </div>
             </div>
             <div class="app-performers-digitale-umgebung__item" data-animation-item data-animation-item-start="1.35" data-animation-item-repeat>
@@ -627,7 +642,7 @@
                 <div class="app-dweller__image _hidden">
                     <picture>
                         <source srcset="./img/app-dweller-6.webp" type="image/webp">
-                        <img loading="lazy" src="./img/app-dweller-6.png" width="377" height="563" alt="Платежи">
+                        <img loading="lazy" src="./img/app-dweller-6.png" width="377" height="605" alt="Платежи">
                     </picture>
                 </div>
             </div>
@@ -728,7 +743,7 @@
                 <input id="c_1" class="checkbox__input" type="checkbox" value="1">
                 <label for="c_1" class="checkbox__label">
                     <span class="checkbox__text">
-                        Соглашаюсь на обработку персональных данных
+                        Соглашаюсь на <a href="#">обработку персональных данных</a>
                     </span>
                 </label>
             </div>
@@ -750,12 +765,21 @@
             </p>
             <form action="#" class="newsletter-home__form form-primary">
                 <label class="form-primary__label label-primary newsletter-home__input">
-                    <input type="email" name="email" class="input-reset input-primary label-primary__input" placeholder="E-mail">
+                    <input type="email" name="email" class="input-reset input-primary label-primary__input" data-newsletter-email placeholder="E-mail">
                 </label>
                 <button type="submit" class="btn btn-reset btn-primary btn-primary--blue form-primary__btn newsletter-home__btn">
                     Подписаться!
                 </button>
             </form>
+        </div>
+        <div class="newsletter-home__success" hidden>
+            <h2 class="newsletter-home__title">
+                Спасибо за подписку
+                <img loading="lazy" src="./img/letter.png" width="32" height="54" alt="Письмо">
+            </h2>
+            <p class="newsletter-home__descr">
+                Обещаем не спамить!
+            </p>
         </div>
     </div>
 </section>
@@ -817,23 +841,6 @@
                     <li class="footer-nav__item">
                         <a href="#" class="footer-nav__link">
                             Пользовательское соглашение
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__col footer__col--4 footer-nav">
-                <h3 class="footer-nav__title">
-                    Вход
-                </h3>
-                <ul class="footer-nav__list list-reset">
-                    <li class="footer-nav__item">
-                        <a href="#" class="footer-nav__link">
-                            Для диспетчеров
-                        </a>
-                    </li>
-                    <li class="footer-nav__item">
-                        <a href="#" class="footer-nav__link">
-                            Для СБ
                         </a>
                     </li>
                 </ul>

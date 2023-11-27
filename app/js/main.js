@@ -960,6 +960,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_navDropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/navDropdown */ "./src/js/components/navDropdown.js");
 /* harmony import */ var _components_animationScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/animationScroll */ "./src/js/components/animationScroll.js");
+/* harmony import */ var _modules_validate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/validate */ "./src/js/modules/validate.js");
+
 
 
 
@@ -975,6 +977,7 @@ document.addEventListener('DOMContentLoaded', () => {
   (0,_components_progressImplement__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_components_navDropdown__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_components_animationScroll__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_validate__WEBPACK_IMPORTED_MODULE_6__.validateNewsletter)();
   const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
   const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
   rellaxTargetsTitlte.forEach(target => {
@@ -1254,25 +1257,19 @@ const navDropdown = () => {
   const container = document.querySelector('.header');
   if (!container) return;
   const items = container.querySelectorAll('.nav-dropdown');
-  let time;
   items.forEach(item => {
     item.addEventListener('mouseenter', () => {
       if (window.innerWidth <= 1326) return;
       removeActiveNav();
       if (!item.classList.contains('_active')) {
-        time = setTimeout(() => {
-          item.classList.add('_active');
-          toggleMask();
-        }, 250);
+        item.classList.add('_active');
+        toggleMask();
       }
     });
     item.addEventListener('mouseleave', e => {
       if (window.innerWidth <= 1326) return;
-      clearTimeout(time);
       removeActiveNav();
-      setTimeout(() => {
-        toggleMask();
-      }, 250);
+      toggleMask();
     });
     const links = item.querySelectorAll('[data-nav-dropdown-item]');
     const banners = item.querySelectorAll('[data-nav-dropdown-banner]');
@@ -1333,7 +1330,6 @@ __webpack_require__.r(__webpack_exports__);
 const progressImplement = () => {
   const progressImplement = document.querySelector('.progress-implement');
   if (progressImplement) {
-    const headerHeight = document.querySelector('.header').offsetHeight;
     const line = progressImplement.querySelector('.progress-implement__line');
     const finish = progressImplement.querySelector('.progress-implement__finish');
     const states = progressImplement.querySelectorAll('.progress-implement__state');
@@ -1368,14 +1364,12 @@ const progressImplement = () => {
       states.forEach(state => state.classList.remove('_current-active'));
       if (activeStates.length > 0) {
         const currentState = activeStates[activeStates.length - 1];
-        currentState.classList.add('_current-active');
+        if (!finish.classList.contains('_active')) {
+          currentState.classList.add('_current-active');
+        }
       } else {
         line.style.removeProperty('--height');
       }
-    }
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
     }
   }
 };
@@ -2289,6 +2283,43 @@ const getHeightBlock = (selector, nameVariable) => {
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHeightBlock);
+
+/***/ }),
+
+/***/ "./src/js/modules/validate.js":
+/*!************************************!*\
+  !*** ./src/js/modules/validate.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "validateEmail": () => (/* binding */ validateEmail),
+/* harmony export */   "validateNewsletter": () => (/* binding */ validateNewsletter)
+/* harmony export */ });
+const validateEmail = input => {
+  if (!input) return;
+  const re = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+  return re.test(input.value);
+};
+const validateNewsletter = () => {
+  const container = document.querySelector('.newsletter-home');
+  if (!container) return;
+  const form = container.querySelector('.newsletter-home__form');
+  const wrapper = container.querySelector('.newsletter-home__wrapper');
+  const success = container.querySelector('.newsletter-home__success');
+  const email = container.querySelector('[data-newsletter-email]');
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (validateEmail(email)) {
+        wrapper.setAttribute('hidden', '');
+        success.removeAttribute('hidden');
+      }
+    });
+  }
+};
 
 /***/ }),
 

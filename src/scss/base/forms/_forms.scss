@@ -1,3 +1,9 @@
+@import "button";
+@import "input";
+@import "checkbox";
+@import "radio";
+
+
 .form-primary {
 
     &__title {
@@ -43,6 +49,17 @@
         .checkbox__text {
             font: var(--text-3);
             line-height: 1;
+            a{
+                text-decoration: none;
+                color: var(--blue);
+                font-weight: 600;
+                transition: color $transitionSpeed $transitionFunction;
+                @media (min-width:$desktop-min){
+                     &:hover{
+                        color: var(--red);
+                     } 
+                }
+            }
             @media (max-width:$tablet-max) {
                 margin-left: 8px;
             }
@@ -55,14 +72,11 @@
     }
 
     &__btn {
-        margin-top: 80px;
+        margin-top: 40px;
         width: 100%;
 
-        padding: 24px 30px;
-        height: 70px;
-
         @media (max-width:$tablet-max) {
-            margin-top: 35px;
+            margin-top: 24px;
         }
     }
 
@@ -85,8 +99,3 @@
         }
     }
 }
-
-@import "button";
-@import "input";
-@import "checkbox";
-@import "radio";

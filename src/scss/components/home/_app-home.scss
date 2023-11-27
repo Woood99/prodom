@@ -68,13 +68,7 @@
     }
 
     &__btn {
-        margin-top: 40px;
 
-        @media (max-width:$tablet-max) {
-            margin-top: 24px;
-            height: 58px;
-            border-radius: 20px;
-        }
     }
 
     &__decor-lightning {

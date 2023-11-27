@@ -42,7 +42,7 @@ $smallMobile-min: 481px;
     --green: #29ce63;
     --red: #d31c1c;
 
-     // ========================================
+    // ========================================
 
     --title-fz-1: 60px;
     --title-fz-2: 48px;
@@ -59,28 +59,30 @@ $smallMobile-min: 481px;
     --small-fz: 12px;
     --very-small-fz: 10px;
 
-    @media (max-width:$desktop){
+    @media (max-width:$desktop) {
         --title-fz-1: 50px;
         --title-fz-2: 38px;
         --title-fz-3: 30px;
-    
+
         --subtitle-fz-1: 24px;
         --subtitle-fz-2: 20px;
         --subtitle-fz-3: 18px;
-    
+
         --text-fz-1: 16px;
         --text-fz-2: 15px;
         --text-fz-3: 14px;
     }
-    @media (max-width:$smallTablet-max){
+
+    @media (max-width:$smallTablet-max) {
         --title-fz-1: 40px;
         --title-fz-2: 28px;
         --title-fz-3: 22px;
-    
+
         --subtitle-fz-1: 20px;
         --subtitle-fz-2: 18px;
         --subtitle-fz-3: 16px;
     }
+
     // ========================================
 
     --title-lh-1: 120%;
@@ -97,21 +99,33 @@ $smallMobile-min: 481px;
 
     // ========================================
 
-    --title-1: 600 var(--title-fz-1)/var(--title-lh-1) 'Manrope', sans-serif;
-    --title-2: 700 var(--title-fz-2)/var(--title-lh-2) 'Manrope', sans-serif;
-    --title-3: 600 var(--title-fz-3)/var(--title-lh-3) 'Manrope', sans-serif;
+    --title-1: 600 var(--title-fz-1)/var(--title-lh-1) 'Manrope',
+    sans-serif;
+    --title-2: 700 var(--title-fz-2)/var(--title-lh-2) 'Manrope',
+    sans-serif;
+    --title-3: 600 var(--title-fz-3)/var(--title-lh-3) 'Manrope',
+    sans-serif;
 
-    --subtitle-1: 500 var(--subtitle-fz-1)/var(--subtitle-lh-1) 'Manrope', sans-serif;
-    --subtitle-2: 500 var(--subtitle-fz-2)/var(--subtitle-lh-2) 'Manrope', sans-serif;
-    --subtitle-3: 500 var(--subtitle-fz-3)/var(--subtitle-lh-3) 'Manrope', sans-serif;
+    --subtitle-1: 500 var(--subtitle-fz-1)/var(--subtitle-lh-1) 'Manrope',
+    sans-serif;
+    --subtitle-2: 500 var(--subtitle-fz-2)/var(--subtitle-lh-2) 'Manrope',
+    sans-serif;
+    --subtitle-3: 500 var(--subtitle-fz-3)/var(--subtitle-lh-3) 'Manrope',
+    sans-serif;
 
-    --text-1: 400 var(--text-fz-1)/var(--text-lh-1) 'Manrope', sans-serif;
-    --text-2-500: 500 var(--text-fz-2)/var(--text-lh-2) 'Manrope', sans-serif;
-    --text-2-400: 400 var(--text-fz-2)/var(--text-lh-2) 'Manrope', sans-serif;
-    --text-3: 400 var(--text-fz-3)/var(--text-lh-3) 'Manrope', sans-serif;
+    --text-1: 400 var(--text-fz-1)/var(--text-lh-1) 'Manrope',
+    sans-serif;
+    --text-2-500: 500 var(--text-fz-2)/var(--text-lh-2) 'Manrope',
+    sans-serif;
+    --text-2-400: 400 var(--text-fz-2)/var(--text-lh-2) 'Manrope',
+    sans-serif;
+    --text-3: 400 var(--text-fz-3)/var(--text-lh-3) 'Manrope',
+    sans-serif;
 
-    --small-text: 400 var(--small-fz)/120% 'Manrope', sans-serif;
-    --very-small-text: 400 var(--very-small-fz)/120% 'Manrope', sans-serif;
+    --small-text: 400 var(--small-fz)/120% 'Manrope',
+    sans-serif;
+    --very-small-text: 400 var(--very-small-fz)/120% 'Manrope',
+    sans-serif;
 
 }
 

@@ -2,30 +2,24 @@ const navDropdown = () => {
     const container = document.querySelector('.header');
     if (!container) return;
     const items = container.querySelectorAll('.nav-dropdown');
-    let time;
     items.forEach(item => {
         item.addEventListener('mouseenter', () => {
             if (window.innerWidth <= 1326) return;
             removeActiveNav();
             if (!item.classList.contains('_active')) {
-                time = setTimeout(() => {
-                    item.classList.add('_active');
-                    toggleMask();
-                }, 250);
+                item.classList.add('_active');
+                toggleMask();
             }
         })
         item.addEventListener('mouseleave', (e) => {
             if (window.innerWidth <= 1326) return;
-            clearTimeout(time);
             removeActiveNav();
-            setTimeout(() => {
-                toggleMask();
-            }, 250);
+            toggleMask();
         });
 
         const links = item.querySelectorAll('[data-nav-dropdown-item]');
-        const banners  = item.querySelectorAll('[data-nav-dropdown-banner]');
-        const bannerStub  = item.querySelector('[data-nav-dropdown-banner-stub]');
+        const banners = item.querySelectorAll('[data-nav-dropdown-banner]');
+        const bannerStub = item.querySelector('[data-nav-dropdown-banner-stub]');
         links.forEach(link => {
             link.addEventListener('mouseenter', () => {
                 if (window.innerWidth <= 1326) return;
@@ -42,7 +36,7 @@ const navDropdown = () => {
                 currentBanner.classList.remove('_active');
             });
 
-            link.addEventListener('click',(e) => {
+            link.addEventListener('click', (e) => {
                 if (link.hasAttribute('data-nav-dropdown-item-stub') && window.innerWidth > 1326) {
                     e.preventDefault();
                     banners.forEach(banner => banner.classList.remove('_active'));

@@ -4,6 +4,7 @@ import progressImplement from './components/progressImplement';
 import Rellax from 'rellax';
 import navDropdown from './components/navDropdown';
 import animationScroll from './components/animationScroll'
+import { validateNewsletter } from './modules/validate';
 document.addEventListener('DOMContentLoaded', () => {
     getHeightBlock('.header', '--header-height');
     window.addEventListener('resize', () => {
@@ -13,8 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     progressImplement();
     navDropdown();
     animationScroll();
-
-
+    validateNewsletter();
     const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
     const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
     rellaxTargetsTitlte.forEach(target => {

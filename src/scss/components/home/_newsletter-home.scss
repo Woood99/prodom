@@ -1,8 +1,14 @@
 .newsletter-home {
     @include adaptiveValue("margin-top", 170, 48,1296,576,1);
     @include adaptiveValue("margin-bottom", 80, 48,1296,576,1);
-
-    &__wrapper {
+    height: 383px;
+    min-height: 383px;
+    max-height: 383px;
+    .container{
+        position: relative;
+        height: 100%;
+    }
+    &__wrapper,&__success {
         @include adaptiveValue("border-radius", 82, 24,1296,576,1);
         background: #050505;
         text-align: center;
@@ -109,6 +115,21 @@
             border-radius: 20px;
             padding: 0 32px;
             height: 58px;
+        }
+    }
+    &__success{
+        height: 100%;
+        padding: 138px 35px 90px;
+
+        .newsletter-home__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font: var(--title-3);
+            img{
+                margin-left: 24px;
+            }
         }
     }
     &.newsletter-contacts{

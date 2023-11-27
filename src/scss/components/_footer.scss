@@ -19,14 +19,15 @@
 
     &__cols {
         display: grid;
-        grid-template-columns: repeat(4, max-content);
+        grid-template-columns: max-content 1fr max-content;
         justify-content: space-between;
-        grid-column-gap: 25px;
+        grid-column-gap: 165px;
         grid-row-gap: 40px;
         padding-bottom: 65px;
 
         @media (max-width:$tablet-max) {
             grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 25px;
         }
 
         @media (max-width:$smallTablet-max) {
@@ -42,12 +43,16 @@
         }
 
         &--2 {
+            justify-self: end;
+
             @media (max-width:$tablet-max) {
                 order: 1;
+                justify-self: start;
             }
         }
 
         &--3 {
+
             @media (max-width:$tablet-max) {
                 order: 3;
             }
@@ -92,9 +97,9 @@
 
         font: var(--text-2-500);
 
-       @media (min-width:$smallTablet-min){
+       @media (min-width:$desktop-min){
         &:hover {
-            color: var(--blue);
+            color: #728FFF;
         } 
        }
 
@@ -131,10 +136,11 @@
     &__link {
         transition: color $transitionSpeed $transitionFunction;
         font: var(--text-2-500);
-        @media (min-width:$smallTablet-min) {
-            &:hover {
-                color: var(--blue);
-            }
-        }
+
+       @media (min-width:$desktop-min){
+        &:hover {
+            color: #728FFF;
+        } 
+       }
     }
 }

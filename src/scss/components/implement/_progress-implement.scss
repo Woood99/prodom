@@ -43,8 +43,7 @@
         }
         img {
             @include adaptiveValue("border-radius", 70, 32, 1296, 576, 1);
-            transition: transform $transitionSpeed $transitionFunction,
-            box-shadow $transitionSpeed $transitionFunction;
+            transition: transform $transitionSpeed $transitionFunction;
         }
         @media (min-width:$desktop-min){
              &:hover{
@@ -53,7 +52,6 @@
                 }
                 img{
                     transform: translateY(-5px);
-                    box-shadow: 3.5px 5.5px 15px rgba(0, 0, 0, 0.15);
                 }
              } 
         }

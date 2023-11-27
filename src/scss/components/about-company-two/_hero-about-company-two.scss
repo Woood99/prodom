@@ -41,7 +41,7 @@
 
         position: relative;
         overflow: hidden;
-        padding: 86px;
+        padding: 86px 86px 83px 86px;
 
         display: flex;
         justify-content: space-between;
@@ -132,11 +132,13 @@
 
             &:nth-child(1) {
                 font: var(--title-1);
+
             }
 
             &:nth-child(2) {
                 max-width: 230px;
                 font: var(--text-1);
+                margin: 5px 0 0 7px;
             }
         }
 

@@ -2,7 +2,6 @@ const progressImplement = () => {
     const progressImplement = document.querySelector('.progress-implement');
 
     if (progressImplement) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
         const line = progressImplement.querySelector('.progress-implement__line');
         const finish = progressImplement.querySelector('.progress-implement__finish');
         const states = progressImplement.querySelectorAll('.progress-implement__state');
@@ -40,22 +39,12 @@ const progressImplement = () => {
             states.forEach(state => state.classList.remove('_current-active'));
             if (activeStates.length > 0) {
                 const currentState = activeStates[activeStates.length - 1];
-                currentState.classList.add('_current-active');
+                if (!finish.classList.contains('_active')) {
+                    currentState.classList.add('_current-active');
+                }
             } else {
                 line.style.removeProperty('--height');
             }
-        }
-
-
-
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
         }
     }
 

@@ -41,6 +41,7 @@
     &__title {
         color: var(--black);
         font: var(--title-2);
+
         span {
             color: var(--blue);
         }
@@ -59,6 +60,7 @@
 
     &__btn {
         margin-top: 49px;
+
         @media (max-width:$tablet-max) {
             margin-top: 32px;
             width: 100%;
@@ -164,7 +166,7 @@
 
             @media (min-width:$tablet-min) {
                 &:hover {
-                    transform: translateX(calc((-308px*3) + 56% - var(--active-prc)));
+                    transform: translateX(calc((-308px*3) + 66% - var(--active-prc)));
                 }
             }
 
