@@ -979,14 +979,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
   rellaxTargetsTitlte.forEach(target => {
     if (!target.classList.contains('_no-rellax')) {
+      target.classList.add('_init');
       const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())(target);
     }
   });
   rellaxTargetsText.forEach(target => {
     if (!target.classList.contains('_no-rellax')) {
-      const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())(target, {
-        breakpoints: [577, 769, 1326]
-      });
+      if (!target.classList.contains('_init')) {
+        target.classList.add('_init');
+        const heroRellax = new (rellax__WEBPACK_IMPORTED_MODULE_3___default())(target, {
+          breakpoints: [577, 769, 1326]
+        });
+      }
     }
   });
   const aboutFuncAds = document.querySelector('.about-func-ads-two');
