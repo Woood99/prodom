@@ -20,7 +20,7 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 132, 52, 1296, 420, 1);
+        @include adaptiveValue("font-size", 132, 52, 1296, 576, 1);
         letter-spacing: -3.24px;
         font-weight: 600;
 
@@ -39,7 +39,7 @@
             max-width: 925px;
         }
         @media (max-width:$smallTablet-max){
-             max-width: 400px; 
+             max-width: 310px;
         }
     }
 
