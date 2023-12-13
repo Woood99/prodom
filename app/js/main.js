@@ -961,6 +961,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_navDropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/navDropdown */ "./src/js/components/navDropdown.js");
 /* harmony import */ var _components_animationScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/animationScroll */ "./src/js/components/animationScroll.js");
 /* harmony import */ var _modules_validate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/validate */ "./src/js/modules/validate.js");
+/* harmony import */ var _functions_tooltip__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/tooltip */ "./src/js/functions/tooltip.js");
+/* harmony import */ var _modules_scrollDrag__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/scrollDrag */ "./src/js/modules/scrollDrag.js");
+
+
 
 
 
@@ -970,14 +974,20 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('DOMContentLoaded', () => {
   (0,_modules_getHeightBlock__WEBPACK_IMPORTED_MODULE_0__["default"])('.header', '--header-height');
+  replaceText();
   window.addEventListener('resize', () => {
     (0,_modules_getHeightBlock__WEBPACK_IMPORTED_MODULE_0__["default"])('.header', '--header-height');
+    replaceText();
   });
+  (0,_modules_scrollDrag__WEBPACK_IMPORTED_MODULE_8__["default"])('.form-contacts-two .radio-secondary .row', 1000, 1326);
   (0,_components_appDweller__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_components_progressImplement__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_components_navDropdown__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_components_animationScroll__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_modules_validate__WEBPACK_IMPORTED_MODULE_6__.validateNewsletter)();
+  (0,_functions_tooltip__WEBPACK_IMPORTED_MODULE_7__.tooltip)();
+  remoteCenterAdsTabs();
+  heroAboutCompany();
   const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
   const rellaxTargetsText = document.querySelectorAll('.hero-primary__text._text-rellax');
   rellaxTargetsTitlte.forEach(target => {
@@ -998,17 +1008,76 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  const aboutFuncAds = document.querySelector('.about-func-ads-two');
-  // if (aboutFuncAds) {
-  //     const target = aboutFuncAds.querySelector('.about-func-ads-two__inner');
-  //     window.addEventListener('scroll', () => {
-  //         if (window.pageYOffset >= target.offsetTop && window.pageYOffset < target.offsetTop + target.clientHeight) {
-  //           aboutFuncAds.classList.add('_current-screen');
-  //         } else {
-  //             aboutFuncAds.classList.remove('_current-screen');
-  //         }
-  //     })
-  // }
+  function remoteCenterAdsTabs() {
+    const container = document.querySelector('.remote-center-ads-two');
+    if (!container) return;
+    let value = true;
+    container.addEventListener('click', e => {
+      if (window.innerWidth <= 1326) {
+        const target = e.target;
+        const tabBtn = target.closest('.remote-center-ads-two__subtitle');
+        if (tabBtn) {
+          const btns = container.querySelectorAll('.remote-center-ads-two__subtitle');
+          const currentIndexBtn = Array.from(btns).indexOf(tabBtn);
+          const contents = container.querySelectorAll('.remote-center-ads-two__tab-content');
+          btns.forEach(btn => btn.classList.remove('_active'));
+          contents.forEach(content => content.setAttribute('hidden', ''));
+          tabBtn.classList.add('_active');
+          contents[currentIndexBtn].removeAttribute('hidden');
+        }
+      }
+    });
+    update();
+    window.addEventListener('resize', () => {
+      update();
+    });
+    function update() {
+      const btns = container.querySelectorAll('.remote-center-ads-two__subtitle');
+      const contents = container.querySelectorAll('.remote-center-ads-two__tab-content');
+      if (window.innerWidth <= 1326 && value) {
+        btns[0].classList.add('_active');
+        btns[1].classList.remove('_active');
+        contents[0].removeAttribute('hidden');
+        contents[1].setAttribute('hidden', '');
+        value = false;
+      }
+      if (window.innerWidth > 1326) {
+        btns[0].classList.remove('_active');
+        btns[1].classList.remove('_active');
+        contents[0].removeAttribute('hidden');
+        contents[1].removeAttribute('hidden');
+        value = true;
+      }
+    }
+  }
+  function replaceText() {
+    const elements = document.querySelectorAll('[data-replace-text]');
+    if (elements.length === 0) return;
+    elements.forEach(element => {
+      const map = element.dataset.replaceText.trim().split(",");
+      element.textContent = window.innerWidth <= map[0] ? map[2] : map[1];
+    });
+  }
+  function heroAboutCompany() {
+    const container = document.querySelector('.hero-about-company-two');
+    if (!container) return;
+    const items = container.querySelectorAll('.card-info-third');
+    container.addEventListener('click', e => {
+      const target = e.target;
+      const card = target.closest('.card-info-third');
+      if (card) {
+        const parent = card.parentElement;
+        if (window.innerWidth <= 1326) {
+          items.forEach(item => {
+            if (card !== item) {
+              item.classList.remove('_active');
+            }
+          });
+          card.classList.toggle('_active');
+        }
+      }
+    });
+  }
 });
 
 /***/ }),
@@ -1345,10 +1414,8 @@ const progressImplement = () => {
       let topOffsetValue;
       if (window.innerWidth >= 1920) {
         topOffsetValue = topOffsetNegativePrc;
-      } else if (window.innerWidth > 1326) {
-        topOffsetValue = topOffsetNegativePrc * 60;
       } else {
-        topOffsetValue = topOffsetNegativePrc * 30;
+        topOffsetValue = topOffsetNegativePrc * 60;
       }
       const scrolled = window.pageYOffset;
       const currentHeightLine = topOffsetValue + scrolled;
@@ -1410,7 +1477,9 @@ const burgerMenu = () => {
   if (menuItems.length) {
     menuItems.forEach(el => {
       el.addEventListener('click', () => {
-        closeMenu();
+        if (window.innerWidth <= 1326) {
+          closeMenu();
+        }
       });
     });
   }
@@ -2201,6 +2270,41 @@ const throttle = function (func) {
 
 /***/ }),
 
+/***/ "./src/js/functions/tooltip.js":
+/*!*************************************!*\
+  !*** ./src/js/functions/tooltip.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "tooltip": () => (/* binding */ tooltip)
+/* harmony export */ });
+const tooltip = () => {
+  const tooltips = document.querySelectorAll('.tooltip');
+  if (tooltips.length === 0) return;
+  const innerWidth = 1326;
+  tooltips.forEach(tooltip => {
+    const target = tooltip.querySelector('.tooltip__btn');
+    const content = tooltip.querySelector('.tooltip__content');
+    tooltip.addEventListener('mouseenter', () => {
+      if (window.innerWidth <= innerWidth) return;
+      tooltip.classList.add('_active');
+    });
+    tooltip.addEventListener('mouseleave', e => {
+      if (window.innerWidth <= innerWidth) return;
+      tooltip.classList.remove('_active');
+    });
+    tooltip.addEventListener('click', () => {
+      if (window.innerWidth > innerWidth) return;
+      tooltip.classList.toggle('_active');
+    });
+  });
+};
+
+/***/ }),
+
 /***/ "./src/js/modules/disableScroll.js":
 /*!*****************************************!*\
   !*** ./src/js/modules/disableScroll.js ***!
@@ -2283,6 +2387,55 @@ const getHeightBlock = (selector, nameVariable) => {
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHeightBlock);
+
+/***/ }),
+
+/***/ "./src/js/modules/scrollDrag.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/scrollDrag.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const scrollDrag = (blockSelector, speed, viewportWidth) => {
+  let elements = typeof blockSelector === 'string' ? document.querySelectorAll(blockSelector) : blockSelector;
+  if (elements.length === 0) return;
+  elements.forEach(scrollBlock => {
+    let left = scrollBlock.scrollLeft;
+    let drag = false;
+    let coorX = 0;
+    scrollBlock.addEventListener('mousedown', function (e) {
+      if (viewportWidth === true || checkViewport()) {
+        drag = true;
+        coorX = e.pageX - this.offsetLeft;
+      }
+    });
+    document.addEventListener('mouseup', function () {
+      if (viewportWidth === true || checkViewport()) {
+        drag = false;
+        left = scrollBlock.scrollLeft;
+      }
+    });
+    scrollBlock.addEventListener('mousemove', function (e) {
+      if (viewportWidth === true || checkViewport()) {
+        if (drag) {
+          scrollBlock.classList.add('_drag');
+          this.scrollLeft = left - (e.pageX - this.offsetLeft - coorX) * (speed / 1000);
+        } else {
+          scrollBlock.classList.remove('_drag');
+        }
+      }
+    });
+  });
+  function checkViewport() {
+    return window.innerWidth <= viewportWidth ? true : false;
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollDrag);
 
 /***/ }),
 

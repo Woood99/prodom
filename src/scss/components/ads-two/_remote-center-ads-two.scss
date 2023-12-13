@@ -1,11 +1,11 @@
 .remote-center-ads-two {
-    @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
+    @include adaptiveValue("border-radius", 88, 42, 1296, 576, 1);
 
-    @include adaptiveValue("margin-top", 158, 48, 1296, 576, 1);
+    @include adaptiveValue("margin-top", 158, 74, 1296, 576, 1);
     margin-bottom: -200px;
 
-    @include adaptiveValue("padding-top", 86, 32, 1296, 576, 1);
-    @include adaptiveValue("padding-bottom", 280, 150, 1296, 576, 1);
+    @include adaptiveValue("padding-top", 86, 48, 1296, 576, 1);
+   padding-bottom: 280px;
 
     background: linear-gradient(0deg, #6792FF 17.48%, #2B53E1 102.21%), linear-gradient(185deg, #F1F7FF -1.79%, rgba(237, 243, 252, 0.00) 160.26%), #FFF;
 
@@ -23,14 +23,32 @@
 
         position: relative;
         z-index: 1;
+
+        @media (max-width:$desktop) {
+            max-width: none;
+            margin: 0;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
     }
 
     &__title {
         max-width: 386px;
         color: var(--white);
         font: var(--title-1);
+
         span {
             color: rgba(#fff, 0.52);
+        }
+
+        @media (max-width:$desktop) {
+            font-size: 26px;
+            text-align: center;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            max-width: 350px;
         }
     }
 
@@ -71,6 +89,10 @@
             height: 100%;
             width: 1px;
             background: linear-gradient(270deg, #5781F7 14.12%, #638BFB 93.51%);
+
+            @media (max-width:$desktop) {
+                display: none;
+            }
         }
 
         .col:nth-child(3) {
@@ -84,28 +106,108 @@
                 }
             }
         }
+
+        @media (max-width:$desktop) {
+            display: none;
+        }
     }
 
     &__subtitle {
-
         display: flex;
         align-items: center;
         font: var(--subtitle-2);
         letter-spacing: -0.24px;
         color: #89A7F9;
         margin-bottom: 40px;
-        >img:nth-child(1){
-            margin-right: 18px;
-        }
-        >span {
 
-            &:nth-child(2) {
-                span {
-                    display: block;
+        >img:nth-child(1) {
+            margin-right: 18px;
+
+            @media (max-width:$desktop) {
+                display: none;
+            }
+        }
+
+        @media (min-width:$desktop-min) {
+            >span {
+
+                &:nth-child(2) {
+                    span {
+                        display: block;
+                    }
                 }
             }
         }
 
+        @media (max-width:$desktop) {
+            margin-bottom: 0;
+            flex-grow: 1;
+            text-align: center;
+            justify-content: center;
+            color: var(--white);
+            height: calc(100% - 10px);
+            margin: 5px 0 5px 6px;
+            font-size: 13px;
+            border-radius: 28px;
+            transition: background-color $transitionSpeed $transitionFunction,
+                color $transitionSpeed $transitionFunction;
+            cursor: pointer;
+
+            &._active {
+                background-color: var(--white);
+                color: #231123;
+            }
+        }
+    }
+
+    &__tabs {
+        align-self: normal;
+
+        @media (min-width:$desktop-min) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+        height: 58px;
+        border-radius: 28px;
+        background: #5B7DEA;
+        overflow: hidden;
+    }
+    &__inner{
+        margin-top: 30px;
+    }
+    &__tab-content {
+        @media (min-width:$desktop-min) {
+            >img {
+                display: none;
+            }
+        }
+
+        @media (max-width:$desktop) {
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+           margin: 0 auto;
+            >img{
+                margin-bottom: 30px;
+                align-self: center;
+            }
+            p {
+                font: var(--text-1);
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        @media (max-width:$smallTablet-max){
+            max-width: 223px;
+        }
+        
     }
 
     &::after {
@@ -120,5 +222,13 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+        @media (max-width:$desktop){
+             top: 22%;
+             left: 45%;
+             width: 125%; 
+        }
+    }
+    @media (max-width:$desktop){
+         padding-bottom: 225px; 
     }
 }

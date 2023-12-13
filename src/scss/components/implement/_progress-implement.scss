@@ -1,6 +1,7 @@
 .progress-implement {
     margin-top: 62px;
     padding-bottom: 200px;
+
     .container {
         max-width: 1162px;
     }
@@ -8,64 +9,94 @@
     &__wrapper {
         display: grid;
         grid-template-columns: 363px 613px;
-        @include adaptiveValue("grid-column-gap", 156, 56, 1296, 1024, 1);
+        grid-column-gap: 156px;
+
+        @media (max-width:$desktop) {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 65px;
+        }
     }
-    &__info{
+
+    &__info {
         display: flex;
         align-items: center;
         flex-direction: column;
     }
+
     &__img {
         position: relative;
         z-index: 1;
-        &::before,&::after{
+
+        &::before,
+        &::after {
             content: '';
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             @include adaptiveValue("border-radius", 58, 24, 1296, 576, 1);
         }
-        &::before{
+
+        &::before {
             top: -22px;
-            width: percent(298,363);
-            height: percent(298,363);
+            width: percent(298, 363);
+            height: percent(298, 363);
             background-color: #F0F0F0;
             z-index: -1;
             transition: top 0.15s $transitionFunction;
         }
-        &::after{
+
+        &::after {
             top: -44px;
-            width: percent(240,363);
-            height: percent(240,363);
+            width: percent(240, 363);
+            height: percent(240, 363);
             background: rgba(240, 240, 240, 0.50);
             z-index: -2;
             transition: top 0.2s $transitionFunction;
         }
+
         img {
-            @include adaptiveValue("border-radius", 70, 32, 1296, 576, 1);
+            @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
             transition: transform $transitionSpeed $transitionFunction;
         }
-        @media (min-width:$desktop-min){
-             &:hover{
-                &::before,&::after{
+
+        @media (min-width:$desktop-min) {
+            &:hover {
+
+                &::before,
+                &::after {
                     top: 0;
                 }
-                img{
+
+                img {
                     transform: translateY(-5px);
                 }
-             } 
+            }
         }
     }
 
     &__title {
         margin-top: 35px;
         max-width: 299px;
+        @media (max-width:$desktop){
+            margin-top: 44px;
+             max-width: none; 
+             text-align: center;
+        }
+        @media (max-width:$smallTablet-max){
+             max-width: 323px; 
+        }
     }
 
     &__content {
         display: flex;
         justify-content: center;
         position: relative;
+        @media (max-width:$desktop){
+             max-width: 327px; 
+        margin: 0 auto;
+
+        }
     }
 
     &__line {
@@ -123,6 +154,7 @@
 
         width: 32px;
         height: 32px;
+
         &::after {
             content: '';
             width: 12px;
@@ -146,9 +178,9 @@
             height: 22px;
 
             transition: filter $transitionSpeed $transitionFunction,
-            width $transitionSpeed $transitionFunction,
-            height $transitionSpeed $transitionFunction,
-            background-color $transitionSpeed $transitionFunction;
+                width $transitionSpeed $transitionFunction,
+                height $transitionSpeed $transitionFunction,
+                background-color $transitionSpeed $transitionFunction;
         }
 
         &._active {
@@ -204,6 +236,9 @@
             z-index: 5;
             transform: translateY(-15px);
             transition: transform $transitionSpeed $transitionFunction;
+            @media (max-width:$desktop){
+                 width: 188px; 
+            }
         }
 
         svg {
@@ -241,53 +276,72 @@
         &._right {
             left: calc(50% + 50px);
             justify-content: start;
+            @media (max-width:$mobile-max){
+                 left: calc(50% + 40px); 
+            }
         }
 
         &._left {
             left: -50px;
             justify-content: end;
+            @media (max-width:$desktop){
+                 left: -130px; 
+            }
         }
 
-        @media (min-width:$tablet-min) {
-            &:nth-child(1) {
-                top: -2%;
+        &:nth-child(1) {
+            top: -2%;
 
-                p {
-                    max-width: 252px;
-                }
-            }
-
-            &:nth-child(2) {
-                top: 19%;
-
-                p {
-                    max-width: 140px;
-                }
-            }
-
-            &:nth-child(3) {
-                top: 37.5%;
-
-                p {
-                    max-width: 135px;
-                }
-            }
-
-            &:nth-child(4) {
-                top: 54%;
-
-                p {
-                    max-width: 217px;
-                }
-            }
-
-            &:nth-child(5) {
-                top: 74%;
-
-                p {
-                    max-width: 292px;
+            p {
+                max-width: 252px;
+                @media (max-width:$desktop){
+                     max-width: 136px; 
                 }
             }
         }
+
+        &:nth-child(2) {
+            top: 19%;
+
+            p {
+                max-width: 140px;
+            }
+        }
+
+        &:nth-child(3) {
+            top: 37.5%;
+
+            p {
+                max-width: 135px;
+            }
+        }
+
+        &:nth-child(4) {
+            top: 54%;
+
+            p {
+                max-width: 217px;
+                @media (max-width:$desktop){
+                    max-width: 100px; 
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            top: 74%;
+
+            p {
+                max-width: 292px;
+                @media (max-width:$desktop){
+                     max-width: 140px; 
+                }
+            }
+        }
+        @media (max-width:$desktop){
+             width: max-content; 
+        }
+    }
+    @media (max-width:$desktop){
+         margin-top: 86px; 
     }
 }

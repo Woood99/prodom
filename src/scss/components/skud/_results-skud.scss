@@ -32,16 +32,16 @@
         grid-column-gap: 32px;
         grid-row-gap: 32px;
 
-        @media (max-width:$tablet-max) {
-            margin-top: 32px;
-            grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 24px;
-            grid-row-gap: 24px;
-        }
+     @media (max-width:$desktop){
+        margin-top: 32px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px; 
+     }
 
         @media (max-width:$mobile-max) {
             grid-template-columns: 1fr;
-            grid-row-gap: 16px;
+            grid-row-gap: 12px;
         }
     }
 
@@ -51,10 +51,10 @@
         border-radius: 56px;
         padding: 32px 46px 70px;
 
-        @media (max-width:$tablet-max) {
-            padding: 24px 32px 32px;
-            border-radius: 24px;
-        }
+     @media (max-width:$desktop){
+        border-radius: 42px; 
+        padding: 32px 32px 45px 32px;
+     }
     }
 
     &__icon {
@@ -76,15 +76,15 @@
             width: 14px;
             height: 14px;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 width: 12px;
                 height: 12px;
             }
         }
 
-        @media (max-width:$tablet-max) {
-            width: 30px;
-            height: 30px;
+        @media (max-width:$desktop) {
+            width: 22px;
+            height: 22px;
         }
     }
 
@@ -93,9 +93,10 @@
         font: var(--subtitle-3);
         color: var(--dark);
         max-width: 225px;
-        @media (max-width:$tablet-max) {
-            margin-top: 16px;
-        }
+
+      @media (max-width:$desktop){
+        margin-top: 16px; 
+      }
     }
 
     &__descr {
@@ -115,14 +116,14 @@
             &__avatars {
                 margin-bottom: 50px;
 
-                @media (max-width:$tablet-max) {
-                    margin-bottom: 32px;
-                }
+              @media (max-width:$desktop){
+                    margin-bottom: 32px; 
+              }
 
                 img {
-                    @media (max-width:$tablet-max) {
-                        width: 100px;
-                    }
+                  @media (max-width:$desktop){
+                    width: 100px; 
+                  }
                 }
             }
 
@@ -137,7 +138,9 @@
 
             }
         }
-
+        @media (max-width:$desktop){
+              margin-top: 24px;
+        }
         @media (max-width:$mobile-max) {
             grid-column: auto;
         }
@@ -149,40 +152,66 @@
         .results-skud {
             &__container {
                 max-width: calc(1185px + (15px*2));
+
+                @media (max-width:$desktop) {
+                    padding-top: 61px;
+                }
+            }
+
+            &__descr {
             }
 
             &__list {
-                @media (min-width:$tablet-min) {
+                @media (min-width:$desktop-min) {
                     margin-top: 56px;
                 }
             }
 
             &__item {
-                @media (min-width:$tablet-min) {
+                @media (min-width:$desktop-min) {
                     padding: 46px 46px 88px;
                 }
 
                 &:not(.results-skud__item--big) {
                     background: var(--white);
+                    .results-skud__descr{
+                        @media (max-width:$desktop) {
+                            font-size: var(--small-fz);
+                            margin-top: 12px;
+                        }
+                    }
                 }
             }
 
             &__icon {
-                @media (min-width:$tablet-min) {
+                @media (min-width:$desktop-min) {
                     width: 32px;
                     height: 32px;
                 }
             }
 
             &__item--big {
-                @media (min-width:$tablet-min) {
-                    padding: 56px;
+                @media (min-width:$desktop-min) {
+                  padding: 56px 40px;
                 }
             }
         }
 
         .top-section-info__descr {
             max-width: 748px;
+
+            @media (max-width:$desktop) {
+                display: none;
+            }
+        }
+
+        @media (max-width:$desktop) {
+            background-color: var(--white);
+            border-radius: 42px;
+            position: relative;
+            z-index: 1;
+            top: -105px;
+            margin-bottom: -105px;
         }
     }
 }

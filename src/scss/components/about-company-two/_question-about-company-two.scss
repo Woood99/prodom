@@ -1,6 +1,7 @@
 .question-about-company-two {
-    @include adaptiveValue("margin-top", 100, 32,1296,576,1);
-    @include adaptiveValue("margin-bottom", 117, 24,1296,576,1);
+    margin-top: 100px;
+    margin-bottom: 117px;
+
     &__container {
         position: relative;
     }
@@ -10,7 +11,7 @@
         padding-left: 0;
         padding-right: 0;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 32px 0;
         }
 
@@ -28,26 +29,28 @@
         align-items: center;
         justify-content: center;
         line-height: 1;
-        height: 162px;
-        @media (max-width:$desktop){
-             height: auto; 
-        }
-        @media (max-width:$tablet-max) {
+        height: 172px;
+
+        @media (max-width:$desktop) {
+            height: auto;
             letter-spacing: -1.56px;
             white-space: normal;
             text-align: center;
             max-width: 925px;
         }
-        @media (max-width:$smallTablet-max){
-             max-width: 310px;
+
+        @media (max-width:$smallTablet-max) {
+            max-width: 342px;
         }
     }
 
     &__text {
         top: -5px;
-        @media (max-width:$desktop){
-            top: 18px; 
+
+        @media (max-width:$desktop) {
+            top: 18px;
         }
+
         p {
             max-width: 617px;
 
@@ -62,8 +65,8 @@
         max-width: 518px;
         margin: 0 auto;
 
-        @media (max-width:$tablet-max) {
-            margin-top: 16px;
+        @media (max-width:$desktop) {
+            margin-top: 42px;
         }
 
         @media (max-width:$smallTablet-max) {
@@ -74,7 +77,7 @@
     &__btn {
         margin-top: 40px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 24px;
             height: 58px;
         }
@@ -88,11 +91,8 @@
             top: 2.5%;
             left: 20%;
 
-            @media (max-width:$tablet-max) {
-                top: 15%;
-                left: auto;
-                right: 3%;
-                width: 20px;
+            @media (max-width:$desktop) {
+             display: none;
             }
         }
 
@@ -100,20 +100,19 @@
             top: 35%;
             left: 10%;
 
-            @media (max-width:$tablet-max) {
-                top: 0%;
-                left: auto;
-                right: 11%;
-                width: 58px;
+            @media (max-width:$desktop) {
+              width: 32px;
+              top: -1%;
+    left: 36%;
             }
         }
 
         &--3 {
             top: 51%;
             left: 4%;
-            
-            @media (max-width:$tablet-max) {
-                top: 39%; 
+
+            @media (max-width:$desktop) {
+                top: 35%;
                 left: 10%;
                 width: 32px;
             }
@@ -122,11 +121,9 @@
         &--4 {
             top: 75%;
             left: 16%;
-            @media (max-width:$tablet-max) {
-                top: 28%;
-                left: 1%;
-                width: 35px;
-                z-index: -1;
+
+            @media (max-width:$desktop) {
+                display: none;
             }
         }
 
@@ -134,26 +131,28 @@
             top: 28%;
             right: -3%;
             z-index: -1;
-         
-            @media (max-width:$tablet-max) {
-                top: 32%;
-                left: auto;
-                right: -9%;
+
+            @media (max-width:$desktop) {
                 width: 107px;
+                top: 33%;
+                right: 7%;
             }
         }
 
         &--6 {
             top: 56%;
             right: 17%;
-            @media (max-width:$tablet-max){
+
+            @media (max-width:$desktop) {
                 display: none;
             }
         }
 
-        @media (max-width:$tablet-max) {}
+        @media (max-width:$desktop) {}
     }
-    @media (max-width:$tablet-max){
-        margin-top: 32px;
+
+    @media (max-width:$desktop) {
+        margin-top: 70px;
+        margin-bottom: 48px;
     }
 }

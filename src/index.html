@@ -19,76 +19,90 @@
 
 <body class="page__body">
     <div class="site-container">
-        <div class="block">
-            <h2>Готовые страницы:</h2>
-            <ol>
-                <li>
-                    <a href="./home.html">Главная</a>
-                </li>
-                <li>
-                    <a href="./automation.html">Автоматизация</a>
-                </li>
-                <li>
-                    <a href="./ads.html">АДС</a>
-                </li>
-                <li>
-                    <a href="./skud.html">СКУД</a>
-                </li>
-                <li>
-                    <a href="./about-company.html">О компании</a>
-                </li>
-                <li>
-                    <a href="./contacts.html">Контакты</a>
-                </li>
-                <li>
-                    <a href="./news-list.html">Новости</a>
-                </li>
-                <li>
-                    <a href="./news.html">Новость</a>
-                </li>
-                <li>
-                    <a href="./invite.html">Приглашение</a>
-                </li>
-                <li>
-                    <a href="./pass.html">Пропуск гостя</a>
-                </li>
-            </ol>
+        <div class="row">
+            <div class="block">
+                <h2>old</h2>
+                <ol>
+                    <li>
+                        <a href="./automation.html">Автоматизация</a>
+                    </li>
+                    <li>
+                        <a href="./ads.html">АДС</a>
+                    </li>
+                    <li>
+                        <a href="./skud.html">СКУД</a>
+                    </li>
+                    <li>
+                        <a href="./about-company.html">О компании</a>
+                    </li>
+                    <li>
+                        <a href="./contacts.html">Контакты</a>
+                    </li>
+                </ol>
+            </div>
         </div>
-        <div class="block">
-            <h2>В разработке:</h2>
-            <ol>
-            </ol>
+        <div class="row">
+            <div class="block">
+                <h2>Готовые страницы:</h2>
+                <ol>
+                    <li>
+                        <a href="./news-list.html">Новости</a>
+                    </li>
+                    <li>
+                        <a href="./news.html">Новость</a>
+                    </li>
+                    <li>
+                        <a href="./invite.html">Приглашение</a>
+                    </li>
+                    <li>
+                        <a href="./pass.html">Пропуск гостя</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="./implement.html">Внедрение</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="block">
+                <h2>Мелкие правки</h2>
+                <ol>
+                    <li>
+                        <a href="./home.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="./skud-two.html">СКУД 2</a>
+                    </li>
+                    <li>
+                        <a href="./ads-two.html">АДС 2</a>
+                    </li>
+                    <li>
+                        <a href="./about-company-two.html">О компании 2</a>
+                    </li>
+                    <li>
+                        <a href="./contacts-two.html">Контакты 2</a>
+                    </li>
+                </ol>
+            </div>
         </div>
-        <div class="block">
-            <h2>В разработке мобилка:</h2>
-            <ol>
-                <li>
-                    <a href="./skud-two.html">СКУД 2</a>
-                </li>
-                <li>
-                    <a href="./ads-two.html">АДС 2</a>
-                </li>
-                <li>
-                    <a href="./about-company-two.html">О компании 2</a>
-                </li>
-                <li>
-                    <a href="./contacts-two.html">Контакты 2</a>
-                </li>
-                <li>
-                    <a href="./implement.html">Внедрение</a>
-                </li>
-                <li>
-                    <a href="./digitale-umgebung.html">Цифровая среда</a>
-                </li>
-            </ol>
+        <div class="row">
+            <div class="block">
+                <h2>В разработке:</h2>
+                <ol>
+                    <li>
+                        <a href="./digitale-umgebung.html">Цифровая среда</a>
+                    </li>
+                </ol>
+            </div>
         </div>
-        <div class="block">
-            <h2>Ui-Kit</h2>
-            <ol>
-                <li>
-                    <a href="./kit.html">Ссылка</a>
-                </li>
-            </ol>
+        <div class="row">
+            <div class="block">
+                <h2>Ui-Kit</h2>
+                <ol>
+                    <li>
+                        <a href="./kit.html">Ссылка</a>
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
 
@@ -102,8 +116,13 @@
         .site-container {
             overflow: visible;
         }
-
-        .block:not(:last-child) {
+        .row{
+            display: flex;
+        }
+        .row .block:not(:last-child){
+            margin-right: 200px;
+        }
+        .row:not(:last-child) {
             margin-bottom: 50px;
         }
 

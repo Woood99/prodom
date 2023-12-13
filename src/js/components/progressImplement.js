@@ -19,10 +19,8 @@ const progressImplement = () => {
             let topOffsetValue;
             if (window.innerWidth >= 1920) {
                 topOffsetValue = topOffsetNegativePrc;
-            } else if (window.innerWidth > 1326) {
-                topOffsetValue = topOffsetNegativePrc * 60;
             } else {
-                topOffsetValue = topOffsetNegativePrc * 30;
+                topOffsetValue = topOffsetNegativePrc * 60;
             }
             const scrolled = window.pageYOffset;
             const currentHeightLine = topOffsetValue + scrolled;

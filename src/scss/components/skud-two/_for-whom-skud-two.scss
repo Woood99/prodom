@@ -1,12 +1,19 @@
 .for-whom-skud-two {
     @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
-
+    .container{
+        @media (max-width:$desktop){
+             padding: 0; 
+        }
+    }
     &__title {
         line-height: math.div(42, 38);
         margin: 0 auto;
         text-align: center;
         span {
             color: var(--blue);
+        }
+        @media (max-width:$desktop){
+             padding: 0 15px; 
         }
     }
 
@@ -17,27 +24,26 @@
         margin-right: auto;
         font: var(--text-1);
         text-align: center;
-        @media (max-width:$tablet-max){
+        @media (max-width:$desktop){
             margin-top: 16px; 
+            padding: 0 15px;
         }
     }
 
     &__wrapper {
         margin-top: 68px;
 
-        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
         border: 1px solid #E7EAF2;
-
+        border-radius: 70px;
         background: #FFF;
 
         padding: 91px 0 66px;
-        @media (max-width:$tablet-max){
+        @media (max-width:$desktop){
             margin-top: 32px;
-            padding: 32px 0;
-        }
-        @media (max-width:$smallTablet-max){
-             padding: 0;
-             border: none; 
+            padding: 63px 0 47px;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
         }
     }
 
@@ -58,6 +64,9 @@
                     max-height: 196px;
                     @media (max-width:$smallTablet-max){
                          max-height: 155px; 
+                    }
+                    @media (max-width:$mobile-max){
+                         max-height: 136px; 
                     }
                 }
 
@@ -82,6 +91,9 @@
                     @media (max-width:$tablet-max) {
                         margin-top: 12px;
                     }
+                    @media (max-width:$mobile-max){
+                         font-size: 12px; 
+                    }
                 }
 
                 &.focus-visible {
@@ -93,6 +105,9 @@
                 }
                 @media (max-width:$smallTablet-max){
                      --width: 155px;
+                }
+                @media (max-width:$mobile-max){
+                     --width:136px; 
                 }
             }
             @media (max-width:$tablet-max){
@@ -112,10 +127,6 @@
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;
-        }
-
-        @media (max-width:$smallTablet-max) {
-            display: none;
         }
     }
     &__next {

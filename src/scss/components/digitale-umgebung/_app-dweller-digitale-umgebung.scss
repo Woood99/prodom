@@ -15,7 +15,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
         background: linear-gradient(148deg, #6C4FCA -26.5%, #C4B2FF 128.88%);
         height: 509px;
         padding: 83px 72px 83px 195px;

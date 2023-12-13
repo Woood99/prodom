@@ -32,7 +32,7 @@
             </a>
             <nav class="header__nav nav" data-menu>
                 <ul class="nav__list list-reset" data-spollers="1326,max" data-one-spoller>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             О нас
                         </a>
@@ -44,7 +44,7 @@
                         <div class="nav-dropdown__container container">
                             <div class="nav-dropdown-content">
                                 <div class="nav-dropdown-content__body">
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#security-safe"></use>
@@ -58,7 +58,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#call-2"></use>
@@ -72,7 +72,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#home-hashtag"></use>
@@ -210,12 +210,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Внедрение
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Контакты
                         </a>
@@ -249,7 +249,8 @@
             <section class="hero-contacts-two">
     <div class="container hero-contacts-two__container">
         <div class="hero-contacts-two__inner hero-primary">
-            <h1 class="hero-contacts-two__title hero-primary__title" data-rellax-speed="-2.5">
+            <h1 class="hero-contacts-two__title hero-primary__title" data-rellax-speed="-2.5" data-rellax-tablet-speed="0"
+            data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
                 контакты
             </h1>
             <div class="hero-contacts-two__content hero-primary__text">
@@ -311,38 +312,42 @@
                 <div class="form-primary__choices">
                     <span>Меня интересует:</span>
                     <div class="radio-secondary">
-                        <div class="radio-secondary__item">
-                            <input id="o_1" class="radio-secondary__input" type="radio"
-                                value="Автоматизация для УК и ТСЖ" name="Меня интересует:" checked>
-                            <label for="o_1" class="radio-secondary__label">
-                                Цифровая среда
-                            </label>
+                        <div class="row">
+                            <div class="radio-secondary__item">
+                                <input id="o_1" class="radio-secondary__input" type="radio"
+                                    value="Автоматизация для УК и ТСЖ" name="Меня интересует:" checked>
+                                <label for="o_1" class="radio-secondary__label">
+                                    Цифровая среда
+                                </label>
+                            </div>
+                            <div class="radio-secondary__item">
+                                <input id="o_2" class="radio-secondary__input" type="radio"
+                                    value="Аварийно-диспетчерская служба" name="Меня интересует:">
+                                <label for="o_2" class="radio-secondary__label">
+                                    Аварийно-диспетчерская служба
+                                </label>
+                            </div>
                         </div>
-                        <div class="radio-secondary__item">
-                            <input id="o_2" class="radio-secondary__input" type="radio"
-                                value="Аварийно-диспетчерская служба" name="Меня интересует:">
-                            <label for="o_2" class="radio-secondary__label">
-                                Аварийно-диспетчерская служба
-                            </label>
-                        </div>
-                        <div class="radio-secondary__item">
-                            <input id="o_3" class="radio-secondary__input" type="radio"
-                                value="Система контроля и управление доступом" name="Меня интересует:">
-                            <label for="o_3" class="radio-secondary__label">
-                                Система контроля и управления доступом
-                            </label>
-                        </div>
-                        <div class="radio-secondary__item">
-                            <input id="o_4" class="radio-secondary__input" type="radio" value="Другое"
-                                name="Меня интересует:">
-                            <label for="o_4" class="radio-secondary__label">
-                                Другое
-                            </label>
+                        <div class="row">
+                            <div class="radio-secondary__item">
+                                <input id="o_3" class="radio-secondary__input" type="radio"
+                                    value="Система контроля и управление доступом" name="Меня интересует:">
+                                <label for="o_3" class="radio-secondary__label">
+                                    Система контроля и управления доступом
+                                </label>
+                            </div>
+                            <div class="radio-secondary__item">
+                                <input id="o_4" class="radio-secondary__input" type="radio" value="Другое"
+                                    name="Меня интересует:">
+                                <label for="o_4" class="radio-secondary__label">
+                                    Другое
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="form-primary__agree checkbox">
-                    <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                    <input id="c_1" class="checkbox__input" checked type="checkbox" value="1">
                     <label for="c_1" class="checkbox__label">
                         <span class="checkbox__text">
                             Соглашаюсь на <a href="#">обработку персональных данных</a>

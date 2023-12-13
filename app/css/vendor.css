@@ -338,7 +338,7 @@ template {
  * Add the correct display in IE 10.
  */
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {

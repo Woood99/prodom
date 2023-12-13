@@ -24,8 +24,8 @@ $smallTablet-min: 769px;
 $mobile-max: 576px;
 $mobile-min: 577px;
 
-$smallMobile-max: 480px;
-$smallMobile-min: 481px;
+$smallMobile-max: 370px;
+$smallMobile-min: 371px;
 
 :root {
 
@@ -68,17 +68,17 @@ $smallMobile-min: 481px;
         --subtitle-fz-2: 20px;
         --subtitle-fz-3: 18px;
 
-        --text-fz-1: 16px;
-        --text-fz-2: 15px;
-        --text-fz-3: 14px;
+        --text-fz-1: 14px;
+        --text-fz-2: 16px;
+        --text-fz-3: 12px;
     }
 
     @media (max-width:$smallTablet-max) {
         --title-fz-1: 40px;
-        --title-fz-2: 28px;
-        --title-fz-3: 22px;
+        --title-fz-2: 26px;
+        --title-fz-3: 26px;
 
-        --subtitle-fz-1: 20px;
+        --subtitle-fz-1: 19px;
         --subtitle-fz-2: 18px;
         --subtitle-fz-3: 16px;
     }

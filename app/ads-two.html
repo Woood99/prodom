@@ -32,7 +32,7 @@
             </a>
             <nav class="header__nav nav" data-menu>
                 <ul class="nav__list list-reset" data-spollers="1326,max" data-one-spoller>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             О нас
                         </a>
@@ -44,7 +44,7 @@
                         <div class="nav-dropdown__container container">
                             <div class="nav-dropdown-content">
                                 <div class="nav-dropdown-content__body">
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#security-safe"></use>
@@ -58,7 +58,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#call-2"></use>
@@ -72,7 +72,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#home-hashtag"></use>
@@ -210,12 +210,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Внедрение
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Контакты
                         </a>
@@ -249,13 +249,19 @@
             <section class="hero-ads-two">
     <div class="container hero-ads-two__container">
         <div class="hero-ads-two__inner hero-primary">
-            <h1 class="hero-ads-two__title hero-primary__title" data-rellax-speed="-2.5">
-                АДС 24/7
+            <h1 class="hero-ads-two__title hero-primary__title" data-rellax-speed="-2.5" data-rellax-tablet-speed="0"
+            data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+                <span class="hero-ads-two__title-desktop">АДС 24/7</span>
                 <span class="popular-subtitle">
                     <svg>
                         <use xlink:href="img/sprite.svg#fire"></use>
                     </svg>
                     Популярно
+                </span>
+                <span class="hero-ads-two__title-mobile title-1">
+                    Аварийно-
+                    диспетчерская служба
+                    24/7
                 </span>
             </h1>
             <div class="hero-ads-two__text hero-primary__text">
@@ -263,6 +269,9 @@
                     АДС 24/7 — круглосуточная аварийно-диспетчерская служба. <br>
                     Берем на себя всю <span>работу с заявками от жителей и контроль</span>
                     исполнителей. Это выгоднее своей диспетчерской.
+                </p>
+                <p>
+                    Берем на&nbsp;себя всю <span>работу с&nbsp;заявками от жителей.</span> Это выгоднее своей диспетчерской.
                 </p>
             </div>
             <button type="button" class="btn btn-reset btn-primary hero-ads-two__btn">
@@ -279,7 +288,7 @@
                 О функционале
             </h2>
             <p class="top-section-info__descr">
-                Мы&nbsp;реализуем АДС под ключ: ведём жителя от&nbsp;звонка до&nbsp;отзыва
+                Мы&nbsp;реализуем АДС под ключ: <br> ведём жителя от&nbsp;звонка до&nbsp;отзыва
                 <span>о&nbsp;работе исполнителя. Контролируем процессы, а&nbsp;вам присылаем отчёты.</span>
             </p>
         </div>
@@ -307,7 +316,7 @@
             </div>
             <div class="about-func-ads-two__row">
                 <div class="about-func-ads-two__item about-func-ads-two__item--big about-func-ads-two__item--3" 
-                data-animation-item data-animation-item-start="1.2" data-animation-item-repeat>
+                data-animation-item data-animation-item-start="0.95" data-animation-item-repeat>
                     <p class="about-func-ads-two__descr">
                         <span>
                             Контроль качества,
@@ -330,6 +339,10 @@
                         <source srcset="./img/decor.webp" type="image/webp">
                         <img loading="lazy" src="./img/decor.png" class="about-func-ads-two__image" alt="decor">
                     </picture>
+                    <picture>
+                        <source srcset="./img/decor-5.webp" type="image/webp">
+                        <img loading="lazy" src="./img/decor-5.png" class="about-func-ads-two__image" alt="decor">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -350,48 +363,62 @@
         </h2>
         <div class="remote-center-ads-two__content">
             <div class="col">
-                <h3 class="remote-center-ads-two__subtitle">
+                <h3 class="remote-center-ads-two__subtitle" data-da=".remote-center-ads-two__nav,1326,1">
                     <img loading="lazy" src="./img/emoji-1.png" width="43" height="42" alt="">
                     <span>
                         Диспетчер
                         <span>в штате</span>
                     </span>
                 </h3>
-                <p>
-                    Большие затраты на&nbsp;оплату труда ваших диспетчеров
-                </p>
-                <p>
-                    Временные затраты на&nbsp;поиск персонала, текучка
-                </p>
-                <p>
-                    Минимальная автоматизация или её&nbsp;отсутствие
-                </p>
-                <p>
-                    Отсутствие аналитики
-                    по&nbsp;сотрудникам
-                </p>
+                <div class="remote-center-ads-two__tab-content" data-da=".remote-center-ads-two__inner,1326,1">
+                    <img loading="lazy" src="./img/emoji-1.png" width="43" height="42" alt="">
+                    <p>
+                        Большие затраты на&nbsp;оплату труда ваших диспетчеров
+                    </p>
+                    <p>
+                        Временные затраты на&nbsp;поиск персонала, текучка
+                    </p>
+                    <p>
+                        Минимальная автоматизация или её&nbsp;отсутствие
+                    </p>
+                    <p>
+                        Отсутствие аналитики
+                        по&nbsp;сотрудникам
+                    </p>
+                </div>
             </div>
             <div class="col" aria-hidden="true"></div>
             <div class="col">
-                <h3 class="remote-center-ads-two__subtitle">
+                <h3 class="remote-center-ads-two__subtitle" data-da=".remote-center-ads-two__nav,1326,1">
                     <img loading="lazy" src="./img/emoji-2.png" width="43" height="42" alt="">
                     <span>
                         Удалённый
                         <span>центр</span>
                     </span>
                 </h3>
-                <p>
-                    Более 30&nbsp;удалённых диспетчеров за&nbsp;те&nbsp;же деньги
-                </p>
-                <p>
-                    Мы&nbsp;сами подбираем и&nbsp;обучаем диспетчеров
-                </p>
-                <p>
-                    Используем собственную <span>CRM-систему</span>
-                </p>
-                <p>
-                    Предоставляем отчёты по&nbsp;заявкам, звонкам, эффективности сотрудников
-                </p>
+                <div class="remote-center-ads-two__tab-content" data-da=".remote-center-ads-two__inner,1326,1">
+                    <img loading="lazy" src="./img/emoji-2.png" width="43" height="42" alt="">
+                    <p>
+                        Более 30&nbsp;удалённых диспетчеров за&nbsp;те&nbsp;же деньги
+                    </p>
+                    <p>
+                        Мы&nbsp;сами подбираем и&nbsp;обучаем диспетчеров
+                    </p>
+                    <p>
+                        Используем собственную <span>CRM-систему</span>
+                    </p>
+                    <p>
+                        Предоставляем отчёты по&nbsp;заявкам, звонкам, эффективности сотрудников
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="remote-center-ads-two__tabs">
+            <div class="remote-center-ads-two__nav">
+
+            </div>
+            <div class="remote-center-ads-two__inner">
+
             </div>
         </div>
     </div>
@@ -495,7 +522,7 @@
         </div>
         <div data-tabs class="benefit-ads-two__tabs tabs">
             <nav data-tabs-titles class="tabs__navigation">
-                <button type="button" class="btn btn-reset tabs__title _tab-active">Управляющей компании</button>
+                <button type="button" class="btn btn-reset tabs__title _tab-active" data-replace-text="1326,Управляющей компании,УК">Управляющей компании</button>
                 <button type="button" class="btn btn-reset tabs__title">Жителю</button>
                 <button type="button" class="btn btn-reset tabs__title">Исполнителю</button>
             </nav>
@@ -639,7 +666,7 @@
         <img loading="lazy" src="./img/lightning-3.png" class="connect-ads-two__decor-lightning connect-ads-two__decor-lightning--4" width="37" height="42" aria-hidden="true" alt="">
         <img loading="lazy" src="./img/lightning-4.png" class="connect-ads-two__decor-lightning connect-ads-two__decor-lightning--5" width="193" height="220" aria-hidden="true" alt="">
         <img loading="lazy" src="./img/lightning-5.png" class="connect-ads-two__decor-lightning connect-ads-two__decor-lightning--6" width="59" height="67" aria-hidden="true" alt="">
-        <div class="connect-ads-two__top hero-primary">
+        <div class="connect-ads-two__top hero-primary hero-secondary">
             <h1 class="connect-ads-two__title hero-primary__title _no-rellax">
                 подключить АДС
             </h1>
@@ -664,7 +691,7 @@
                 <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
             </label>
             <div class="form-primary__agree checkbox">
-                <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                <input id="c_1" class="checkbox__input" checked type="checkbox" value="1">
                 <label for="c_1" class="checkbox__label">
                     <span class="checkbox__text">
                         Соглашаюсь на <a href="#">обработку персональных данных</a>

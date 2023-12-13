@@ -16,9 +16,9 @@
         font: var(--text-1);
         color: var(--dark);
 
-        @media (max-width:$tablet-max) {
-            margin-top: 20px;
-        }
+     @media (max-width:$desktop){
+        margin-top: 20px; 
+     }
     }
 
     &__container {
@@ -32,14 +32,14 @@
         &:not(:last-child) {
             margin-bottom: 14px;
 
-            @media (max-width:$tablet-max) {
-                margin-bottom: 7px;
-            }
+          @media (max-width:$desktop){
+            margin-bottom: 7px; 
+          }
         }
 
-        @media (max-width:$tablet-max) {
-            height: 58px;
-        }
+     @media (max-width:$desktop){
+        height: 58px; 
+     }
     }
 
     &__agree {
@@ -60,24 +60,25 @@
                      } 
                 }
             }
-            @media (max-width:$tablet-max) {
-                margin-left: 8px;
-            }
+         @media (max-width:$desktop){
+            margin-left: 8px; 
+         }
         }
 
-        @media (max-width:$tablet-max) {
-            margin-top: 12px;
-            margin-left: 12px;
-        }
+     @media (max-width:$desktop){
+        margin-top: 12px;
+        margin-left: 12px; 
+     }
     }
 
     &__btn {
         margin-top: 40px;
         width: 100%;
-
-        @media (max-width:$tablet-max) {
-            margin-top: 24px;
-        }
+@media (max-width:$desktop){
+    margin-top: 24px;
+    height: 58px;
+    border-radius: 20px; 
+}
     }
 
     &__choices {
@@ -89,13 +90,14 @@
             margin-bottom: 20px;
 
             font: var(--text-2-500);
-            @media (max-width:$tablet-max) {
-                margin-bottom: 24px;
-            }
+          @media (max-width:$desktop){
+            margin-bottom: 20px;
+            text-align: center; 
+          }
         }
 
-        @media (max-width:$tablet-max) {
-            margin-top: 32px;
-        }
+      @media (max-width:$desktop){
+        margin-top: 24px; 
+      }
     }
 }

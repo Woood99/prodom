@@ -1,12 +1,12 @@
 .ways-skud-two {
-    @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
+    @include adaptiveValue("margin-top", 120, 24, 1296, 576, 1);
 
     &__container {
         display: grid;
         grid-template-columns: 345px 1fr;
         justify-content: space-between;
         width: 100%;
-        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
         background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
 
 
@@ -32,15 +32,14 @@
         }
 
         @media (max-width:$desktop) {
-            flex-direction: column;
+        grid-template-columns: 1fr;
             justify-content: center;
             text-align: center;
 
-            padding: 48px 32px;
+            padding: 38px 40px 48px;
         }
-
-        @media (max-width:$smallTablet-max) {
-            padding: 32px 24px;
+        @media (max-width:$smallTablet-max){
+             text-align: left; 
         }
     }
 
@@ -56,12 +55,18 @@
         span {
             color: #AEC2FF;
         }
+        @media (max-width:$smallTablet-max){
+             max-width: 208px; 
+        }
     }
 
     &__descr {
         margin-top: 16px;
         font: var(--text-1);
         color: var(--white);
+        @media (max-width:$smallTablet-max){
+             display: none; 
+        }
     }
 
     &__right {
@@ -71,11 +76,11 @@
         text-align: left;
 
         @media (max-width:$desktop) {
-            margin: 48px 0 0 0;
+            margin: 32px 0 0 0;
         }
 
         @media (max-width:$smallTablet-max) {
-            margin: 32px 0 0 0;
+            margin: 24px 0 0 0;
         }
     }
 
@@ -90,7 +95,7 @@
         >.col {}
 
         &__item {
-            @include adaptiveValue("border-radius", 39, 16, 1296, 576, 1);
+            @include adaptiveValue("border-radius", 39, 24, 1296, 576, 1);
             background: #5184F3;
             padding: 14px 17px;
             transition: padding $transitionSpeed $transitionFunction;
@@ -103,12 +108,9 @@
             }
 
             &:not(:last-child) {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
             }
 
-            @media (max-width:$smallTablet-max) {
-                padding: 14px 18px;
-            }
         }
 
         &__title {
@@ -138,9 +140,10 @@
                     transition: stroke $transitionSpeed $transitionFunction;
                 }
 
-                @media (max-width:$tablet-max) {
-                    --size: 26px;
-                }
+               @media (max-width:$desktop){
+                --size: 22px;
+                margin-right: 14px; 
+               }
             }
 
             &._spoller-active {
@@ -163,15 +166,12 @@
             }
 
             @media (max-width:$smallTablet-max) {
-                padding: 16px 0 0 0;
+                padding: 16px 0 0 calc(22px + 14px);
             }
         }
 
         @media (max-width:$smallTablet-max) {
-            grid-column-gap: 24px;
-        }
-
-        @media (max-width:$mobile-max) {
+            grid-row-gap: 8px;
             grid-template-columns: 1fr;
         }
     }

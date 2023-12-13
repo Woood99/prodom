@@ -89,3 +89,11 @@
 }
 
 
+
+
+@mixin hiddenScroll {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -42,7 +42,7 @@
             }
 
             .crm-digitale-umgebung__image {
-                @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+                @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
                 background: linear-gradient(112deg, #348D5E -4.84%, #60C28E 64.36%);
 
                 display: flex;

@@ -2,30 +2,16 @@
     position: relative;
     display: inline-block;
 
-    &__btn {
-
-        &:hover,
-        &:focus {
-            &+.tooltip__content {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
-        }
-    }
+    &__btn {}
 
     &__content {
         position: absolute;
         left: 0;
-        bottom: calc(100% + 5px);
+        bottom: 100%;
         z-index: 3;
-        padding: 7px 15px;
         width: max-content;
-        max-width: 250px;
-        box-shadow: 0 0 29px rgba(#000, 0.15);
-        line-height: 200%;
-        color: #fff;
-        background-color: #000;
+        max-width: 553px;
+
         opacity: 0;
         visibility: hidden;
         transform: translateY(10px);
@@ -33,5 +19,24 @@
             opacity $transitionSpeed $transitionFunction,
             transform $transitionSpeed $transitionFunction,
             visibility $transitionSpeed $transitionFunction;
+
+        >div {
+            padding: 38px 48px;
+            width: 100%;
+            height: 100%;
+            color: var(--black);
+            font: var(--text-1);
+            background-color: #FFF;
+            border: 1px solid #DCE4FC;
+            @include adaptiveValue("border-radius", 40, 24, 1296, 576, 1);
+        }
+    }
+
+    &._active {
+        .tooltip__content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
     }
 }

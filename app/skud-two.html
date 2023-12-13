@@ -32,7 +32,7 @@
             </a>
             <nav class="header__nav nav" data-menu>
                 <ul class="nav__list list-reset" data-spollers="1326,max" data-one-spoller>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             О нас
                         </a>
@@ -44,7 +44,7 @@
                         <div class="nav-dropdown__container container">
                             <div class="nav-dropdown-content">
                                 <div class="nav-dropdown-content__body">
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#security-safe"></use>
@@ -58,7 +58,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#call-2"></use>
@@ -72,7 +72,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#home-hashtag"></use>
@@ -210,12 +210,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Внедрение
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Контакты
                         </a>
@@ -250,7 +250,7 @@
     <div class="container hero-skud-two__container">
         <div class="hero-skud-two__content">
             <h1 class="hero-skud-two__title title-1">
-                Система контроля и
+                Система контроля <br>и
                 <span>управление доступом</span>
                 через интернет
             </h1>
@@ -330,7 +330,9 @@
                     </p>
                 </div>
             </div>
-            <button type="button" class="btn btn-reset btn-primary hero-skud-two__btn">Оставить заявку</button>
+            <button type="button" class="btn btn-reset btn-primary hero-skud-two__btn">
+                ⚡️ Оставить заявку
+            </button>
         </div>
     </div>
 </section>
@@ -488,7 +490,7 @@
                         </button>
                         <div class="spollers__body">
                             <p>
-                                Больше не&nbsp;нужно содержать бюро пропусков, отдельный сервер для СКУД и&nbsp;оплачивать клиентские приложения.
+                                Больше не&nbsp;нужно содержать бюро пропусков, отдельный сервер для СКУД.
                             </p>
                         </div>
                     </div>
@@ -517,7 +519,7 @@
         <div class="banner-skud-two__container">
             <div class="banner-skud-two__info">
                 <h2 class="banner-skud-two__title title-2">
-                    Внедрим систему, <span>не меняя ваше текущее оборудование</span>
+                    Внедрим систему, <span>не&nbsp;меняя ваше текущее оборудование</span>
                 </h2>
                 <p class="banner-skud-two__descr">
                     Быстро и без заморочек, за 1 день
@@ -773,7 +775,7 @@
                 <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
             </label>
             <div class="form-primary__agree checkbox">
-                <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                <input id="c_1" class="checkbox__input" checked type="checkbox" value="1">
                 <label for="c_1" class="checkbox__label">
                     <span class="checkbox__text">
                         Соглашаюсь на <a href="#">обработку персональных данных</a>

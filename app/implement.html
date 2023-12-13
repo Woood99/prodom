@@ -32,7 +32,7 @@
             </a>
             <nav class="header__nav nav" data-menu>
                 <ul class="nav__list list-reset" data-spollers="1326,max" data-one-spoller>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             О нас
                         </a>
@@ -44,7 +44,7 @@
                         <div class="nav-dropdown__container container">
                             <div class="nav-dropdown-content">
                                 <div class="nav-dropdown-content__body">
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#security-safe"></use>
@@ -58,7 +58,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#call-2"></use>
@@ -72,7 +72,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#home-hashtag"></use>
@@ -210,12 +210,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Внедрение
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Контакты
                         </a>
@@ -345,7 +345,7 @@
         <div class="info-implement__item info-implement-item">
             <div class="info-implement-item__image">
                 <picture>
-                    <source srcset="./img/info-implement-1.webp" type="image/webp">
+                    <source srcset="./img/info-implement-4.jpg" media="(max-width:768px)">
                     <img loading="lazy" src="./img/info-implement-1.jpg" width="580" height="363" alt="Условия сотрудничества">
                 </picture>
             </div>
@@ -386,18 +386,24 @@
         <div class="info-implement__item info-implement-item">
             <div class="info-implement-item__image">
                 <picture>
-                    <source srcset="./img/info-implement-3.webp" type="image/webp">
+                    <source srcset="./img/info-implement-5.jpg" media="(max-width:768px)">
                     <img loading="lazy" src="./img/info-implement-3.jpg" width="580" height="363" alt="Результат">
                 </picture>
             </div>
             <div class="info-implement-item__info">
-                <h2 class="info-implement-item__title title-2">
+                <h2 class="info-implement-item__title title-2" data-replace-text="768,Результат,Стоимость и результат">
                     Результат
                 </h2>
                 <div class="info-implement-item__text">
                     <p>
                         Полностью <span>настроенный и&nbsp;запущенный сервис</span>, 
                         обученные сотрудники, понимание как работать в&nbsp;системе.
+                    </p>
+                    <p>
+                        Стоимость внедрения рассчитывается индивидуально, но&nbsp;при стандартном решении внедрение производится бесплатно.
+                    </p>
+                    <p>
+                        Результат&nbsp;&mdash; полностью настроенный и&nbsp;запущенный сервис, обученные сотрудники, понимание как работать в&nbsp;системе.
                     </p>
                 </div>
             </div>
@@ -413,7 +419,7 @@
         <img loading="lazy" src="./img/lightning-3.png" class="app-implement__decor-lightning app-implement__decor-lightning--4" width="37" height="42" aria-hidden="true" alt="">
         <img loading="lazy" src="./img/lightning-4.png" class="app-implement__decor-lightning app-implement__decor-lightning--5" width="193" height="220" aria-hidden="true" alt="">
         <img loading="lazy" src="./img/lightning-5.png" class="app-implement__decor-lightning app-implement__decor-lightning--6" width="59" height="67" aria-hidden="true" alt="">
-        <div class="app-implement__top hero-primary">
+        <div class="app-implement__top hero-primary hero-secondary">
             <h1 class="app-implement__title hero-primary__title _no-rellax">
                 оставьте заявку
             </h1>
@@ -438,7 +444,7 @@
                 <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
             </label>
             <div class="form-primary__agree checkbox">
-                <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                <input id="c_1" class="checkbox__input" checked type="checkbox" value="1">
                 <label for="c_1" class="checkbox__label">
                     <span class="checkbox__text">
                         Соглашаюсь на <a href="#">обработку персональных данных</a>

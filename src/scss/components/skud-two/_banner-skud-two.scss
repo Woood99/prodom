@@ -1,7 +1,12 @@
 .banner-skud-two {
     @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
+    .container{
+        @media (max-width:$smallTablet-max){
+            padding: 0;
+        }
+    }
     &__container {
-        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
         background-color: #FBFBFB;
         padding: 64px 84px 70px;
 
@@ -12,8 +17,8 @@
             content: '';
             background-image: url('../img/banner.png');
             background-repeat: no-repeat;
-            background-position: right center;
-            background-size: contain;
+            background-position: 129% 52%;
+            background-size: 62%;
             position: absolute;
             inset: 0;
             width: 100%;
@@ -21,7 +26,21 @@
 
             z-index: -1;
             @media (max-width:$smallTablet-max){
-                 display: none; 
+                transform: rotate(49deg) translateX(-50%);
+                background-position: 50% 50%; 
+                background-size: 100%;
+              width: 537px;
+                height: 358px;
+                background-position: 0 0;
+                left: 40%;
+                top: auto;
+                bottom: -83%;
+            }
+            @media (max-width:$mobile-max){
+                left: 33%; 
+            }
+            @media (max-width:$smallMobile-max){
+                 left: 27%; 
             }
         }
         &::before{
@@ -37,14 +56,14 @@
             background-size: cover;
             z-index: -2;
             @media (max-width:$smallTablet-max){
-                 opacity: 0.65; 
+              display: none;
             }
         }
-        @media (max-width:$tablet-max){
-            padding: 32px;
-        }
+   @media (max-width:$desktop){
+    padding: 32px; 
+   }
         @media (max-width:$smallTablet-max){
-             padding: 24px; 
+        padding: 0 0 125px 0;
         }
     }
 
@@ -53,7 +72,11 @@
         @media (max-width:$smallTablet-max){
              max-width: none; 
              text-align: center;
-        }
+            max-width: calc(327px + 30px);
+            margin: 0 auto;
+            padding: 0 15px;
+            }
+
     }
 
     &__title {
@@ -66,18 +89,16 @@
         margin-top: 20px;
 
         font: var(--text-1);
-        @media (max-width:$tablet-max){
-            margin-top: 16px;
-        }
+     @media (max-width:$desktop){
+        margin-top: 12px; 
+     }
     }
 
     &__btn {
         margin-top: 59px;
-        @media (max-width:$tablet-max){
-            margin-top: 32px;
-        }
-        @media (max-width:$smallTablet-max){
-             width: 100%; 
-        }
+     @media (max-width:$desktop){
+        margin-top: 32px;
+        width: 250px; 
+     }
     }
 }

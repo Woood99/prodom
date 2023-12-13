@@ -32,7 +32,7 @@
             </a>
             <nav class="header__nav nav" data-menu>
                 <ul class="nav__list list-reset" data-spollers="1326,max" data-one-spoller>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             О нас
                         </a>
@@ -44,7 +44,7 @@
                         <div class="nav-dropdown__container container">
                             <div class="nav-dropdown-content">
                                 <div class="nav-dropdown-content__body">
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="2" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#security-safe"></use>
@@ -58,7 +58,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#call-2"></use>
@@ -72,7 +72,7 @@
                                             Описание
                                         </span>
                                     </a>
-                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3">
+                                    <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3" data-menu-item>
                                         <div>
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#home-hashtag"></use>
@@ -210,12 +210,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Внедрение
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" data-menu-item>
                         <a href="#" class="nav__link">
                             Контакты
                         </a>
@@ -249,7 +249,8 @@
             <section class="hero-about-company-two">
     <div class="container hero-about-company-two__container">
         <div class="hero-about-company-two__inner hero-primary">
-            <h1 class="hero-about-company-two__title hero-primary__title" data-rellax-speed="-2.5">
+            <h1 class="hero-about-company-two__title hero-primary__title" data-rellax-speed="-2.5" data-rellax-tablet-speed="0"
+            data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
                 о компании
             </h1>
             <div class="hero-about-company-two__text hero-primary__text">
@@ -281,7 +282,7 @@
                             ...
                         </div>
                     </div>
-                    <div class="hero-about-company-two__info">
+                    <div class="hero-about-company-two__info" data-da=".hero-about-company-two__content,1326,2">
                         <span>(10000+)</span>
                         <span>
                             пользователей основного приложения для жителей
@@ -417,7 +418,7 @@
         <img loading="lazy" src="./img/lightning-3.png" class="question-about-company-two__decor-lightning question-about-company-two__decor-lightning--4" width="37" height="42" aria-hidden="true" alt="">
         <img loading="lazy" src="./img/lightning-4.png" class="question-about-company-two__decor-lightning question-about-company-two__decor-lightning--5" width="193" height="220" aria-hidden="true" alt="">
         <img loading="lazy" src="./img/lightning-5.png" class="question-about-company-two__decor-lightning question-about-company-two__decor-lightning--6" width="59" height="67" aria-hidden="true" alt="">
-        <div class="question-about-company-two__top hero-primary">
+        <div class="question-about-company-two__top hero-primary hero-secondary">
             <h1 class="question-about-company-two__title hero-primary__title _no-rellax">
                 есть вопрос?
             </h1>
@@ -440,7 +441,7 @@
                 <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
             </label>
             <div class="form-primary__agree checkbox">
-                <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                <input id="c_1" class="checkbox__input" checked type="checkbox" value="1">
                 <label for="c_1" class="checkbox__label">
                     <span class="checkbox__text">
                         Соглашаюсь на <a href="#">обработку персональных данных</a>

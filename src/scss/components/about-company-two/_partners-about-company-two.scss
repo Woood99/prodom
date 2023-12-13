@@ -1,5 +1,5 @@
 .partners-about-company-two {
-    @include adaptiveValue("margin-top", 87, 32,1296,576,1);
+    @include adaptiveValue("margin-top", 87, 54,1296,576,1);
     &__container {}
 
     &__top {
@@ -22,7 +22,7 @@
     &__wrapper{
 
 
-        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
         border: 1px solid #E7EAF2;
 
         background: #FFF;

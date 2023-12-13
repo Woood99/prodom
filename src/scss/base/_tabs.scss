@@ -13,18 +13,18 @@
         height: 74px;
         padding: 0 8px;
 
-        @media (max-width:$tablet-max) {
-            padding: 8px;
-            height: auto;
-            border-radius: 18px;
-
-            flex-direction: column;
-            width: 100%;
+        @media (max-width:$desktop) {
+         width: 100%;
+         height: 58px;
+         border-radius: 28px;
+        }
+        @media (max-width:$smallMobile-max){
+             border-radius: 22px; 
         }
     }
 
     &__title {
-     height: 58px;
+        height: 58px;
         border-radius: 48px;
         padding: 0 58px;
         font: var(--subtitle-3);
@@ -37,10 +37,15 @@
             color: #231123;
         }
 
-        @media (max-width:$tablet-max) {
-            height: 38px;
-            border-radius: 12px;
-            padding: 0 20px;
+        @media (max-width:$desktop) {
+            border-radius: 28px;
+            height: 48px;
+            flex-grow: 1;
+            padding: 0 16px;
+        }
+        @media (max-width:$smallMobile-max){
+             border-radius: 22px;
+             padding: 0 12px; 
         }
     }
 

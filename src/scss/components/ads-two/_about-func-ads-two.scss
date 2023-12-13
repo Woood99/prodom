@@ -1,19 +1,36 @@
 .about-func-ads-two {
     @include adaptiveValue("margin-top", 64, 32, 1296, 576, 1);
 
-    &__top {}
+    &__top {
+        .top-section-info__descr {
+            br {
+                display: none;
+
+                @media (max-width:$smallTablet-max) {
+                    display: block;
+                }
+            }
+        }
+
+        @media (max-width:$smallTablet-max) {
+            max-width: 291px;
+            margin: 0 auto;
+        }
+    }
 
     &__inner {
         margin-top: 68px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 32px;
         }
     }
 
     .top-section-info__descr {
-        span {
-            display: inline-block;
+        @media (min-width:$smallTablet-min) {
+            span {
+                display: inline-block;
+            }
         }
     }
 
@@ -24,7 +41,7 @@
             margin-bottom: 24px;
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             flex-direction: column;
         }
     }
@@ -39,26 +56,26 @@
                     border-radius: 40px 40px 0 0;
                     width: 100%;
 
-                    @media (max-width:$tablet-max) {
-                        border-radius: 18px 18px 0 0;
+                    @media (max-width:$desktop) {
+                        border-radius: 42px 42px 0 0;
                     }
                 }
 
                 &__descr {
-                    margin: 35px auto 0;
-                    padding: 0 10px;
+                    margin: 32px 0 0;
+                    padding: 0 36px;
                     max-width: 302px;
                 }
             }
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 max-width: 350px;
                 align-self: center;
-                text-align: center;
+                text-align: left; 
                 margin-right: 0;
-                padding-bottom: 24px;
+                padding-bottom: 40px;
+                order: 1;
             }
-
             @media (max-width:$mobile-max) {
                 max-width: none;
             }
@@ -87,17 +104,18 @@
                     span {
                         color: #9FB6FE;
                     }
+                    @media (max-width:$smallTablet-max){
+                         max-width: 236px; 
+                    }
 
                 }
 
                 &__audio {
-                    @media (max-width:$tablet-max) {
-                        margin-top: 24px;
+                    @media (max-width:$desktop) {
+                        margin-top: 60px;
+                        max-width: 218px;
                     }
 
-                    @media (max-width:$smallTablet-max) {
-                        max-width: 250px;
-                    }
                 }
             }
 
@@ -113,9 +131,14 @@
                 border-radius: var(--radius);
             }
 
-            @media (max-width:$tablet-max) {
-                padding: 24px;
-                --radius: 18px;
+            @media (max-width:$desktop) {
+                padding: 40px 36px;
+                --radius: 42px;
+                margin-bottom: 24px;
+            }
+            @media (max-width:$smallTablet-max){
+                 background-position: 150% 50%;
+                 background-size: 193px 214px;
             }
         }
 
@@ -142,8 +165,10 @@
                         color: var(--blue);
                     }
 
-                    @media (max-width:$tablet-max) {
-                        padding-bottom: 24px;
+                    @media (max-width:$desktop) {
+                        padding-bottom: 40px;
+                        order: 2;
+                        max-width: 195px;
                     }
                 }
 
@@ -165,6 +190,13 @@
                         background-size: contain;
 
                         transition: top $transitionSpeed $transitionFunction;
+                        @media (max-width:$desktop){
+                             left: auto;
+                             right: -40%; 
+                             transform: translateY(-50%) rotate(275deg);
+                             width: 230px;
+                             height: 230px;
+                        }
                     }
 
                     &::after {
@@ -181,29 +213,36 @@
                         opacity: 0;
                         transition: top $transitionSpeed $transitionFunction,
                             opacity $transitionSpeed $transitionFunction;
+                            @media (max-width:$desktop){
+                                 width: 18px;
+                                 height: 18px; 
+                            }
                     }
-
-                    @media (max-width:$smallTablet-max) {
-                        max-width: 100%;
+                    @media (max-width:$desktop){
+                         max-width: 268px; 
+                         width: 100%;
+                         margin-bottom: 13px;
+                         left: 45px;
+                         align-self: end;
                     }
                 }
             }
 
-            @media (max-width:$tablet-max) {
-                --radius: 18px;
-                padding: 24px 24px 0;
-            }
-
-            @media (max-width:$smallTablet-max) {
-                align-items: center;
-                text-align: center;
+            @media (max-width:$desktop) {
+                --radius: 42px;
+                padding: 14px 36px 0;
+                order: 1;
                 flex-direction: column;
+                align-items: start;
             }
 
             &._animation-active {
                 .about-func-ads-two__image {
                     &::before {
                         top: 120%;
+                        @media (max-width:$desktop){
+                             top: 130%; 
+                        }
                     }
 
                     &::after {
@@ -222,27 +261,56 @@
                 &__descr {
                     max-width: 302px;
                     margin: 0 auto;
+
+                    @media (max-width:$desktop) {
+                        order: 1;
+                        margin: 0;
+                        text-align: left;
+                    }
                 }
 
                 &__image {
                     position: relative;
-                    top: 43px;
-                    left: 50px;
+                    top: 54px;
+                    left: 77px;
 
-                    @media (max-width:$tablet-max) {
-                        top: 24px;
-                        left: 24px;
-                        max-width: 250px;
+                    @media (max-width:$desktop) {
+                        top: -15px;
+                        left: 0;
+                        max-width: 310px;
                         margin-left: auto;
+                    }
+
+                    @media (max-width:$mobile-max) {
+                        left: -55px;
+                        max-width: 385px;
                     }
                 }
             }
 
-            @media (max-width:$tablet-max) {
-                max-width: 350px;
-                padding: 24px;
+            picture {
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+
+            @media (max-width:$desktop) {
+                padding: 40px 36px;
                 align-self: center;
-                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                margin-bottom: 24px;
+                picture {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+
+                    &:nth-child(3) {
+                        display: block;
+                    }
+                }
             }
 
             @media (max-width:$mobile-max) {
@@ -264,23 +332,17 @@
                 }
             }
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 width: 100%;
-                border-radius: 18px;
+                border-radius: 42px;
             }
         }
 
         &--big {
             width: percent(852, 1296);
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 width: 100%;
-            }
-        }
-
-        @media (max-width:$tablet-max) {
-            &:not(:last-child) {
-                margin-bottom: 24px;
             }
         }
     }
@@ -302,9 +364,9 @@
         justify-content: center;
         align-items: center;
 
-        @media (max-width:$tablet-max) {
-            margin: 32px auto 0;
-            width: 100%;
+        @media (max-width:$desktop) {
+            margin: 42px auto 0;
+            width: 250px;
         }
     }
 }

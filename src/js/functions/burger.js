@@ -19,7 +19,9 @@ const burgerMenu = () => {
     if (menuItems.length) {
         menuItems.forEach(el => {
             el.addEventListener('click', () => {
-                closeMenu();
+                if (window.innerWidth <= 1326) {
+                    closeMenu();
+                }
             });
         });
     }

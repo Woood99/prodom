@@ -121,7 +121,7 @@
 
     &__image {
         max-height: calc(100% - 57px);
-        @include adaptiveValue("border-radius", 70, 24, 1296, 576, 1);
+        @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
         background: linear-gradient(196deg, #6BA6FF -44.28%, #1541DF 107.8%);
         display: flex;
         justify-content: center;

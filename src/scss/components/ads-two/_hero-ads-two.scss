@@ -8,6 +8,15 @@
     .hero-primary{
         margin-top: 12px;
         padding: 68px 51px 71px;
+        @media (max-width:$desktop){
+            margin: 0 auto;
+            padding: 32px 16px; 
+            max-width: 500px;
+            text-align: center;
+        }
+        @media (max-width:$smallTablet-max){
+             max-width: 342px; 
+        }
     }
     &__title {
         position: relative;
@@ -19,24 +28,50 @@
 
             transform: rotate(2.67deg);
 
-            @media (max-width:$tablet-max) {
-                top: -25px;
-            }
+          @media (max-width:$desktop){
+             display: none; 
+          }
+        }
+        @media (max-width:$desktop){
+             font-size: 0;
+             line-height: 0; 
         }
     }
-
+    &__title-desktop{
+        @media (max-width:$desktop){
+             display: none; 
+        }
+    }
+    &__title-mobile{
+        @media (min-width:$desktop-min){
+             display: none; 
+        }
+    }
     &__text {
         p{
             max-width: 693px;
+            &:nth-child(2){
+                display: none;
+            }
+        }
+        @media (max-width:$desktop){
+            p{
+                &:nth-child(1){
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: block;
+                }
+             } 
         }
     }
 
     &__btn {
         margin-top: 62px;
         width: 276px;
-        @media (max-width:$tablet-max) {
-            margin-top: 32px;
-           width: 100%;
-        }
+      @media (max-width:$desktop){
+        margin-top: 42px;
+        width: 250px; 
+      }
     }
 }

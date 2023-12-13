@@ -100,7 +100,7 @@
         max-width: 842px;
 
         color: var(--black);
-        font:var(--text-1);
+        font: var(--text-1);
 
         @media (max-width:$tablet-max) {
             margin-top: 20px;
@@ -124,6 +124,10 @@
         line-height: math.div(171, 190);
         display: block;
         white-space: nowrap;
+
+        @media (max-width:$desktop) {
+            white-space: normal;
+        }
     }
 
     &__text {
@@ -140,6 +144,7 @@
 
 
         font: var(--text-1);
+
         p {
             margin: 0 auto;
             max-width: 705px;
@@ -149,21 +154,33 @@
             }
         }
 
-        @media (max-width:$tablet-max) {
-            padding: 32px 24px;
-            top: -3px;
-            border-radius: 24px;
-        }
-
-        @media (max-width:$smallTablet-max) {
-            padding: 16px;
+        @media (max-width:$desktop) {
+            margin-top: 12px;
+            padding: 0;
+            top: 0;
+            border-radius: 0;
+            backdrop-filter: blur(0);
+            border: none;
         }
     }
 
-    @media (max-width:$tablet-max) {
-        padding: 56px 16px 56px;
+    @media (max-width:$desktop) {
+        margin-top: 0;
+        padding: 32px 16px;
         border-radius: 0;
         background: transparent;
+    }
+
+    &.hero-secondary{
+        .hero-primary__text{
+            @media (max-width:$desktop) {
+                margin-top: 0px;
+                border-radius: 24px;
+                border: 1px solid #E7EAF2;
+                backdrop-filter: blur(7.5px);
+                padding: 24px 20px;
+            }
+        }
     }
 }
 
@@ -212,7 +229,7 @@
         }
 
         .controls {
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 margin-top: 2px;
             }
         }
@@ -260,14 +277,14 @@
             }
         }
 
-        @media (max-width:$smallTablet-max) {
+        @media (max-width:$desktop) {
             max-width: 100%;
             width: 100%;
             min-width: 100%;
         }
     }
 
-    @media (max-width:$smallTablet-max) {
+    @media (max-width:$desktop) {
         width: 100%;
     }
 }
@@ -303,6 +320,7 @@
         height: 52px;
         padding: 0 24px;
         font: var(--text-2-500);
+
         @media (max-width:$tablet-max) {
             padding: 0 20px;
             height: 44px;
@@ -321,6 +339,7 @@
         border-radius: 56px;
         height: 79px;
         padding: 0 38px;
+
         @media (max-width:$tablet-max) {
             padding: 0 30px;
             height: 56px;
@@ -386,7 +405,7 @@
 }
 
 .banner-info {
-    @include adaptiveValue("border-radius", 50, 24, 1296, 576, 1);
+    @include adaptiveValue("border-radius", 50, 36, 1296, 576, 1);
     position: relative;
     overflow: hidden;
 
@@ -418,7 +437,7 @@
 
 
 .banner-stub {
-    @include adaptiveValue("border-radius", 50, 24, 1296, 576, 1);
+    @include adaptiveValue("border-radius", 50, 36, 1296, 576, 1);
     position: relative;
     overflow: hidden;
     background-image: url('../img/card-7.jpg');

@@ -1,6 +1,5 @@
 .form-contacts-two {
-    @include adaptiveValue("margin-top", 72,32,1296,576,1 );
-    @include adaptiveValue("margin-bottom", 108, 48,1296,576,1);
+    margin-top: 72px;
     &__container {
     }
 
@@ -34,6 +33,18 @@
         &__btn {
            margin-top: 20px;
         }
+        .radio-secondary{
+            .row{
+                @media (max-width:$desktop){
+                    padding: 0 16px;
+                    margin: 0 -16px;
+                    overflow-x: auto;
+                    @include hiddenScroll; 
+                }
+            }
+        }
     }
-
+    @media (max-width:$desktop){
+         margin-top: 52px;
+    }
 }
