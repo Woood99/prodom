@@ -66,6 +66,11 @@
     >.row{
         display: flex;
         column-gap: 16px;
+        &._drag {
+            .radio-secondary__input{
+                pointer-events: none;
+            }
+        }
     }
     &__item {
         position: relative;

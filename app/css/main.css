@@ -655,6 +655,9 @@ textarea.input-reset {
   -moz-column-gap: 16px;
   column-gap: 16px;
 }
+.radio-secondary > .row._drag .radio-secondary__input {
+  pointer-events: none;
+}
 .radio-secondary__item {
   position: relative;
   cursor: pointer;
@@ -1021,6 +1024,7 @@ textarea.input-reset {
 @media (max-width: 1326px) {
   .spollers__title {
     padding: 16px 0;
+    font-size: 14px;
   }
 }
 .spollers__icon {
@@ -5237,6 +5241,7 @@ textarea.input-reset {
   .about-func-ads-two__item--4 .about-func-ads-two__image {
     left: -55px;
     max-width: 385px;
+    width: 385px;
   }
 }
 .about-func-ads-two__item--4 picture:nth-child(3) {
@@ -5519,6 +5524,10 @@ textarea.input-reset {
   .remote-center-ads-two__subtitle._active {
     background-color: var(--white);
     color: #231123;
+  }
+  .remote-center-ads-two__subtitle:last-child {
+    margin-right: 6px;
+    margin-left: 0;
   }
 }
 .remote-center-ads-two__tabs {
@@ -5922,6 +5931,12 @@ textarea.input-reset {
     margin-top: 32px;
   }
 }
+@media (max-width: 768px) {
+  .benefit-ads-two .top-section-info__title {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+}
 .benefit-ads-two .tabs__content {
   margin-top: 68px;
   width: 100%;
@@ -6046,6 +6061,12 @@ textarea.input-reset {
     grid-column: auto;
     font-size: 18px;
     font-weight: 500;
+  }
+}
+@media (max-width: 768px) {
+  .benefit-ads-two__title {
+    max-width: 258px;
+    margin: 0 auto 8px;
   }
 }
 .benefit-ads-two__descr {
@@ -6313,7 +6334,7 @@ textarea.input-reset {
 }
 @media (max-width: 768px) {
   .faq-ads-two__wrapper {
-    padding: 24px 16px;
+    padding: 24px;
   }
 }
 .faq-ads-two__spollers {
@@ -8933,12 +8954,12 @@ textarea.input-reset {
 }
 @media (max-width: 768px) {
   .hero-about-company-two__content {
-    padding: 32px 24px;
+    padding: 24px 20px 62px;
   }
 }
 @media (max-width: 370px) {
   .hero-about-company-two__content {
-    padding: 32px 12px;
+    padding: 24px 12px 55px;
   }
 }
 .hero-about-company-two__tags {
@@ -9114,7 +9135,7 @@ textarea.input-reset {
 }
 @media (max-width: 768px) {
   .partners-about-company-two__slider .swiper-slide {
-    --width: 155px;
+    --width: 179px;
   }
 }
 @media (max-width: 1024px) {

@@ -157,6 +157,10 @@
                 background-color: var(--white);
                 color: #231123;
             }
+            &:last-child{
+                margin-right: 6px;
+                margin-left: 0;
+            }
         }
     }
 
