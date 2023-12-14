@@ -35,12 +35,12 @@
         min-width: 512px;
         margin-right: 75px;
 
-      @media (max-width:$desktop){
-        max-width: 485px;
-        min-width: auto;
-        text-align: center;
-        margin: 0 auto; 
-      }
+        @media (max-width:$desktop) {
+            max-width: 485px;
+            min-width: auto;
+            text-align: center;
+            margin: 0 auto;
+        }
     }
 
     &__title {
@@ -50,9 +50,9 @@
         span {
             color: var(--blue);
 
-        @media (max-width:$desktop){
-            display: block; 
-        }
+            @media (max-width:$desktop) {
+                display: block;
+            }
         }
     }
 
@@ -62,18 +62,18 @@
         font: var(--text-1);
         max-width: 430px;
 
-    @media (max-width:$desktop){
-        margin: 12px auto 0; 
-    }
+        @media (max-width:$desktop) {
+            margin: 12px auto 0;
+        }
     }
 
     &__btn {
         margin-top: 49px;
 
-     @media (max-width:$desktop){
-        margin-top: 24px;
-        width: 100%; 
-     }
+        @media (max-width:$desktop) {
+            margin-top: 24px;
+            width: 100%;
+        }
 
         @media (max-width:$smallTablet-max) {
             max-width: 250px;
@@ -86,10 +86,10 @@
 
         display: flex;
 
-     @media (max-width:$desktop){
-        margin-top: 32px;
-        max-height: 460px; 
-     }
+        @media (max-width:$desktop) {
+            margin-top: 32px;
+            max-height: 460px;
+        }
 
         @media (max-width:$smallTablet-max) {
             max-height: 375px;
@@ -111,9 +111,9 @@
             height: 100%;
             border-radius: 50px;
 
-          @media (max-width:$desktop){
-            border-radius: 50px; 
-          }
+            @media (max-width:$desktop) {
+                border-radius: 50px;
+            }
 
             @media (max-width:$smallTablet-max) {
                 border-radius: 40px;
@@ -125,73 +125,73 @@
         }
 
         &:nth-child(1) {
-          @media (min-width:$desktop-min){
-            &:hover {
-                transform: translateX(calc(-1 * var(--active-prc)));
-            } 
-          }
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc(-1 * var(--active-prc)));
+                }
+            }
         }
 
         &:nth-child(2) {
             transform: translateX(-61%);
 
-       @media (min-width:$desktop-min){
-        &:hover {
-            transform: translateX(calc(-61% - var(--active-prc)));
-        } 
-       }
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc(-61% - var(--active-prc)));
+                }
+            }
 
-            @media (max-width:$smallMobile-max) {
-                transform: translateX(-75%);
+            @media (max-width:$mobile-max) {
+                transform: translateX(-80%);
             }
         }
 
         &:nth-child(3) {
             transform: translateX(calc(-308px + (-22%)));
 
-         @media (min-width:$desktop-min){
-            &:hover {
-                transform: translateX(calc(-308px + (-22%) - var(--active-prc)));
-            } 
-         }
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc(-308px + (-22%) - var(--active-prc)));
+                }
+            }
 
-            @media (max-width:$smallMobile-max) {
-                transform: translateX(calc(-308px + (-44%)));
+            @media (max-width:$mobile-max) {
+                transform: translateX(calc(-308px + (-49%)));
             }
         }
 
         &:nth-child(4) {
             transform: translateX(calc((-308px*2) + 17%));
 
-          @media (min-width:$desktop-min){
-            &:hover {
-                transform: translateX(calc((-308px*2) + 17% - var(--active-prc)));
-            } 
-          }
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc((-308px*2) + 17% - var(--active-prc)));
+                }
+            }
 
-            @media (max-width:$smallMobile-max) {
-                transform: translateX(calc((-308px*2) + (-9%)));
+            @media (max-width:$mobile-max) {
+                transform: translateX(calc((-308px*2) + (-19%)));
             }
         }
 
         &:nth-child(5) {
             transform: translateX(calc((-308px*3) + 56%));
 
-        @media (min-width:$desktop-min){
-            &:hover {
-                transform: translateX(calc((-308px*3) + 66% - var(--active-prc)));
-            } 
-        }
+            @media (min-width:$desktop-min) {
+                &:hover {
+                    transform: translateX(calc((-308px*3) + 66% - var(--active-prc)));
+                }
+            }
 
-            @media (max-width:$smallMobile-max) {
-                transform: translateX(calc((-308px*3) + 21%));
+            @media (max-width:$mobile-max) {
+                transform: translateX(calc((-308px*3) + 10%));
             }
         }
 
-    @media (max-width:$desktop){
-        min-width: 330px;
-        border-radius: 50px; 
-    }
+        @media (max-width:$desktop) {
+            min-width: 330px;
+            border-radius: 50px;
+        }
 
         @media (max-width:$smallTablet-max) {
             min-width: 310px;
