@@ -92,7 +92,8 @@
         transition: opacity var(--transition-time), visibility var(--transition-time);
     }
 
-    &--show-qr {
+    &--show-qr,
+    &--download-app {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -213,6 +214,76 @@
     }
 }
 
+.download-app {
+    display: flex;
+
+    &__title {
+       font-size: 22px;
+        line-height: 120%;
+        font-weight: 500;
+        max-width: 297px;
+
+        span {
+            color: var(--blue);
+        }
+
+        @media (max-width:$tablet-max) {
+            text-align: center;
+            max-width: none;
+            margin-bottom: 24px;
+        }
+    }
+    &__badges{
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__badge{
+        height: 45px;
+        width: 151px;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+    &__qrs {
+        display: flex;
+        margin-left: 36px;
+
+        @media (max-width:$tablet-max) {
+            margin-left: 0;
+        }
+    }
+
+    &__qr {
+        &:not(:last-child) {
+            margin-right: 18px;
+
+            @media (max-width:$smallTablet-max) {
+                margin-right: 8px;
+            }
+        }
+
+        span {
+            display: block;
+            margin-top: 15px;
+            color: var(--black);
+            font: var(--subtitle-2);
+            font-weight: 500;
+            line-height: 130%;
+            text-align: center;
+        }
+
+        @media (max-width:$tablet-max) {
+            max-width: 200px;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        flex-direction: column;
+    }
+}
+
 .order-call {
     &__title {
         line-height: math.div(44, 48);
@@ -252,8 +323,8 @@
 
     .form-primary {
         &__agree {
-            .checkbox__text{
-                a{
+            .checkbox__text {
+                a {
                     color: var(--blue);
                     text-decoration: none;
                 }

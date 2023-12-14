@@ -29,7 +29,6 @@
             align-items: center;
             padding: 0 16px;
             height: 100%;
-            cursor: pointer;
 
             &:last-child {
                 margin-left: auto;
@@ -44,7 +43,6 @@
     &__link {
         font-weight: 500;
         transition: color $transitionSpeed $transitionFunction;
-        height: 100%;
         position: relative;
 
         display: flex;
@@ -121,7 +119,6 @@
             top: 100%;
             left: 0;
             transform: translateY(20px);
-            width: 100%;
             max-width: $containerWidth + px;
             min-height: 260px;
             opacity: 0;
@@ -150,6 +147,14 @@
                 color: var(--blue);
             }
         }
+        &._active-banner{
+            .nav-dropdown__container{
+                width: 100%;
+            }
+            .nav-dropdown-content{
+                grid-template-columns: 856px 1fr;
+            }
+        }
     }
 
     @media (max-width:$desktop) {
@@ -163,7 +168,7 @@
     cursor: default;
 
     display: grid;
-    grid-template-columns: 1fr percent(416, 1296);
+    grid-template-columns: 856px;
     grid-column-gap: 24px;
 
     &__body {
@@ -256,7 +261,7 @@
         grid-template-columns: var(--size-icon) 1fr;
         grid-column-gap: 20px;
         grid-row-gap: 10px;
-
+        position: relative;
         >div:nth-child(1) {
             background-color: #D9E3FF;
             border-radius: 24px;
@@ -267,7 +272,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
             svg {
                 width: 32px;
                 height: 32px;
@@ -275,7 +279,23 @@
                 stroke: rgba(41, 45, 50, 1);
                 stroke-width: 2px;
             }
+            .popular-subtitle{
+                height: 28px;
+                padding: 0 13px;
+                font-size: 11px;
+                position: absolute;
+                top: -12px;
+                left: 23px;
+                transform: rotate(13deg);
+                svg{
+                    fill: var(--white);
+                    stroke: none;
 
+                    width: 12px;
+                    height: 13.5px;
+                    margin-right: 2px;
+                }
+            }
             @media (max-width:$desktop) {
                 border-radius: 16px;
 

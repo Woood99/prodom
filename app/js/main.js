@@ -1159,6 +1159,7 @@ __webpack_require__.r(__webpack_exports__);
 // }
 
 (0,_functions_popup__WEBPACK_IMPORTED_MODULE_6__["default"])(null, 'show-qr');
+(0,_functions_popup__WEBPACK_IMPORTED_MODULE_6__["default"])(null, 'download-app');
 (0,_functions_popup__WEBPACK_IMPORTED_MODULE_6__["default"])(null, 'order-call');
 
 // ========================================================================================
@@ -1337,7 +1338,8 @@ const navDropdown = () => {
   if (!container) return;
   const items = container.querySelectorAll('.nav-dropdown');
   items.forEach(item => {
-    item.addEventListener('mouseenter', () => {
+    const link = item.querySelector('.nav__link');
+    link.addEventListener('mouseenter', () => {
       if (window.innerWidth <= 1326) return;
       removeActiveNav();
       if (!item.classList.contains('_active')) {
@@ -1360,12 +1362,16 @@ const navDropdown = () => {
         const currentIndexLink = link.dataset.navDropdownItem;
         const currentBanner = item.querySelector(`[data-nav-dropdown-banner='${currentIndexLink}']`);
         currentBanner.classList.add('_active');
+        item.classList.add('_active-banner');
       });
       link.addEventListener('mouseleave', () => {
         if (window.innerWidth <= 1326) return;
         const currentIndexLink = link.dataset.navDropdownItem;
         const currentBanner = item.querySelector(`[data-nav-dropdown-banner='${currentIndexLink}']`);
         currentBanner.classList.remove('_active');
+        if (!bannerStub.classList.contains('_active')) {
+          item.classList.remove('_active-banner');
+        }
       });
       link.addEventListener('click', e => {
         if (link.hasAttribute('data-nav-dropdown-item-stub') && window.innerWidth > 1326) {

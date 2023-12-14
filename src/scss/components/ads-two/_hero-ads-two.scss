@@ -5,73 +5,91 @@
             padding: 0;
         }
     }
-    .hero-primary{
+
+    .hero-primary {
         margin-top: 12px;
         padding: 68px 51px 71px;
-        @media (max-width:$desktop){
+
+        @media (max-width:$desktop) {
             margin: 0 auto;
-            padding: 32px 16px; 
+            padding: 32px 16px;
             max-width: 500px;
             text-align: center;
         }
-        @media (max-width:$smallTablet-max){
-             max-width: 342px; 
+
+        @media (max-width:$smallTablet-max) {
+            max-width: 342px;
         }
     }
+
     &__title {
         position: relative;
 
         .popular-subtitle {
             position: absolute;
-            top: -18px;
+            top: -100%;
             right: 32%;
 
             transform: rotate(2.67deg);
 
-          @media (max-width:$desktop){
-             display: none; 
-          }
-        }
-        @media (max-width:$desktop){
-             font-size: 0;
-             line-height: 0; 
-        }
-    }
-    &__title-desktop{
-        @media (max-width:$desktop){
-             display: none; 
-        }
-    }
-    &__title-mobile{
-        @media (min-width:$desktop-min){
-             display: none; 
-        }
-    }
-    &__text {
-        p{
-            max-width: 693px;
-            &:nth-child(2){
+            transition: top 0.5s $transitionFunction;
+            @media (min-width:$desktop-min){
+                 &._animation-active{
+                    top: -18px;
+                 } 
+            }
+            @media (max-width:$desktop) {
                 display: none;
             }
         }
-        @media (max-width:$desktop){
-            p{
-                &:nth-child(1){
+
+        @media (max-width:$desktop) {
+            font-size: 0;
+            line-height: 0;
+        }
+    }
+
+    &__title-desktop {
+        @media (max-width:$desktop) {
+            display: none;
+        }
+    }
+
+    &__title-mobile {
+        @media (min-width:$desktop-min) {
+            display: none;
+        }
+    }
+
+    &__text {
+        p {
+            max-width: 693px;
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+
+        @media (max-width:$desktop) {
+            p {
+                &:nth-child(1) {
                     display: none;
                 }
-                &:nth-child(2){
+
+                &:nth-child(2) {
                     display: block;
                 }
-             } 
+            }
         }
     }
 
     &__btn {
         margin-top: 62px;
         width: 276px;
-      @media (max-width:$desktop){
-        margin-top: 42px;
-        width: 250px; 
-      }
+
+        @media (max-width:$desktop) {
+            margin-top: 42px;
+            width: 250px;
+        }
     }
 }

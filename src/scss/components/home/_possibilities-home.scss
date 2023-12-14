@@ -358,18 +358,6 @@
                 }
             }
         }
-        &--2,
-        &--3,
-        &--4,
-        &--5 {
-            transition: transform 0.5s $transitionFunction;
-
-            @media (min-width:$desktop-min) {
-                &:hover {
-                    transform: translateY(-5px);
-                }
-            }
-        }
     }
 
   @media (max-width:$desktop){

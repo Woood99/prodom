@@ -3,7 +3,8 @@ const navDropdown = () => {
     if (!container) return;
     const items = container.querySelectorAll('.nav-dropdown');
     items.forEach(item => {
-        item.addEventListener('mouseenter', () => {
+        const link = item.querySelector('.nav__link');
+        link.addEventListener('mouseenter', () => {
             if (window.innerWidth <= 1326) return;
             removeActiveNav();
             if (!item.classList.contains('_active')) {
@@ -28,12 +29,16 @@ const navDropdown = () => {
                 const currentIndexLink = link.dataset.navDropdownItem;
                 const currentBanner = item.querySelector(`[data-nav-dropdown-banner='${currentIndexLink}']`);
                 currentBanner.classList.add('_active');
+                item.classList.add('_active-banner');
             })
             link.addEventListener('mouseleave', () => {
                 if (window.innerWidth <= 1326) return;
                 const currentIndexLink = link.dataset.navDropdownItem;
                 const currentBanner = item.querySelector(`[data-nav-dropdown-banner='${currentIndexLink}']`);
                 currentBanner.classList.remove('_active');
+                if (!bannerStub.classList.contains('_active')) {
+                    item.classList.remove('_active-banner');
+                }
             });
 
             link.addEventListener('click', (e) => {
@@ -50,7 +55,6 @@ const navDropdown = () => {
             });
         })
     })
-
     function toggleMask() {
         const activeItem = container.querySelector('.nav-dropdown._active');
         const body = document.body;

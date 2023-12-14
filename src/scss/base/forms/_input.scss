@@ -41,12 +41,12 @@ textarea.input-reset {
         border: 1px solid var(--black);
     }
 
-    @media (max-width:$tablet-max) {
-        height: 58px;
-        padding: 0 26px;
-        border-radius: 20px;
-        font-size: 14px;
-    }
+@media (max-width:$desktop){
+    height: 58px;
+    padding: 0 26px;
+    border-radius: 20px;
+    font-size: 14px; 
+}
 }
 
 .textarea-primary {
@@ -70,9 +70,9 @@ textarea.input-reset {
         border: 1px solid var(--dark);
     }
 
-    @media (max-width:$tablet-max) {
-        --height: 125px;
-        padding: 16px 18px;
-        border-radius: 16px;
-    }
+@media (max-width:$desktop){
+    --height: 125px;
+    padding: 16px 18px;
+    border-radius: 16px; 
+}
 }

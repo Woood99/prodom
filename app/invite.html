@@ -55,7 +55,7 @@
                                             и&nbsp;управления доступом
                                         </span>
                                         <span>
-                                            Описание
+                                            Бесшовная интеграция
                                         </span>
                                     </a>
                                     <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="1" data-menu-item>
@@ -63,13 +63,19 @@
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#call-2"></use>
                                             </svg>
+                                            <span class="popular-subtitle">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#fire"></use>
+                                                </svg>
+                                                Хит
+                                            </span>
                                         </div>
                                         <span>
                                             Аварийно-диспетчерская
                                             служба
                                         </span>
                                         <span>
-                                            Описание
+                                            24/7, под ключ
                                         </span>
                                     </a>
                                     <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="3" data-menu-item>
@@ -83,7 +89,7 @@
                                             и&nbsp;управляющих организаций
                                         </span>
                                         <span>
-                                            Описание
+                                            CRM, веб, приложения
                                         </span>
                                     </a>
                                     <a href="#" class="nav-dropdown-content__item" data-nav-dropdown-item="4" data-nav-dropdown-item-stub>
@@ -256,7 +262,7 @@
                 Радостно сообщаем, что ваш дом теперь подключен к нашему сервису,
                 а значит решать бытовые вопросы теперь можно в пару кликов 🥳
             </p>
-            <button type="button" class="btn btn-reset btn-primary hero-invite__btn">
+            <button type="button" class="btn btn-reset btn-primary hero-invite__btn" data-popup-path="download-app">
                 ⚡️ Скачать приложение
             </button>
             <div class="hero-invite__wrapper">
@@ -574,6 +580,41 @@
                     <span>IOS</span>
                 </div>
                 <div class="show-qr__qr">
+                    <img loading="lazy" src="img/android-qr-2.svg" width="210" height="210" alt="">
+                    <span>Android</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-primary popup-primary--download-app">
+    <div class="popup__container popup-primary__container" role="dialog" aria-modal="true" data-popup-target="download-app">
+        <button class="btn-reset js-popup-close popup__close popup-primary__close" aria-label="Закрыть модальное окно">
+            <svg>
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content popup-primary__content download-app">
+            <div class="col">
+                <h2 class="download-app__title">
+                    <span>Скачайте</span>
+                    приложение &laquo;Продом&raquo; прямо сейчас
+                </h2>
+                <div class="download-app__badges">
+                    <a href="#" class="download-app__badge">
+                        <img loading="lazy" src="img/app-store-badge.svg" alt="App Store">
+                    </a>
+                    <a href="#" class="download-app__badge">
+                        <img loading="lazy" src="img/google-play-badge.svg" alt="Google Play">
+                    </a>
+                </div>
+            </div>
+            <div class="download-app__qrs">
+                <div class="download-app__qr">
+                    <img loading="lazy" src="img/ios-qr-2.svg" width="210" height="210" alt="">
+                    <span>IOS</span>
+                </div>
+                <div class="download-app__qr">
                     <img loading="lazy" src="img/android-qr-2.svg" width="210" height="210" alt="">
                     <span>Android</span>
                 </div>
