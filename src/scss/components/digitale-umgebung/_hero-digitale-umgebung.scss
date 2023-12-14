@@ -6,6 +6,10 @@
         @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
         text-align: center;
         position: relative;
+
+        @media (max-width:$desktop) {
+            margin-top: 0;
+        }
     }
 
     &__content {
@@ -13,21 +17,21 @@
         max-width: 800px;
         margin: 0 auto;
 
-        @media (max-width:$tablet-max) {
-            padding: 25px 0;
+        @media (max-width:$desktop) {
+            padding: 32px 0 0;
         }
     }
 
     &__title {
         span {
             background: linear-gradient(90deg, #1A5AFF 12.31%, #CA95F5 53.5%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        @media (max-width:$tablet-max) {
-            margin-top: 25px;
+        @media (max-width:$desktop) {
+            margin-top: 0;
         }
     }
 
@@ -36,17 +40,18 @@ background-clip: text;
         color: var(--black);
         font: var(--text-1);
 
-        @media (max-width:$tablet-max) {
-            margin-top: 24px;
+        @media (max-width:$desktop) {
+            margin-top: 12px;
         }
     }
 
     &__btn {
         margin-top: 96px;
         width: 276px;
-        @media (max-width:$tablet-max) {
-            margin-top: 32px;
-      width: 100%;
+
+        @media (max-width:$desktop) {
+            margin-top: 42px;
+            width: 250px;
         }
     }
 }

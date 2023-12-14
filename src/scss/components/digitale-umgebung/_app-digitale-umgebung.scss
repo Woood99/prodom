@@ -57,9 +57,9 @@
         max-width: 518px;
         margin: 0 auto;
 
-        @media (max-width:$tablet-max) {
-            margin-top: 16px;
-        }
+      @media (max-width:$desktop){
+         margin-top: 42px; 
+      }
 
         @media (max-width:$smallTablet-max) {
             max-width: none;
@@ -84,11 +84,8 @@
             top: 2.5%;
             left: 20%;
 
-            @media (max-width:$tablet-max) {
-                top: 15%;
-                left: auto;
-                right: 3%;
-                width: 20px;
+            @media (max-width:$desktop) {
+                display: none;
             }
         }
 
@@ -96,10 +93,10 @@
             top: 35%;
             left: 10%;
 
-            @media (max-width:$tablet-max) {
-                top: 3%;
+            @media (max-width:$desktop) {
+                top: 6%;
                 left: auto;
-                right: 9%;
+                right: 3%;
                 width: 58px;
             }
         }
@@ -107,10 +104,10 @@
         &--3 {
             top: 51%;
             left: 4%;
-            
-            @media (max-width:$tablet-max) {
-                top: 39.5%;
-                left: 13%;
+
+            @media (max-width:$desktop) {
+                top: 42%;
+                left: 10%;
                 width: 32px;
             }
         }
@@ -118,11 +115,9 @@
         &--4 {
             top: 75%;
             left: 16%;
-            @media (max-width:$tablet-max) {
-                top: 28%;
-                left: 1%;
-                width: 35px;
-                z-index: -1;
+
+            @media (max-width:$desktop) {
+                display: none;
             }
         }
 
@@ -130,23 +125,22 @@
             top: 28%;
             right: -3%;
             z-index: -1;
-         
-            @media (max-width:$tablet-max) {
-                top: 32%;
+
+            @media (max-width:$desktop) {
+                top: 39%;
                 left: auto;
-                right: -9%;
-                width: 107px;
+                right: -3%;
+                width: 107px
             }
         }
 
         &--6 {
             top: 56%;
             right: 17%;
-            @media (max-width:$tablet-max){
+
+            @media (max-width:$desktop) {
                 display: none;
             }
         }
-
-        @media (max-width:$tablet-max) {}
     }
 }

@@ -49,6 +49,9 @@
         color: var(--black);
         font: var(--small-text);
         font-weight: 500;
+        @media (max-width:$smallTablet-max){
+             font-size: 10px; 
+        }
     }
 
     &__descr {
@@ -58,6 +61,9 @@
         color: var(--gray);
 
         font: var(--very-small-text);
+        @media (max-width:$smallTablet-max){
+             font-size: 9px; 
+        }
     }
 
     &--orange {

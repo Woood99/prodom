@@ -1,5 +1,13 @@
 .crm-digitale-umgebung {
-    @include adaptiveValue("margin-top", 96, 32, 1296, 576, 1);
+    margin-top: 96px;
+
+    .container {
+        @media (max-width:$desktop) {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
 
     &__container {
         display: grid;
@@ -7,7 +15,7 @@
         grid-column-gap: 24px;
         grid-row-gap: 44px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             grid-template-columns: repeat(2, 1fr);
             grid-row-gap: 24px;
         }
@@ -17,7 +25,6 @@
             grid-row-gap: 16px;
         }
     }
-
 
     &__item {
 
@@ -31,13 +38,17 @@
             .crm-digitale-umgebung__info {
                 margin-top: 42px;
 
+                @media (max-width:$desktop) {
+                    margin-top: 0;
+                }
+
                 @media (max-width:$smallTablet-max) {
                     text-align: center;
                     margin-bottom: 74px;
                 }
 
                 @media (max-width:$mobile-max) {
-                    margin-bottom: 52px;
+                    margin-bottom: 62px;
                 }
             }
 
@@ -47,12 +58,14 @@
 
                 display: flex;
                 justify-content: center;
+
                 picture {
                     max-width: percent(625, 745);
                     transform: translateY(-14.2%);
                     position: relative;
 
                     transition: transform $transitionSpeed $transitionFunction;
+
                     &::before {
                         content: '';
                         position: absolute;
@@ -69,16 +82,18 @@
                     }
                 }
 
-                @media (min-width:$desktop-min){
-                     &:hover{
-                        picture{
+                @media (min-width:$desktop-min) {
+                    &:hover {
+                        picture {
                             transform: translateY(-15.7%);
-                            &::before{
+
+                            &::before {
                                 transform: translateY(-1.5%);
                             }
                         }
-                     } 
+                    }
                 }
+
                 @media (max-width:$smallTablet-max) {
                     order: 2;
                 }
@@ -89,6 +104,12 @@
                     display: block;
                     color: var(--blue);
                 }
+
+                @media (max-width:$smallTablet-max) {
+                    span {
+                        display: inline;
+                    }
+                }
             }
 
             .crm-digitale-umgebung__descr {
@@ -96,12 +117,16 @@
                 font: var(--text-1);
                 max-width: 404px;
 
-                @media (max-width:$smallTablet-max) {
-                    margin-top: 16px;
+                span {
+                    font-weight: 600;
+                }
+
+                @media (max-width:$desktop) {
+                    margin: 12px auto 0;
                 }
             }
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 grid-template-columns: percent(745, 1296) 1fr;
                 grid-column-gap: 48px;
             }
@@ -118,12 +143,13 @@
 
             background-color: #FBFBFB;
             border: 1px solid #E7EAF2;
-            @include adaptiveValue("border-radius", 60, 24, 1296, 576, 1);
+            border-radius: 60px;
             display: flex;
             flex-direction: column;
 
-            @media (max-width:$tablet-max) {
-                padding: 20px;
+            @media (max-width:$desktop) {
+                padding: 40px 36px;
+                border-radius: 42px;
             }
 
             .crm-digitale-umgebung__title {
@@ -150,8 +176,12 @@
             .crm-digitale-umgebung__title {
                 margin-bottom: 36px;
 
-                @media (max-width:$tablet-max) {
-                    margin-bottom: 24px;
+                @media (max-width:$desktop) {
+                    margin-bottom: 26px;
+                }
+
+                @media (max-width:$smallTablet-max) {
+                    max-width: 245px;
                 }
             }
         }
@@ -159,8 +189,18 @@
         &:nth-child(3) {
             .crm-digitale-umgebung__images {
                 @media (max-width:$smallTablet-max) {
-                    width: 125px;
-                    margin-bottom: 24px;
+                    width: 166px;
+                    margin-bottom: 26px;
+                }
+            }
+
+            .crm-digitale-umgebung__title {
+                @media (max-width:$smallTablet-max) {
+                    max-width: 270px;
+
+                    br {
+                        display: block;
+                    }
                 }
             }
         }
@@ -173,12 +213,12 @@
             .crm-digitale-umgebung__title {
                 margin-bottom: 25px;
 
-                @media (max-width:$tablet-max) {
+                @media (max-width:$desktop) {
                     margin-bottom: 24px;
                 }
             }
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 grid-column: 1/-1;
             }
         }
@@ -190,8 +230,8 @@
             border-radius: 24px;
 
             @media (max-width:$smallTablet-max) {
-                width: 200px;
-                border-radius: 16px;
+                width: 215px;
+                border-radius: 22px;
             }
         }
     }
@@ -213,26 +253,24 @@
             }
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             align-self: start;
         }
 
         @media (max-width:$smallTablet-max) {
-            border-radius: 16px;
-
-            .item-primary {
-                &:first-child {
-                    left: 16px;
-                }
-            }
+            border-radius: 30px;
         }
     }
 
     &__btn {
         margin-top: 36px;
 
-        @media (max-width:$tablet-max) {
-            margin-top: 50px;
+        @media (max-width:$desktop) {
+            display: none;
         }
+    }
+
+    @media (max-width:$desktop) {
+        margin-top: 60px;
     }
 }

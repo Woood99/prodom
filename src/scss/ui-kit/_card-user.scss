@@ -21,6 +21,9 @@
         font: var(--small-text);
         font-weight: 500;
         color: var(--black);
+        @media (max-width:$desktop){
+             font-size: 11px; 
+        }
     }
 
     &__time {
@@ -42,6 +45,9 @@
             transform: translateY(-50%);
             left: 0;
         }
+        @media (max-width:$desktop){
+             font-size: 9.5px; 
+        }
     }
 
     &__descr {
@@ -52,6 +58,9 @@
        font-size: 12px;
        line-height: 166%;
        font-weight: 500;
+       @media (max-width:$desktop){
+         font-size: 11px; 
+       }
     }
 
     &__like {
@@ -60,5 +69,8 @@
         width: 20px;
         height: 22px;
         display: block;
+    }
+    @media (max-width:$desktop){
+        box-shadow: 4.396px 6.731px 38.862px 0px rgba(44, 46, 65, 0.08); 
     }
 }

@@ -52,15 +52,16 @@
     &__btn {
         margin-top: 55px;
 
-        @media (max-width:$tablet-max) {
-            margin-top: 24px;
-        }
         @media (min-width:$desktop-min){
             &:hover{
                 background-color: var(--white);
                 color: var(--black); 
             }
-        }
+        }    
+         @media (max-width:$desktop){
+            width: 250px;
+            margin: 42px auto 0;
+         }
     }
 
 
@@ -87,5 +88,7 @@
 
         margin-right: 16px;
     }
-
+    @media (max-width:$desktop){
+         display: none; 
+    }
 }
