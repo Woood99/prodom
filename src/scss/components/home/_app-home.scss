@@ -135,15 +135,13 @@
             top: 56%;
             right: 17%;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 display: none;
             }
         }
-
-        @media (max-width:$desktop) {}
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         margin-top: 24px;
     }
 }

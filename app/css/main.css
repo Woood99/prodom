@@ -7543,6 +7543,14 @@ textarea.input-reset {
   transform: rotate(38deg) translateY(20%);
 }
 @media (max-width: 1326px) {
+  .ways-skud-two__container::before {
+    width: 180px;
+    height: 179px;
+    top: auto;
+    bottom: -2%;
+  }
+}
+@media (max-width: 1326px) {
   .ways-skud-two__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -8198,7 +8206,7 @@ textarea.input-reset {
   padding-right: 0;
   padding-bottom: 36px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__top {
     padding: 32px 0;
   }
@@ -8243,7 +8251,7 @@ textarea.input-reset {
     height: auto;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__title {
     letter-spacing: -1.56px;
     white-space: normal;
@@ -8271,9 +8279,9 @@ textarea.input-reset {
   max-width: 518px;
   margin: 0 auto;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__form {
-    margin-top: 16px;
+    margin-top: 42px;
   }
 }
 @media (max-width: 768px) {
@@ -8289,23 +8297,20 @@ textarea.input-reset {
   top: 2.5%;
   left: 20%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__decor-lightning--1 {
-    top: 15%;
-    left: auto;
-    right: 3%;
-    width: 20px;
+    display: none;
   }
 }
 .app-skud-two__decor-lightning--2 {
   top: 35%;
   left: 10%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__decor-lightning--2 {
-    top: 0%;
+    top: 6%;
     left: auto;
-    right: 11%;
+    right: 3%;
     width: 58px;
   }
 }
@@ -8313,9 +8318,9 @@ textarea.input-reset {
   top: 51%;
   left: 4%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__decor-lightning--3 {
-    top: 39%;
+    top: 42%;
     left: 10%;
     width: 32px;
   }
@@ -8324,12 +8329,9 @@ textarea.input-reset {
   top: 75%;
   left: 16%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__decor-lightning--4 {
-    top: 28%;
-    left: 1%;
-    width: 35px;
-    z-index: -1;
+    display: none;
   }
 }
 .app-skud-two__decor-lightning--5 {
@@ -8337,11 +8339,11 @@ textarea.input-reset {
   right: -3%;
   z-index: -1;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__decor-lightning--5 {
-    top: 32%;
+    top: 39%;
     left: auto;
-    right: -9%;
+    right: -3%;
     width: 107px;
   }
 }
@@ -8349,12 +8351,12 @@ textarea.input-reset {
   top: 56%;
   right: 17%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two__decor-lightning--6 {
     display: none;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-skud-two {
     margin-top: 32px;
   }
@@ -11614,12 +11616,12 @@ textarea.input-reset {
   top: 56%;
   right: 17%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-home__decor-lightning--6 {
     display: none;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1326px) {
   .app-home {
     margin-top: 24px;
   }

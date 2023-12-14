@@ -29,6 +29,12 @@
             opacity: 0.06;
             z-index: -1;
             transform: rotate(38deg) translateY(20%);
+            @media (max-width:$desktop){
+                 width: 180px;
+                 height: 179px; 
+                 top: auto;
+                 bottom: -2%;
+            }
         }
 
         @media (max-width:$desktop) {
