@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (elements.length === 0) return;
         elements.forEach(element => {
             const map = element.dataset.replaceText.trim().split(",");
-            element.textContent = window.innerWidth <= map[0] ? map[2] : map[1];
+            element.innerHTML = window.innerWidth <= map[0] ? map[2] : map[1];
         })
     }
 
