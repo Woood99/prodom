@@ -11586,12 +11586,12 @@ textarea.input-reset {
 .training-home__tags .row:not(:last-child) {
   margin-bottom: 16px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .training-home__tags .row:not(:last-child) {
     margin-bottom: 8px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .training-home__tags .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -11613,7 +11613,7 @@ textarea.input-reset {
 .training-home__tag:not(:last-child) {
   margin-right: 16px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .training-home__tag:not(:last-child) {
     margin-right: 0;
     margin-bottom: 8px;
@@ -11625,6 +11625,7 @@ textarea.input-reset {
   font: var(--text-2-500);
   padding: 0 28px;
   height: 58px;
+  white-space: nowrap;
 }
 @media (max-width: 1024px) {
   .training-home__tag.tag--big {
