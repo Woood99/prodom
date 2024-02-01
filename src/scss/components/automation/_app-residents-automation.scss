@@ -25,7 +25,7 @@
         position: relative;
         @include adaptiveValue("max-height", 673, 200, 1296, 576, 1);
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 40px;
             border-radius: 32px;
             grid-column-gap: 40px;
@@ -70,7 +70,7 @@
             }
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-left: 35px;
         }
 
@@ -87,7 +87,7 @@
         grid-column-gap: 24px;
         grid-row-gap: 24px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 32px;
             grid-template-columns: 1fr;
         }
@@ -97,12 +97,12 @@
         align-self: center;
         margin-top: 80px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 50px;
         }
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         margin-top: 70px;
     }
 }

@@ -8,7 +8,7 @@
     padding: 0;
     width: var(--burger-width);
     height: var(--burger-height);
-    color: var(--blue);
+    color: var(--black);
     background-color: transparent;
     cursor: pointer;
     transform: rotate(0);
@@ -56,6 +56,7 @@
             &:nth-child(3) {
                 top: 9px;
                 transform: rotate(-135deg) translateY(-50%);
+                left: 1px;
             }
         }
     }

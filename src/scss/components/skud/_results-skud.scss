@@ -192,7 +192,7 @@
 
             &__item--big {
                 @media (min-width:$desktop-min) {
-                  padding: 56px 40px;
+                  padding: 56px 40px 56px 56px;
                 }
             }
         }

@@ -4,7 +4,7 @@
     &__wrapper {
         display: flex;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             flex-direction: column-reverse;
             align-items: center;
         }
@@ -27,7 +27,7 @@
 
         overflow: hidden;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 48px;
             margin-right: 0;
             max-width: 720px;
@@ -63,10 +63,10 @@
                 height: 100%;
                 width: 100%;
                 max-height: 283px;
-                @media (max-width:$tablet-max){
+                @media (max-width:$desktop){
                     max-height: none;
                 }
-                @media (max-width:$tablet-max) {
+                @media (max-width:$desktop) {
                     border-radius: 36px;
                 }
             }
@@ -88,7 +88,7 @@
                     color: #8f8f90;
                 }
 
-                @media (max-width:$tablet-max) {
+                @media (max-width:$desktop) {
                     margin-top: 16px;
                 }
 
@@ -121,7 +121,7 @@
         justify-content: center;
         align-items: start;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             max-width: none;
             text-align: center;
             align-items: center;
@@ -150,7 +150,7 @@
                 fill: var(--blue);
             }
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 border-radius: 24px;
             }
         }
@@ -178,7 +178,7 @@
         color: var(--black);
         font: var(--text-1);
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 24px;
         }
     }
@@ -186,7 +186,7 @@
     &__btn {
         margin-top: 78px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 24px;
             width: 50%;
         }
@@ -195,7 +195,7 @@
             width: 100%;
         }
     }
-    @media (max-width:$tablet-max){
+    @media (max-width:$desktop){
         max-height: none;
     }
 }

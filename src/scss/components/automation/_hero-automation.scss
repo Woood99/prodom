@@ -7,7 +7,7 @@
         text-align: center;
         position: relative;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             background: transparent;
             border-radius: 0;
         }
@@ -18,7 +18,7 @@
         max-width: 800px;
         margin: 0 auto;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 25px 0;
         }
     }
@@ -47,7 +47,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 25px;
         }
     }
@@ -66,7 +66,7 @@
             font-weight: 500;
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 25px;
             border-radius: 16px;
             padding: 12px;
@@ -76,7 +76,7 @@
     &__btn {
         margin-top: 45px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 25px;
             width: 50%;
         }
@@ -103,7 +103,7 @@
             font-weight: 500;
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             position: static;
 
             span {

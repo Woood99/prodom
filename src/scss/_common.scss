@@ -70,7 +70,7 @@
         display: flex;
         justify-content: center;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             flex-direction: column;
         }
     }
@@ -79,7 +79,7 @@
         align-self: start;
         margin-right: 20px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-right: 0;
             align-self: center;
         }
@@ -88,7 +88,7 @@
     &__title {
         text-align: center;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 12px;
         }
     }
@@ -102,7 +102,7 @@
         color: var(--black);
         font: var(--text-1);
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 20px;
         }
     }
@@ -302,7 +302,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         height: 36px;
         padding: 0 14px;
         border-radius: 18px;
@@ -321,7 +321,7 @@
         padding: 0 24px;
         font: var(--text-2-500);
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 0 20px;
             height: 44px;
             border-radius: 18px;
@@ -340,7 +340,7 @@
         height: 79px;
         padding: 0 38px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 0 30px;
             height: 56px;
             border-radius: 24px;
@@ -371,7 +371,7 @@
         height: 28px;
         fill: var(--white);
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             width: 24px;
             height: 24px;
         }
@@ -390,7 +390,7 @@
         cursor: default;
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         width: 51px;
         height: 42px;
     }

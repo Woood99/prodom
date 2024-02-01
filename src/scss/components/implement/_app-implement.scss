@@ -10,7 +10,7 @@
         padding-left: 0;
         padding-right: 0;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 32px 0;
         }
 
@@ -32,7 +32,7 @@
         @media (max-width:$desktop){
              height: auto; 
         }
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             letter-spacing: -1.56px;
             white-space: normal;
             text-align: center;
@@ -136,14 +136,14 @@
         &--6 {
             top: 56%;
             right: 17%;
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 display: none;
             }
         }
 
-        @media (max-width:$tablet-max) {}
+        @media (max-width:$desktop) {}
     }
-    @media (max-width:$tablet-max){
+    @media (max-width:$desktop){
         margin-top: 32px;
     }
 }

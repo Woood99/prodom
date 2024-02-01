@@ -12,7 +12,7 @@
         grid-column-gap: 24px;
         grid-row-gap: 24px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -52,7 +52,7 @@
                 margin-top: auto;
             }
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 grid-column: 1/-1;
             }
         }
@@ -112,7 +112,7 @@
             }
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             align-self: start;
         }
 
@@ -131,7 +131,7 @@
         margin-top: 72px;
         align-self: center;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 50px;
         }
     }

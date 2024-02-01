@@ -1,13 +1,13 @@
 .hero-skud {
 
     &__container {
-        @media (max-width:$tablet-max){
+        @media (max-width:$desktop){
             padding: 0;
         }
     }
 
     &__inner {
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 32px 16px;
         }
     }
@@ -36,7 +36,7 @@
         position: relative;
         @include adaptiveValue("max-height", 501, 175, 1296, 576, 1);
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             border-radius: 80px;
             grid-column-gap: 40px;
         }
@@ -87,7 +87,7 @@
     &__btn {
         margin-top: 56px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 32px;
         }
 

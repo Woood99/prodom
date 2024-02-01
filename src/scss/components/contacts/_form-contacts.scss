@@ -35,7 +35,7 @@
         font: var(--text-2-400);
         margin-bottom: 50px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-bottom: 32px;
         }
 
@@ -48,13 +48,13 @@
         &__btn {
             margin-top: 42px;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 margin-top: 32px;
             }
         }
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         margin-bottom: 56px;
     }
 }

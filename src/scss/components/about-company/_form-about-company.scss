@@ -43,7 +43,7 @@
         position: relative;
         top: -130px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             top: 0;
             padding: 45px 32px 32px;
         }
@@ -61,7 +61,7 @@
         margin-bottom: 24px;
         color: var(--black);
         font: var(--title-3);
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-bottom: 16px;
         }
     }
@@ -72,7 +72,7 @@
         color: var(--dark);
         text-align: center;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-bottom: 24px;
         }
 
@@ -82,13 +82,13 @@
         &__btn {
             margin-top: 40px;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 margin-top: 24px;
             }
         }
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         margin-top: 56px;
         margin-bottom: 56px;
     }

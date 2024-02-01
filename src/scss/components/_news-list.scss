@@ -18,7 +18,7 @@
         &:not(:last-child) {
             margin-bottom: 66px;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 margin-bottom: 32px;
             }
         }
@@ -31,7 +31,7 @@
         transform: translateX(-50%);
         padding: 0 56px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 56px;
         }
 
@@ -40,7 +40,7 @@
         }
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         padding-top: 0;
         margin-bottom: 56px;
     }

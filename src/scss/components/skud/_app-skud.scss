@@ -19,7 +19,7 @@
             width: 466px;
             height: 514px;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 display: none;
             }
         }
@@ -37,7 +37,7 @@
             width: 466px;
             height: 514px;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 display: none;
             }
         }
@@ -61,7 +61,7 @@
         color: var(--dark);
         text-align: center;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 32px;
         }
 
@@ -73,12 +73,12 @@
     &__form {
         margin-top: 32px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 24px;
         }
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         padding: 56px 0;
         margin-top: 24px;
     }

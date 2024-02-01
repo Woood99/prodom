@@ -1,6 +1,6 @@
 .about-home {
-    @include adaptiveValue("border-top-left-radius", 65, 16, 1296, 576, 1);
-    @include adaptiveValue("border-top-right-radius", 65, 16, 1296, 576, 1);
+    border-top-left-radius: 65px;
+    border-top-right-radius: 65px;
     @include adaptiveValue("padding-top", 90, 42, 1296, 576, 1);
     background-color: var(--white);
     position: relative;
@@ -9,7 +9,7 @@
         display: flex;
         justify-content: space-between;
         padding: 0 60px;
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 0;
         }
         @media (max-width:$smallTablet-max){
@@ -41,7 +41,7 @@
         background-color: #f3f6ff;
         padding: 0 60px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 0;
             background-color: transparent;
             border-radius: 0;
@@ -56,7 +56,7 @@
         grid-column-gap: 24px;
         grid-row-gap: 24px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             grid-column-gap: 16px;
             grid-row-gap: 16px;
             grid-template-columns: 1fr;
@@ -111,7 +111,7 @@
             }
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 20px 20px 30px 30px;
         }
     }
@@ -133,13 +133,13 @@
             stroke: var(--black);
             fill: var(--white);
             stroke-width: 1.5px;
-            @media (max-width:$tablet-max){
+            @media (max-width:$desktop){
                 width: 22px;
                 height: 22px;
             }
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             width: 52px;
             height: 52px;
         }
@@ -160,7 +160,7 @@
             font: var(--text-1);
             font-weight: 600;
         }
-        @media (max-width:$tablet-max){
+        @media (max-width:$desktop){
             letter-spacing: -0.722px;
         }
     }
@@ -177,7 +177,7 @@
 
     &__item-link {
         margin-top: 32px;
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 20px;
         }
     }
@@ -196,5 +196,9 @@
                 }
             }
         }
+    }
+    @media (max-width:$desktop){
+        border-top-left-radius: 42px;
+        border-top-right-radius: 42px;
     }
 }

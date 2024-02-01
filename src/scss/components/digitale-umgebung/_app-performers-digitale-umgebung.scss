@@ -257,7 +257,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                height: calc(100% + 14px);
+                height: calc(100% + 15px);
                 @media (max-width:$desktop){
                      max-width: 300px;
                      height: 300px; 
@@ -271,7 +271,7 @@
                 opacity: 0;
 
                 &--1 {
-                    top: -2.7%;
+                    top: -2.55%;
                     right: 13.2%;
 
                     transition: transform 0.25s $transitionFunction,

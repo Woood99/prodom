@@ -25,7 +25,7 @@
         grid-row-gap: 40px;
         padding-bottom: 65px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 25px;
         }
@@ -37,7 +37,7 @@
 
     &__col {
         &--1 {
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 order: 4;
             }
         }
@@ -45,7 +45,7 @@
         &--2 {
             justify-self: end;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 order: 1;
                 justify-self: start;
             }
@@ -53,7 +53,7 @@
 
         &--3 {
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 order: 3;
             }
 
@@ -63,7 +63,7 @@
         }
 
         &--4 {
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 order: 2;
             }
         }

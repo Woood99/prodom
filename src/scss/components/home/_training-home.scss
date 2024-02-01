@@ -18,21 +18,28 @@
             background-size: contain;
             z-index: 0;
 
-            @media (max-width:$tablet-max) {
+            @media (max-width:$desktop) {
                 background-position: right -8% bottom -50px;
             }
 
-            @media (max-width:$mobile-max) {
+            @media (max-width:$smallTablet-max) {
                 background-position: right -50px bottom -15px;
+
+            }
+
+            @media (max-width:$mobile-max) {
+                background-size: 650px;
+                background-position: right -256px bottom -6px;
             }
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 56px 32px;
         }
 
         @media (max-width:$smallTablet-max) {
             padding: 32px 24px;
+            overflow: hidden;
         }
     }
 
@@ -45,7 +52,7 @@
         position: relative;
         z-index: 1;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             max-width: none;
         }
     }
@@ -73,7 +80,7 @@
             }
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 32px;
         }
     }
@@ -82,12 +89,12 @@
         background-color: #5e85f4;
 
         &:not(:last-child) {
-            margin-right: 16px;
+            margin-right: 12px;
 
-      @media (max-width:$smallTablet-max){
-        margin-right: 0;
-        margin-bottom: 8px; 
-      }
+            @media (max-width:$smallTablet-max) {
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
         }
 
         &.tag--big {
@@ -98,15 +105,8 @@
             height: 58px;
             white-space: nowrap;
 
-            @media (max-width:$tablet-max) {
-                padding: 0 20px;
-                height: 50px;
-                border-radius: 24px;
-            }
-
-            @media (max-width:$smallTablet-max) {
-                height: 45px;
-                padding: 0 16px;
+            @media (max-width:$desktop) {
+                background-color: rgba(#fff, 0.18);
             }
         }
     }

@@ -9,7 +9,7 @@
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 36px;
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 32px 0;
         }
 
@@ -30,7 +30,7 @@
         @media (max-width:$desktop){
              height: auto; 
         }
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             letter-spacing: -1.56px;
             white-space: normal;
             text-align: center;
@@ -69,7 +69,7 @@
     &__btn {
         margin-top: 40px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 24px;
             height: 58px;
             border-radius: 20px;

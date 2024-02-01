@@ -1,10 +1,12 @@
 .banner-skud-two {
     @include adaptiveValue("margin-top", 120, 48, 1296, 576, 1);
-    .container{
-        @media (max-width:$smallTablet-max){
+
+    .container {
+        @media (max-width:$smallTablet-max) {
             padding: 0;
         }
     }
+
     &__container {
         @include adaptiveValue("border-radius", 70, 42, 1296, 576, 1);
         background-color: #FBFBFB;
@@ -13,7 +15,8 @@
         position: relative;
         z-index: 2;
         overflow: hidden;
-        &::after{
+
+        &::after {
             content: '';
             background-image: url('../img/banner.png');
             background-repeat: no-repeat;
@@ -25,25 +28,33 @@
             height: 100%;
 
             z-index: -1;
-            @media (max-width:$smallTablet-max){
+
+            @media (max-width:$smallTablet-max) {
                 transform: rotate(49deg) translateX(-50%);
-                background-position: 50% 50%; 
+                background-position: 50% 50%;
                 background-size: 100%;
-              width: 537px;
-                height: 358px;
+                width: 800px;
+                height: 550px;
                 background-position: 0 0;
-                left: 40%;
+                left: 32%;
                 top: auto;
-                bottom: -83%;
+                bottom: -122%;
             }
-            @media (max-width:$mobile-max){
-                left: 33%; 
+
+            @media (max-width:$mobile-max) {
+                left: 26%;
+                bottom: -105%;
             }
-            @media (max-width:$smallMobile-max){
-                 left: 27%; 
+
+            @media (max-width:450px) {
+                width: 650px;
+                height: 400px;
+                bottom: -88%;
             }
+
         }
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             top: 0;
@@ -55,27 +66,40 @@
             background-repeat: no-repeat;
             background-size: cover;
             z-index: -2;
-            @media (max-width:$smallTablet-max){
-              display: none;
+
+            @media (max-width:$smallTablet-max) {
+                display: none;
             }
         }
-   @media (max-width:$desktop){
-    padding: 32px; 
-   }
-        @media (max-width:$smallTablet-max){
-        padding: 0 0 125px 0;
+
+        @media (max-width:$desktop) {
+            padding: 32px;
+            background-color: transparent;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 0 0 175px 0;
+        }
+
+        @media (max-width:$mobile-max) {
+            padding: 0 0 200px 0;
+        }
+
+        @media (max-width:450px) {
+            padding: 0 0 150px 0;
         }
     }
 
     &__info {
         max-width: 578px;
-        @media (max-width:$smallTablet-max){
-             max-width: none; 
-             text-align: center;
+
+        @media (max-width:$smallTablet-max) {
+            max-width: none;
+            text-align: center;
             max-width: calc(327px + 30px);
             margin: 0 auto;
             padding: 0 15px;
-            }
+        }
 
     }
 
@@ -89,16 +113,18 @@
         margin-top: 20px;
 
         font: var(--text-1);
-     @media (max-width:$desktop){
-        margin-top: 12px; 
-     }
+
+        @media (max-width:$desktop) {
+            margin-top: 12px;
+        }
     }
 
     &__btn {
         margin-top: 59px;
-     @media (max-width:$desktop){
-        margin-top: 32px;
-        width: 250px; 
-     }
+
+        @media (max-width:$desktop) {
+            margin-top: 32px;
+            width: 250px;
+        }
     }
 }

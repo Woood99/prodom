@@ -2,7 +2,7 @@
     margin-top: 100px;
 
     .container {
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 0;
         }
     }
@@ -29,7 +29,7 @@
             z-index: -1;
         }
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             padding: 56px 32px;
             border: none;
             border-radius: 18px;
@@ -44,12 +44,12 @@
         max-width: 634px;
         margin: 0 auto;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             max-width: none;
         }
     }
 
-    @media (max-width:$tablet-max) {
+    @media (max-width:$desktop) {
         margin-top: 56px;
     }
 

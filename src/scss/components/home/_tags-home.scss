@@ -1,6 +1,6 @@
 .tags-home {
     @include adaptiveValue("margin-top", 137, 48, 1296, 576, 1);
-    @include adaptiveValue("margin-bottom", -260, -125, 1296, 576, 1);
+    @include adaptiveValue("margin-bottom", -260, -110, 1296, 576, 1);
     @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
     background-color: #0f0f0f;
     position: relative;
@@ -50,7 +50,7 @@
     &__btn {
         margin-top: 55px;
 
-        @media (max-width:$tablet-max) {
+        @media (max-width:$desktop) {
             margin-top: 24px;
         }
         @media (min-width:$desktop-min){

@@ -163,6 +163,9 @@
                 &:last-child {
                     margin-top: auto;
                 }
+                @media (max-width:$desktop){
+                     line-height: 24px; 
+                }
             }
 
         }
@@ -254,7 +257,7 @@
         }
 
         @media (max-width:$desktop) {
-            align-self: start;
+            align-self: center;
         }
 
         @media (max-width:$smallTablet-max) {
