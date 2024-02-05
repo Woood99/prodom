@@ -3056,15 +3056,6 @@ textarea.input-reset {
   height: 13.5px;
   margin-right: 2px;
 }
-@media (max-width: 1326px) {
-  .nav-dropdown-content__item > div:nth-child(1) .popular-subtitle {
-    height: 20px;
-    padding: 0 8px;
-    font-size: 8px;
-    top: -8px;
-    left: 13px;
-  }
-}
 .nav-dropdown-content__item > span {
   color: var(--black);
 }
