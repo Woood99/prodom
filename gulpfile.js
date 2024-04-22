@@ -290,14 +290,6 @@ const rewrite = () => {
         .pipe(dest(buildFolder));
 }
 
-const htmlMinify = () => {
-    return src(`${buildFolder}/**/*.html`)
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
-        .pipe(dest(buildFolder));
-}
-
 const zipFiles = (done) => {
     del.sync([`${buildFolder}/*.zip`]);
     return src(`${buildFolder}/**/*.*`, {})
@@ -320,7 +312,7 @@ exports.default = series(clean, htmlInclude, scripts, styles, resources, images,
 
 exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites);
 
 exports.cache = series(cache, rewrite);
 
