@@ -66,6 +66,7 @@ spollers();
 popup(null, 'show-qr');
 popup(null, 'download-app');
 popup(null, 'order-call');
+popup(null, 'order-accepted');
 
 
 

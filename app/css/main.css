@@ -1297,7 +1297,7 @@ textarea.input-reset {
 @media (max-width: 1326px) {
   .popup-primary--order-call .popup-primary__container {
     border-radius: 24px 24px 0 0;
-    padding: 65px 24px 32px;
+    padding: 75px 20px 32px;
     max-width: none;
     width: 100%;
     height: auto;
@@ -1305,6 +1305,39 @@ textarea.input-reset {
 }
 @media (max-width: 1326px) {
   .popup-primary--order-call {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
+  }
+}
+.popup-primary--order-accepted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.popup-primary--order-accepted .popup-primary__container {
+  min-height: auto;
+  width: 856px;
+  border-radius: 70px;
+  padding: 97px 60px;
+}
+@media (max-width: 1326px) {
+  .popup-primary--order-accepted .popup-primary__container {
+    border-radius: 24px 24px 0 0;
+    padding: 65px 24px 32px;
+    max-width: none;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1326px) {
+  .popup-primary--order-accepted {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: end;
@@ -1492,13 +1525,22 @@ textarea.input-reset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 67px;
+}
+@media (max-width: 1326px) {
+  .order-call__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 .order-call__descr {
   font: var(--text-1);
   max-width: 358px;
 }
 .order-call__wrapper {
-  margin-left: 67px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -1509,6 +1551,35 @@ textarea.input-reset {
 }
 .order-call .form-primary__btn {
   margin-top: 43px;
+}
+
+.order-accepted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+.order-accepted__title {
+  margin-top: 28px;
+  font: var(--subtitle-2);
+}
+.order-accepted__descr {
+  margin-top: 12px;
+  font: var(--text-1);
+  max-width: 331px;
+}
+.order-accepted__btn {
+  margin-top: 48px;
+  min-width: 256px;
+  font: var(--text-1);
+  font-weight: 500;
 }
 
 .fade {
@@ -7050,6 +7121,11 @@ textarea.input-reset {
   font: var(--subtitle-1);
   color: var(--white);
 }
+@media (min-width: 1327px) {
+  .results-skud__item--big .results-skud__descr {
+    font-size: 30px;
+  }
+}
 .results-skud__item--big .results-skud__descr span {
   color: #9FB6FE;
 }
@@ -11029,12 +11105,12 @@ textarea.input-reset {
 }
 @media (min-width: 36em) and (max-width: 81em) {
   .tags-home {
-    padding-top: calc(7.8125rem + 7.875 * (100vw - 36rem) / ((45)));
+    padding-top: calc(8.9375rem + 6.75 * (100vw - 36rem) / ((45)));
   }
 }
 @media (max-width: 36em) {
   .tags-home {
-    padding-top: 7.8125rem;
+    padding-top: 8.9375rem;
   }
 }
 @media (min-width: 81em) {
@@ -11044,12 +11120,12 @@ textarea.input-reset {
 }
 @media (min-width: 36em) and (max-width: 81em) {
   .tags-home {
-    padding-bottom: calc(5rem + 7.5 * (100vw - 36rem) / ((45)));
+    padding-bottom: calc(3.75rem + 8.75 * (100vw - 36rem) / ((45)));
   }
 }
 @media (max-width: 36em) {
   .tags-home {
-    padding-bottom: 5rem;
+    padding-bottom: 3.75rem;
   }
 }
 .tags-home__container {
@@ -11113,6 +11189,16 @@ textarea.input-reset {
 }
 .tags-home__title span {
   color: #7290D3;
+}
+@media (max-width: 1326px) {
+  .tags-home__title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .tags-home__title {
+    max-width: 320px;
+  }
 }
 .tags-home__btn {
   margin-top: 55px;
@@ -13421,8 +13507,8 @@ textarea.input-reset {
 }
 @media (max-width: 768px) {
   .tags-digitale-umgebung__decor {
-    top: 5%;
-    min-width: 600px;
+    top: -5%;
+    min-width: 650px;
   }
 }
 .tags-digitale-umgebung__info {

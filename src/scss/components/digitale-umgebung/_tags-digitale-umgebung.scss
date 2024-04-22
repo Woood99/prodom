@@ -20,8 +20,8 @@
         transform: translateX(-50%);
         z-index: 4;
         @media (max-width:$smallTablet-max){
-             top: 5%;
-             min-width: 600px; 
+             top: -5%;
+             min-width: 650px; 
         }
     }
 

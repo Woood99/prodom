@@ -960,43 +960,64 @@
     </div>
 </div>
 <div class="popup popup-primary popup-primary--order-call">
-        <div class="popup__container popup-primary__container" role="dialog" aria-modal="true" data-popup-target="order-call">
-            <button class="btn-reset js-popup-close popup__close popup-primary__close" aria-label="Закрыть модальное окно">
-                <svg>
-                    <use xlink:href="img/sprite.svg#close"></use>
-                </svg>
-            </button>
-            <div class="popup__content popup-primary__content order-call">
-                <h2 class="order-call__title title-1">
-                    Заявка
-                    на звонок
-                </h2>
-                <form action="#" class="order-call__form form-primary">
-                    <p class="order-call__descr">
-                        Оставьте свои данные — мы свяжемся с вами в самое ближайшее время
-                    </p>
-                    <div class="order-call__wrapper">
-                        <label class="form-primary__label label-primary">
-                            <input type="text" name="Имя" class="input-reset input-primary label-primary__input" placeholder="Имя">
+    <div class="popup__container popup-primary__container" role="dialog" aria-modal="true" data-popup-target="order-call">
+        <button class="btn-reset js-popup-close popup__close popup-primary__close" aria-label="Закрыть модальное окно">
+            <svg>
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content popup-primary__content order-call">
+            <h2 class="order-call__title title-1">
+                Заявка
+                на звонок
+            </h2>
+            <form action="#" class="order-call__form form-primary" onsubmit="event.preventDefault()">
+                <p class="order-call__descr">
+                    Оставьте свои данные — мы свяжемся с вами в самое ближайшее время
+                </p>
+                <div class="order-call__wrapper">
+                    <label class="form-primary__label label-primary">
+                        <input type="text" name="Имя" class="input-reset input-primary label-primary__input" placeholder="Имя">
+                    </label>
+                    <label class="form-primary__label label-primary">
+                        <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
+                    </label>
+                    <div class="form-primary__agree checkbox">
+                        <input id="c_8" class="checkbox__input" type="checkbox" value="1">
+                        <label for="c_8" class="checkbox__label">
+                            <span class="checkbox__text">
+                                Соглашаюсь на <a href="#">обработку персональных данных</a>
+                            </span>
                         </label>
-                        <label class="form-primary__label label-primary">
-                            <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
-                        </label>
-                        <div class="form-primary__agree checkbox">
-                            <input id="c_8" class="checkbox__input" type="checkbox" value="1">
-                            <label for="c_8" class="checkbox__label">
-                                <span class="checkbox__text">
-                                    Соглашаюсь на <a href="#">обработку персональных данных</a>
-                                </span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-reset btn-primary form-primary__btn">
-                            Заказать звонок
-                        </button>
                     </div>
-                </form>
-            </div>
+                    <button type="submit" class="btn btn-reset btn-primary form-primary__btn js-popup-close" data-popup-path="order-accepted">
+                        Заказать звонок
+                    </button>
+                </div>
+            </form>
         </div>
+    </div>
+</div>
+
+<div class="popup popup-primary popup-primary--order-accepted">
+    <div class="popup__container popup-primary__container" role="dialog" aria-modal="true" data-popup-target="order-accepted">
+        <button class="btn-reset js-popup-close popup__close popup-primary__close" aria-label="Закрыть модальное окно">
+            <svg>
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content popup-primary__content order-accepted">
+            <img loading="lazy" src="./img/circle.svg" width='48' height='48' class="order-accepted__icon" alt="">
+            <h4 class="order-accepted__title">
+                Спасибо за заявку
+            </h4>
+            <p class="order-accepted__descr">
+                Мы свяжемся с вами в рабочее время:
+                пн-пт с 9:00 до 19:00 по Москве
+            </p>
+            <button type='button' class='btn btn-reset btn-primary order-accepted__btn js-popup-close'>Хорошо</button>
+        </div>
+    </div>
 </div>
 
 </body>

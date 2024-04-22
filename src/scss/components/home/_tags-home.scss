@@ -4,8 +4,8 @@
     @include adaptiveValue("border-radius", 88, 24, 1296, 576, 1);
     background-color: #0f0f0f;
     position: relative;
-    @include adaptiveValue("padding-top", 251, 125, 1296, 576, 1);
-    @include adaptiveValue("padding-bottom", 200, 80, 1296, 576, 1);
+    @include adaptiveValue("padding-top", 251, 143, 1296, 576, 1);
+    @include adaptiveValue("padding-bottom", 200, 60, 1296, 576, 1);
     overflow: hidden;
     &__container {
         max-width: 3550px;
@@ -44,6 +44,12 @@
 
         span {
             color: #7290D3;
+        }
+        @media (max-width:$desktop){
+             font-size: 24px; 
+        }
+        @media (max-width:$smallTablet-max){
+             max-width: 320px; 
         }
     }
 

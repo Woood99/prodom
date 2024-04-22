@@ -131,7 +131,9 @@
                 margin-top: auto;
                 font: var(--subtitle-1);
                 color: var(--white);
-
+                @media (min-width:$desktop-min){
+                     font-size: 30px; 
+                }
                 span {
                     color: #9FB6FE;
                 }

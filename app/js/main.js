@@ -1172,6 +1172,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_functions_popup__WEBPACK_IMPORTED_MODULE_6__["default"])(null, 'show-qr');
 (0,_functions_popup__WEBPACK_IMPORTED_MODULE_6__["default"])(null, 'download-app');
 (0,_functions_popup__WEBPACK_IMPORTED_MODULE_6__["default"])(null, 'order-call');
+(0,_functions_popup__WEBPACK_IMPORTED_MODULE_6__["default"])(null, 'order-accepted');
 
 // ========================================================================================
 
