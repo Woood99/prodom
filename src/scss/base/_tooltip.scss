@@ -21,14 +21,7 @@
             visibility $transitionSpeed $transitionFunction;
 
         >div {
-            padding: 38px 48px;
-            width: 100%;
-            height: 100%;
-            color: var(--black);
-            font: var(--text-1);
-            background-color: #FFF;
-            border: 1px solid #DCE4FC;
-            @include adaptiveValue("border-radius", 40, 24, 1296, 576, 1);
+         
         }
     }
 
@@ -38,5 +31,35 @@
             visibility: visible;
             transform: translateY(0);
         }
+    }
+}
+
+
+.tooltip-html {
+    position: fixed;
+    padding: 38px 48px;
+    border: 1px solid #DCE4FC;
+    background: #fff;
+
+    max-width: 553px;
+    width: max-content;
+    width: 100%;
+    color: var(--black);
+    font: var(--text-1);
+    z-index: 5;
+
+    @include adaptiveValue("border-radius", 40, 24, 1296, 576, 1);
+
+    p{
+        &:not(:last-child){
+            margin-bottom: 24px;
+            @media (max-width:$desktop){
+                 margin-bottom: 16px; 
+            }
+        }
+    }
+    @media (max-width:$desktop) {
+        max-width: calc(100vw - 35px);
+        padding: 24px;
     }
 }

@@ -7,9 +7,7 @@ import animationScroll from './components/animationScroll'
 import {
     validateNewsletter
 } from './modules/validate';
-import {
-    tooltip
-} from './functions/tooltip';
+import Tooltip from './functions/tooltip'
 import scrollDrag from './modules/scrollDrag';
 document.addEventListener('DOMContentLoaded', () => {
     getHeightBlock('.header', '--header-height');
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navDropdown();
     animationScroll();
     validateNewsletter();
-    tooltip();
     remoteCenterAdsTabs();
     heroAboutCompany();
     const rellaxTargetsTitlte = document.querySelectorAll('.hero-primary__title');
@@ -47,9 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     })
-
-
-
 
     function remoteCenterAdsTabs() {
         const container = document.querySelector('.remote-center-ads-two');
@@ -131,4 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
+
+    const tooltipHtml = new Tooltip({
+        mode: 'html',
+        gap: 10,
+        targetSelector: '[data-tooltip-html]',
+        elementSelector: 'tooltip-html',
+        positionX: 'left',
+        animation: {
+            type: 'fade-up',
+            speed: 300,
+            transformGap: '10px'
+        },
+    });
 });

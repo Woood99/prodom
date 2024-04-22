@@ -194,7 +194,7 @@
             grid-column-gap: 50px;
             grid-row-gap: 36px;
 
-            grid-template-columns: repeat(2, max-content);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, max-content);
         }
 
@@ -270,6 +270,7 @@
         --size-icon: 76px;
         display: grid;
         grid-template-columns: var(--size-icon) 1fr;
+        grid-template-rows: max-content 1fr;
         grid-column-gap: 20px;
         grid-row-gap: 10px;
         position: relative;
@@ -335,55 +336,9 @@
                     font-size: 14px; 
                }
             }
-
-        }
-
-        &:nth-child(1) {
-            >span {
-                &:nth-child(2) {
-                    max-width: 186px;
-                }
-            }
-        }
-
-        &:nth-child(2) {
-            >span {
-                &:nth-child(2) {
-                    max-width: 207px;
-                }
-            }
-        }
-
-        &:nth-child(3) {
-            >span {
-                &:nth-child(2) {
-                    max-width: 234px;
-                }
-            }
-        }
-
-        &:nth-child(4) {
-            >span {
-                &:nth-child(2) {
-                    max-width: 218px;
-                }
-            }
         }
 
         &:nth-child(5) {
-            >span {
-                &:nth-child(3) {
-                    max-width: 120px;
-                }
-            }
-        }
-
-        &:nth-child(6) {
-            >span {
-                &:nth-child(3) {
-                    max-width: 120px;
-                }
-            }
             >div{
                 svg{
                     transform: translateX(2px);
@@ -404,6 +359,7 @@
         }
 
         @media (max-width:$desktop) {
+
         }
     }
 

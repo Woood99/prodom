@@ -247,12 +247,8 @@
             }
 
             @media (max-width:$desktop) {
-                padding: 32px;
+                padding: 45px 36px 40px;
                 order: 4;
-            }
-
-            @media (max-width:$smallTablet-max) {
-                padding: 24px;
             }
         }
 
@@ -340,16 +336,12 @@
             }
 
             @media (max-width:$desktop) {
-                padding: 32px 0 32px 32px;
+                padding: 20px 0 40px 36px;
                 order: 5;
                 img {
                     max-width: 50%;
                     margin-left: auto;
                 }
-            }
-
-            @media (max-width:$smallTablet-max) {
-                padding: 24px 0 24px 24px;
             }
 
             @media (max-width:$mobile-max) {
@@ -371,6 +363,7 @@
                 font-size: 14px;
                 line-height: 22px;
                 margin-top: 14px; 
+                align-self: start;
             }
         }
         @media (max-width:$desktop){
