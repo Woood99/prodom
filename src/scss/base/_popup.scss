@@ -28,7 +28,7 @@
 
     &__container {
         position: relative;
-        min-height: var(--vh);
+        min-height: var(--vh,100vh);
         display: inline-block;
         vertical-align: middle;
         background-color: #fff;

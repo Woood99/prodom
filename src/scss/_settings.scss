@@ -145,10 +145,10 @@ br{
 .main {
     @media (max-width:$desktop) {
         &:not(.main--no-header) {
-            margin-top: var(--header-height);
+            margin-top: var(--header-height,60px);
 
             &.main--invite {
-                margin-top: calc(var(--header-height) + 28px);
+                margin-top: calc(var(--header-height,60px) + 28px);
             }
         }
     }

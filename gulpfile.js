@@ -33,6 +33,8 @@ const path = require('path');
 const zip = require('gulp-zip');
 const rootFolder = path.basename(path.resolve());
 
+const mediaQueries = require('gulp-group-css-media-queries');
+
 // paths
 const srcFolder = './src';
 const buildFolder = './app';
@@ -105,6 +107,7 @@ const styles = () => {
             grid: true,
             overrideBrowserslist: ["last 5 versions"]
         }))
+        .pipe(gulpif(isProd, mediaQueries()))
         .pipe(gulpif(isProd, cleanCSS({
             level: 2
         })))
