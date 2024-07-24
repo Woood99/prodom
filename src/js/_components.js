@@ -138,4 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
             transformGap: '10px'
         },
     });
+
+
+    const actionTg = document.querySelector('.action-tg');
+    if (actionTg) {
+        actionTgToggle(actionTg);
+    }
+
+    function actionTgToggle(container) {
+        const link = container.querySelector('.action-tg-link');
+        const btn = container.querySelector('.action-tg-btn');
+        if (!link || !btn) return;
+        btn.addEventListener('click',() => {
+            container.classList.toggle('_active');
+            btn.classList.toggle('_active');
+        })
+    }
 });

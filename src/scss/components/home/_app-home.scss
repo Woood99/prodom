@@ -70,6 +70,13 @@
             max-width: none;
         }
     }
+    &__form-row{
+        @media (min-width: $smallTablet-min) {
+            display: grid;
+            grid-template-columns: percent(250, 493) 1fr;
+            grid-gap: 10px;
+        }
+    }
 
     &__btn {}
 

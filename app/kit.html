@@ -284,21 +284,34 @@
             </svg>
         </button>
         <div class="popup__content popup-primary__content order-call">
-            <h2 class="order-call__title title-1">
-                Заявка
-                на звонок
-            </h2>
-            <form action="#" class="order-call__form form-primary" onsubmit="event.preventDefault()">
+            <div>
+                <h2 class="order-call__title title-1">
+                    Заявка
+                    на звонок
+                </h2>
                 <p class="order-call__descr">
                     Оставьте свои данные — мы свяжемся с вами в самое ближайшее время
                 </p>
+            </div>
+            <form action="#" class="order-call__form form-primary" onsubmit="event.preventDefault()">
                 <div class="order-call__wrapper">
                     <label class="form-primary__label label-primary">
                         <input type="text" name="Имя" class="input-reset input-primary label-primary__input" placeholder="Имя">
                     </label>
                     <label class="form-primary__label label-primary">
+                        <input type="email" name="email" class="input-reset input-primary label-primary__input" placeholder="Email">
+                    </label>
+                    <label class="form-primary__label label-primary">
                         <input type="tel" name="phone" class="input-reset input-primary label-primary__input" placeholder="Телефон">
                     </label>
+                    <div class='order-call__row'>
+                        <label class="form-primary__label label-primary">
+                            <input type="text" name="Название организации" class="input-reset input-primary label-primary__input" placeholder="Название организации">
+                        </label>
+                        <label class="form-primary__label label-primary">
+                            <input type="text" name="ИНН" class="input-reset input-primary label-primary__input" placeholder="ИНН">
+                        </label>
+                    </div>
                     <div class="form-primary__agree checkbox">
                         <input id="c_8" class="checkbox__input" type="checkbox" value="1">
                         <label for="c_8" class="checkbox__label">

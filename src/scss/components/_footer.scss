@@ -28,10 +28,12 @@
         @media (max-width:$desktop) {
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 25px;
+            position: relative;
         }
 
         @media (max-width:$smallTablet-max) {
             padding-bottom: 40px;
+            grid-template-columns: max-content;
         }
     }
 
@@ -74,7 +76,8 @@
         border-top: 1px solid #545454;
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: space-between;
+        gap: 12px;
 
         @media (max-width:$smallTablet-max) {
             justify-content: center;
@@ -142,5 +145,14 @@
             color: #728FFF;
         } 
        }
+    }
+}
+
+
+.footer-btn-tg{
+    @media (max-width:$smallTablet-max){
+        position: absolute;
+        bottom: 40px;
+        right: 0;  
     }
 }

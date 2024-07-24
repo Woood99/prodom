@@ -10,7 +10,7 @@
 
 .subtitle-number {
     color: var(--blue);
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
 
     letter-spacing: 0.11em;
     font: var(--subtitle-3);
@@ -23,7 +23,7 @@
     padding: 8px 22px;
     border-radius: 42px;
 
-    @media (max-width:$smallTablet-max) {
+    @media (max-width: $smallTablet-max) {
         border-radius: 28px;
         padding: 8px 16px;
     }
@@ -47,7 +47,7 @@
         margin-right: 5px;
     }
 
-    @media (max-width:$smallTablet-max) {
+    @media (max-width: $smallTablet-max) {
         padding: 6px 12px;
         border-radius: 20px;
 
@@ -62,15 +62,12 @@
     text-align: center;
 }
 
-
-
 .top-section-info {
-
     &__top {
         display: flex;
         justify-content: center;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             flex-direction: column;
         }
     }
@@ -79,7 +76,7 @@
         align-self: start;
         margin-right: 20px;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             margin-right: 0;
             align-self: center;
         }
@@ -88,7 +85,7 @@
     &__title {
         text-align: center;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             margin-top: 12px;
         }
     }
@@ -102,16 +99,15 @@
         color: var(--black);
         font: var(--text-1);
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             margin-top: 20px;
         }
     }
 }
 
-
 .hero-primary {
     margin-top: 18px;
-    background: linear-gradient(6.56deg, #FFFFFF -6.06%, #F3F5F8 135.59%);
+    background: linear-gradient(6.56deg, #ffffff -6.06%, #f3f5f8 135.59%);
     border-radius: 70px;
     padding: 60px 51px 66px;
 
@@ -125,7 +121,7 @@
         display: block;
         white-space: nowrap;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             white-space: normal;
         }
     }
@@ -135,13 +131,12 @@
         top: -14px;
 
         background: rgba(255, 255, 255, 0.5);
-        border: 1px solid #E7EAF2;
+        border: 1px solid #e7eaf2;
         backdrop-filter: blur(7.5px);
         border-radius: 45px;
         width: 100%;
         padding: 46px 32px;
         text-align: center;
-
 
         font: var(--text-1);
 
@@ -154,7 +149,7 @@
             }
         }
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             margin-top: 12px;
             padding: 0;
             top: 0;
@@ -164,19 +159,19 @@
         }
     }
 
-    @media (max-width:$desktop) {
+    @media (max-width: $desktop) {
         margin-top: 0;
         padding: 32px 16px;
         border-radius: 0;
         background: transparent;
     }
 
-    &.hero-secondary{
-        .hero-primary__text{
-            @media (max-width:$desktop) {
+    &.hero-secondary {
+        .hero-primary__text {
+            @media (max-width: $desktop) {
                 margin-top: 0px;
                 border-radius: 24px;
-                border: 1px solid #E7EAF2;
+                border: 1px solid #e7eaf2;
                 backdrop-filter: blur(7.5px);
                 padding: 24px 20px;
             }
@@ -216,7 +211,7 @@
             margin-left: 10px;
 
             &::before {
-                content: '/';
+                content: "/";
                 position: relative;
                 left: -5px;
             }
@@ -229,7 +224,7 @@
         }
 
         .controls {
-            @media (max-width:$desktop) {
+            @media (max-width: $desktop) {
                 margin-top: 2px;
             }
         }
@@ -238,11 +233,11 @@
             background-color: #fff;
 
             .gap-progress {
-                background: #B29AFF;
+                background: #b29aff;
                 z-index: 99;
 
                 .pin {
-                    background-color: #B29AFF;
+                    background-color: #b29aff;
                     width: 12px;
                     height: 12px;
                     box-shadow: none;
@@ -263,7 +258,7 @@
                 }
 
                 &.open path {
-                    fill: #B29AFF !important; // need hack :(
+                    fill: #b29aff !important; // need hack :(
                 }
             }
 
@@ -277,18 +272,17 @@
             }
         }
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             max-width: 100%;
             width: 100%;
             min-width: 100%;
         }
     }
 
-    @media (max-width:$desktop) {
+    @media (max-width: $desktop) {
         width: 100%;
     }
 }
-
 
 .tag {
     height: 42px;
@@ -302,14 +296,14 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width:$desktop) {
+    @media (max-width: $desktop) {
         height: 36px;
         padding: 0 14px;
         border-radius: 18px;
     }
 
     &.tag--white {
-        border: 1px solid rgba(180, 199, 245, 0.00);
+        border: 1px solid rgba(180, 199, 245, 0);
         background-color: #f1f3f4;
         color: var(--black);
     }
@@ -321,13 +315,13 @@
         padding: 0 24px;
         font: var(--text-2-500);
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             padding: 0 20px;
             height: 44px;
             border-radius: 18px;
         }
 
-        @media (max-width:$smallTablet-max) {
+        @media (max-width: $smallTablet-max) {
             height: 40px;
             padding: 0 16px;
         }
@@ -340,19 +334,18 @@
         height: 79px;
         padding: 0 38px;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             padding: 0 30px;
             height: 56px;
             border-radius: 24px;
         }
 
-        @media (max-width:$smallTablet-max) {
+        @media (max-width: $smallTablet-max) {
             height: 50px;
             padding: 0 22px;
         }
     }
 }
-
 
 .nav-primary {
     display: flex;
@@ -371,13 +364,14 @@
         height: 28px;
         fill: var(--white);
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             width: 24px;
             height: 24px;
         }
     }
 
-    &_prev {}
+    &_prev {
+    }
 
     &_next {
         svg {
@@ -386,16 +380,15 @@
     }
 
     &.swiper-button-disabled {
-        background-color: #E7EAF2;
+        background-color: #e7eaf2;
         cursor: default;
     }
 
-    @media (max-width:$desktop) {
+    @media (max-width: $desktop) {
         width: 51px;
         height: 42px;
     }
 }
-
 
 .ticker-slider {
     .marquee3k__copy {
@@ -412,7 +405,11 @@
     &__info {
         padding: 36px 23px 44px 44px;
         border-radius: 50px;
-        background: linear-gradient(355deg, #000 -248.96%, rgba(0, 0, 0, 0.00) 105.66%);
+        background: linear-gradient(
+            355deg,
+            #000 -248.96%,
+            rgba(0, 0, 0, 0) 105.66%
+        );
 
         backdrop-filter: blur(5px);
 
@@ -435,15 +432,14 @@
     }
 }
 
-
 .banner-stub {
     @include adaptiveValue("border-radius", 50, 36, 1296, 576, 1);
     position: relative;
     overflow: hidden;
-    background-image: url('../img/card-7.jpg');
+    background-image: url("../img/card-7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 9.63389px 42.03881px 0px rgba(182, 179, 192, 0.20);
+    box-shadow: 0px 9.63389px 42.03881px 0px rgba(182, 179, 192, 0.2);
 
     padding: 39px 40px 44px 44px;
 
@@ -473,22 +469,164 @@
     }
 }
 
-
-
-.pagination-slider{
-    .swiper-pagination-bullet{
-        background-color: #E4E6EA;
+.pagination-slider {
+    .swiper-pagination-bullet {
+        background-color: #e4e6ea;
         width: 12px;
         height: 12px;
         border-radius: 12px;
         transition: width $transitionSpeed $transitionFunction,
-        background-color $transitionSpeed $transitionFunction;
+            background-color $transitionSpeed $transitionFunction;
         margin: 0 6px;
         opacity: 1;
-        &.swiper-pagination-bullet-active{
+        &.swiper-pagination-bullet-active {
             width: 37px;
-            background-color:var(--blue);
+            background-color: var(--blue);
             border-radius: 28px;
         }
+    }
+}
+
+.btn-tg {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+    svg {
+        width: 16px;
+        height: 14px;
+    }
+}
+
+.action-tg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+
+    z-index: 20;
+
+    &._active {
+        .action-tg-link {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    @media (max-width:$desktop){
+         position: fixed;
+         bottom: 20px;
+         right: 16px; 
+    }
+}
+.action-tg-link {
+    background-color: white;
+    box-shadow: 0px 0px 15px 0px #456ac733;
+    height: 70px;
+    padding: 0 calc(70px + 15px) 0 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 70px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity $transitionSpeed $transitionFunction,
+        visibility $transitionSpeed $transitionFunction;
+
+        @media (max-width:$desktop){
+             font-size: 14px; 
+             height: 48px;
+             padding: 0 calc(45px + 15px) 0 30px;
+        }
+}
+
+.action-tg-btn {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #000;
+
+    position: relative;
+    z-index: 1;
+
+    &:not(._active){
+        animation: pulse_1 500ms ease-in-out infinite alternate;
+    }
+
+    svg {
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+
+        transition: opacity $transitionSpeed $transitionFunction,
+            visibility $transitionSpeed $transitionFunction;
+
+            @media (max-width:$desktop){
+                 width: 24px;
+                 height: 24px; 
+            }
+    }
+
+    .action-tg-btn-message {
+    }
+
+    .action-tg-btn-tg {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &._active {
+        .action-tg-btn-message {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .action-tg-btn-tg {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @media (max-width:$desktop){
+         width: 48px;
+         height: 48px; 
+    }
+}
+
+@keyframes pulse_1 {
+    from {
+        opacity: 0.75;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.05);
     }
 }

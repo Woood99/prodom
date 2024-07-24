@@ -2,30 +2,37 @@
     margin-top: 30px;
 
     &__container {
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             padding: 0;
         }
     }
 
     &__wrapper {
         border-radius: 70px;
-        background: linear-gradient(255deg, #DFE8FF 3.57%, rgba(255, 255, 255, 0.00) 78.21%);
+        background: linear-gradient(
+            255deg,
+            #dfe8ff 3.57%,
+            rgba(255, 255, 255, 0) 78.21%
+        );
         display: flex;
 
         padding: 70px 0 120px 61px;
-        overflow: hidden;
-
-        @media (max-width:$desktop) {
+        position: relative;
+        @media (max-width: $desktop) {
             flex-direction: column;
             padding: 32px 16px;
-            background: linear-gradient(242deg, #DFE8FF 3.13%, rgba(255, 255, 255, 0.00) 60.9%);
+            background: linear-gradient(
+                242deg,
+                #dfe8ff 3.13%,
+                rgba(255, 255, 255, 0) 60.9%
+            );
             border-bottom-left-radius: 36px;
             border-bottom-right-radius: 36px;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
 
-        @media (max-width:$smallTablet-max) {
+        @media (max-width: $smallTablet-max) {
             border-bottom-left-radius: 24px;
             border-bottom-right-radius: 24px;
         }
@@ -35,7 +42,7 @@
         min-width: 512px;
         margin-right: 75px;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             max-width: 485px;
             min-width: auto;
             text-align: center;
@@ -50,7 +57,7 @@
         span {
             color: var(--blue);
 
-            @media (max-width:$desktop) {
+            @media (max-width: $desktop) {
                 display: block;
             }
         }
@@ -62,7 +69,7 @@
         font: var(--text-1);
         max-width: 430px;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             margin: 12px auto 0;
         }
     }
@@ -70,12 +77,12 @@
     &__btn {
         margin-top: 49px;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             margin-top: 24px;
             width: 100%;
         }
 
-        @media (max-width:$smallTablet-max) {
+        @media (max-width: $smallTablet-max) {
             max-width: 250px;
         }
     }
@@ -86,16 +93,16 @@
 
         display: flex;
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             margin-top: 32px;
             max-height: 460px;
         }
 
-        @media (max-width:$smallTablet-max) {
+        @media (max-width: $smallTablet-max) {
             max-height: 375px;
         }
 
-        @media (max-width:$mobile-max) {
+        @media (max-width: $mobile-max) {
             max-height: 250px;
         }
     }
@@ -103,7 +110,8 @@
     &__image {
         border-radius: 50px;
         min-width: 308px;
-        box-shadow: 0px 1px 2px 0px rgba(7, 46, 146, 0.03), 13px 4px 26px 0px rgba(69, 106, 199, 0.10);
+        box-shadow: 0px 1px 2px 0px rgba(7, 46, 146, 0.03),
+            13px 4px 26px 0px rgba(69, 106, 199, 0.1);
         transition: transform $transitionSpeed ease-out;
         --active-prc: 35.2%;
 
@@ -111,21 +119,21 @@
             height: 100%;
             border-radius: 50px;
 
-            @media (max-width:$desktop) {
+            @media (max-width: $desktop) {
                 border-radius: 50px;
             }
 
-            @media (max-width:$smallTablet-max) {
+            @media (max-width: $smallTablet-max) {
                 border-radius: 40px;
             }
 
-            @media (max-width:$mobile-max) {
+            @media (max-width: $mobile-max) {
                 border-radius: 28px;
             }
         }
 
         &:nth-child(1) {
-            @media (min-width:$desktop-min) {
+            @media (min-width: $desktop-min) {
                 &:hover {
                     transform: translateX(calc(-1 * var(--active-prc)));
                 }
@@ -135,13 +143,13 @@
         &:nth-child(2) {
             transform: translateX(-61%);
 
-            @media (min-width:$desktop-min) {
+            @media (min-width: $desktop-min) {
                 &:hover {
                     transform: translateX(calc(-61% - var(--active-prc)));
                 }
             }
 
-            @media (max-width:$mobile-max) {
+            @media (max-width: $mobile-max) {
                 transform: translateX(-80%);
             }
         }
@@ -149,62 +157,68 @@
         &:nth-child(3) {
             transform: translateX(calc(-308px + (-22%)));
 
-            @media (min-width:$desktop-min) {
+            @media (min-width: $desktop-min) {
                 &:hover {
-                    transform: translateX(calc(-308px + (-22%) - var(--active-prc)));
+                    transform: translateX(
+                        calc(-308px + (-22%) - var(--active-prc))
+                    );
                 }
             }
 
-            @media (max-width:$mobile-max) {
+            @media (max-width: $mobile-max) {
                 transform: translateX(calc(-308px + (-49%)));
             }
         }
 
         &:nth-child(4) {
-            transform: translateX(calc((-308px*2) + 17%));
+            transform: translateX(calc((-308px * 2) + 17%));
 
-            @media (min-width:$desktop-min) {
+            @media (min-width: $desktop-min) {
                 &:hover {
-                    transform: translateX(calc((-308px*2) + 17% - var(--active-prc)));
+                    transform: translateX(
+                        calc((-308px * 2) + 17% - var(--active-prc))
+                    );
                 }
             }
 
-            @media (max-width:$mobile-max) {
-                transform: translateX(calc((-308px*2) + (-19%)));
+            @media (max-width: $mobile-max) {
+                transform: translateX(calc((-308px * 2) + (-19%)));
             }
         }
 
         &:nth-child(5) {
-            transform: translateX(calc((-308px*3) + 56%));
+            transform: translateX(calc((-308px * 3) + 56%));
 
-            @media (min-width:$desktop-min) {
+            @media (min-width: $desktop-min) {
                 &:hover {
-                    transform: translateX(calc((-308px*3) + 66% - var(--active-prc)));
+                    transform: translateX(
+                        calc((-308px * 3) + 66% - var(--active-prc))
+                    );
                 }
             }
 
-            @media (max-width:$mobile-max) {
-                transform: translateX(calc((-308px*3) + 10%));
+            @media (max-width: $mobile-max) {
+                transform: translateX(calc((-308px * 3) + 10%));
             }
         }
 
-        @media (max-width:$desktop) {
+        @media (max-width: $desktop) {
             min-width: 330px;
             border-radius: 50px;
         }
 
-        @media (max-width:$smallTablet-max) {
+        @media (max-width: $smallTablet-max) {
             min-width: 310px;
             border-radius: 40px;
         }
 
-        @media (max-width:$mobile-max) {
+        @media (max-width: $mobile-max) {
             min-width: 290px;
             border-radius: 30px;
         }
     }
 
-    @media (max-width:$desktop) {
+    @media (max-width: $desktop) {
         margin-top: 0;
     }
 }
