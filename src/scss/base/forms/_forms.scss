@@ -3,9 +3,7 @@
 @import "checkbox";
 @import "radio";
 
-
 .form-primary {
-
     &__title {
         color: var(--dark);
         font: var(--title-3);
@@ -16,9 +14,9 @@
         font: var(--text-1);
         color: var(--dark);
 
-     @media (max-width:$desktop){
-        margin-top: 20px; 
-     }
+        @media (max-width: $desktop) {
+            margin-top: 20px;
+        }
     }
 
     &__container {
@@ -26,20 +24,32 @@
     }
 
     &__label {
-        height: 75px;
+        min-height: 75px;
         display: block;
 
         &:not(:last-child) {
             margin-bottom: 14px;
 
-          @media (max-width:$desktop){
-            margin-bottom: 7px; 
-          }
+            @media (max-width: $desktop) {
+                margin-bottom: 7px;
+            }
         }
 
-     @media (max-width:$desktop){
-        height: 58px; 
-     }
+        @media (max-width: $desktop) {
+            min-height: 58px;
+        }
+
+        &._error{
+          .input-primary{
+            border-color: var(--red);
+          }
+          .error-text{
+            display: block;
+            margin-top: 8px;
+            margin-left: 8px;
+            color: var(--red);
+          }
+        }
     }
 
     &__agree {
@@ -49,36 +59,36 @@
         .checkbox__text {
             font: var(--text-3);
             line-height: 1;
-            a{
+            a {
                 text-decoration: none;
                 color: var(--blue);
                 font-weight: 600;
                 transition: color $transitionSpeed $transitionFunction;
-                @media (min-width:$desktop-min){
-                     &:hover{
+                @media (min-width: $desktop-min) {
+                    &:hover {
                         color: var(--red);
-                     } 
+                    }
                 }
             }
-         @media (max-width:$desktop){
-            margin-left: 8px; 
-         }
+            @media (max-width: $desktop) {
+                margin-left: 8px;
+            }
         }
 
-     @media (max-width:$desktop){
-        margin-top: 12px;
-        margin-left: 12px; 
-     }
+        @media (max-width: $desktop) {
+            margin-top: 12px;
+            margin-left: 12px;
+        }
     }
 
     &__btn {
         margin-top: 40px;
         width: 100%;
-@media (max-width:$desktop){
-    margin-top: 24px;
-    height: 58px;
-    border-radius: 20px; 
-}
+        @media (max-width: $desktop) {
+            margin-top: 24px;
+            height: 58px;
+            border-radius: 20px;
+        }
     }
 
     &__choices {
@@ -90,14 +100,14 @@
             margin-bottom: 20px;
 
             font: var(--text-2-500);
-          @media (max-width:$desktop){
-            margin-bottom: 20px;
-            text-align: center; 
-          }
+            @media (max-width: $desktop) {
+                margin-bottom: 20px;
+                text-align: center;
+            }
         }
 
-      @media (max-width:$desktop){
-        margin-top: 24px; 
-      }
+        @media (max-width: $desktop) {
+            margin-top: 24px;
+        }
     }
 }

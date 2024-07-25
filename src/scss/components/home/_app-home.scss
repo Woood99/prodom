@@ -71,11 +71,9 @@
         }
     }
     &__form-row{
-        @media (min-width: $smallTablet-min) {
-            display: grid;
-            grid-template-columns: percent(250, 493) 1fr;
-            grid-gap: 10px;
-        }
+        display: grid;
+        grid-template-columns: percent(250, 493) 1fr;
+        grid-gap: 10px;
     }
 
     &__btn {}
@@ -110,7 +108,7 @@
             left: 4%;
 
             @media (max-width:$desktop) {
-                top: 42%;
+                top: 36%;
                 left: 10%;
                 width: 32px;
             }

@@ -18,6 +18,8 @@
 
         padding: 70px 0 120px 61px;
         position: relative;
+
+        overflow: hidden;
         @media (max-width: $desktop) {
             flex-direction: column;
             padding: 32px 16px;
