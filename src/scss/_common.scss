@@ -506,8 +506,8 @@
 
 .action-tg {
     position: fixed;
-    bottom: 20px;
-    right: 20px; 
+    bottom: 36px;
+    right: 36px; 
 
     display: flex;
 
@@ -518,6 +518,10 @@
             opacity: 1;
             visibility: visible;
         }
+    }
+    @media (max-width:$desktop){
+         bottom: 20px;
+         right: 20px; 
     }
 }
 .action-tg-link {
